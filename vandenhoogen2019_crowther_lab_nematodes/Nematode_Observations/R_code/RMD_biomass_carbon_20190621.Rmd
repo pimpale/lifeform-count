@@ -1,0 +1,551 @@
+---
+title: "Supplementary Methods - Biomass and Carbon budget calculationss"
+author: "J. van den Hoogen & S. Giesen et al. 2019"
+output:
+  html_document:
+    # code_folding: hide
+    toc: yes
+    toc_collapse: no
+    toc_float: yes
+    theme: spacelab
+    fig_retina: 2
+  github_document: default
+---
+
+```{r load packages, results='hide', message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+Initial values and assumptions
+```{r Initial values and assumptions}
+#Percentage of carbon (C) per fresh mass
+cperw = 0.2 * 0.52
+
+##1. Correct for the expected difference between CO2 evolved and O2 consumed using a respiratory quotient (RQ) of 0.95 
+##Klekowski 1972 (doi: 10.1163/187529272x00665) reports a aO2 value of 1.40 nl O2 per hour. This can be converted to a aCO2 value of 2.43 using:
+##aCO2 = mass.CO2 * (44 x 10^9)
+a.O2 = 1.4
+V.CO2 = 0.95 * a.O2
+
+##2. Calculate the number of moles (m) of CO2
+##We assume a temperature of 15 degrees Celcius.
+t = 15
+m = V.CO2 / (0.0821 * (273 + t) * 1E9)
+
+##3. Convert from aO2 to aCO2 
+a.CO2 = m * (44 * 1E9)
+
+##4. Convert to daily rate, scale to relative mass of C in CO2. Divide by 1000 to convert from ng to ug.
+a.CO2.daily = a.CO2 * 24 * (12/44) / 1000
+```
+
+Data source: 
+For adult biomass and carbon budget calculations we use data from Nemaplex (http://nemaplex.ucdavis.edu/) and Mulder and Vonk 2011, doi:10.2307/23034835. For juveniles, we use data from Mulder and Vonk 2011. 
+
+# Data import
+```{r}
+# Nemaplex data
+setwd("~/Work/ETH/Projects/Nematodes/Calculations")
+Nemaplex_data_raw <- read.csv("Family Ecophysiology qParameters.csv", stringsAsFactors = FALSE, fileEncoding = "latin1") 
+
+# Mulder 2011 data
+mulder_2011 <- read.csv("Mulder2011.csv")
+mulder_data <- mulder_2011 %>% 
+  select(trophic.group, Length, Width, Juv_Adult)
+
+# Biome abundances
+Biome_Abundances <- read.csv("20180827_Biome_Abundances.csv")
+
+# Lowest estimates
+numbers_min <- read.csv("20180912_Biome_Abundances_Minimum.csv") %>% 
+  select(-Total_Number) %>% 
+  gather(key, value, -Biome) %>% 
+  rename(trophic.group = key) %>% 
+  rename(Total.number = value)
+
+# Highest estimates
+numbers_max <- read.csv("20180912_Biome_Abundances_Maximum.csv") %>% 
+  select(-Total_Number) %>% 
+  gather(key, value, -Biome) %>% 
+  rename(trophic.group = key) %>% 
+  rename(Total.number = value)
+
+adult_data_1 <- Nemaplex_data_raw %>% 
+  select(cp.value, feeding.code, Length.micm, Width.micm) %>% 
+  mutate(feeding.code = replace(feeding.code, feeding.code == "p", "Predators")) %>% 
+  mutate(feeding.code = replace(feeding.code, feeding.code == "o", "Omnivores")) %>% 
+  mutate(feeding.code = replace(feeding.code, feeding.code == "b", "Bacterivores")) %>% 
+  mutate(feeding.code = replace(feeding.code, feeding.code == "h", "Herbivores")) %>% 
+  mutate(feeding.code = replace(feeding.code, feeding.code == "f", "Fungivores")) %>% 
+  filter(feeding.code != "e") %>% 
+  filter(feeding.code != "d") %>% 
+  filter(feeding.code != "") %>% 
+  rename(trophic.group = feeding.code) %>% 
+  rename(Length = Length.micm) %>% 
+  rename(Width = Width.micm)
+
+cp.values <- adult_data_1 %>% group_by(trophic.group) %>% summarise(cp.value = mean(cp.value)) 
+
+mulder_data$trophic.group <- substr(mulder_data$trophic.group,1,4)  
+adult_data_2 <- mulder_data %>%   
+  mutate(trophic.group = replace(trophic.group, trophic.group == "bact", "Bacterivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "fung", "Fungivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "herb", "Herbivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "omni", "Omnivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "pred", "Predators")) %>% 
+  filter(Juv_Adult == "adult")
+adult_data_2 <- adult_data_2 %>% select(-Juv_Adult)
+adult_data_2 <- merge(cp.values, adult_data_2[1:3], by = "trophic.group")
+
+adult_data <- rbind(adult_data_1, adult_data_2)
+```
+
+# Bodymass calculations
+## Adults
+```{r}
+#mass as function of length and width: W = (L ∙D^2)/(1.6 ∙ 10^6 )
+adult_data$mass <- with(adult_data,(Length * Width * Width)/(1.6*1E6))
+
+#Respiration rate in ug C per day as funciton of mass and aC02. b-value is set to 0.75
+adult_data$Respiration.rate <- with(adult_data,(a.CO2.daily * ((adult_data$mass)^0.75)))
+
+#Production rate in ug C per day as function of mass and cp value
+adult_data$Production.rate <- with(adult_data, (cperw* ((adult_data$mass)/(12 * adult_data$cp.value))))
+
+#Daily carbon budget in ug C; sum of respiration rate and production rate
+adult_data$Carbon.budget <- with(adult_data, (adult_data$Respiration.rate + adult_data$Production.rate))
+
+summary_adult <- adult_data %>% 
+  group_by(trophic.group) %>% 
+  summarise(n.measurements = n(), 
+            mean.mass.ug = mean(mass),
+            mean.daily.respiration.rate.ug = mean(Respiration.rate),
+            mean.daily.production.rate.ug = mean(Production.rate),
+            mean.daily.carbon.budget.ug = mean(Carbon.budget)) %>% 
+  na.omit() 
+summary_adult
+```
+
+## Juveniles
+```{r}
+juv_data <- mulder_2011 %>% 
+  select(Taxonomy, trophic.group, Length, Width, Juv_Adult)
+
+juv_data$trophic.group <- substr(juv_data$trophic.group,1,4)  
+juv_data <- juv_data %>%   
+  mutate(trophic.group = replace(trophic.group, trophic.group == "bact", "Bacterivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "fung", "Fungivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "herb", "Herbivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "omni", "Omnivores")) %>% 
+  mutate(trophic.group = replace(trophic.group, trophic.group == "pred", "Predators")) %>% 
+  filter(Juv_Adult == "juveniles")
+
+cp.values <- adult_data %>% group_by(trophic.group) %>% summarise(cp.value = mean(cp.value)) 
+
+juv_data<- merge(cp.values, juv_data[1:5], by = "trophic.group")
+
+#Mass as function of length and width: W = (L x D^2)/(1.6 x 10^6 )
+juv_data$Mass <- with(juv_data, (Length * Width * Width)/(1.6*1E6))
+
+#Respiration rate in ug C per day as function of mass. aCO2 is as calculated above b-value assumed at 0.75
+juv_data$Respiration.rate <- with(juv_data,(a.CO2.daily * ((juv_data$Mass)^0.75)))
+
+#Production rate in ug C per day as function of mass and cp value
+juv_data$Production.rate <- with(juv_data, (cperw* ((juv_data$Mass)/(12 * juv_data$cp.value))))
+
+#Daily carbon budget in ug C; sum of respiration rate and production rate
+juv_data$Carbon.budget <- with(juv_data, (juv_data$Respiration.rate + juv_data$Production.rate))
+
+summary_juv <- juv_data %>% 
+  group_by(trophic.group) %>% 
+  summarise(n.measurements = n(), 
+            mean.mass.ug = mean(Mass),
+            mean.daily.respiration.rate.ug = mean(Respiration.rate),
+            mean.daily.production.rate.ug = mean(Production.rate),
+            mean.daily.carbon.budget.ug = mean(Carbon.budget)) %>% 
+  na.omit() 
+summary_juv
+```
+# Number of nematodes per biome
+The numbers per biome are outputted from the geospatial models.
+```{r}
+#Import calculated totals of individuals
+numbers <- Biome_Abundances %>% 
+  select(-Total_Number) %>% 
+  gather(key, value, -Biome) %>% 
+  rename(trophic.group = key) %>% 
+  rename(Total.number = value)
+
+#Total number of individuals, per trophic group
+numbers_tot <- numbers %>% 
+  group_by(trophic.group) %>% 
+  summarise(tot.numb.indiv = sum(Total.number))
+
+#Total number of individuals, per trophic group, per biome
+numbers_biome <- numbers%>% group_by(trophic.group, Biome) %>% summarise(tot.numb.indiv = sum(Total.number)) 
+```
+
+## Per-trophic group sums
+```{r}
+#Total number of individuals, per trophic group
+numbers_tot_print <- numbers_tot  %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Number of individuals" = 2) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total")))
+numbers_tot_print
+```
+
+
+
+## Relative abundances per biome
+```{r}
+#Relative abundance per biome
+abundances <- Biome_Abundances %>%
+  mutate(Biome = replace(Biome, Biome == 1, "Tropical Moist Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 2, "Tropical Dry Forest")) %>%
+  mutate(Biome = replace(Biome, Biome == 3, "Tropical Coniferous Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 4, "Temperate Broadleaf Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 5, "Temperate Conifer Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 6, "Boreal Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 7, "Tropical Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 8, "Temperate Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 9, "Flooded Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 10, "Montane Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 11, "Tundra")) %>%
+  mutate(Biome = replace(Biome, Biome == 12, "Mediterranean Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 13, "Deserts")) %>% 
+  mutate(Biome = replace(Biome, Biome == 14, "Mangroves"))
+
+abundances_biome <- abundances %>% select(-Total_Number)
+abundances_biome[,2:6] <- prop.table(as.matrix(abundances_biome[,2:6]), 1)
+abundances_biome[,2:6] <- round(select_if(abundances_biome[,2:6], is.numeric), 3)
+abundances_biome
+
+abundances_tot <- abundances %>% select(Biome, Total_Number) 
+abundances_tot[,2] <- prop.table(as.matrix(abundances_tot[,2]), 2)
+abundances_tot[,2] <- round(abundances_tot[,2], 3)
+abundances_tot
+
+rel.abundance.trophic <- format(round(prop.table(data.frame(as.list(apply(subset(abundances, select= c(-Biome, -Total_Number)), 2, sum)))), 3), nsmall = 3)
+rel.abundance.trophic
+
+abundances_final <- rbind(rel.abundance.trophic)
+
+write.csv(abundances_final, "TableS5_rel_abundance_biome.csv")
+```
+
+# Carbon budget
+## Adults
+```{r}
+#Adults
+summary_tot_adult <- merge(summary_adult, numbers_tot, by = "trophic.group")
+#Total biomass in Gt: mean mass per trophic group x individuals
+summary_tot_adult$total.biomass.Gt <- with(summary_tot_adult, (summary_tot_adult$mean.mass.ug * summary_tot_adult$tot.numb.indiv)/1E21)
+#Total biomass in Gt C: biomass x 20% fresh mass x carbon content 52% of dry mass
+summary_tot_adult$total.Cbiomass.Gt <- with(summary_tot_adult, (summary_tot_adult$total.biomass.Gt * cperw))
+#Total monthly respiration in Gt C: daily rate x individuals x 31 days
+summary_tot_adult$total.mon.resp.Gt <- with(summary_tot_adult, (summary_tot_adult$mean.daily.respiration.rate.ug * summary_tot_adult$tot.numb.indiv * 31)/1E21)
+#Total monthly production in Gt C: daily rate x individuals x 31 days
+summary_tot_adult$total.mon.prod.Gt <- with(summary_tot_adult, (summary_tot_adult$mean.daily.production.rate.ug * summary_tot_adult$tot.numb.indiv * 31)/1E21)
+#Total monthly carbon budget in Gt C: sum of respiration + production
+summary_tot_adult$total.C.budget.Gt <- with(summary_tot_adult, (summary_tot_adult$total.mon.prod.Gt + summary_tot_adult$total.mon.resp.Gt))
+
+#Final output
+summary_tot_adult <- summary_tot_adult %>%  
+  select(trophic.group, tot.numb.indiv, total.biomass.Gt, total.Cbiomass.Gt, total.mon.resp.Gt, total.mon.prod.Gt, total.C.budget.Gt) %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Computed individuals" = 2) %>% 
+  rename("Fresh biomass (Mt)" = 3) %>% 
+  rename("Biomass (Mt C)" = 4) %>% 
+  rename("Monthly respiration (Mt C)" = 5) %>% 
+  rename("Monthly production (Mt C)" = 6) %>% 
+  rename("Monthly carbon budget (Mt C)" = 7) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total")))
+
+summary_tot_adult[,3:7] <- summary_tot_adult[,3:7] * 1000
+summary_tot_adult[,-1] <- round(select_if(summary_tot_adult, is.numeric), 2)
+summary_tot_adult[,2] <- formatC(summary_tot_adult[,2], format = "e", digits = 2)
+summary_tot_adult
+```
+
+## Juveniles
+```{r}
+#Juveniles
+summary_tot_juv <- merge(summary_juv, numbers_tot, by = "trophic.group")
+#Total biomass in Gt: mean mass per trophic group x individuals
+summary_tot_juv$total.biomass.Gt <- with(summary_tot_juv, (summary_tot_juv$mean.mass.ug * summary_tot_juv$tot.numb.indiv)/1E21)
+#Total biomass in Gt C: biomass x 20% fresh mass x carbon content 52% of dry mass
+summary_tot_juv$total.Cbiomass.Gt <- with(summary_tot_juv, (summary_tot_juv$total.biomass.Gt * cperw))
+#Total monthly respiration in Gt C: daily rate x individuals x 31 days
+summary_tot_juv$total.mon.resp.Gt <- with(summary_tot_juv, (summary_tot_juv$mean.daily.respiration.rate.ug * summary_tot_juv$tot.numb.indiv * 31)/1E21)
+#Total monthly production in Gt C: daily rate x individuals x 31 days
+summary_tot_juv$total.mon.prod.Gt <- with(summary_tot_juv, (summary_tot_juv$mean.daily.production.rate.ug * summary_tot_juv$tot.numb.indiv * 31)/1E21)
+# #Total monthly carbon budget in Gt C: sum of respiration + production
+summary_tot_juv$total.C.budget.Gt <- with(summary_tot_juv, (summary_tot_juv$total.mon.prod.Gt + summary_tot_juv$total.mon.resp.Gt))
+
+summary_tot_juv <- summary_tot_juv %>%  
+  select(trophic.group, tot.numb.indiv, total.biomass.Gt, total.Cbiomass.Gt, total.mon.resp.Gt, total.mon.prod.Gt, total.C.budget.Gt) %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Computed individuals" = 2) %>% 
+  rename("Fresh biomass (Mt)" = 3) %>% 
+  rename("Biomass (Mt C)" = 4) %>% 
+  rename("Monthly respiration (Mt C)" = 5) %>% 
+  rename("Monthly production (Mt C)" = 6) %>% 
+  rename("Carbon budget (Mt C)" = 7) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total")))
+
+summary_tot_juv[,3:7] <- summary_tot_juv[,3:7] * 1000
+summary_tot_juv[,-1] <- round(select_if(summary_tot_juv, is.numeric), 2)
+summary_tot_juv[,2] <- formatC(summary_tot_juv[,2], format = "e", digits = 2)
+```
+
+## Total carbon budget
+```{r}
+# Final table of biomass and carbon budget
+
+#Assuming a relative proportion of 30% adults and 70% juveniles
+adult_frac <- 0.30
+juv_frac <- 0.70
+
+#Multiply adult and juvenile summaries by relative proportions
+summary_tot_final <- summary_tot_juv[,1:2]
+summary_tot_final[3:7] <- ((adult_frac * summary_tot_adult[3:7]) + (juv_frac * summary_tot_juv[3:7])) 
+summary_tot_final[3:7] <- round(select_if(summary_tot_final[3:7], is.numeric), 2)
+summary_tot_final
+
+#Write to file
+setwd("~/Work/ETH/Projects/Nematodes/Calculations")
+write.csv(summary_tot_final, "Table1_carbon_budget_2.csv")
+```
+
+## outer bounds (i.e. ± values) in our estimates 
+```{r}
+#to calculate the spread of the data, we take the minimum and maximum predicted values across all ensembled models
+numbers_tot_min <- numbers_min %>% 
+  group_by(trophic.group) %>% 
+  summarise(tot.numb.indiv = sum(Total.number))
+
+numbers_tot_max <- numbers_max %>% 
+  group_by(trophic.group) %>% 
+  summarise(tot.numb.indiv = sum(Total.number))
+
+numbers_tot_min_print <- numbers_tot_min %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Number of individuals" = 2) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total")))
+
+numbers_tot_max_print <- numbers_tot_max %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Number of individuals" = 2) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total")))
+
+variation <- numbers_tot_print[,1]
+#variation$avg <- (((numbers_tot_max_print$"Number of individuals" - numbers_tot_print$"Number of individuals") + (numbers_tot_print$"Number of individuals" - numbers_tot_min_print$"Number of individuals"))/2)
+variation$mean.min <- (numbers_tot_print$"Number of individuals" - numbers_tot_min_print$"Number of individuals")
+#variation$max.mean <- (numbers_tot_max_print$"Number of individuals" - numbers_tot_print$"Number of individuals") 
+
+#Adults
+summary_tot_min_adult <- merge(summary_adult, numbers_tot_min, by = "trophic.group")
+#Total biomass in Gt: mean mass per trophic group x individuals
+summary_tot_min_adult$total.biomass.Gt <- with(summary_tot_min_adult, (summary_tot_min_adult$mean.mass.ug * summary_tot_min_adult$tot.numb.indiv)/1E21)
+#Total biomass in Gt C: biomass x 20% fresh mass x carbon content 52% of dry mass
+summary_tot_min_adult$total.Cbiomass.Gt <- with(summary_tot_min_adult, (summary_tot_min_adult$total.biomass.Gt * cperw))
+#Total monthly respiration in Gt C: daily rate x individuals x 31 days
+summary_tot_min_adult$total.mon.resp.Gt <- with(summary_tot_min_adult, (summary_tot_min_adult$mean.daily.respiration.rate.ug * summary_tot_min_adult$tot.numb.indiv * 31)/1E21)
+#Total monthly production in Gt C: daily rate x individuals x 31 days
+summary_tot_min_adult$total.mon.prod.Gt <- with(summary_tot_min_adult, (summary_tot_min_adult$mean.daily.production.rate.ug * summary_tot_min_adult$tot.numb.indiv * 31)/1E21)
+#Total monthly carbon budget in Gt C: sum of respiration + production
+summary_tot_min_adult$total.C.budget.Gt <- with(summary_tot_min_adult, (summary_tot_min_adult$total.mon.prod.Gt + summary_tot_min_adult$total.mon.resp.Gt))
+
+#Final output
+summary_tot_min_adult <- summary_tot_min_adult %>%  
+  select(trophic.group, tot.numb.indiv, total.biomass.Gt, total.Cbiomass.Gt, total.mon.resp.Gt, total.mon.prod.Gt, total.C.budget.Gt) %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Computed individuals" = 2) %>% 
+  rename("Fresh biomass (Mt)" = 3) %>% 
+  rename("Biomass (Mt C)" = 4) %>% 
+  rename("Monthly respiration (Mt C)" = 5) %>% 
+  rename("Monthly production (Mt C)" = 6) %>% 
+  rename("Monthly carbon budget (Mt C)" = 7) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total")))
+
+summary_tot_min_adult[3:7] <- summary_tot_min_adult[3:7] * 1000
+summary_tot_min_adult[,-1] <- round(select_if(summary_tot_min_adult, is.numeric), 3)
+summary_tot_min_adult[,2] <- formatC(summary_tot_min_adult[,2], format = "e", digits = 3)
+
+#Juveniles
+summary_tot_min_juv <- merge(summary_juv, numbers_tot_min, by = "trophic.group")
+#Total biomass in Gt: mean mass per trophic group x individuals
+summary_tot_min_juv$total.biomass.Gt <- with(summary_tot_min_juv, (summary_tot_min_juv$mean.mass.ug * summary_tot_min_juv$tot.numb.indiv)/1E21)
+#Total biomass in Gt C: biomass x 20% fresh mass x carbon content 52% of dry mass
+summary_tot_min_juv$total.Cbiomass.Gt <- with(summary_tot_min_juv, (summary_tot_min_juv$total.biomass.Gt * cperw))
+#Total monthly respiration in Gt C: daily rate x individuals x 31 days
+summary_tot_min_juv$total.mon.resp.Gt <- with(summary_tot_min_juv, (summary_tot_min_juv$mean.daily.respiration.rate.ug * summary_tot_min_juv$tot.numb.indiv * 31)/1E21)
+#Total monthly production in Gt C: daily rate x individuals x 31 days
+summary_tot_min_juv$total.mon.prod.Gt <- with(summary_tot_min_juv, (summary_tot_min_juv$mean.daily.production.rate.ug * summary_tot_min_juv$tot.numb.indiv * 31)/1E21)
+# #Total monthly carbon budget in Gt C: sum of respiration + production
+summary_tot_min_juv$total.C.budget.Gt <- with(summary_tot_min_juv, (summary_tot_min_juv$total.mon.prod.Gt + summary_tot_min_juv$total.mon.resp.Gt))
+
+summary_tot_min_juv <- summary_tot_min_juv %>%  
+  select(trophic.group, tot.numb.indiv, total.biomass.Gt, total.Cbiomass.Gt, total.mon.resp.Gt, total.mon.prod.Gt, total.C.budget.Gt) %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Computed individuals" = 2) %>% 
+  rename("Fresh biomass (Mt)" = 3) %>% 
+  rename("Biomass (Mt C)" = 4) %>% 
+  rename("Monthly respiration (Mt C)" = 5) %>% 
+  rename("Monthly production (Mt C)" = 6) %>% 
+  rename("Carbon budget (Mt C)" = 7) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total")))
+
+summary_tot_min_juv[3:7] <- summary_tot_min_juv[3:7] * 1000
+summary_tot_min_juv[,-1] <- round(select_if(summary_tot_min_juv, is.numeric), 3)
+summary_tot_min_juv[,2] <- formatC(summary_tot_min_juv[,2], format = "e", digits = 3)
+
+#Multiply adult and juvenile summaries by relative proportions
+summary_tot_min_final <- summary_tot_min_juv[,1:2]
+summary_tot_min_final[3:7] <- ((adult_frac * summary_tot_min_adult[3:7]) + (juv_frac * summary_tot_min_juv[3:7]))
+
+variation <- variation %>% 
+  rename("Trophic group" = 1) %>% 
+  rename("Number ±" = 2)
+variation$'Fresh biomass ±' <- summary_tot_final$`Fresh biomass (Mt)` - summary_tot_min_final$`Fresh biomass (Mt)`
+variation$"Biomass C ±" <- summary_tot_final$`Biomass (Mt C)` - summary_tot_min_final$`Biomass (Mt C)`
+variation$"Respiration ±" <- summary_tot_final$`Monthly respiration (Mt C)` - summary_tot_min_final$`Monthly respiration (Mt C)`
+variation$"Production ±" <- summary_tot_final$`Monthly production (Mt C)` - summary_tot_min_final$`Monthly production (Mt C)`
+variation$"Budget ±" <- summary_tot_final$`Monthly carbon budget (Mt C)` - summary_tot_min_final$`Monthly carbon budget (Mt C)`
+variation
+
+write.csv(variation, "variation.csv")
+
+```
+
+#Biomass per biome
+```{r}
+#Total biomass per biome, per trophic group
+
+#adult
+summary_biome_adult <- merge(summary_adult, numbers_biome, by = "trophic.group")
+summary_biome_adult$total.mon.resp.Gt <- with(summary_biome_adult, (summary_biome_adult$mean.daily.respiration.rate.ug * summary_biome_adult$tot.numb.indiv * 31)/1E21)
+summary_biome_adult$total.biomass.Gt <- with(summary_biome_adult, (summary_biome_adult$mean.mass.ug * summary_biome_adult$tot.numb.indiv)/1E21)
+summary_biome_adult$total.biomass.C.Gt <- with(summary_biome_adult, (summary_biome_adult$total.biomass.Gt * cperw * 1000))
+summary_biome_adult$total.mon.prod.Gt <- with(summary_biome_adult, (summary_biome_adult$mean.daily.production.rate.ug * summary_biome_adult$tot.numb.indiv * 31)/1E21)
+summary_biome_adult$total.C.budget.Gt <- with(summary_biome_adult, (summary_biome_adult$total.mon.prod.Gt + summary_biome_adult$total.mon.resp.Gt))
+
+
+biomesum_adult <- summary_biome_adult %>% group_by(Biome, trophic.group) %>% summarise(sum(total.biomass.C.Gt)) %>%
+  spread(key = trophic.group, value = 'sum(total.biomass.C.Gt)') 
+biomesum_adult <- transform(biomesum_adult, Total.biomass=rowSums(subset(biomesum_adult, select= -Biome))) %>% 
+  mutate(Biome = replace(Biome, Biome == 1, "Tropical Moist Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 2, "Tropical Dry Forest")) %>%
+  mutate(Biome = replace(Biome, Biome == 3, "Tropical Coniferous Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 4, "Temperate Broadleaf Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 5, "Temperate Conifer Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 6, "Boreal Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 7, "Tropical Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 8, "Temperate Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 9, "Flooded Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 10, "Montane Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 11, "Tundra")) %>%
+  mutate(Biome = replace(Biome, Biome == 12, "Mediterranean Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 13, "Deserts")) %>% 
+  mutate(Biome = replace(Biome, Biome == 14, "Mangroves")) %>% 
+  mutate(Biome = replace(Biome, Biome == 105, "Total"))
+
+# juveniles
+summary_biome_juv <- merge(summary_juv, numbers_biome, by = "trophic.group")
+summary_biome_juv$total.mon.resp.Gt <- with(summary_biome_juv, (summary_biome_juv$mean.daily.respiration.rate.ug * summary_biome_juv$tot.numb.indiv * 31)/1E21)
+summary_biome_juv$total.biomass.Gt <- with(summary_biome_juv, (summary_biome_juv$mean.mass.ug * summary_biome_juv$tot.numb.indiv)/1E21)
+summary_biome_juv$total.biomass.C.Gt <- with(summary_biome_juv, (summary_biome_juv$total.biomass.Gt * cperw * 1000))
+summary_biome_juv$total.mon.prod.Gt <- with(summary_biome_juv, (summary_biome_juv$mean.daily.production.rate.ug * summary_biome_juv$tot.numb.indiv * 31)/1E21)
+summary_biome_juv$total.C.budget.Gt <- with(summary_biome_juv, (summary_biome_juv$total.mon.prod.Gt + summary_biome_juv$total.mon.resp.Gt))
+
+biomesum_juv <- summary_biome_juv %>% group_by(Biome, trophic.group) %>% summarise(sum(total.biomass.C.Gt)) %>%
+  spread(key = trophic.group, value = 'sum(total.biomass.C.Gt)') 
+biomesum_juv <- transform(biomesum_juv, Total.biomass=rowSums(subset(biomesum_juv, select= -Biome))) %>% 
+  mutate(Biome = replace(Biome, Biome == 1, "Tropical Moist Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 2, "Tropical Dry Forest")) %>%
+  mutate(Biome = replace(Biome, Biome == 3, "Tropical Coniferous Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 4, "Temperate Broadleaf Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 5, "Temperate Conifer Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 6, "Boreal Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 7, "Tropical Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 8, "Temperate Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 9, "Flooded Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 10, "Montane Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 11, "Tundra")) %>%
+  mutate(Biome = replace(Biome, Biome == 12, "Mediterranean Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 13, "Deserts")) %>% 
+  mutate(Biome = replace(Biome, Biome == 14, "Mangroves")) %>% 
+  mutate(Biome = replace(Biome, Biome == 105, "Total"))
+
+biomesum <- biomesum_adult[,1, drop = FALSE]
+biomesum[2:7] <- ((adult_frac * biomesum_adult[2:7]) + (juv_frac * biomesum_juv[2:7]))
+
+biomesum_print <- biomesum %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total"))) %>% 
+  rename("Bacterivores (Mt C)" = 2) %>% 
+  rename("Fungivores (Mt C)" = 3) %>% 
+  rename("Herbivores (Mt C)" = 4) %>% 
+  rename("Omnivores (Mt C)" = 5) %>% 
+  rename("Predators (Mt C)" = 6) %>% 
+  rename("Total biomass (Mt C)" = 7) 
+biomesum_print[-1] <- format(round(biomesum_print[-1], 3), nsmall = 5)
+biomesum_print
+
+write.csv(biomesum_print, "TableS6_biomass.csv")
+```
+
+#Relative biomass of each trophic group
+```{r}
+#Relative biomass of each trophic group 
+rel.biomass.trophic <- format(round(prop.table(data.frame(as.list(apply(subset(biomesum, select= c(-Biome, -Total.biomass)), 2, sum)))), 3), nsmall = 3)
+rel.biomass.trophic
+```
+
+#Relative biomass of each trophic group per biome
+```{r}
+#Relative biomass of each trophic group per biome
+rel.biomass.biome <- as.data.frame(prop.table(as.matrix(biomesum[2:6]),1))
+rel.biomass.biome <- cbind(biomesum$Biome, format(round(rel.biomass.biome, 3), nsmall = 3)) %>% 
+  rename(Biome = 1)
+
+rel.biomass.trophic$Biome <- "Total"
+rel.biomass <- rbind(rel.biomass.biome,rel.biomass.trophic)
+```
+
+```{r}
+#relative biomass per biome
+rel.biomass.sum <- as.data.frame(prop.table(as.matrix(subset(biomesum, select = Total.biomass))),1) %>% 
+  bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Total"))) %>% 
+  rename("Across trophic groups - fraction of total biomass" = 1)
+
+rel.biomass.final <- cbind(rel.biomass, format(round(rel.biomass.sum, 3), nsmall = 3)) %>% 
+  rename("Bacterivores - fraction of total" = 2) %>% 
+  rename("Fungivores - fraction of total" = 3) %>% 
+  rename("Herbivores - fraction of total" = 4) %>% 
+  rename("Omnivores - fraction of total" = 5) %>% 
+  rename("Predators - fraction of total" = 6)
+rel.biomass.final
+
+write.csv(rel.biomass.final, "TableS7_rel_biomass.csv")
+```
+
+#Comparing nematodes to humans
+```{r}
+#total nematode biomass (freshweight) in Gt:
+tot_nema_biomass <- summary_tot_final$`Fresh biomass (Gt)`[6]
+
+#Human biomass is calculated using assumptions from Bar-On et al. 2018 PNAS 
+#human population from 2015 UN data
+human_pop <- 7383008.82 * 1000 #https://esa.un.org/unpd/wpp/Download/Standard/Population/
+
+#human population versus nematode population in billions
+cat("For each human on Earth,", format(round((numbers_tot_print$`Number of individuals`[6]/human_pop)/1E9, 1), nsmall = 1), "billion nematodes are present.")
+
+#Average human weight assumed at 50 kg by Hern et al. 1999 https://link.springer.com/article/10.1023/A:1022153110536
+human_weight <- 50
+human_biomass <- (human_pop * human_weight)/1E12
+
+#nematode biomass as fraction of human biomass
+cat("Total soil nematode biomass represents", format(round((tot_nema_biomass/human_biomass*100), 1)),"% of total human biomass")
+```
+

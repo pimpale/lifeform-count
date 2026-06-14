@@ -1,0 +1,14 @@
+,0,0
+env,above_ground,soil
+aggregated biome,,
+Boreal Forests/Taiga,2 (2-3),20 (8-30)
+Crops,2 (1-3),40 (20-60)
+Deserts and Xeric Shrublands,0.07 (0.002-0.2),3 (0.3-7)
+"Mediterranean Forests, Woodlands and Scrub",,1 (0.3-2)
+Pasture,4 (0.7-10),40 (20-70)
+Temperate Forests,2 (0.7-4),30 (10-50)
+"Temperate Grasslands, Savannas and Shrublands",0.9 (0.5-2),10 (3-30)
+Tropical and Subtropical Forests,20 (8-60),50 (30-90)
+"Tropical and Subtropical Grasslands, Savannas and Shrublands",9 (8-10),20 (10-40)
+Tundra,,8 (4-10)
+World Total,40 (20-90),200 (100-400)

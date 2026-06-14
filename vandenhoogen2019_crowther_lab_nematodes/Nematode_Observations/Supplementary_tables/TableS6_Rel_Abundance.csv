@@ -1,0 +1,17 @@
+,Biome,Bacterivores,Fungivores,Herbivores,Omnivores,Predators,,Total
+1,Tropical Moist Forests,0.443,0.12,0.249,0.116,0.071,,0.103
+2,Tropical Dry Forest,0.447,0.124,0.285,0.096,0.047,,0.016
+3,Tropical Coniferous Forests,0.423,0.135,0.235,0.127,0.08,,0.005
+4,Temperate Broadleaf Forests,0.445,0.153,0.248,0.108,0.045,,0.124
+5,Temperate Conifer Forests,0.39,0.201,0.239,0.114,0.057,,0.042
+6,Boreal Forests,0.446,0.158,0.293,0.074,0.029,,0.249
+7,Tropical Grasslands,0.371,0.14,0.354,0.094,0.041,,0.081
+8,Temperate Grasslands,0.478,0.138,0.278,0.078,0.027,,0.079
+9,Flooded Grasslands,0.41,0.141,0.308,0.095,0.045,,0.005
+10,Montane Grasslands,0.395,0.166,0.26,0.119,0.06,,0.042
+11,Tundra,0.462,0.13,0.303,0.071,0.033,,0.137
+12,Mediterranean Forests,0.435,0.155,0.263,0.098,0.049,,0.014
+13,Deserts,0.423,0.127,0.296,0.079,0.075,,0.098
+14,Mangroves,0.443,0.137,0.221,0.127,0.072,,0.002
+,,,,,,,,
+,Total,0.435,0.145,0.283,0.089,0.045,,

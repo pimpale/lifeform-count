@@ -1,0 +1,805 @@
+,units type_x,aggregated taxon,aggregated biome,site,mass density,mass_std,units type_y,population density,pop_std,eff_mass_B,eff_mass_std_B,eff_mass_G,eff_mass_std_G,mass_B,mass_B_std,mass_G,mass_G_std
+0,mg,Acari,Boreal Forests/Taiga,"Birch forest, Kevo",1101.6000000000001,282.40000000000003,,,,,,,,1101.6000000000001,282.40000000000003,1101.6000000000001,282.40000000000003
+1,mg,Acari,Boreal Forests/Taiga,C01 – N. Finland – Kevo – pine forest,677.6594358,0.0,,,,,,,,677.6594358,0.0,677.6594358,0.0
+2,mg,Acari,Boreal Forests/Taiga,C46 – USA – Oregon – Andrews Experimental Forest – Pseudotsuga forest,585.1096921,0.0,,,,,,,,585.1096921,0.0,585.1096921,0.0
+3,mg,Acari,Boreal Forests/Taiga,C48 – Japan – Shiga-Yama – subalpine conifer forest,157.3578672,0.0,,,,,,,,157.3578672,0.0,157.3578672,0.0
+4,mg,Acari,Boreal Forests/Taiga,C49 – Australia – Mt. Kosciusco – dry Eucalyptus forest,58.56365708,0.0,,,,,,,,58.56365708,0.0,58.56365708,0.0
+5,mg,Acari,Boreal Forests/Taiga,C50 – Australia – Mt. Kosciusco – wet Eucalyptus forest,96.85946695,0.0,,,,,,,,96.85946695,0.0,96.85946695,0.0
+6,mg,Acari,Boreal Forests/Taiga,Ecosystem Management Emulating  Natural  Disturbance research site,1122.0,0.0,,,,,,,,1122.0,0.0,1122.0,0.0
+7,mg,Acari,Boreal Forests/Taiga,Fell Riisitunturi,437.6000000000001,0.0,,,,,,,,437.6000000000001,0.0,437.6000000000001,0.0
+8,mg,Acari,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 1- open ground",65.52,0.0,,,,,,,,65.52,0.0,65.52,0.0
+9,mg,Acari,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 1- under plant associations",91.44000000000001,0.0,,,,,,,,91.44000000000001,0.0,91.44000000000001,0.0
+10,mg,Acari,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 2",143.96,0.0,,,,,,,,143.96,0.0,143.96,0.0
+11,mg,Acari,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 3",154.08000000000004,0.0,,,,,,,,154.08000000000004,0.0,154.08000000000004,0.0
+12,mg,Acari,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 4-  in the moss
+and turf layers",43.52,0.0,,,,,,,,43.52,0.0,43.52,0.0
+13,mg,Acari,Boreal Forests/Taiga,"Ivantjarnsheden, Jadraas, Gastrikland",515.3,0.0,,,,,,,,515.3,0.0,515.3,0.0
+14,mg,Acari,Boreal Forests/Taiga,Jyvaskyla- Natural Deciduous forest,179.33333333333334,0.0,,,,,,,,179.33333333333334,0.0,179.33333333333334,0.0
+15,mg,Acari,Boreal Forests/Taiga,Jyvaskyla-Birch after Field,379.6,0.0,,,,,,,,379.6,0.0,379.6,0.0
+16,mg,Acari,Boreal Forests/Taiga,Jyvaskyla-Birch after Spruce,505.29999999999995,0.0,,,,,,,,505.29999999999995,0.0,505.29999999999995,0.0
+17,mg,Acari,Boreal Forests/Taiga,Lammi commune-OMT,931.5999999999999,0.0,,,,,,,,931.5999999999999,0.0,931.5999999999999,0.0
+18,mg,Acari,Boreal Forests/Taiga,"Pine forest, Kevo",653.6,200.8,,,,,,,,653.6,200.8,653.6,200.8
+19,mg,Acari,Boreal Forests/Taiga,Scots pine forest in Finland,351.0,0.0,,,,,,,,351.0,0.0,351.0,0.0
+20,mg,Acari,Boreal Forests/Taiga,harviala-MT,787.2,0.0,,,,,,,,787.2,0.0,787.2,0.0
+21,mg,Acari,Boreal Forests/Taiga,oulanka-HMT,489.20000000000005,0.0,,,,,,,,489.20000000000005,0.0,489.20000000000005,0.0
+22,mg,Acari,Deserts and Xeric Shrublands,Rock Valley,9.145,0.0,,,,,,,,9.145,0.0,9.145,0.0
+23,mg,Acari,Pasture,Bulldozed mesquite control,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+24,mg,Acari,Pasture,Camp  Well,2.0,0.0,,,,,,,,2.0,0.0,2.0,0.0
+25,mg,Acari,Pasture,East mesquite site,2.0,0.0,,,,,,,,2.0,0.0,2.0,0.0
+26,mg,Acari,Pasture,Exclosure west control,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+27,mg,Acari,Pasture,Mayfield Well ,6.0,0.0,,,,,,,,6.0,0.0,6.0,0.0
+28,mg,Acari,Pasture,West Well ,4.0,0.0,,,,,,,,4.0,0.0,4.0,0.0
+29,mg,Acari,Temperate Forests,Andersby ingsbackar,599.0,299.5,,,,,,,,599.0,299.5,599.0,299.5
+30,mg,Acari,Temperate Forests,Andersby ingsbackar - quercus / betula / corylus,600.0,0.0,,,,,,,,600.0,0.0,600.0,0.0
+31,mg,Acari,Temperate Forests,"Arch Rock,located in Vinton County – Intermediate",180.0,0.0,,,,,,,,180.0,0.0,180.0,0.0
+32,mg,Acari,Temperate Forests,"Arch Rock,located in Vinton County – Mesic",198.0,0.0,,,,,,,,198.0,0.0,198.0,0.0
+33,mg,Acari,Temperate Forests,"Arch Rock,located in Vinton County – Xeric",326.0,0.0,,,,,,,,326.0,0.0,326.0,0.0
+34,mg,Acari,Temperate Forests,Cedar-Hemlock,70.0,0.0,,,,,,,,70.0,0.0,70.0,0.0
+35,mg,Acari,Temperate Forests,Coweeta Hydrologic Laboratory,766.0,0.0,,,,,,,,766.0,0.0,766.0,0.0
+36,mg,Acari,Temperate Forests,Coweeta Hydrologic Laboratory - mature mixed oak,229.0,0.0,,,,,,,,229.0,0.0,229.0,0.0
+37,mg,Acari,Temperate Forests,Coweeta Hydrologic Laboratory - plantation white pine,720.0,0.0,,,,,,,,720.0,0.0,720.0,0.0
+38,mg,Acari,Temperate Forests,Danish oak forest,24.0,0.0,,,,,,,,24.0,0.0,24.0,0.0
+39,mg,Acari,Temperate Forests,De Hooge veluwe,84.0,0.0,,,,,,,,84.0,0.0,84.0,0.0
+40,mg,Acari,Temperate Forests,Geels skov- fagus / anemone / asperula - mull,90.0,0.0,,,,,,,,90.0,0.0,90.0,0.0
+41,mg,Acari,Temperate Forests,Geels skov- fagus / melica / asperula - mull,70.0,0.0,,,,,,,,70.0,0.0,70.0,0.0
+42,mg,Acari,Temperate Forests,Gottinger Wald,100.4,0.0,,,,,,,,100.4,0.0,100.4,0.0
+43,mg,Acari,Temperate Forests,Grib skov - fagus / oxalis - moder,80.0,0.0,,,,,,,,80.0,0.0,80.0,0.0
+44,mg,Acari,Temperate Forests,H01 – N. Finland – Kevo – birch forest,1118.582252,0.0,,,,,,,,1118.582252,0.0,1118.582252,0.0
+45,mg,Acari,Temperate Forests,H12 – Denmark – Hestehaven – beech forest,373.356967,0.0,,,,,,,,373.356967,0.0,373.356967,0.0
+46,mg,Acari,Temperate Forests,H22 – Germany – Gorlitz – Fraxino-Ulmetum,154.44019,0.0,,,,,,,,154.44019,0.0,154.44019,0.0
+47,mg,Acari,Temperate Forests,H32 – Netherlands – Meerdink – mixed deciduous forest,1246.222899,0.0,,,,,,,,1246.222899,0.0,1246.222899,0.0
+48,mg,Acari,Temperate Forests,H52 – Italy – Frassenelle – mixed oak forest,510.1908872,0.0,,,,,,,,510.1908872,0.0,510.1908872,0.0
+49,mg,Acari,Temperate Forests,H59 – USA – Tennessee – Oak Ridge – Liriodendron forest,6432.238916,0.0,,,,,,,,6432.238916,0.0,6432.238916,0.0
+50,mg,Acari,Temperate Forests,Hemlock-Amabilis fir,3166.0,0.0,,,,,,,,3166.0,0.0,3166.0,0.0
+51,mg,Acari,Temperate Forests,Japanese beech forest,40.0,0.0,,,,,,,,40.0,0.0,40.0,0.0
+52,mg,Acari,Temperate Forests,Kiesdorfer wald - fraxinus / quercus / prunus - mull,150.0,0.0,,,,,,,,150.0,0.0,150.0,0.0
+53,mg,Acari,Temperate Forests,"Lusignan, France",23.600000000000005,0.0,,,,,,,,23.600000000000005,0.0,23.600000000000005,0.0
+54,mg,Acari,Temperate Forests,Meathop wood - quercus / fraxinus / corylus,250.0,0.0,,,,,,,,250.0,0.0,250.0,0.0
+55,mg,Acari,Temperate Forests,New York – Forest,1238.0,0.0,,,,,,,,1238.0,0.0,1238.0,0.0
+56,mg,Acari,Temperate Forests,New York – Willow crops,664.0,0.0,,,,,,,,664.0,0.0,664.0,0.0
+57,mg,Acari,Temperate Forests,"Oak Ridge, Tennesse",96.0,0.0,,,,,,,,96.0,0.0,96.0,0.0
+58,mg,Acari,Temperate Forests,"Oak-birch forest in Tynaarlo, Netherlands",51.01,0.0,,,,,,,,51.01,0.0,51.01,0.0
+59,mg,Acari,Temperate Forests,"Poplar forest, Marknesse, Netherlands",13.76,0.0,,,,,,,,13.76,0.0,13.76,0.0
+60,mg,Acari,Temperate Forests,Solling (B 1) - fagus / luzula - moder,2290.0,0.0,,,,,,,,2290.0,0.0,2290.0,0.0
+61,mg,Acari,Temperate Forests,Solling 135-yr-old   beech   forest  ,465.0,0.0,,,,,,,,465.0,0.0,465.0,0.0
+62,mg,Acari,Temperate Forests,"Solling mountains, Dassel - 120 years stand - beech forest",736.8140000000001,0.0,,,,,,,,736.8140000000001,0.0,736.8140000000001,0.0
+63,mg,Acari,Temperate Forests,"Solling mountains, Dassel - 120 years stand - mixed forest",682.648,0.0,,,,,,,,682.648,0.0,682.648,0.0
+64,mg,Acari,Temperate Forests,"Solling mountains, Dassel - 120 years stand - spruce forest",707.409,0.0,,,,,,,,707.409,0.0,707.409,0.0
+65,mg,Acari,Temperate Forests,"Solling mountains, Dassel - 30 years stand - beech forest",870.29,0.0,,,,,,,,870.29,0.0,870.29,0.0
+66,mg,Acari,Temperate Forests,"Solling mountains, Dassel - 30 years stand - mixed forest",929.742,0.0,,,,,,,,929.742,0.0,929.742,0.0
+67,mg,Acari,Temperate Forests,"Solling mountains, Dassel - 30 years stand - spruce forest",746.327,0.0,,,,,,,,746.327,0.0,746.327,0.0
+68,mg,Acari,Temperate Forests,"Spruce forest in Madonna  di  Campiglio, Italy – Adult",1878.0,0.0,,,,,,,,1878.0,0.0,1878.0,0.0
+69,mg,Acari,Temperate Forests,"Spruce forest in Madonna  di  Campiglio, Italy – Regeneration",2044.0,0.0,,,,,,,,2044.0,0.0,2044.0,0.0
+70,mg,Acari,Temperate Forests,Stampeskoven - quercus / mercurialis - mull,20.0,0.0,,,,,,,,20.0,0.0,20.0,0.0
+71,mg,Acari,Temperate Forests,Tharandter Wald – 25 years,806.0,0.0,,,,,,,,806.0,0.0,806.0,0.0
+72,mg,Acari,Temperate Forests,Tharandter Wald – 45 years,368.0,0.0,,,,,,,,368.0,0.0,368.0,0.0
+73,mg,Acari,Temperate Forests,Tharandter Wald – 5 years,300.0,0.0,,,,,,,,300.0,0.0,300.0,0.0
+74,mg,Acari,Temperate Forests,Tharandter Wald – 95 years,344.0,0.0,,,,,,,,344.0,0.0,344.0,0.0
+75,mg,Acari,Temperate Forests,"Veluwe, Netherlands",1104.1375,0.0,,,,,,,,1104.1375,0.0,1104.1375,0.0
+76,mg,Acari,Temperate Forests,mesic deciduous forest,6811.5,0.0,,,,,,,,6811.5,0.0,6811.5,0.0
+77,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",G36 – Canada – Saskatchewan – Matador – mixed prairie,84.09951613,0.0,,,,,,,,84.09951613,0.0,84.09951613,0.0
+78,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",G57 – Australia – Mt. Kosciusco – alpine herbfield,105.2753072,0.0,,,,,,,,105.2753072,0.0,105.2753072,0.0
+79,mg,Acari,"Temperate Grasslands, Savannas and Shrublands","Grassland in Finsterwolde, Netherlands",8.886,0.0,,,,,,,,8.886,0.0,8.886,0.0
+80,mg,Acari,"Temperate Grasslands, Savannas and Shrublands","Grassland in Lelystad, Netherlands",8.654,0.0,,,,,,,,8.654,0.0,8.654,0.0
+81,mg,Acari,"Temperate Grasslands, Savannas and Shrublands","Grassland in Tynaarlo, Netherlands",46.0,0.0,,,,,,,,46.0,0.0,46.0,0.0
+82,mg,Acari,"Temperate Grasslands, Savannas and Shrublands","Grassland in Wieringermeer, Netherlands",26.005000000000003,0.0,,,,,,,,26.005000000000003,0.0,26.005000000000003,0.0
+83,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",Hygum Jutland Denmark,436.0,0.0,,,,,,,,436.0,0.0,436.0,0.0
+84,mg,Acari,"Temperate Grasslands, Savannas and Shrublands","Lusignan, France",474.0,0.0,,,,,,,,474.0,0.0,474.0,0.0
+85,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",N E.R.C. Soil Biodiversity Programme site at Sourhope in the Cheviot Hills,360.8,0.0,,,,,,,,360.8,0.0,360.8,0.0
+86,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",New York - Herbaceous fields,540.0,0.0,,,,,,,,540.0,0.0,540.0,0.0
+87,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",New York – Shrubby fields,400.0,0.0,,,,,,,,400.0,0.0,400.0,0.0
+88,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",Pawnee National Grassland,0.48333333333333334,0.0,,,,,,,,0.48333333333333334,0.0,0.48333333333333334,0.0
+89,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",Sankt Koloman meadow,174.0,0.0,,,,,,,,174.0,0.0,174.0,0.0
+90,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",Shergyla Mountain – meadow,342.0,0.0,,,,,,,,342.0,0.0,342.0,0.0
+91,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",Shergyla Mountain – open grassland in Quercus forests,1224.0,0.0,,,,,,,,1224.0,0.0,1224.0,0.0
+92,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",Shergyla Mountain – open grassland in sparse forests,478.0,0.0,,,,,,,,478.0,0.0,478.0,0.0
+93,mg,Acari,"Temperate Grasslands, Savannas and Shrublands",Spikbole farm,129.0,9.0,,,,,,,,129.0,9.0,129.0,9.0
+94,mg,Acari,Tropical and Subtropical Forests,E09 – Borneo – Sepilok – tropical rain forest,29.27122319,0.0,,,,,,,,29.27122319,0.0,29.27122319,0.0
+95,mg,Acari,Tropical and Subtropical Forests,E16 – Zaire – Haut-Shaba – dry dense evergreen forest,147.5804604,0.0,,,,,,,,147.5804604,0.0,147.5804604,0.0
+96,mg,Acari,Tropical and Subtropical Forests,"E17 – Zaire – Haut-Shaba – miombo, open forest",31.33687781,0.0,,,,,,,,31.33687781,0.0,31.33687781,0.0
+97,mg,Acari,Tropical and Subtropical Forests,E18 – Zaire – Haut-Shaba – river forest,124.2220196,0.0,,,,,,,,124.2220196,0.0,124.2220196,0.0
+98,mg,Acari,Tropical and Subtropical Forests,"Teaching and Research Farm of the Obafemi Awolowo University, Ile-Ife, Oyo State, Nigeria - Forest Plot",479.8333333333333,0.0,,,,,,,,479.8333333333333,0.0,479.8333333333333,0.0
+99,mg,Acari,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S15 – Zaire – Haut-Shaba – savanna,26.6267719,0.0,,,,,,,,26.6267719,0.0,26.6267719,0.0
+100,mg,Acari,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S16 – S. Africa – Potchefstroom – thorn tree biotope,121.6189249,0.0,,,,,,,,121.6189249,0.0,121.6189249,0.0
+101,mg,Acari,Tundra,225 wet medow,79.1,0.0,,,,,,,,79.1,0.0,79.1,0.0
+102,mg,Acari,Tundra,253 mesic medow,166.3,0.0,,,,,,,,166.3,0.0,166.3,0.0
+103,mg,Acari,Tundra,254 wet medow,87.3,0.0,,,,,,,,87.3,0.0,87.3,0.0
+104,mg,Acari,Tundra,407 wet medow,140.2,0.0,,,,,,,,140.2,0.0,140.2,0.0
+105,mg,Acari,Tundra,408 wet medow,52.6,0.0,,,,,,,,52.6,0.0,52.6,0.0
+106,mg,Acari,Tundra,410 polygon trough,72.1,0.0,,,,,,,,72.1,0.0,72.1,0.0
+107,mg,Acari,Tundra,411 polygon basin,15.4,0.0,,,,,,,,15.4,0.0,15.4,0.0
+108,mg,Acari,Tundra,413 low polygon rim,104.3,0.0,,,,,,,,104.3,0.0,104.3,0.0
+109,mg,Acari,Tundra,429 raised center polygon,182.0,0.0,,,,,,,,182.0,0.0,182.0,0.0
+110,mg,Acari,Tundra,"Low alpine heath, Kevo",1384.0,326.8,,,,,,,,1384.0,326.8,1384.0,326.8
+111,mg,Acari,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Cushion",89.9,0.0,,,,,,,,89.9,0.0,89.9,0.0
+112,mg,Acari,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Deschampsia",32.45,0.0,,,,,,,,32.45,0.0,32.45,0.0
+113,mg,Acari,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Kobresia",200.65,0.0,,,,,,,,200.65,0.0,200.65,0.0
+114,mg,Acari,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Willow",156.8,0.0,,,,,,,,156.8,0.0,156.8,0.0
+115,mg,Acari,Tundra,"T05 – N. Canada, Devon Isl./ raised beach/crest",53.73639573,0.0,,,,,,,,53.73639573,0.0,53.73639573,0.0
+116,mg,Acari,Tundra,"T06 - Truelove site, N. Canada, Devon Isl./ meadow",36.97430773,0.0,,,,,,,,36.97430773,0.0,36.97430773,0.0
+117,mg,Acari,Tundra,T19 – Alaska – Point Barrow – Wet meadow,72.77726708,0.0,,,,,,,,72.77726708,0.0,72.77726708,0.0
+118,mg,Acari,Tundra,T20 – Alaska – Point Barrow – Wet meadow,117.4776939,0.0,,,,,,,,117.4776939,0.0,117.4776939,0.0
+119,mg,Acari,Tundra,T21 – Alaska – Point Barrow – Mesic meadow,189.4926097,0.0,,,,,,,,189.4926097,0.0,189.4926097,0.0
+120,mg,Acari,Tundra,T22 – Alaska – Point Barrow – polygon trough,71.6925569,0.0,,,,,,,,71.6925569,0.0,71.6925569,0.0
+121,mg,Acari,Tundra,T23 – Alaska – Point Barrow – polygon trough,19.81853517,0.0,,,,,,,,19.81853517,0.0,19.81853517,0.0
+122,mg,Acari,Tundra,T24 – Alaska – Point Barrow – polygon rim,143.9025919,0.0,,,,,,,,143.9025919,0.0,143.9025919,0.0
+123,mg,Acari,Tundra,T25 – Alaska – Point Barrow – raised polygon,218.7607147,0.0,,,,,,,,218.7607147,0.0,218.7607147,0.0
+124,mg,Acari,Tundra,T26 – Alaska – Point Barrow – Wet meadow,139.8827594,0.0,,,,,,,,139.8827594,0.0,139.8827594,0.0
+125,mg,Acari,Tundra,T27 – Alaska – Point Barrow – Wet meadow,54.08670901,0.0,,,,,,,,54.08670901,0.0,54.08670901,0.0
+126,mg,Acari,Tundra,T28 – Alaska – Prudhoe Bay – marsh,26.52368603,0.0,,,,,,,,26.52368603,0.0,26.52368603,0.0
+127,mg,Acari,Tundra,T29 – Alaska – Prudhoe Bay – mesic heath,78.73177522,0.0,,,,,,,,78.73177522,0.0,78.73177522,0.0
+128,mg,Acari,Tundra,T30 – Alaska – Prudhoe Bay – dry heath,117.7091821,0.0,,,,,,,,117.7091821,0.0,117.7091821,0.0
+129,mg,Acari,Tundra,T31 – N. Finland – Kevo – subalpine heath,1450.401812,0.0,,,,,,,,1450.401812,0.0,1450.401812,0.0
+130,mg,Acari,Tundra,T32 – N. Sweden – Abisko – mire,79.37583214,0.0,,,,,,,,79.37583214,0.0,79.37583214,0.0
+131,mg,Acari,Tundra,T39 – S. Norway – Hardangervidda – wet meadow,184.8701047,0.0,,,,,,,,184.8701047,0.0,184.8701047,0.0
+132,mg,Acari,Tundra,T40 – S. Norway – Hardangervidda – dry meadow,484.7665657,0.0,,,,,,,,484.7665657,0.0,484.7665657,0.0
+133,mg,Acari,Tundra,T41 – S. Norway – Hardangervidda – lichen heath,283.6288101,0.0,,,,,,,,283.6288101,0.0,283.6288101,0.0
+134,mg,Acari,Tundra,T42 – England – Moor House – blanket bog – Calluna,448.9970936,0.0,,,,,,,,448.9970936,0.0,448.9970936,0.0
+135,mg,Acari,Tundra,T43 – England – Moor House – Juncus moor,367.873428,0.0,,,,,,,,367.873428,0.0,367.873428,0.0
+136,mg,Acari,Tundra,T44 – England – Moor House – alluvial grassland,744.0709146,0.0,,,,,,,,744.0709146,0.0,744.0709146,0.0
+137,mg,Acari,Tundra,T45 – England – Moor House – limestone grassland,398.7541771,0.0,,,,,,,,398.7541771,0.0,398.7541771,0.0
+138,mg,Acari,Tundra,T46 – Ireland – Glenamoy – virgin bog – Sphagnum,80.65590495,0.0,,,,,,,,80.65590495,0.0,80.65590495,0.0
+139,mg,Acari,Tundra,T47 – Ireland – Glenamoy – virgin bog – heather,146.4518589,0.0,,,,,,,,146.4518589,0.0,146.4518589,0.0
+140,mg,Acari,Tundra,T48 – Ireland – Glenamoy – grassland,57.83704164,0.0,,,,,,,,57.83704164,0.0,57.83704164,0.0
+141,mg,Acari,Tundra,T60 – Austria – Obergurgl – manured alpine meadow,255.1467291,0.0,,,,,,,,255.1467291,0.0,255.1467291,0.0
+142,mg,Acari,Tundra,T61 – Austria – Obergurgl – alpine sedge mat,89.00417443,0.0,,,,,,,,89.00417443,0.0,89.00417443,0.0
+143,mg,Acari,Tundra,T70 – Antarctica – Signy Island – crustone lichen,975.803925,0.0,,,,,,,,975.803925,0.0,975.803925,0.0
+144,mg,Acari,Tundra,T71 – Antarctica – Signy Island – fruticose lichen and moss,15.53224836,0.0,,,,,,,,15.53224836,0.0,15.53224836,0.0
+145,mg,Acari,Tundra,T72 – Antarctica – Signy Island – moss carpet,19.40638932,0.0,,,,,,,,19.40638932,0.0,19.40638932,0.0
+146,mg,Acari,Tundra,T73 – Antarctica – Signy Island – moss turf,8.247462007,0.0,,,,,,,,8.247462007,0.0,8.247462007,0.0
+147,mg,Acari,Tundra,T74 – Antarctica – Signy Island – alga,269.2843002,0.0,,,,,,,,269.2843002,0.0,269.2843002,0.0
+148,mg,Acari,Tundra,T75 – Antarctica – Signy Island – grass and cushion chamaephytes,58.40030935,0.0,,,,,,,,58.40030935,0.0,58.40030935,0.0
+149,mg,Collembola,Boreal Forests/Taiga,"Birch forest, Kevo",128.96,48.64,,,,,,,,128.96,48.64,128.96,48.64
+150,mg,Collembola,Boreal Forests/Taiga,C01 – N. Finland – Kevo – pine forest,73.44658733,0.0,,,,,,,,73.44658733,0.0,73.44658733,0.0
+151,mg,Collembola,Boreal Forests/Taiga,C46 – USA – Oregon – Andrews Experimental Forest – Pseudotsuga forest,52.13194883,0.0,,,,,,,,52.13194883,0.0,52.13194883,0.0
+152,mg,Collembola,Boreal Forests/Taiga,C48 – Japan – Shiga-Yama – subalpine conifer forest,155.8250026,0.0,,,,,,,,155.8250026,0.0,155.8250026,0.0
+153,mg,Collembola,Boreal Forests/Taiga,C49 – Australia – Mt. Kosciusco – dry Eucalyptus forest,41.38581875,0.0,,,,,,,,41.38581875,0.0,41.38581875,0.0
+154,mg,Collembola,Boreal Forests/Taiga,C50 – Australia – Mt. Kosciusco – wet Eucalyptus forest,65.73724739,0.0,,,,,,,,65.73724739,0.0,65.73724739,0.0
+155,mg,Collembola,Boreal Forests/Taiga,Fell Riisitunturi,42.88,0.0,,,,,,,,42.88,0.0,42.88,0.0
+156,mg,Collembola,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 1- open ground",46.24,0.0,,,,,,,,46.24,0.0,46.24,0.0
+157,mg,Collembola,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 1- under plant associations",148.032,0.0,,,,,,,,148.032,0.0,148.032,0.0
+158,mg,Collembola,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 2",1985.504,0.0,,,,,,,,1985.504,0.0,1985.504,0.0
+159,mg,Collembola,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 3",505.856,0.0,,,,,,,,505.856,0.0,505.856,0.0
+160,mg,Collembola,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 4-  in the moss
+and turf layers",5442.911999999999,0.0,,,,,,,,5442.911999999999,0.0,5442.911999999999,0.0
+161,mg,Collembola,Boreal Forests/Taiga,"Ivantjarnsheden, Jadraas, Gastrikland",94.0,0.0,,,,,,,,94.0,0.0,94.0,0.0
+162,mg,Collembola,Boreal Forests/Taiga,Jyvaskyla- Natural Deciduous forest,300.6666666666667,0.0,,,,,,,,300.6666666666667,0.0,300.6666666666667,0.0
+163,mg,Collembola,Boreal Forests/Taiga,Jyvaskyla-Birch after Field,140.83333333333334,0.0,,,,,,,,140.83333333333334,0.0,140.83333333333334,0.0
+164,mg,Collembola,Boreal Forests/Taiga,Jyvaskyla-Birch after Spruce,191.4,0.0,,,,,,,,191.4,0.0,191.4,0.0
+165,mg,Collembola,Boreal Forests/Taiga,Lammi commune-OMT,101.44,0.0,,,,,,,,101.44,0.0,101.44,0.0
+166,mg,Collembola,Boreal Forests/Taiga,"Pine forest, Kevo",74.24,25.279999999999998,,,,,,,,74.24,25.279999999999998,74.24,25.279999999999998
+167,mg,Collembola,Boreal Forests/Taiga,Scots pine forest in Finland,117.0,0.0,,,,,,,,117.0,0.0,117.0,0.0
+168,mg,Collembola,Boreal Forests/Taiga,harviala-MT,95.04,0.0,,,,,,,,95.04,0.0,95.04,0.0
+169,mg,Collembola,Boreal Forests/Taiga,oulanka-HMT,33.6,0.0,,,,,,,,33.6,0.0,33.6,0.0
+170,mg,Collembola,Deserts and Xeric Shrublands,Rock Valley,1.4325,0.0,,,,,,,,1.4325,0.0,1.4325,0.0
+171,mg,Collembola,Pasture,Bulldozed mesquite control,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+172,mg,Collembola,Pasture,Camp  Well,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+173,mg,Collembola,Pasture,East mesquite site,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+174,mg,Collembola,Pasture,Exclosure west control,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+175,mg,Collembola,Pasture,Mayfield Well ,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+176,mg,Collembola,Pasture,West Well ,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+177,mg,Collembola,Temperate Forests,Andersby ingsbackar,106.0,17.0,,,,,,,,106.0,17.0,106.0,17.0
+178,mg,Collembola,Temperate Forests,"Arch Rock,located in Vinton County – Intermediate",38.0,0.0,,,,,,,,38.0,0.0,38.0,0.0
+179,mg,Collembola,Temperate Forests,"Arch Rock,located in Vinton County – Mesic",32.0,0.0,,,,,,,,32.0,0.0,32.0,0.0
+180,mg,Collembola,Temperate Forests,"Arch Rock,located in Vinton County – Xeric",32.0,0.0,,,,,,,,32.0,0.0,32.0,0.0
+181,mg,Collembola,Temperate Forests,Cedar-Hemlock,490.0,0.0,,,,,,,,490.0,0.0,490.0,0.0
+182,mg,Collembola,Temperate Forests,Coweeta Hydrologic Laboratory,240.20000000000002,0.0,,,,,,,,240.20000000000002,0.0,240.20000000000002,0.0
+183,mg,Collembola,Temperate Forests,Coweeta Hydrologic Laboratory - mature mixed oak,502.0,0.0,,,,,,,,502.0,0.0,502.0,0.0
+184,mg,Collembola,Temperate Forests,Coweeta Hydrologic Laboratory - plantation white pine,170.0,0.0,,,,,,,,170.0,0.0,170.0,0.0
+185,mg,Collembola,Temperate Forests,Danish oak forest,44.800000000000004,0.0,,,,,,,,44.800000000000004,0.0,44.800000000000004,0.0
+186,mg,Collembola,Temperate Forests,De Hooge veluwe,25.6,0.0,,,,,,,,25.6,0.0,25.6,0.0
+187,mg,Collembola,Temperate Forests,Duchesnay experimental forest station ,10.0,0.0,,,,,,,,10.0,0.0,10.0,0.0
+188,mg,Collembola,Temperate Forests,Geels skov- fagus / anemone / asperula - mull,20.0,0.0,,,,,,,,20.0,0.0,20.0,0.0
+189,mg,Collembola,Temperate Forests,Geels skov- fagus / melica / asperula - mull,20.0,0.0,,,,,,,,20.0,0.0,20.0,0.0
+190,mg,Collembola,Temperate Forests,Gottinger Wald,48.96,0.0,,,,,,,,48.96,0.0,48.96,0.0
+191,mg,Collembola,Temperate Forests,Grib skov - fagus / oxalis - moder,20.0,0.0,,,,,,,,20.0,0.0,20.0,0.0
+192,mg,Collembola,Temperate Forests,Gumpenstein Norway Sprouce forest,264.0,0.0,,,,,,,,264.0,0.0,264.0,0.0
+193,mg,Collembola,Temperate Forests,H12 – Denmark – Hestehaven – beech forest,110.665531,0.0,,,,,,,,110.665531,0.0,110.665531,0.0
+194,mg,Collembola,Temperate Forests,H22 – Germany – Gorlitz – Fraxino-Ulmetum,112.9179503,0.0,,,,,,,,112.9179503,0.0,112.9179503,0.0
+195,mg,Collembola,Temperate Forests,H27 – England – Meathop Wood – mixed deciduous forest,44.40788615,0.0,,,,,,,,44.40788615,0.0,44.40788615,0.0
+196,mg,Collembola,Temperate Forests,H52 – Italy – Frassenelle – mixed oak forest,135.409709,0.0,,,,,,,,135.409709,0.0,135.409709,0.0
+197,mg,Collembola,Temperate Forests,H59 – USA – Tennessee – Oak Ridge – Liriodendron forest,521.7701582,0.0,,,,,,,,521.7701582,0.0,521.7701582,0.0
+198,mg,Collembola,Temperate Forests,H61 – Japan – Mount Sobo – mixed deciduous forest,145.3209997,0.0,,,,,,,,145.3209997,0.0,145.3209997,0.0
+199,mg,Collembola,Temperate Forests,Hemlock-Amabilis fir,1266.0,0.0,,,,,,,,1266.0,0.0,1266.0,0.0
+200,mg,Collembola,Temperate Forests,Japanese beech forest,4160.0,0.0,,,,,,,,4160.0,0.0,4160.0,0.0
+201,mg,Collembola,Temperate Forests,Kiesdorfer wald - fraxinus / quercus / prunus - mull,110.0,0.0,,,,,,,,110.0,0.0,110.0,0.0
+202,mg,Collembola,Temperate Forests,Meathop wood - quercus / fraxinus / corylus - mull,40.0,0.0,,,,,,,,40.0,0.0,40.0,0.0
+203,mg,Collembola,Temperate Forests,"Oak Ridge, Tennesse",9.6,0.0,,,,,,,,9.6,0.0,9.6,0.0
+204,mg,Collembola,Temperate Forests,"Oak-birch forest in Tynaarlo, Netherlands",76.686,0.0,,,,,,,,76.686,0.0,76.686,0.0
+205,mg,Collembola,Temperate Forests,"Poplar forest, Marknesse, Netherlands",28.574,0.0,,,,,,,,28.574,0.0,28.574,0.0
+206,mg,Collembola,Temperate Forests,Solling (B 1) - fagus / luzula - moder,250.0,0.0,,,,,,,,250.0,0.0,250.0,0.0
+207,mg,Collembola,Temperate Forests,Solling 135-yr-old   beech   forest  ,370.0,0.0,,,,,,,,370.0,0.0,370.0,0.0
+208,mg,Collembola,Temperate Forests,"Solling mountains, Dassel - 120 years stand - beech forest",238.972,0.0,,,,,,,,238.972,0.0,238.972,0.0
+209,mg,Collembola,Temperate Forests,"Solling mountains, Dassel - 120 years stand - mixed forest",210.064,0.0,,,,,,,,210.064,0.0,210.064,0.0
+210,mg,Collembola,Temperate Forests,"Solling mountains, Dassel - 120 years stand - spruce forest",258.886,0.0,,,,,,,,258.886,0.0,258.886,0.0
+211,mg,Collembola,Temperate Forests,"Solling mountains, Dassel - 30 years stand - beech forest",144.54,0.0,,,,,,,,144.54,0.0,144.54,0.0
+212,mg,Collembola,Temperate Forests,"Solling mountains, Dassel - 30 years stand - mixed forest",212.633,0.0,,,,,,,,212.633,0.0,212.633,0.0
+213,mg,Collembola,Temperate Forests,"Solling mountains, Dassel - 30 years stand - spruce forest",300.0,0.0,,,,,,,,300.0,0.0,300.0,0.0
+214,mg,Collembola,Temperate Forests,"Spruce forest in Madonna  di  Campiglio, Italy – Adult",472.0,0.0,,,,,,,,472.0,0.0,472.0,0.0
+215,mg,Collembola,Temperate Forests,"Spruce forest in Madonna  di  Campiglio, Italy – Regeneration",382.0,0.0,,,,,,,,382.0,0.0,382.0,0.0
+216,mg,Collembola,Temperate Forests,Stampeskoven - quercus / mercurialis - mull,30.0,0.0,,,,,,,,30.0,0.0,30.0,0.0
+217,mg,Collembola,Temperate Forests,Tharandter forest – 25yr,876.53311529027,0.0,,,,,,,,876.53311529027,0.0,876.53311529027,0.0
+218,mg,Collembola,Temperate Forests,Tharandter forest – 45yr,329.681112019625,0.0,,,,,,,,329.681112019625,0.0,329.681112019625,0.0
+219,mg,Collembola,Temperate Forests,Tharandter forest – 5yr,562.551103843008,0.0,,,,,,,,562.551103843008,0.0,562.551103843008,0.0
+220,mg,Collembola,Temperate Forests,Tharandter forest – 95yr,295.666394112838,0.0,,,,,,,,295.666394112838,0.0,295.666394112838,0.0
+221,mg,Collembola,Temperate Forests,mesic deciduous forest,50.0,0.0,,,,,,,,50.0,0.0,50.0,0.0
+222,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",G13 – Wales – Pteridium moorland,111.5657781,0.0,,,,,,,,111.5657781,0.0,111.5657781,0.0
+223,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",G14 – England – Cothill – Molinia fen – Molinia,94.92618805,0.0,,,,,,,,94.92618805,0.0,94.92618805,0.0
+224,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",G15 – England – Cothill – Molinia fen – Daschampsia,81.14768047,0.0,,,,,,,,81.14768047,0.0,81.14768047,0.0
+225,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",G16 – England – Cothill – Molinia fen – Juncus,21.63548727,0.0,,,,,,,,21.63548727,0.0,21.63548727,0.0
+226,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",G36 – Canada – Saskatchewan – Matador – mixed prairie,139.5780709,0.0,,,,,,,,139.5780709,0.0,139.5780709,0.0
+227,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",G57 – Australia – Mt. Kosciusco – alpine herbfield,33.83986037,0.0,,,,,,,,33.83986037,0.0,33.83986037,0.0
+228,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands","Grassland in Finsterwolde, Netherlands",9.62,0.0,,,,,,,,9.62,0.0,9.62,0.0
+229,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands","Grassland in Lelystad, Netherlands",71.192,0.0,,,,,,,,71.192,0.0,71.192,0.0
+230,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands","Grassland in Tynaarlo, Netherlands",154.0,0.0,,,,,,,,154.0,0.0,154.0,0.0
+231,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands","Grassland in Wieringermeer, Netherlands",47.58,0.0,,,,,,,,47.58,0.0,47.58,0.0
+232,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",Hygum Jutland Denmark,432.0,0.0,,,,,,,,432.0,0.0,432.0,0.0
+233,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",N E.R.C. Soil Biodiversity Programme site at Sourhope in the Cheviot Hills,823.04,0.0,,,,,,,,823.04,0.0,823.04,0.0
+234,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",Pawnee National Grassland,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+235,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",Sankt Koloman meadow,164.0,0.0,,,,,,,,164.0,0.0,164.0,0.0
+236,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",Shergyla Mountain – Quercus forests,248.0,0.0,,,,,,,,248.0,0.0,248.0,0.0
+237,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",Shergyla Mountain – meadow,274.0,0.0,,,,,,,,274.0,0.0,274.0,0.0
+238,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",Shergyla Mountain – open grassland in sparse forests,412.0,0.0,,,,,,,,412.0,0.0,412.0,0.0
+239,mg,Collembola,"Temperate Grasslands, Savannas and Shrublands",Spikbole farm,142.0,13.0,,,,,,,,142.0,13.0,142.0,13.0
+240,mg,Collembola,Tropical and Subtropical Forests,E09 – Borneo – Sepilok – tropical rain forest,190.3306388,0.0,,,,,,,,190.3306388,0.0,190.3306388,0.0
+241,mg,Collembola,Tropical and Subtropical Forests,E16 – Zaire – Haut-Shaba – dry dense evergreen forest,15.1407709,0.0,,,,,,,,15.1407709,0.0,15.1407709,0.0
+242,mg,Collembola,Tropical and Subtropical Forests,"E17 – Zaire – Haut-Shaba – miombo, open forest",15.18500559,0.0,,,,,,,,15.18500559,0.0,15.18500559,0.0
+243,mg,Collembola,Tropical and Subtropical Forests,E18 – Zaire – Haut-Shaba – river forest,17.0504096,0.0,,,,,,,,17.0504096,0.0,17.0504096,0.0
+244,mg,Collembola,Tropical and Subtropical Forests,Sakaerat Environmental Research Station,26.857142857142858,0.0,,,,,,,,26.857142857142858,0.0,26.857142857142858,0.0
+245,mg,Collembola,Tropical and Subtropical Forests,"Teaching and Research Farm of the Obafemi Awolowo University, Ile-Ife, Oyo State, Nigeria - Forest Plot",30.0,0.0,,,,,,,,30.0,0.0,30.0,0.0
+246,mg,Collembola,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S15 – Zaire – Haut-Shaba – savanna,11.37210053,0.0,,,,,,,,11.37210053,0.0,11.37210053,0.0
+247,mg,Collembola,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S16 – S. Africa – Potchefstroom – thorn tree biotope,13.32819065,0.0,,,,,,,,13.32819065,0.0,13.32819065,0.0
+248,mg,Collembola,Tundra,"Low alpine heath, Kevo",195.84,42.559999999999995,,,,,,,,195.84,42.559999999999995,195.84,42.559999999999995
+249,mg,Collembola,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Cushion",87.4,0.0,,,,,,,,87.4,0.0,87.4,0.0
+250,mg,Collembola,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Deschampsia",32.95,0.0,,,,,,,,32.95,0.0,32.95,0.0
+251,mg,Collembola,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Kobresia",5.65,0.0,,,,,,,,5.65,0.0,5.65,0.0
+252,mg,Collembola,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Willow",22.3,0.0,,,,,,,,22.3,0.0,22.3,0.0
+253,mg,Collembola,Tundra,"T05 – Truelove site, N. Canada, Devon Isl./ raised beach/crest",68.72784648,0.0,,,,,,,,68.72784648,0.0,68.72784648,0.0
+254,mg,Collembola,Tundra,"T06 - Truelove site, N. Canada, Devon Isl./ meadow",42.02206814,0.0,,,,,,,,42.02206814,0.0,42.02206814,0.0
+255,mg,Collembola,Tundra,"T07 - Truelove site, N. Canada, Devon Isl./ transition zone",44.6746002,0.0,,,,,,,,44.6746002,0.0,44.6746002,0.0
+256,mg,Collembola,Tundra,T08 – Taimyr – spot medallion tundra – lichens,120.5599416,0.0,,,,,,,,120.5599416,0.0,120.5599416,0.0
+257,mg,Collembola,Tundra,T09 – Taimyr – spot medallion tundra – spot being overgrown,240.3185972,0.0,,,,,,,,240.3185972,0.0,240.3185972,0.0
+258,mg,Collembola,Tundra,T10 – Taimyr – spot medallion tundra – mossy ridges,520.0405543,0.0,,,,,,,,520.0405543,0.0,520.0405543,0.0
+259,mg,Collembola,Tundra,T11 – Taimyr – spot medallion tundra – trough,258.7468988,0.0,,,,,,,,258.7468988,0.0,258.7468988,0.0
+260,mg,Collembola,Tundra,T12 – Taimyr – Eriphorum-grass association,638.9434245,0.0,,,,,,,,638.9434245,0.0,638.9434245,0.0
+261,mg,Collembola,Tundra,T13 – Taimyr – Eriphorum-Dryas stands,742.6319459,0.0,,,,,,,,742.6319459,0.0,742.6319459,0.0
+262,mg,Collembola,Tundra,T16 – Taimyr – polygon bog – dry moss ridges,292.930079,0.0,,,,,,,,292.930079,0.0,292.930079,0.0
+263,mg,Collembola,Tundra,T17 – Taimyr – Dryas-sedge-moss tundra,440.5409992,0.0,,,,,,,,440.5409992,0.0,440.5409992,0.0
+264,mg,Collembola,Tundra,T31 – N. Finland – Kevo – subalpine heath,187.7031063,0.0,,,,,,,,187.7031063,0.0,187.7031063,0.0
+265,mg,Collembola,Tundra,T32 – N. Sweden – Abisko – mire,175.0766951,0.0,,,,,,,,175.0766951,0.0,175.0766951,0.0
+266,mg,Collembola,Tundra,T39 – S. Norway – Hardangervidda – wet meadow,206.3836441,0.0,,,,,,,,206.3836441,0.0,206.3836441,0.0
+267,mg,Collembola,Tundra,T40 – S. Norway – Hardangervidda – dry meadow,224.2499968,0.0,,,,,,,,224.2499968,0.0,224.2499968,0.0
+268,mg,Collembola,Tundra,T41 – S. Norway – Hardangervidda – lichen heath,46.31769014,0.0,,,,,,,,46.31769014,0.0,46.31769014,0.0
+269,mg,Collembola,Tundra,T43 – England – Moor House – Juncus moor,48.23690262,0.0,,,,,,,,48.23690262,0.0,48.23690262,0.0
+270,mg,Collembola,Tundra,T44 – England – Moor House – alluvial grassland,120.6766272,0.0,,,,,,,,120.6766272,0.0,120.6766272,0.0
+271,mg,Collembola,Tundra,T45 – England – Moor House – limestone grassland,91.54607946,0.0,,,,,,,,91.54607946,0.0,91.54607946,0.0
+272,mg,Collembola,Tundra,T46 – Ireland – Glenamoy – virgin bog – Sphagnum,27.51004691,0.0,,,,,,,,27.51004691,0.0,27.51004691,0.0
+273,mg,Collembola,Tundra,T47 – Ireland – Glenamoy – virgin bog – heather,27.51004691,0.0,,,,,,,,27.51004691,0.0,27.51004691,0.0
+274,mg,Collembola,Tundra,T48 – Ireland – Glenamoy – grassland,14.98337538,0.0,,,,,,,,14.98337538,0.0,14.98337538,0.0
+275,mg,Collembola,Tundra,T60 – Austria – Obergurgl – manured alpine meadow,35.03754841,0.0,,,,,,,,35.03754841,0.0,35.03754841,0.0
+276,mg,Collembola,Tundra,T61 – Austria – Obergurgl – alpine sedge mat,8.681236476,0.0,,,,,,,,8.681236476,0.0,8.681236476,0.0
+277,mg,Collembola,Tundra,T70 – Antarctica – Signy Island – crustone lichen,30.57749945,0.0,,,,,,,,30.57749945,0.0,30.57749945,0.0
+278,mg,Collembola,Tundra,T71 – Antarctica – Signy Island – fruticose lichen and moss,213.1526327,0.0,,,,,,,,213.1526327,0.0,213.1526327,0.0
+279,mg,Collembola,Tundra,T72 – Antarctica – Signy Island – moss carpet,2246.067598,0.0,,,,,,,,2246.067598,0.0,2246.067598,0.0
+280,mg,Collembola,Tundra,T73 – Antarctica – Signy Island – moss turf,112.349876,0.0,,,,,,,,112.349876,0.0,112.349876,0.0
+281,mg,Collembola,Tundra,T74 – Antarctica – Signy Island – alga,4686.701376,0.0,,,,,,,,4686.701376,0.0,4686.701376,0.0
+282,mg,Collembola,Tundra,T75 – Antarctica – Signy Island – grass and cushion chamaephytes,1323.557236,0.0,,,,,,,,1323.557236,0.0,1323.557236,0.0
+283,mg,Formicidae,Crops,Sampadi Forest Reserve,43.32,32.831999999999994,,,,,,,,43.32,32.831999999999994,43.32,32.831999999999994
+284,mg,Formicidae,Crops,"Yurimaguas, Loreto, high input cultivation (corn, first crop)",91.2,45.6,,,,,,,,91.2,45.6,91.2,45.6
+285,mg,Formicidae,Crops,"Yurimaguas, Loreto, low input cultivation (rice, first crop)",45.6,15.96,,,,,,,,45.6,15.96,45.6,15.96
+286,mg,Formicidae,Crops,"Yurimaguas, Loreto, traditional cultivation (first crop of cassava)",22.8,11.4,,,,,,,,22.8,11.4,22.8,11.4
+287,mg,Formicidae,Crops,carimagua research station-crops-cassava,20.52,0.0,,,,,,,,20.52,0.0,20.52,0.0
+288,mg,Formicidae,Crops,carimagua research station-crops-rice,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+289,mg,Formicidae,Deserts and Xeric Shrublands,"Deep Canyon Field Station, California",31.0,0.0,,,,,,,,31.0,0.0,31.0,0.0
+290,mg,Formicidae,Deserts and Xeric Shrublands,"East Mesa Geothermal Site, California",7.0,0.0,,,,,,,,7.0,0.0,7.0,0.0
+291,mg,Formicidae,Deserts and Xeric Shrublands,"Fallon State Park, Nevada",175.0,0.0,,,,,,,,175.0,0.0,175.0,0.0
+292,mg,Formicidae,Deserts and Xeric Shrublands,"Northern Great Basin Exp. Range, Oregon",76.0,0.0,,,,,,,,76.0,0.0,76.0,0.0
+293,mg,Formicidae,"Mediterranean Forests, Woodlands and Scrub","Cold Canyon Preserve, California",39.0,0.0,,,,,,,,39.0,0.0,39.0,0.0
+294,mg,Formicidae,Pasture,EMBRAPA’s Western Amazonian Experimental Station ,172.52,165.13350235491285,,,,,,,,172.52,165.13350235491285,172.52,165.13350235491285
+295,mg,Formicidae,Pasture,G25 – Poland – Jaworki – Pienniny – pasture,48.48982822,0.0,,,,,,,,48.48982822,0.0,48.48982822,0.0
+296,mg,Formicidae,Pasture,G50 – USA – Pawnee Colorado – short grass prairie – lightly grazed,360.8590438,0.0,,,,,,,,360.8590438,0.0,360.8590438,0.0
+297,mg,Formicidae,Pasture,G51 – USA – Pawnee Colorado – short grass prairie – moderately grazed,54.01449448,0.0,,,,,,,,54.01449448,0.0,54.01449448,0.0
+298,mg,Formicidae,Pasture,G52 – USA – Pawnee Colorado – short grass prairie – heavily grazed,204.9330767,0.0,,,,,,,,204.9330767,0.0,204.9330767,0.0
+299,mg,Formicidae,Pasture,"New England Tablelands, Armidale, New South Wales, 10 sheep per Hectare",10.64,10.386666666666667,,,,,,,,10.64,10.386666666666667,10.64,10.386666666666667
+300,mg,Formicidae,Pasture,"New England Tablelands, Armidale, New South Wales, 20 sheep per Hectare",9.88,10.386666666666667,,,,,,,,9.88,10.386666666666667,9.88,10.386666666666667
+301,mg,Formicidae,Pasture,"New England Tablelands, Armidale, New South Wales, 30 sheep per Hectare",11.653333333333334,10.386666666666667,,,,,,,,11.653333333333334,10.386666666666667,11.653333333333334,10.386666666666667
+302,mg,Formicidae,Pasture,"Yurimaguas, Loreto, centrosema pubescens benth. (leguminosae) Pasture",45.6,22.8,,,,,,,,45.6,22.8,45.6,22.8
+303,mg,Formicidae,Pasture,"Yurimaguas, Loreto, improved Pasture with Brachiaria humidicola (Rendle) schwiek + desmodium ovalifolium Guill and Perr. (leguminosae)",114.0,45.6,,,,,,,,114.0,45.6,114.0,45.6
+304,mg,Formicidae,Pasture,"Yurimaguas, Loreto, traditional 10-year Pastures, ""dry""",182.4,68.4,,,,,,,,182.4,68.4,182.4,68.4
+305,mg,Formicidae,Pasture,"Yurimaguas, Loreto, traditional 10-year Pastures, ""humid""",22.8,13.68,,,,,,,,22.8,13.68,22.8,13.68
+306,mg,Formicidae,Pasture,carimagua research station-Pastures- B. dec.+kudzu,111.72,0.0,,,,,,,,111.72,0.0,111.72,0.0
+307,mg,Formicidae,Temperate Forests,Andersby ingsbackar,52.0,0.0,,,,,,,,52.0,0.0,52.0,0.0
+308,mg,Formicidae,Temperate Forests,"Coweeta Hydrologic Laboratory, Nantahala Mountain Range, western North Carolina",9.5,8.5,,,,,,,,9.5,8.5,9.5,8.5
+309,mg,Formicidae,Temperate Forests,"Dykes Gap, Coweeta LTER, Georgia",100.0,0.0,,,,,,,,100.0,0.0,100.0,0.0
+310,mg,Formicidae,Temperate Forests,"Field Station, HJ Andrews LTER, Oregon",25.0,0.0,,,,,,,,25.0,0.0,25.0,0.0
+311,mg,Formicidae,Temperate Forests,"Galena Creek SP, Nevada",27.0,0.0,,,,,,,,27.0,0.0,27.0,0.0
+312,mg,Formicidae,Temperate Forests,"Myles Standish SP, Massachusetts",78.0,0.0,,,,,,,,78.0,0.0,78.0,0.0
+313,mg,Formicidae,Temperate Forests,"San Felasco State Park, Florida",4870.0,2435.0,,,,,,,,4870.0,2435.0,4870.0,2435.0
+314,mg,Formicidae,Temperate Forests,Temperate Forests 1,562.0,0.0,,,,,,,,562.0,0.0,562.0,0.0
+315,mg,Formicidae,Temperate Forests,Temperate Forests 10,21.0,0.0,,,,,,,,21.0,0.0,21.0,0.0
+316,mg,Formicidae,Temperate Forests,Temperate Forests 11,47.0,0.0,,,,,,,,47.0,0.0,47.0,0.0
+317,mg,Formicidae,Temperate Forests,Temperate Forests 12,50.0,0.0,,,,,,,,50.0,0.0,50.0,0.0
+318,mg,Formicidae,Temperate Forests,Temperate Forests 13,132.0,0.0,,,,,,,,132.0,0.0,132.0,0.0
+319,mg,Formicidae,Temperate Forests,Temperate Forests 14,49.0,0.0,,,,,,,,49.0,0.0,49.0,0.0
+320,mg,Formicidae,Temperate Forests,Temperate Forests 15,62.0,0.0,,,,,,,,62.0,0.0,62.0,0.0
+321,mg,Formicidae,Temperate Forests,Temperate Forests 16,54.0,0.0,,,,,,,,54.0,0.0,54.0,0.0
+322,mg,Formicidae,Temperate Forests,Temperate Forests 2,24.0,0.0,,,,,,,,24.0,0.0,24.0,0.0
+323,mg,Formicidae,Temperate Forests,Temperate Forests 3,14.0,0.0,,,,,,,,14.0,0.0,14.0,0.0
+324,mg,Formicidae,Temperate Forests,Temperate Forests 4,17.0,0.0,,,,,,,,17.0,0.0,17.0,0.0
+325,mg,Formicidae,Temperate Forests,Temperate Forests 5,36.0,0.0,,,,,,,,36.0,0.0,36.0,0.0
+326,mg,Formicidae,Temperate Forests,Temperate Forests 6,135.0,0.0,,,,,,,,135.0,0.0,135.0,0.0
+327,mg,Formicidae,Temperate Forests,Temperate Forests 7,175.0,0.0,,,,,,,,175.0,0.0,175.0,0.0
+328,mg,Formicidae,Temperate Forests,Temperate Forests 8,6.0,0.0,,,,,,,,6.0,0.0,6.0,0.0
+329,mg,Formicidae,Temperate Forests,Temperate Forests 9,26.0,0.0,,,,,,,,26.0,0.0,26.0,0.0
+330,mg,Formicidae,Temperate Forests,"Whitehall Forest, Georgia",371.0,368.0,,,,,,,,371.0,368.0,371.0,368.0
+331,mg,Formicidae,Temperate Forests,"Yale Myers Forest, Connecticut",51.0,25.5,,,,,,,,51.0,25.5,51.0,25.5
+332,mg,Formicidae,"Temperate Grasslands, Savannas and Shrublands","Arapaho Prairie, Nebraska",39.0,0.0,,,,,,,,39.0,0.0,39.0,0.0
+333,mg,Formicidae,"Temperate Grasslands, Savannas and Shrublands",Central Plains Experimental Range,42.0,0.0,,,,,,,,42.0,0.0,42.0,0.0
+334,mg,Formicidae,"Temperate Grasslands, Savannas and Shrublands",G36 – Canada – Saskatchewan – Matador – mixed prairie,87.11198775,0.0,,,,,,,,87.11198775,0.0,87.11198775,0.0
+335,mg,Formicidae,"Temperate Grasslands, Savannas and Shrublands",G49 – USA – Pawnee Colorado – short grass prairie – ungrazed,152.9594729,0.0,,,,,,,,152.9594729,0.0,152.9594729,0.0
+336,mg,Formicidae,"Temperate Grasslands, Savannas and Shrublands",G55 – Japan – Kawatabi – Miscanthus grassland,47.70451227,0.0,,,,,,,,47.70451227,0.0,47.70451227,0.0
+337,mg,Formicidae,"Temperate Grasslands, Savannas and Shrublands",G62 – Denmark – Mols – Corynephorus heath,1721.185428,0.0,,,,,,,,1721.185428,0.0,1721.185428,0.0
+338,mg,Formicidae,"Temperate Grasslands, Savannas and Shrublands",Pawnee National Grassland,85.9578947368421,0.0,,,,,,,,85.9578947368421,0.0,85.9578947368421,0.0
+339,mg,Formicidae,Tropical and Subtropical Forests,E16 – Zaire – Haut-Shaba – dry dense evergreen forest,72.1485359,0.0,,,,,,,,72.1485359,0.0,72.1485359,0.0
+340,mg,Formicidae,Tropical and Subtropical Forests,"E17 – Zaire – Haut-Shaba – miombo, open forest",31.07739289,0.0,,,,,,,,31.07739289,0.0,31.07739289,0.0
+341,mg,Formicidae,Tropical and Subtropical Forests,E18 – Zaire – Haut-Shaba – river forest,18.50986986,0.0,,,,,,,,18.50986986,0.0,18.50986986,0.0
+342,mg,Formicidae,Tropical and Subtropical Forests,E19 – Brazil – Amazonia – inundation forest – black water,2.050345317,0.0,,,,,,,,2.050345317,0.0,2.050345317,0.0
+343,mg,Formicidae,Tropical and Subtropical Forests,E20 – Brazil – Amazonia – inundation forest – mixed water,7.099685255,0.0,,,,,,,,7.099685255,0.0,7.099685255,0.0
+344,mg,Formicidae,Tropical and Subtropical Forests,E21 – Brazil – Amazonia – inundation forest – white water,7.056185469,0.0,,,,,,,,7.056185469,0.0,7.056185469,0.0
+345,mg,Formicidae,Tropical and Subtropical Forests,EMBRAPA’s Western Amazonian Experimental Station ,289.56,223.44,,,,,,,,289.56,223.44,289.56,223.44
+346,mg,Formicidae,Tropical and Subtropical Forests,"Ft. Sherman,",38.0,0.0,,,,,,,,38.0,0.0,38.0,0.0
+347,mg,Formicidae,Tropical and Subtropical Forests,Isla Barro Colorado,46.0,0.0,,,,,,,,46.0,0.0,46.0,0.0
+348,mg,Formicidae,Tropical and Subtropical Forests,"Monteverde FS, Costa Rica",28.0,0.0,,,,,,,,28.0,0.0,28.0,0.0
+349,mg,Formicidae,Tropical and Subtropical Forests,Semengoh Wildlife Rehabilitation Center,1182.636,3638.424,,,,,,,,1182.636,3638.424,1182.636,3638.424
+350,mg,Formicidae,Tropical and Subtropical Forests,Tropical Forests 1,24.0,0.0,,,,,,,,24.0,0.0,24.0,0.0
+351,mg,Formicidae,Tropical and Subtropical Forests,Tropical Forests 2,31.0,0.0,,,,,,,,31.0,0.0,31.0,0.0
+352,mg,Formicidae,Tropical and Subtropical Forests,Tropical Forests 3,38.0,0.0,,,,,,,,38.0,0.0,38.0,0.0
+353,mg,Formicidae,Tropical and Subtropical Forests,Tropical Forests 4,27.0,0.0,,,,,,,,27.0,0.0,27.0,0.0
+354,mg,Formicidae,Tropical and Subtropical Forests,Tropical Forests 5,36.0,0.0,,,,,,,,36.0,0.0,36.0,0.0
+355,mg,Formicidae,Tropical and Subtropical Forests,"Yasuni FS, Ecuador",84.0,0.0,,,,,,,,84.0,0.0,84.0,0.0
+356,mg,Formicidae,Tropical and Subtropical Forests,"Yurimaguas, Loreto, 15-year old secondary forest",159.6,114.0,,,,,,,,159.6,114.0,159.6,114.0
+357,mg,Formicidae,Tropical and Subtropical Forests,"Yurimaguas, Loreto, Primary forest",159.6,45.6,,,,,,,,159.6,45.6,159.6,45.6
+358,mg,Formicidae,Tropical and Subtropical Forests,"Yurimaguas, Loreto, pijuayo palm-trees (bactris gasipaes Runth.) with a kudzu cover",22.8,6.84,,,,,,,,22.8,6.84,22.8,6.84
+359,mg,Formicidae,Tropical and Subtropical Forests,"Yurimaguas, Loreto, six month ""kudzu"" (pueraria phaseoloides Benth.) fallow after high input croppping",45.6,15.96,,,,,,,,45.6,15.96,45.6,15.96
+360,mg,Formicidae,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S02 – Ivory Coast – Lamto – burnt savanna – bare soil,448.9224635,0.0,,,,,,,,448.9224635,0.0,448.9224635,0.0
+361,mg,Formicidae,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S03 – Ivory Coast – Lamto – burnt savanna – tussocks,451.2184505,0.0,,,,,,,,451.2184505,0.0,451.2184505,0.0
+362,mg,Formicidae,"Tropical and Subtropical Grasslands, Savannas and Shrublands",carimagua research station,222.3,0.0,,,,,,,,222.3,0.0,222.3,0.0
+363,mg,Formicidae,Tundra,"""tundra""",0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+364,mg,Isoptera,Boreal Forests/Taiga,Boreal forests and Taiga - Isoptera,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+365,mg,Isoptera,Crops,Acacia plantation (S. India),456.3,0.0,,,,,,,,456.3,0.0,456.3,0.0
+366,mg,Isoptera,Crops,Acre State,378.0,256.34363655062714,,,,,,,,378.0,256.34363655062714,378.0,256.34363655062714
+367,mg,Isoptera,Crops,Cocoa plantation (Cameroon),324.0,0.0,,,,,,,,324.0,0.0,324.0,0.0
+368,mg,Isoptera,Crops,Embrapa Amazônia Ocidental,3545.1000000000004,4168.02306555518,,,,,,,,3545.1000000000004,4168.02306555518,3545.1000000000004,4168.02306555518
+369,mg,Isoptera,Crops,Eucalypt stand,216.0,0.0,,,,,,,,216.0,0.0,216.0,0.0
+370,mg,Isoptera,Crops,"Logged-over forest (4 yr., Borneo)",675.0,0.0,,,,,,,,675.0,0.0,675.0,0.0
+371,mg,Isoptera,Crops,"Logger-over forest (18 yr., 13orneo)",1215.0,0.0,,,,,,,,1215.0,0.0,1215.0,0.0
+372,mg,Isoptera,Crops,"Maize (1 yr., W. Africa)",459.00000000000006,0.0,,,,,,,,459.00000000000006,0.0,459.00000000000006,0.0
+373,mg,Isoptera,Crops,"Maize (8-24 yr., W. Africa)",5103.0,0.0,,,,,,,,5103.0,0.0,5103.0,0.0
+374,mg,Isoptera,Crops,Maize (Southern Africa),0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+375,mg,Isoptera,Crops,"Mixed crops (1 yr., ex-forest, cameroon)",5751.0,0.0,,,,,,,,5751.0,0.0,5751.0,0.0
+376,mg,Isoptera,Crops,Rondônia Stat,390.15000000000003,247.43208159008,,,,,,,,390.15000000000003,247.43208159008,390.15000000000003,247.43208159008
+377,mg,Isoptera,Crops,Sampadi Forest Reserve,183.60000000000002,435.24,,,,,,,,183.60000000000002,435.24,183.60000000000002,435.24
+378,mg,Isoptera,Crops,Sugar cane (w. Africa),1458.0,0.0,,,,,,,,1458.0,0.0,1458.0,0.0
+379,mg,Isoptera,Crops,Terminalia plantation (1 yr.),2743.2000000000003,0.0,,,,,,,,2743.2000000000003,0.0,2743.2000000000003,0.0
+380,mg,Isoptera,Crops,Terminalia plantation (2 yr.),29.700000000000003,0.0,,,,,,,,29.700000000000003,0.0,29.700000000000003,0.0
+381,mg,Isoptera,Crops,Terminalia plantation (5 yr.),6224.85,0.0,,,,,,,,6224.85,0.0,6224.85,0.0
+382,mg,Isoptera,Crops,"Yurimaguas, Loreto, high input cultivation (corn, first crop)",324.0,270.00000000000006,,,,,,,,324.0,270.00000000000006,324.0,270.00000000000006
+383,mg,Isoptera,Crops,"Yurimaguas, Loreto, low input cultivation (rice, first crop)",1647.0,729.0000000000001,,,,,,,,1647.0,729.0000000000001,1647.0,729.0000000000001
+384,mg,Isoptera,Crops,"Yurimaguas, Loreto, pijuayo palm-trees (bactris gasipaes Runth.) with a kudzu cover",2133.0,1080.0000000000002,,,,,,,,2133.0,1080.0000000000002,2133.0,1080.0000000000002
+385,mg,Isoptera,Crops,"Yurimaguas, Loreto, six month ""kudzu"" (pueraria phaseoloides Benth.) fallow after high input croppping",1279.8000000000002,631.8000000000001,,,,,,,,1279.8000000000002,631.8000000000001,1279.8000000000002,631.8000000000001
+386,mg,Isoptera,Crops,"Yurimaguas, Loreto, traditional cultivation (first crop of cassava)",243.00000000000003,108.00000000000001,,,,,,,,243.00000000000003,108.00000000000001,243.00000000000003,108.00000000000001
+387,mg,Isoptera,Crops,carimagua research station-crops-cassava,159.3,0.0,,,,,,,,159.3,0.0,159.3,0.0
+388,mg,Isoptera,Crops,carimagua research station-crops-rice,48.6,0.0,,,,,,,,48.6,0.0,48.6,0.0
+389,mg,Isoptera,Crops,"farmland / settlement (old world) - (based on a sugar cane field in riparian forest near Rabba, Niggeria)",1452.6000000000001,0.0,,,,,,,,1452.6000000000001,0.0,1452.6000000000001,0.0
+390,mg,Isoptera,Deserts and Xeric Shrublands,Semi-arid desert (USA),221.4,0.0,,,,,,,,221.4,0.0,221.4,0.0
+391,mg,Isoptera,"Mediterranean Forests, Woodlands and Scrub","Mediterranean Forests, Woodlands and Scrub",1431.0,0.0,,,,,,,,1431.0,0.0,1431.0,0.0
+392,mg,Isoptera,"Mediterranean Forests, Woodlands and Scrub","dry / highland scrub, semidesert",729.0,0.0,,,,,,,,729.0,0.0,729.0,0.0
+393,mg,Isoptera,Pasture,Acre State,0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+394,mg,Isoptera,Pasture,CIAT-CORPOICA research station of Carimagua,792.0450000000001,465.2942335232623,,,,,,,,792.0450000000001,465.2942335232623,792.0450000000001,465.2942335232623
+395,mg,Isoptera,Pasture,"Chromolaena fallows (4 yr.,Cameroon)",567.0,0.0,,,,,,,,567.0,0.0,567.0,0.0
+396,mg,Isoptera,Pasture,EMBRAPA’s Western Amazonian Experimental Station ,748.8000000000002,583.6269270689968,,,,,,,,748.8000000000002,583.6269270689968,748.8000000000002,583.6269270689968
+397,mg,Isoptera,Pasture,Embrapa Amazônia Ocidental,5016.6,2440.8,,,,,,,,5016.6,2440.8,5016.6,2440.8
+398,mg,Isoptera,Pasture,G50 – USA – Pawnee Colorado – short grass prairie – lightly grazed,2.5,0.0,,,,,,,,2.5,0.0,2.5,0.0
+399,mg,Isoptera,Pasture,G51 – USA – Pawnee Colorado – short grass prairie – moderately grazed,16.7,0.0,,,,,,,,16.7,0.0,16.7,0.0
+400,mg,Isoptera,Pasture,Grass fallow (Southern Africa),27.0,0.0,,,,,,,,27.0,0.0,27.0,0.0
+401,mg,Isoptera,Pasture,Grazed pasture W. Africa),756.0,0.0,,,,,,,,756.0,0.0,756.0,0.0
+402,mg,Isoptera,Pasture,"Pasture (10 yr., ex-forest, Amazonia)",162.0,0.0,,,,,,,,162.0,0.0,162.0,0.0
+403,mg,Isoptera,Pasture,Pastures (S. India),523.8000000000001,0.0,,,,,,,,523.8000000000001,0.0,523.8000000000001,0.0
+404,mg,Isoptera,Pasture,Rondônia Stat,16.200000000000003,17.182694782833106,,,,,,,,16.200000000000003,17.182694782833106,16.200000000000003,17.182694782833106
+405,mg,Isoptera,Pasture,"Weeded fallow (ex- forest, Cameroon)",517.0500000000001,0.0,,,,,,,,517.0500000000001,0.0,517.0500000000001,0.0
+406,mg,Isoptera,Pasture,"Yurimaguas, Loreto, centrosema pubescens benth. (leguminosae) Pasture",742.5,310.50000000000006,,,,,,,,742.5,310.50000000000006,742.5,310.50000000000006
+407,mg,Isoptera,Pasture,"Yurimaguas, Loreto, improved Pasture with Brachiaria humidicola (Rendle) schwiek + desmodium ovalifolium Guill and Perr. (leguminosae)",5.4,8.100000000000001,,,,,,,,5.4,8.100000000000001,5.4,8.100000000000001
+408,mg,Isoptera,Pasture,"Yurimaguas, Loreto, traditional 10-year Pastures, ""dry""",432.0,243.00000000000003,,,,,,,,432.0,243.00000000000003,432.0,243.00000000000003
+409,mg,Isoptera,Pasture,"Yurimaguas, Loreto, traditional 10-year Pastures, ""humid""",351.0,102.60000000000001,,,,,,,,351.0,102.60000000000001,351.0,102.60000000000001
+410,mg,Isoptera,Pasture,carimagua research station-Pastures- B. dec.+kudzu,982.8000000000001,0.0,,,,,,,,982.8000000000001,0.0,982.8000000000001,0.0
+411,mg,Isoptera,Temperate Forests,"Coweeta Hydrologic Laboratory, Nantahala Mountain Range, western North Carolina",2.5,1.25,,,,,,,,2.5,1.25,2.5,1.25
+412,mg,Isoptera,Temperate Forests,"San Felasco State Park, Florida",45.5,22.75,,,,,,,,45.5,22.75,45.5,22.75
+413,mg,Isoptera,Temperate Forests,Semi-arid woodland (Queensland),1350.0,0.0,,,,,,,,1350.0,0.0,1350.0,0.0
+414,mg,Isoptera,Temperate Forests,"Whitehall Forest, Georgia",6.5,3.25,,,,,,,,6.5,3.25,6.5,3.25
+415,mg,Isoptera,Temperate Forests,"Yale Myers Forest, Connecticut",0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+416,mg,Isoptera,Temperate Forests,temperate forest (ScIerophyll forest (S. Australia)),810.0,0.0,,,,,,,,810.0,0.0,810.0,0.0
+417,mg,Isoptera,"Temperate Grasslands, Savannas and Shrublands",G49 – USA – Pawnee Colorado – short grass prairie – ungrazed,0.6,0.0,,,,,,,,0.6,0.0,0.6,0.0
+418,mg,Isoptera,"Temperate Grasslands, Savannas and Shrublands","temperate grassland / prairie - Semiarid grassland, North America",1404.0,459.00000000000006,,,,,,,,1404.0,459.00000000000006,1404.0,459.00000000000006
+419,mg,Isoptera,Tropical and Subtropical Forests,Acre State,149.85000000000002,183.28207768355313,,,,,,,,149.85000000000002,183.28207768355313,149.85000000000002,183.28207768355313
+420,mg,Isoptera,Tropical and Subtropical Forests,"Atlantic Forest,  Parqe Estadual Dois Irmãos (PHDI)",3086.1000000000004,0.0,,,,,,,,3086.1000000000004,0.0,3086.1000000000004,0.0
+421,mg,Isoptera,Tropical and Subtropical Forests,"Atlantic Forest,  Reserva Biológica de Pedra Talhada (RBPT)",3051.0,0.0,,,,,,,,3051.0,0.0,3051.0,0.0
+422,mg,Isoptera,Tropical and Subtropical Forests,"Atlantic Forest,  Área de Proteção Ambiental Mata do Buraquinho (APMB)",2724.3,0.0,,,,,,,,2724.3,0.0,2724.3,0.0
+423,mg,Isoptera,Tropical and Subtropical Forests,Bi Dup-Nui Ba Nature Reserve - Mountain pine forest,216.0,108.00000000000001,,,,,,,,216.0,108.00000000000001,216.0,108.00000000000001
+424,mg,Isoptera,Tropical and Subtropical Forests,Cat Tien National Park - Lagerstroemia forest,3510.0000000000005,1890.8100000000004,,,,,,,,3510.0000000000005,1890.8100000000004,3510.0000000000005,1890.8100000000004
+425,mg,Isoptera,Tropical and Subtropical Forests,Dry deciduous,27.0,0.0,,,,,,,,27.0,0.0,27.0,0.0
+426,mg,Isoptera,Tropical and Subtropical Forests,E08 – Malaysia – Pasoh – tropical rain forest,896.7796797,0.0,,,,,,,,896.7796797,0.0,896.7796797,0.0
+427,mg,Isoptera,Tropical and Subtropical Forests,E16 – Zaire – Haut-Shaba – dry dense evergreen forest,63.21568361,0.0,,,,,,,,63.21568361,0.0,63.21568361,0.0
+428,mg,Isoptera,Tropical and Subtropical Forests,"E17 – Zaire – Haut-Shaba – miombo, open forest",3174.881664,0.0,,,,,,,,3174.881664,0.0,3174.881664,0.0
+429,mg,Isoptera,Tropical and Subtropical Forests,E18 – Zaire – Haut-Shaba – river forest,4.864497143,0.0,,,,,,,,4.864497143,0.0,4.864497143,0.0
+430,mg,Isoptera,Tropical and Subtropical Forests,E19 – Brazil – Amazonia – inundation forest – black water,0.500285702,0.0,,,,,,,,0.500285702,0.0,0.500285702,0.0
+431,mg,Isoptera,Tropical and Subtropical Forests,E20 – Brazil – Amazonia – inundation forest – mixed water,0.391140236,0.0,,,,,,,,0.391140236,0.0,0.391140236,0.0
+432,mg,Isoptera,Tropical and Subtropical Forests,E21 – Brazil – Amazonia – inundation forest – white water,0.482647696,0.0,,,,,,,,0.482647696,0.0,0.482647696,0.0
+433,mg,Isoptera,Tropical and Subtropical Forests,EMBRAPA’s Western Amazonian Experimental Station ,1428.3000000000002,774.9000000000001,,,,,,,,1428.3000000000002,774.9000000000001,1428.3000000000002,774.9000000000001
+434,mg,Isoptera,Tropical and Subtropical Forests,Montane (Gunung Mulu),95.85000000000001,0.0,,,,,,,,95.85000000000001,0.0,95.85000000000001,0.0
+435,mg,Isoptera,Tropical and Subtropical Forests,Peruvian tropical moist forest (old growth),93.15,27.810000000000002,,,,,,,,93.15,27.810000000000002,93.15,27.810000000000002
+436,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (Amazonia)1,2970.0,0.0,,,,,,,,2970.0,0.0,2970.0,0.0
+437,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (Amazonia)2,1822.5000000000002,0.0,,,,,,,,1822.5000000000002,0.0,1822.5000000000002,0.0
+438,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (Amazonia)3,4185.0,0.0,,,,,,,,4185.0,0.0,4185.0,0.0
+439,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (Borneo),945.0000000000001,0.0,,,,,,,,945.0000000000001,0.0,945.0000000000001,0.0
+440,mg,Isoptera,Tropical and Subtropical Forests,"Rainforest (Malaysia) - Pasoh Forest Reserve, (equatorial rainforest)",934.2,0.0,,,,,,,,934.2,0.0,934.2,0.0
+441,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (Pasoh) - Malaysia (lowland rain forest),2538.0,0.0,,,,,,,,2538.0,0.0,2538.0,0.0
+442,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (Puerto Rico,135.0,0.0,,,,,,,,135.0,0.0,135.0,0.0
+443,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (Sumatra),1579.5,0.0,,,,,,,,1579.5,0.0,1579.5,0.0
+444,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (dipterocarp),1156.5,0.0,,,,,,,,1156.5,0.0,1156.5,0.0
+445,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (kerangas heath forest),1080.0,0.0,,,,,,,,1080.0,0.0,1080.0,0.0
+446,mg,Isoptera,Tropical and Subtropical Forests,Rainforest (swamp forest),189.0,0.0,,,,,,,,189.0,0.0,189.0,0.0
+447,mg,Isoptera,Tropical and Subtropical Forests,Riverine (Congo),2970.0,0.0,,,,,,,,2970.0,0.0,2970.0,0.0
+448,mg,Isoptera,Tropical and Subtropical Forests,Riverine (Nigeria),1863.0000000000002,0.0,,,,,,,,1863.0000000000002,0.0,1863.0000000000002,0.0
+449,mg,Isoptera,Tropical and Subtropical Forests,Rondônia State,89.10000000000001,45.900000000000006,,,,,,,,89.10000000000001,45.900000000000006,89.10000000000001,45.900000000000006
+450,mg,Isoptera,Tropical and Subtropical Forests,Secondary forest (20 yr.),4050.0000000000005,0.0,,,,,,,,4050.0000000000005,0.0,4050.0000000000005,0.0
+451,mg,Isoptera,Tropical and Subtropical Forests,Secondary forest (40 yr.),20691.45,0.0,,,,,,,,20691.45,0.0,20691.45,0.0
+452,mg,Isoptera,Tropical and Subtropical Forests,Semengoh Wildlife Rehabilitation Center,321.57,394.20000000000005,,,,,,,,321.57,394.20000000000005,321.57,394.20000000000005
+453,mg,Isoptera,Tropical and Subtropical Forests,Semi-deciduous (Cameroon),17753.850000000002,0.0,,,,,,,,17753.850000000002,0.0,17753.850000000002,0.0
+454,mg,Isoptera,Tropical and Subtropical Forests,Slashed evergreen forest (S. India),731.7,0.0,,,,,,,,731.7,0.0,731.7,0.0
+455,mg,Isoptera,Tropical and Subtropical Forests,Wet evergreen (S. India),990.9000000000001,0.0,,,,,,,,990.9000000000001,0.0,990.9000000000001,0.0
+456,mg,Isoptera,Tropical and Subtropical Forests,"Yurimaguas, Loreto, 15-year old secondary forest",1863.0000000000002,729.0000000000001,,,,,,,,1863.0000000000002,729.0000000000001,1863.0000000000002,729.0000000000001
+457,mg,Isoptera,Tropical and Subtropical Forests,"Yurimaguas, Loreto, Primary forest",2295.0,621.0000000000001,,,,,,,,2295.0,621.0000000000001,2295.0,621.0000000000001
+458,mg,Isoptera,Tropical and Subtropical Forests,"rain green forest (old world) - Semi-deciduous forest, Ibadan, Nigeria",2160.0,0.0,,,,,,,,2160.0,0.0,2160.0,0.0
+459,mg,Isoptera,Tropical and Subtropical Forests,tropical montane / seasonal (old world),3040.2000000000003,0.0,,,,,,,,3040.2000000000003,0.0,3040.2000000000003,0.0
+460,mg,Isoptera,Tropical and Subtropical Forests,tropical rain forest (old world),2970.0,0.0,,,,,,,,2970.0,0.0,2970.0,0.0
+461,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",CIAT-CORPOICA research station of Carimagua,157.365,71.43743267713364,,,,,,,,157.365,71.43743267713364,157.365,71.43743267713364
+462,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",Disturbed parkland (Southern Africa),405.0,0.0,,,,,,,,405.0,0.0,405.0,0.0
+463,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",Grass savanna (Central Africa) - Ethiopian region,432.0,81.00000000000001,,,,,,,,432.0,81.00000000000001,432.0,81.00000000000001
+464,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",Guinea savanna (W. Africa),972.0000000000001,0.0,,,,,,,,972.0000000000001,0.0,972.0000000000001,0.0
+465,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",Parkland (Southern Africa),216.0,0.0,,,,,,,,216.0,0.0,216.0,0.0
+466,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S01 – Ivory Coast – Lamto – mean savanna,512.3521272,0.0,,,,,,,,512.3521272,0.0,512.3521272,0.0
+467,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S06 – Ivory Coast – Lamto – burnt savanna – tussocks,565.5042584,0.0,,,,,,,,565.5042584,0.0,565.5042584,0.0
+468,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S08 – Ivory Coast – Lamto – slightly wooded savanna,552.0286902,0.0,,,,,,,,552.0286902,0.0,552.0286902,0.0
+469,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S09 – Ivory Coast – Lamto – wooded savanna,594.2939331,0.0,,,,,,,,594.2939331,0.0,594.2939331,0.0
+470,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S15 – Zaire – Haut-Shaba – savanna,8700.0,0.0,,,,,,,,8700.0,0.0,8700.0,0.0
+471,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",carimagua research station,1301.4,0.0,,,,,,,,1301.4,0.0,1301.4,0.0
+472,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands","savannah / grassland (old world, arid)",259.20000000000005,0.0,,,,,,,,259.20000000000005,0.0,259.20000000000005,0.0
+473,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands","savannah / grassland (old world, nonarid)",2862.0,0.0,,,,,,,,2862.0,0.0,2862.0,0.0
+474,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands","succulent woods (old world, arid) - Acacia savanna (S.Africa)",264.6,0.0,,,,,,,,264.6,0.0,264.6,0.0
+475,mg,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands","succulent woods (old world, nonarid) - Broadleaved parkland (Southern Africa)",2276.1000000000004,0.0,,,,,,,,2276.1000000000004,0.0,2276.1000000000004,0.0
+476,mg,Isoptera,Tundra,"""tundra""",0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+477,mg,Other,Boreal Forests/Taiga,C45 – USA – Washington – Cedar River – Pseudotsuga,146.20962126,0.0,,,,,,,,146.20962126,0.0,146.20962126,0.0
+478,mg,Other,Boreal Forests/Taiga,C46 – USA – Oregon – Andrews Experimental Forest – Pseudotsuga forest,159.2953751,0.0,,,,,,,,159.2953751,0.0,159.2953751,0.0
+479,mg,Other,Boreal Forests/Taiga,C48 – Japan – Shiga-Yama – subalpine conifer forest,24.526847526,0.0,,,,,,,,24.526847526,0.0,24.526847526,0.0
+480,mg,Other,Boreal Forests/Taiga,Fell Riisitunturi,172.93,0.0,,,,,,,,172.93,0.0,172.93,0.0
+481,mg,Other,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 1- open ground",0.0,0.0,,,,,,,,0.0,0.0,0.0,0.0
+482,mg,Other,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 1- under plant associations",19.47,0.0,,,,,,,,19.47,0.0,19.47,0.0
+483,mg,Other,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 2",22.65,0.0,,,,,,,,22.65,0.0,22.65,0.0
+484,mg,Other,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 3",15.719999999999999,0.0,,,,,,,,15.719999999999999,0.0,15.719999999999999,0.0
+485,mg,Other,Boreal Forests/Taiga,"Hornsund, Spitsbergen-plot 4-  in the moss
+and turf layers",701.9699999999999,0.0,,,,,,,,701.9699999999999,0.0,701.9699999999999,0.0
+486,mg,Other,Boreal Forests/Taiga,"Ivantjarnsheden, Jadraas, Gastrikland",313.3,0.0,,,,,,,,313.3,0.0,313.3,0.0
+487,mg,Other,Boreal Forests/Taiga,Jyvaskyla- Natural Deciduous forest,402.6666666666667,0.0,,,,,,,,402.6666666666667,0.0,402.6666666666667,0.0
+488,mg,Other,Boreal Forests/Taiga,Jyvaskyla-Birch after Field,308.66666666666663,0.0,,,,,,,,308.66666666666663,0.0,308.66666666666663,0.0
+489,mg,Other,Boreal Forests/Taiga,Jyvaskyla-Birch after Spruce,468.0,0.0,,,,,,,,468.0,0.0,468.0,0.0
+490,mg,Other,Boreal Forests/Taiga,Lammi commune-OMT,553.78,0.0,,,,,,,,553.78,0.0,553.78,0.0
+491,mg,Other,Boreal Forests/Taiga,harviala-MT,801.9,0.0,,,,,,,,801.9,0.0,801.9,0.0
+492,mg,Other,Boreal Forests/Taiga,oulanka-HMT,201.06,0.0,,,,,,,,201.06,0.0,201.06,0.0
+493,mg,Other,Crops,Acre State,609.0,166.32197690022807,,,,,,,,609.0,166.32197690022807,609.0,166.32197690022807
+494,mg,Other,Crops,Embrapa Amazônia Ocidental,4612.35,1753.9360749468608,,,,,,,,4612.35,1753.9360749468608,4612.35,1753.9360749468608
+495,mg,Other,Crops,Rondônia Stat,1644.5,692.6211085434808,,,,,,,,1644.5,692.6211085434808,1644.5,692.6211085434808
+496,mg,Other,Crops,Sampadi Forest Reserve,1432.6999999999998,565.1732499862321,,,,,,,,1432.6999999999998,565.1732499862321,1432.6999999999998,565.1732499862321
+497,mg,Other,Crops,"Yurimaguas, Loreto, high input cultivation (corn, first crop)",420.0,127.27922061357856,,,,,,,,420.0,127.27922061357856,420.0,127.27922061357856
+498,mg,Other,Crops,"Yurimaguas, Loreto, low input cultivation (rice, first crop)",249.0,67.14908785679818,,,,,,,,249.0,67.14908785679818,249.0,67.14908785679818
+499,mg,Other,Crops,"Yurimaguas, Loreto, traditional cultivation (first crop of cassava)",183.0,150.00749981250937,,,,,,,,183.0,150.00749981250937,183.0,150.00749981250937
+500,mg,Other,Crops,carimagua research station-crops-cassava,810.0,0.0,,,,,,,,810.0,0.0,810.0,0.0
+501,mg,Other,Crops,carimagua research station-crops-rice,219.0,0.0,,,,,,,,219.0,0.0,219.0,0.0
+502,mg,Other,Pasture,Acre State,990.0,380.72824954289905,,,,,,,,990.0,380.72824954289905,990.0,380.72824954289905
+503,mg,Other,Pasture,CIAT-CORPOICA research station of Carimagua,1166.5,651.3190462438513,,,,,,,,1166.5,651.3190462438513,1166.5,651.3190462438513
+504,mg,Other,Pasture,EMBRAPA’s Western Amazonian Experimental Station ,406.0,273.4062910761199,,,,,,,,406.0,273.4062910761199,406.0,273.4062910761199
+505,mg,Other,Pasture,Embrapa Amazônia Ocidental,2049.3,640.6668576569261,,,,,,,,2049.3,640.6668576569261,2049.3,640.6668576569261
+506,mg,Other,Pasture,G50 – USA – Pawnee Colorado – short grass prairie – lightly grazed,7.648192396,0.0,,,,,,,,7.648192396,0.0,7.648192396,0.0
+507,mg,Other,Pasture,G51 – USA – Pawnee Colorado – short grass prairie – moderately grazed,1.913677751,0.0,,,,,,,,1.913677751,0.0,1.913677751,0.0
+508,mg,Other,Pasture,G52 – USA – Pawnee Colorado – short grass prairie – heavily grazed,3.933764956,0.0,,,,,,,,3.933764956,0.0,3.933764956,0.0
+509,mg,Other,Pasture,"New England Tablelands, Armidale, New South Wales, 10 sheep per Hectare",698.1266666666667,87.09874957643065,,,,,,,,698.1266666666667,87.09874957643065,698.1266666666667,87.09874957643065
+510,mg,Other,Pasture,"New England Tablelands, Armidale, New South Wales, 20 sheep per Hectare",761.2133333333333,87.09874957643065,,,,,,,,761.2133333333333,87.09874957643065,761.2133333333333,87.09874957643065
+511,mg,Other,Pasture,"New England Tablelands, Armidale, New South Wales, 30 sheep per Hectare",181.33333333333334,87.09109509269271,,,,,,,,181.33333333333334,87.09109509269271,181.33333333333334,87.09109509269271
+512,mg,Other,Pasture,Rondônia Stat,523.5,222.37468381090505,,,,,,,,523.5,222.37468381090505,523.5,222.37468381090505
+513,mg,Other,Pasture,"Yurimaguas, Loreto, centrosema pubescens benth. (leguminosae) Pasture",1341.0,452.8410317098043,,,,,,,,1341.0,452.8410317098043,1341.0,452.8410317098043
+514,mg,Other,Pasture,"Yurimaguas, Loreto, improved Pasture with Brachiaria humidicola (Rendle) schwiek + desmodium ovalifolium Guill and Perr. (leguminosae)",186.0,150.02999700059985,,,,,,,,186.0,150.02999700059985,186.0,150.02999700059985
+515,mg,Other,Pasture,"Yurimaguas, Loreto, traditional 10-year Pastures, ""dry""",531.0,256.33766793040775,,,,,,,,531.0,256.33766793040775,531.0,256.33766793040775
+516,mg,Other,Pasture,"Yurimaguas, Loreto, traditional 10-year Pastures, ""humid""",147.0,50.0199960015992,,,,,,,,147.0,50.0199960015992,147.0,50.0199960015992
+517,mg,Other,Pasture,carimagua research station-Pastures- B. dec.+kudzu,1332.0,0.0,,,,,,,,1332.0,0.0,1332.0,0.0
+518,mg,Other,Temperate Forests,Andersby ingsbackar,806.2,1.3313526955694348,,,,,,,,806.2,1.3313526955694348,806.2,1.3313526955694348
+519,mg,Other,Temperate Forests,Coweeta Hydrologic Laboratory,3097.6,0.0,,,,,,,,3097.6,0.0,3097.6,0.0
+520,mg,Other,Temperate Forests,Coweeta Hydrologic Laboratory - mature mixed oak,200.0,0.0,,,,,,,,200.0,0.0,200.0,0.0
+521,mg,Other,Temperate Forests,Coweeta Hydrologic Laboratory - plantation white pine,3410.0,0.0,,,,,,,,3410.0,0.0,3410.0,0.0
+522,mg,Other,Temperate Forests,Danish beech forest,647.7,0.0,,,,,,,,647.7,0.0,647.7,0.0
+523,mg,Other,Temperate Forests,Danish oak forest,1831.8,0.0,,,,,,,,1831.8,0.0,1831.8,0.0
+524,mg,Other,Temperate Forests,Danish spruce forest,405.9,0.0,,,,,,,,405.9,0.0,405.9,0.0
+525,mg,Other,Temperate Forests,De Hooge veluwe,840.0,0.0,,,,,,,,840.0,0.0,840.0,0.0
+526,mg,Other,Temperate Forests,Geels skov- fagus / anemone / asperula - mull,4340.0,0.0,,,,,,,,4340.0,0.0,4340.0,0.0
+527,mg,Other,Temperate Forests,Geels skov- fagus / melica / asperula - mull,1510.0,0.0,,,,,,,,1510.0,0.0,1510.0,0.0
+528,mg,Other,Temperate Forests,Gottinger Wald,471.0,0.0,,,,,,,,471.0,0.0,471.0,0.0
+529,mg,Other,Temperate Forests,Grib skov - fagus / oxalis - moder,1380.0,0.0,,,,,,,,1380.0,0.0,1380.0,0.0
+530,mg,Other,Temperate Forests,H12 – Denmark – Hestehaven – beech forest,23.194983530000002,0.0,,,,,,,,23.194983530000002,0.0,23.194983530000002,0.0
+531,mg,Other,Temperate Forests,H19 – Germany – Solling – beech forest,323.6375113,0.0,,,,,,,,323.6375113,0.0,323.6375113,0.0
+532,mg,Other,Temperate Forests,H22 – Germany – Gorlitz – Fraxino-Ulmetum,215.02472841,0.0,,,,,,,,215.02472841,0.0,215.02472841,0.0
+533,mg,Other,Temperate Forests,H59 – USA – Tennessee – Oak Ridge – Liriodendron forest,79.61741671,0.0,,,,,,,,79.61741671,0.0,79.61741671,0.0
+534,mg,Other,Temperate Forests,Japanese beech forest,372.1,0.0,,,,,,,,372.1,0.0,372.1,0.0
+535,mg,Other,Temperate Forests,Kiesdorfer wald - fraxinus / quercus / prunus - mull,370.0,0.0,,,,,,,,370.0,0.0,370.0,0.0
+536,mg,Other,Temperate Forests,Meathop wood - quercus / fraxinus / corylus - mull,1260.0,0.0,,,,,,,,1260.0,0.0,1260.0,0.0
+537,mg,Other,Temperate Forests,"Oak Ridge, Tennesse",372.15,0.0,,,,,,,,372.15,0.0,372.15,0.0
+538,mg,Other,Temperate Forests,Solling (B 1) - fagus / luzula - moder,2280.0,0.0,,,,,,,,2280.0,0.0,2280.0,0.0
+539,mg,Other,Temperate Forests,"Solling mountains, Dassel - 120 years stand - beech forest",1296.2775,0.0,,,,,,,,1296.2775,0.0,1296.2775,0.0
+540,mg,Other,Temperate Forests,"Solling mountains, Dassel - 120 years stand - mixed forest",611.3698,0.0,,,,,,,,611.3698,0.0,611.3698,0.0
+541,mg,Other,Temperate Forests,"Solling mountains, Dassel - 120 years stand - spruce forest",530.7629999999999,0.0,,,,,,,,530.7629999999999,0.0,530.7629999999999,0.0
+542,mg,Other,Temperate Forests,"Solling mountains, Dassel - 30 years stand - beech forest",359.496,0.0,,,,,,,,359.496,0.0,359.496,0.0
+543,mg,Other,Temperate Forests,"Solling mountains, Dassel - 30 years stand - mixed forest",561.927,0.0,,,,,,,,561.927,0.0,561.927,0.0
+544,mg,Other,Temperate Forests,"Solling mountains, Dassel - 30 years stand - spruce forest",440.587,0.0,,,,,,,,440.587,0.0,440.587,0.0
+545,mg,Other,Temperate Forests,Stampeskoven - quercus / mercurialis - mull,3360.0,0.0,,,,,,,,3360.0,0.0,3360.0,0.0
+546,mg,Other,Temperate Forests,"Yanagisawa Pass, Enzan city",1052.625,0.0,,,,,,,,1052.625,0.0,1052.625,0.0
+547,mg,Other,Temperate Forests,mesic deciduous forest,2081.67,0.0,,,,,,,,2081.67,0.0,2081.67,0.0
+548,mg,Other,Temperate Forests,temperate coniferous forest,430.0,0.0,,,,,,,,430.0,0.0,430.0,0.0
+549,mg,Other,Temperate Forests,temperate coniferous forest (mor),840.0,0.0,,,,,,,,840.0,0.0,840.0,0.0
+550,mg,Other,Temperate Forests,temperate coniferous forest (mull),840.0,0.0,,,,,,,,840.0,0.0,840.0,0.0
+551,mg,Other,"Temperate Grasslands, Savannas and Shrublands","""temperate"" grassland",1140.0,0.0,,,,,,,,1140.0,0.0,1140.0,0.0
+552,mg,Other,"Temperate Grasslands, Savannas and Shrublands",Colstrip montana,304.0,249.0,,,,,,,,304.0,249.0,304.0,249.0
+553,mg,Other,"Temperate Grasslands, Savannas and Shrublands",G29 – USSR – Strelyetzkaya – forest glade,244.4879486,0.0,,,,,,,,244.4879486,0.0,244.4879486,0.0
+554,mg,Other,"Temperate Grasslands, Savannas and Shrublands",G30 – USSR – Strelyetzkaya – bottom of ravine in steppe,380.1284223,0.0,,,,,,,,380.1284223,0.0,380.1284223,0.0
+555,mg,Other,"Temperate Grasslands, Savannas and Shrublands",G31 – USSR – Strelyetzkaya – uncut meadow steppe,975.9174127,0.0,,,,,,,,975.9174127,0.0,975.9174127,0.0
+556,mg,Other,"Temperate Grasslands, Savannas and Shrublands",G32 – USSR – Strelyetzkaya – moved meadow steppe,150.2183467,0.0,,,,,,,,150.2183467,0.0,150.2183467,0.0
+557,mg,Other,"Temperate Grasslands, Savannas and Shrublands",G36 – Canada – Saskatchewan – Matador – mixed prairie,36.982574116,0.0,,,,,,,,36.982574116,0.0,36.982574116,0.0
+558,mg,Other,"Temperate Grasslands, Savannas and Shrublands",G49 – USA – Pawnee Colorado – short grass prairie – ungrazed,0.478324693,0.0,,,,,,,,0.478324693,0.0,0.478324693,0.0
+559,mg,Other,"Temperate Grasslands, Savannas and Shrublands",G55 – Japan – Kawatabi – Miscanthus grassland,80.01463068999999,0.0,,,,,,,,80.01463068999999,0.0,80.01463068999999,0.0
+560,mg,Other,"Temperate Grasslands, Savannas and Shrublands",Pawnee National Grassland,1810.8137092564298,0.0,,,,,,,,1810.8137092564298,0.0,1810.8137092564298,0.0
+561,mg,Other,"Temperate Grasslands, Savannas and Shrublands",Spikbole farm,3542.0,442.74145954495833,,,,,,,,3542.0,442.74145954495833,3542.0,442.74145954495833
+562,mg,Other,Tropical and Subtropical Forests,Acre State,777.0,307.77426793024785,,,,,,,,777.0,307.77426793024785,777.0,307.77426793024785
+563,mg,Other,Tropical and Subtropical Forests,Bi Dup-Nui Ba Nature Reserve - Mountain pine forest,2160.0,631.5765986798434,,,,,,,,2160.0,631.5765986798434,2160.0,631.5765986798434
+564,mg,Other,Tropical and Subtropical Forests,Cat Tien National Park - Lagerstroemia forest,2778.0,485.119572888994,,,,,,,,2778.0,485.119572888994,2778.0,485.119572888994
+565,mg,Other,Tropical and Subtropical Forests,Cat Tien National Park - Riparian dipterocarp forest,1314.0,230.141260968128,,,,,,,,1314.0,230.141260968128,1314.0,230.141260968128
+566,mg,Other,Tropical and Subtropical Forests,E16 – Zaire – Haut-Shaba – dry dense evergreen forest,30.863444169999998,0.0,,,,,,,,30.863444169999998,0.0,30.863444169999998,0.0
+567,mg,Other,Tropical and Subtropical Forests,"E17 – Zaire – Haut-Shaba – miombo, open forest",57.89464598,0.0,,,,,,,,57.89464598,0.0,57.89464598,0.0
+568,mg,Other,Tropical and Subtropical Forests,E18 – Zaire – Haut-Shaba – river forest,174.166501544,0.0,,,,,,,,174.166501544,0.0,174.166501544,0.0
+569,mg,Other,Tropical and Subtropical Forests,E19 – Brazil – Amazonia – inundation forest – black water,37.153790233,0.0,,,,,,,,37.153790233,0.0,37.153790233,0.0
+570,mg,Other,Tropical and Subtropical Forests,E20 – Brazil – Amazonia – inundation forest – mixed water,15.023391513,0.0,,,,,,,,15.023391513,0.0,15.023391513,0.0
+571,mg,Other,Tropical and Subtropical Forests,E21 – Brazil – Amazonia – inundation forest – white water,29.50183997,0.0,,,,,,,,29.50183997,0.0,29.50183997,0.0
+572,mg,Other,Tropical and Subtropical Forests,EMBRAPA’s Western Amazonian Experimental Station ,333.0,139.20129309744217,,,,,,,,333.0,139.20129309744217,333.0,139.20129309744217
+573,mg,Other,Tropical and Subtropical Forests,Pasoh forest,617.732,96.54104917598522,,,,,,,,617.732,96.54104917598522,617.732,96.54104917598522
+574,mg,Other,Tropical and Subtropical Forests,Rondônia State,1110.0,351.4484314945793,,,,,,,,1110.0,351.4484314945793,1110.0,351.4484314945793
+575,mg,Other,Tropical and Subtropical Forests,Semengoh Wildlife Rehabilitation Center,960.3399999999999,1096.3023807326153,,,,,,,,960.3399999999999,1096.3023807326153,960.3399999999999,1096.3023807326153
+576,mg,Other,Tropical and Subtropical Forests,Tropical Forests,30.0,0.0,,,,,,,,30.0,0.0,30.0,0.0
+577,mg,Other,Tropical and Subtropical Forests,"Yurimaguas, Loreto, 15-year old secondary forest",1410.0,544.1507144165116,,,,,,,,1410.0,544.1507144165116,1410.0,544.1507144165116
+578,mg,Other,Tropical and Subtropical Forests,"Yurimaguas, Loreto, Primary forest",3270.0,1371.4955340794952,,,,,,,,3270.0,1371.4955340794952,3270.0,1371.4955340794952
+579,mg,Other,Tropical and Subtropical Forests,"Yurimaguas, Loreto, pijuayo palm-trees (bactris gasipaes Runth.) with a kudzu cover",120.0,36.98648401781386,,,,,,,,120.0,36.98648401781386,120.0,36.98648401781386
+580,mg,Other,Tropical and Subtropical Forests,"Yurimaguas, Loreto, six month ""kudzu"" (pueraria phaseoloides Benth.) fallow after high input croppping",291.0,77.76888838089432,,,,,,,,291.0,77.76888838089432,291.0,77.76888838089432
+581,mg,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands","""tropical"" grassland",30.0,0.0,,,,,,,,30.0,0.0,30.0,0.0
+582,mg,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",CIAT-CORPOICA research station of Carimagua,177.1,132.87598541497258,,,,,,,,177.1,132.87598541497258,177.1,132.87598541497258
+583,mg,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S15 – Zaire – Haut-Shaba – savanna,54.901931604000005,0.0,,,,,,,,54.901931604000005,0.0,54.901931604000005,0.0
+584,mg,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",S16 – S. Africa – Potchefstroom – thorn tree biotope,7.469336424,0.0,,,,,,,,7.469336424,0.0,7.469336424,0.0
+585,mg,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",carimagua research station,732.0,0.0,,,,,,,,732.0,0.0,732.0,0.0
+586,mg,Other,Tundra,"""tundra""",520.0,0.0,,,,,,,,520.0,0.0,520.0,0.0
+587,mg,Other,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Cushion",37.86,0.0,,,,,,,,37.86,0.0,37.86,0.0
+588,mg,Other,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Deschampsia",17.205000000000002,0.0,,,,,,,,17.205000000000002,0.0,17.205000000000002,0.0
+589,mg,Other,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Kobresia",41.05,0.0,,,,,,,,41.05,0.0,41.05,0.0
+590,mg,Other,Tundra,"Niwot Ridge, the Indian Peaks section of the Rocky Mountains, Willow",20.689999999999998,0.0,,,,,,,,20.689999999999998,0.0,20.689999999999998,0.0
+591,mg,Other,Tundra,"T05 – N. Canada, Devon Isl./ raised beach/crest",3.819674347,0.0,,,,,,,,3.819674347,0.0,3.819674347,0.0
+592,mg,Other,Tundra,"T06 - Truelove site, N. Canada, Devon Isl./ meadow",0.963150657,0.0,,,,,,,,0.963150657,0.0,0.963150657,0.0
+593,mg,Other,Tundra,T12 – Taimyr – Eriphorum-grass association,108.5830689,0.0,,,,,,,,108.5830689,0.0,108.5830689,0.0
+594,mg,Other,Tundra,T13 – Taimyr – Eriphorum-Dryas stands,30.47893463,0.0,,,,,,,,30.47893463,0.0,30.47893463,0.0
+595,mg,Other,Tundra,T42 – England – Moor House – blanket bog – Calluna,16.1503488,0.0,,,,,,,,16.1503488,0.0,16.1503488,0.0
+596,mg,Other,Tundra,T43 – England – Moor House – Juncus moor,36.99169626,0.0,,,,,,,,36.99169626,0.0,36.99169626,0.0
+597,mg,Other,Tundra,T44 – England – Moor House – alluvial grassland,45.55387174,0.0,,,,,,,,45.55387174,0.0,45.55387174,0.0
+598,mg,Other,Tundra,T45 – England – Moor House – limestone grassland,2.834016263,0.0,,,,,,,,2.834016263,0.0,2.834016263,0.0
+599,mg,Other,Tundra,T60 – Austria – Obergurgl – manured alpine meadow,18.329630887,0.0,,,,,,,,18.329630887,0.0,18.329630887,0.0
+600,,Acari,Crops,"2 willow plantations,  central New York",,,individuals,21028.0,3071.7760335024427,108.25228566111078,15.813523714364667,108.25228566111078,15.813523714364667,108.25228566111078,15.813523714364667,108.25228566111078,15.813523714364667
+601,,Acari,Crops,"3 corn fields, central New York",,,individuals,4288.0,597.9297617613628,22.074652887333222,3.078146441671626,22.074652887333222,3.078146441671626,22.074652887333222,3.078146441671626,22.074652887333222,3.078146441671626
+602,,Acari,Crops,"3 herbaceous old fields, central New York",,,individuals,17116.0,1840.7824423326076,88.11328330680864,9.476360414083441,88.11328330680864,9.476360414083441,88.11328330680864,9.476360414083441,88.11328330680864,9.476360414083441
+603,,Acari,Crops,"Farm of the Obafemi Awolowo University, Ile-Ife, Oyo Stat - crop",,,individuals,60861.166666666664,0.0,313.3136960085825,0.0,313.3136960085825,0.0,313.3136960085825,0.0,313.3136960085825,0.0
+604,,Acari,Crops,"Irrigated olive farm , Egyptian western desert ",,,individuals,14674.626860800001,0.0,75.54507793920159,0.0,75.54507793920159,0.0,75.54507793920159,0.0,75.54507793920159,0.0
+605,,Acari,Crops,"Rain-fed olive farm, Egyptian western desert ",,,individuals,5838.8059706,0.0,30.058212471428114,0.0,30.058212471428114,0.0,30.058212471428114,0.0,30.058212471428114,0.0
+606,,Acari,Crops,"Vineyard, Egyptian western desert ",,,individuals,6605.9701498,0.0,34.0075788341697,0.0,34.0075788341697,0.0,34.0075788341697,0.0,34.0075788341697,0.0
+607,,Acari,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (with crust),,,individuals,194.84,0.0,1.0030376325951504,0.0,1.0030376325951504,0.0,1.0030376325951504,0.0,1.0030376325951504,0.0
+608,,Acari,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (without crust),,,individuals,122.55499999999999,0.0,0.6309139656266611,0.0,0.6309139656266611,0.0,0.6309139656266611,0.0,0.6309139656266611,0.0
+609,,Acari,Deserts and Xeric Shrublands,Jornada Validation Site,,,individuals,980.375,0.0,5.046977104575398,0.0,5.046977104575398,0.0,5.046977104575398,0.0,5.046977104575398,0.0
+610,,Acari,Deserts and Xeric Shrublands,Joshua Tree National Monument,,,individuals,1420.0,0.0,7.310169566234416,0.0,7.310169566234416,0.0,7.310169566234416,0.0,7.310169566234416,0.0
+611,,Acari,Deserts and Xeric Shrublands,Joshua Tree National Monument - juniper site,,,individuals,1410.0,180.0,7.258689498866568,0.926641212621264,7.258689498866568,0.926641212621264,7.258689498866568,0.926641212621264,7.258689498866568,0.926641212621264
+612,,Acari,Deserts and Xeric Shrublands,The Mariut region,,,individuals,0.01173913043478261,0.0,6.043312256225635e-05,0.0,6.043312256225635e-05,0.0,6.043312256225635e-05,0.0,6.043312256225635e-05,0.0
+613,,Acari,"Mediterranean Forests, Woodlands and Scrub",Anabasis formation in Omayed,,,individuals,0.11,0.0,0.000566280741046328,0.0,0.000566280741046328,0.0,0.000566280741046328,0.0,0.000566280741046328,0.0
+614,,Acari,"Mediterranean Forests, Woodlands and Scrub",Eucalyptus marginata forest in S.W.,,,individuals,128.5,0.0,0.6615188656768468,0.0,0.6615188656768468,0.0,0.6615188656768468,0.0,0.6615188656768468,0.0
+615,,Acari,"Mediterranean Forests, Woodlands and Scrub",Le Rouquet,,,individuals,8775.0,0.0,45.17375911528662,0.0,45.17375911528662,0.0,45.17375911528662,0.0,45.17375911528662,0.0
+616,,Acari,"Mediterranean Forests, Woodlands and Scrub",Mediterranean sclerophyllous forest,,,individuals,104490.0,0.0,537.9152239266438,0.0,537.9152239266438,0.0,537.9152239266438,0.0,537.9152239266438,0.0
+617,,Acari,"Mediterranean Forests, Woodlands and Scrub",Montseny,,,individuals,15496.0,0.0,79.77351239321726,0.0,79.77351239321726,0.0,79.77351239321726,0.0,79.77351239321726,0.0
+618,,Acari,"Mediterranean Forests, Woodlands and Scrub","P. halepensis forest in N. Euboea,",,,individuals,5326.8,0.0,27.422402285505274,0.0,27.422402285505274,0.0,27.422402285505274,0.0,27.422402285505274,0.0
+619,,Acari,"Mediterranean Forests, Woodlands and Scrub",P. halepensis forest in Skopelos is,,,individuals,4966.4,0.0,25.567060657568028,0.0,25.567060657568028,0.0,25.567060657568028,0.0,25.567060657568028,0.0
+620,,Acari,"Mediterranean Forests, Woodlands and Scrub",Prades,,,individuals,24913.0,0.0,128.25229183351973,0.0,128.25229183351973,0.0,128.25229183351973,0.0,128.25229183351973,0.0
+621,,Acari,"Mediterranean Forests, Woodlands and Scrub",Quercus cocci/era formation in Ikaria is,,,individuals,114.5,0.0,0.5894467713618596,0.0,0.5894467713618596,0.0,0.5894467713618596,0.0,0.5894467713618596,0.0
+622,,Acari,"Mediterranean Forests, Woodlands and Scrub",Sainte-Baume,,,individuals,17063.0,0.0,87.84043894975905,0.0,87.84043894975905,0.0,87.84043894975905,0.0,87.84043894975905,0.0
+623,,Acari,"Mediterranean Forests, Woodlands and Scrub",Thymelaea formation in Gharbaniat,,,individuals,0.12,0.0,0.000617760808414176,0.0,0.000617760808414176,0.0,0.000617760808414176,0.0,0.000617760808414176,0.0
+624,,Acari,"Mediterranean Forests, Woodlands and Scrub",Thymelaea formation in Omayed,,,individuals,0.24,0.0,0.001235521616828352,0.0,0.001235521616828352,0.0,0.001235521616828352,0.0,0.001235521616828352,0.0
+625,,Acari,Pasture,"3 shrubby old fields, central New York",,,individuals,2564.0,292.0,13.199489273116226,1.5032179671411616,13.199489273116226,1.5032179671411616,13.199489273116226,1.5032179671411616,13.199489273116226,1.5032179671411616
+626,,Acari,Pasture,"3 shrubby old fieldss, central New York",,,individuals,10140.0,1780.0,52.20078831099787,9.163451991476943,52.20078831099787,9.163451991476943,52.20078831099787,9.163451991476943,52.20078831099787,9.163451991476943
+627,,Acari,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur",,,individuals,15.206703910449999,1.6698210944791707,0.07828421417528836,0.008596250243604138,0.07828421417528836,0.008596250243604138,0.07828421417528836,0.008596250243604138,0.07828421417528836,0.008596250243604138
+628,,Acari,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur - Control (pure grass blocks)",,,individuals,0.7541899439166667,8.902160576133587,0.0038825749120983506,0.045828382617875765,0.0038825749120983506,0.045828382617875765,0.0038825749120983506,0.045828382617875765,0.0038825749120983506,0.045828382617875765
+629,,Acari,Pasture,"New England Tablelands, Armidale, New South Wales, 10 sheep per Hectare",,,individuals,20572.5,3174.5,105.90736859250529,16.342347385923347,105.90736859250529,16.342347385923347,105.90736859250529,16.342347385923347,105.90736859250529,16.342347385923347
+630,,Acari,Pasture,"New England Tablelands, Armidale, New South Wales, 20 sheep per Hectare",,,individuals,15736.5,3971.5,81.011608013414,20.445308755140832,81.011608013414,20.445308755140832,81.011608013414,20.445308755140832,81.011608013414,20.445308755140832
+631,,Acari,Pasture,"New England Tablelands, Armidale, New South Wales, 30 sheep per Hectare",,,individuals,3403.0,1490.0,17.518666925278673,7.6705300378093515,17.518666925278673,7.6705300378093515,17.518666925278673,7.6705300378093515,17.518666925278673,7.6705300378093515
+632,,Acari,Pasture,Potchefstroom,,,individuals,289.84714285714284,0.0,1.4921350440663976,0.0,1.4921350440663976,0.0,1.4921350440663976,0.0,1.4921350440663976,0.0
+633,,Acari,Temperate Forests," spruce forest, Southeastern Italian Alps.",,,individuals,440645.9,37189.63592985282,4400.063904119746,371.35662594909013,2268.448061736601,191.45249630545635,4400.063904119746,371.35662594909013,2268.448061736601,191.45249630545635
+634,,Acari,Temperate Forests,"3  hardwood forests, central New York",,,individuals,39252.0,2817.150333226823,391.95033555176224,28.130618017120455,202.06956043227697,14.50270889398723,391.95033555176224,28.130618017120455,202.06956043227697,14.50270889398723
+635,,Acari,Temperate Forests,"The Coweeta Hydrologic Laboratory, North Carolina",,,individuals,100766.66666666667,0.0,1006.2042395911693,0.0,518.7474788433484,0.0,1006.2042395911693,0.0,518.7474788433484,0.0
+636,,Acari,Temperate Forests,"Yanagisawa Pass, Enzan city Tullgren",,,individuals,43128.5,0.0,430.65907589025215,0.0,222.02580854742325,0.0,430.65907589025215,0.0,222.02580854742325,0.0
+637,,Acari,Temperate Forests,west slope of Shergyla Mountain in the Shergyla Mountains in southeastern Tibet,,,individuals,140800.0,21116.595369519204,1405.9565689821698,210.8594884539346,724.8393485392999,108.70837522024357,1405.9565689821698,210.8594884539346,724.8393485392999,108.70837522024357
+638,,Acari,"Temperate Grasslands, Savannas and Shrublands",west slope of Shergyla Mountain in the Shergyla Mountains in southeastern Tibet,,,individuals,56600.0,7445.965350443151,101.06358744064401,13.295335163860724,291.37718130201966,38.331879785947535,101.06358744064401,13.295335163860724,291.37718130201966,38.331879785947535
+639,,Acari,Tropical and Subtropical Forests,"Farm of the Obafemi Awolowo University, Ile-Ife, Oyo Stat - forest",,,individuals,80472.08333333333,0.0,142.03595902149598,0.0,414.2708271231078,0.0,142.03595902149598,0.0,414.2708271231078,0.0
+640,,Acari,Tropical and Subtropical Forests,The Chamela Biological Station,,,individuals,14196.0,0.0,25.056421938487865,0.0,73.08110363539701,0.0,25.056421938487865,0.0,73.08110363539701,0.0
+641,,Acari,Tropical and Subtropical Forests,central Amazonian rain fores,,,individuals,72700.0,0.0,128.31796808453564,0.0,374.26008976425493,0.0,128.31796808453564,0.0,374.26008976425493,0.0
+642,,Acari,Tropical and Subtropical Forests,"dry evergreen forest at the Sakaerat Environmental Research Station, ",,,individuals,33918.0,4868.0,59.86642147855956,8.592185263212098,174.61009249826685,25.060496794668406,59.86642147855956,8.592185263212098,174.61009249826685,25.060496794668406
+643,,Acari,Tundra,Gluudnset,,,individuals,5117.0,1094.0,25.57164277068637,5.467144262484051,26.342350472127823,5.631919370042571,25.57164277068637,5.467144262484051,26.342350472127823,5.631919370042571
+644,,Acari,Tundra,Kiaerstranda,,,individuals,22090.0,1667.0,110.3923370733754,8.330648524278713,113.71946881557623,8.581727230220261,110.3923370733754,8.330648524278713,113.71946881557623,8.581727230220261
+645,,Acari,Tundra,Knudsenheia,,,individuals,126455.5,13977.67285709606,631.9474051961168,69.85187748039468,650.9937659034903,71.95715403290455,631.9474051961168,69.85187748039468,650.9937659034903,71.95715403290455
+646,,Collembola,Crops,"Farm of the Obafemi Awolowo University, Ile-Ife, Oyo Stat - crop",,,individuals,3035.5,0.0,17.240200398049904,0.0,17.240200398049904,0.0,17.240200398049904,0.0,17.240200398049904,0.0
+647,,Collembola,Crops,"Irrigated olive farm , Egyptian western desert ",,,individuals,8514.925372669999,0.0,48.36073786831512,0.0,48.36073786831512,0.0,48.36073786831512,0.0,48.36073786831512,0.0
+648,,Collembola,Crops,"Rain-fed olive farm, Egyptian western desert ",,,individuals,2097.0149253,0.0,11.910050255270516,0.0,11.910050255270516,0.0,11.910050255270516,0.0,11.910050255270516,0.0
+649,,Collembola,Crops,"Vineyard, Egyptian western desert ",,,individuals,3970.1492541000002,0.0,22.548564898979528,0.0,22.548564898979528,0.0,22.548564898979528,0.0,22.548564898979528,0.0
+650,,Collembola,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (with crust),,,individuals,2.08,0.0,0.011813413548984944,0.0,0.011813413548984944,0.0,0.011813413548984944,0.0,0.011813413548984944,0.0
+651,,Collembola,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (without crust),,,individuals,1.22,0.0,0.006929021408539246,0.0,0.006929021408539246,0.0,0.006929021408539246,0.0,0.006929021408539246,0.0
+652,,Collembola,Deserts and Xeric Shrublands,Jornada Validation Site,,,individuals,783.0,124.45079348883236,4.4470686581034675,0.7068214855687017,4.4470686581034675,0.7068214855687017,4.4470686581034675,0.7068214855687017,4.4470686581034675,0.7068214855687017
+653,,Collembola,Deserts and Xeric Shrublands,Joshua Tree National Monument,,,individuals,110.0,0.0,0.6247478319174731,0.0,0.6247478319174731,0.0,0.6247478319174731,0.0,0.6247478319174731,0.0
+654,,Collembola,Deserts and Xeric Shrublands,Joshua Tree National Monument - juniper site,,,individuals,115.0,40.0,0.6531454606409945,0.227181029788172,0.6531454606409945,0.227181029788172,0.6531454606409945,0.227181029788172,0.6531454606409945,0.227181029788172
+655,,Collembola,"Mediterranean Forests, Woodlands and Scrub",Eucalyptus marginata forest in S.W.,,,individuals,840.0,0.0,4.770801625551612,0.0,4.770801625551612,0.0,4.770801625551612,0.0,4.770801625551612,0.0
+656,,Collembola,"Mediterranean Forests, Woodlands and Scrub",Le Rouquet,,,individuals,7460.0,0.0,42.36926205549408,0.0,42.36926205549408,0.0,42.36926205549408,0.0,42.36926205549408,0.0
+657,,Collembola,"Mediterranean Forests, Woodlands and Scrub",Mediterranean sclerophyllous forest,,,individuals,19000.0,0.0,107.9109891493817,0.0,107.9109891493817,0.0,107.9109891493817,0.0,107.9109891493817,0.0
+658,,Collembola,"Mediterranean Forests, Woodlands and Scrub",Montseny,,,individuals,7529.0,0.0,42.76114933187868,0.0,42.76114933187868,0.0,42.76114933187868,0.0,42.76114933187868,0.0
+659,,Collembola,"Mediterranean Forests, Woodlands and Scrub","P. halepensis forest in N. Euboea,",,,individuals,4530.4,0.0,25.73052343380836,0.0,25.73052343380836,0.0,25.73052343380836,0.0,25.73052343380836,0.0
+660,,Collembola,"Mediterranean Forests, Woodlands and Scrub",P. halepensis forest in Skopelos is,,,individuals,1208.3,0.0,6.862570957326206,0.0,6.862570957326206,0.0,6.862570957326206,0.0,6.862570957326206,0.0
+661,,Collembola,"Mediterranean Forests, Woodlands and Scrub",Prades,,,individuals,13939.0,0.0,79.16690935543325,0.0,79.16690935543325,0.0,79.16690935543325,0.0,79.16690935543325,0.0
+662,,Collembola,"Mediterranean Forests, Woodlands and Scrub",Sainte-Baume,,,individuals,6413.0,0.0,36.42279860078868,0.0,36.42279860078868,0.0,36.42279860078868,0.0,36.42279860078868,0.0
+663,,Collembola,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur",,,individuals,3.4093137254999997,0.3704684766977776,0.01936328507575098,0.002104085251006413,0.01936328507575098,0.002104085251006413,0.01936328507575098,0.002104085251006413,0.01936328507575098,0.002104085251006413
+664,,Collembola,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur - Control (pure grass blocks)",,,individuals,0.44526143783333333,0.17503501057351523,0.00252887379929847,0.0009941158487768692,0.00252887379929847,0.0009941158487768692,0.00252887379929847,0.0009941158487768692,0.00252887379929847,0.0009941158487768692
+665,,Collembola,Pasture,"New England Tablelands, Armidale, New South Wales, 10 sheep per Hectare",,,individuals,24466.5,3306.5,138.95811663280776,18.77935187486477,138.95811663280776,18.77935187486477,138.95811663280776,18.77935187486477,138.95811663280776,18.77935187486477
+666,,Collembola,Pasture,"New England Tablelands, Armidale, New South Wales, 20 sheep per Hectare",,,individuals,9834.5,3064.5,55.85529593629444,17.404906644646328,55.85529593629444,17.404906644646328,55.85529593629444,17.404906644646328,55.85529593629444,17.404906644646328
+667,,Collembola,Pasture,"New England Tablelands, Armidale, New South Wales, 30 sheep per Hectare",,,individuals,1488.5,150.5,8.45397407099235,0.8547686245779972,8.45397407099235,0.8547686245779972,8.45397407099235,0.8547686245779972,8.45397407099235,0.8547686245779972
+668,,Collembola,Pasture,Potchefstroom,,,individuals,26.650000000000002,0.0,0.1513593610963696,0.0,0.1513593610963696,0.0,0.1513593610963696,0.0,0.1513593610963696,0.0
+669,,Collembola,Temperate Forests," spruce forest, Southeastern Italian Alps.",,,individuals,45921.05,10724.971754741362,458.5048195161186,107.0849041719028,260.80978569885343,60.91275319228002,458.5048195161186,107.0849041719028,260.80978569885343,60.91275319228002
+670,,Collembola,Temperate Forests,"The Coweeta Hydrologic Laboratory, North Carolina",,,individuals,10200.0,0.0,101.84325399929682,0.0,57.931162595983864,0.0,101.84325399929682,0.0,57.931162595983864,0.0
+671,,Collembola,Temperate Forests,"Yanagisawa Pass, Enzan city",,,individuals,115.7,0.0,1.1552220085998668,0.0,0.6571211286622876,0.0,1.1552220085998668,0.0,0.6571211286622876,0.0
+672,,Collembola,Temperate Forests,"Yanagisawa Pass, Enzan city Tullgren",,,individuals,44391.0,0.0,443.22783218458676,0.0,252.1198273331686,0.0,443.22783218458676,0.0,252.1198273331686,0.0
+673,,Collembola,Temperate Forests,west slope of Shergyla Mountain in the Shergyla Mountains in southeastern Tibet,,,individuals,54600.0,10414.701147896658,545.1609478785888,103.98696611098111,310.1021056608548,59.1505632928805,545.1609478785888,103.98696611098111,310.1021056608548,59.1505632928805
+674,,Collembola,"Temperate Grasslands, Savannas and Shrublands",west slope of Shergyla Mountain in the Shergyla Mountains in southeastern Tibet,,,individuals,45400.0,5060.0,111.55145847372064,12.432827750595296,257.85046880957526,28.73840026820376,111.55145847372064,12.432827750595296,257.85046880957526,28.73840026820376
+675,,Collembola,Tropical and Subtropical Forests,Bi Dup-Nui Ba Nature Reserve - Mountain pine forest,,,individuals,7547.0,1040.0,65.45669870730843,9.020136034927887,42.863380795283355,5.906706774492473,65.45669870730843,9.020136034927887,42.863380795283355,5.906706774492473
+676,,Collembola,Tropical and Subtropical Forests,Cat Tien National Park - Lagerstroemia forest,,,individuals,10594.0,1216.0,91.88396264810196,10.546620594684914,60.16889573939736,6.906303305560429,91.88396264810196,10.546620594684914,60.16889573939736,6.906303305560429
+677,,Collembola,Tropical and Subtropical Forests,Cat Tien National Park - Riparian dipterocarp forest,,,individuals,11760.0,1574.0,101.99692285649226,13.651628960554321,66.79122275772257,8.939573522164569,101.99692285649226,13.651628960554321,66.79122275772257,8.939573522164569
+678,,Collembola,Tropical and Subtropical Forests,"Farm of the Obafemi Awolowo University, Ile-Ife, Oyo Stat - forest",,,individuals,7281.0,0.0,63.1496254522211,0.0,41.35262694719201,0.0,63.1496254522211,0.0,41.35262694719201,0.0
+679,,Collembola,Tropical and Subtropical Forests,The Chamela Biological Station,,,individuals,5318.5,0.0,46.12845529015766,0.0,30.206557673209822,0.0,46.12845529015766,0.0,30.206557673209822,0.0
+680,,Collembola,Tropical and Subtropical Forests,central Amazonian rain fores,,,individuals,12014.0,0.0,104.19991761886888,0.0,68.23382229687746,0.0,104.19991761886888,0.0,68.23382229687746,0.0
+681,,Collembola,Tropical and Subtropical Forests,"dry evergreen forest at the Sakaerat Environmental Research Station, ",,,individuals,7247.0,1376.0,62.85473638954077,11.934333830827667,41.159523071872066,7.815027424713117,62.85473638954077,11.934333830827667,41.159523071872066,7.815027424713117
+682,,Collembola,Tundra,Gluudnset,,,individuals,11288.0,2604.0,57.94589098357634,13.367390159570588,64.11048660622214,14.789485039209998,57.94589098357634,13.367390159570588,64.11048660622214,14.789485039209998
+683,,Collembola,Tundra,Kiaerstranda,,,individuals,243475.0,1921.0,1249.8561133262092,9.861273616180913,1382.8225306918796,10.910368955576962,1249.8561133262092,9.861273616180913,1382.8225306918796,10.910368955576962
+684,,Collembola,Tundra,Knudsenheia,,,individuals,140005.0,17516.13190747318,718.7025573312903,89.91742292384691,795.1620018873256,99.48332211613037,718.7025573312903,89.91742292384691,795.1620018873256,99.48332211613037
+685,,Collembola,Tundra,"T05 – N. Canada, Devon Isl./ raised beach/crest",,,individuals,7657.843615,0.0,39.31082311162882,0.0,43.492919960311944,0.0,39.31082311162882,0.0,43.492919960311944,0.0
+686,,Collembola,Tundra,T11 Taimyr – spot medallion tundra – trough,,,individuals,24937.63918,0.0,128.01503555209445,0.0,141.63396373495664,0.0,128.01503555209445,0.0,141.63396373495664,0.0
+687,,Formicidae,Boreal Forests/Taiga,harviala-MT,,,individuals,13.0,0.0,10.95462739192562,0.0,10.95462739192562,0.0,10.95462739192562,0.0,10.95462739192562,0.0
+688,,Formicidae,Boreal Forests/Taiga,oulanka-HMT,,,individuals,2.3,0.0,1.9381263847253019,0.0,1.9381263847253019,0.0,1.9381263847253019,0.0,1.9381263847253019,0.0
+689,,Formicidae,Crops,"Yurimaguas, Loreto, pijuayo palm-trees (bactris gasipaes Runth.) with a kudzu cover",,,individuals,147.0,5.3,14.333339549178241,0.5167802694601679,123.87155589331277,4.466117321323522,14.333339549178241,0.5167802694601679,123.87155589331277,4.466117321323522
+690,,Formicidae,Crops,"Yurimaguas, Loreto, six month ""kudzu"" (pueraria phaseoloides Benth.) fallow after high input croppping",,,individuals,285.0,119.0,27.789127697386387,11.603179635049052,240.1591389768309,100.27697381839606,27.789127697386387,11.603179635049052,240.1591389768309,100.27697381839606
+691,,Formicidae,Deserts and Xeric Shrublands,The Mariut region,,,individuals,4.339130434782609,0.0,3.6564274706159763,0.0,3.6564274706159763,0.0,3.6564274706159763,0.0,3.6564274706159763,0.0
+692,,Formicidae,Pasture,"Benfica Field Station, eastern Amazonia, near Marabá, State of Pará, Brazil.",,,individuals,252.0,0.0,133.1806362622883,0.0,212.35123867425048,0.0,133.1806362622883,0.0,212.35123867425048,0.0
+693,,Formicidae,Tropical and Subtropical Forests,Forestry Reserve of Linhares A. mangium plantation,,,individuals,1172.25,374.4472593036301,234.94746228272086,75.04835430335496,987.8124584757544,315.53309258454016,234.94746228272086,75.04835430335496,987.8124584757544,315.53309258454016
+694,,Formicidae,Tropical and Subtropical Forests,Forestry Reserve of Linhares E. grandis plantation,,,individuals,426.25,278.62385037896524,85.4308857308678,55.84300838385874,359.1853789083304,234.78618949270754,85.4308857308678,55.84300838385874,359.1853789083304,234.78618949270754
+695,,Formicidae,Tropical and Subtropical Forests,Forestry Reserve of Linhares F Primary forest,,,individuals,2227.0,591.1317535033962,446.3450616366981,118.47720653474757,1876.611938601412,498.1252383973329,446.3450616366981,118.47720653474757,1876.611938601412,498.1252383973329
+696,,Formicidae,"Tropical and Subtropical Grasslands, Savannas and Shrublands",A. karroo,,,individuals,654.0,99.12618221237011,489.9799393293637,74.26581153878983,551.102024178412,83.53003007081844,489.9799393293637,74.26581153878983,551.102024178412,83.53003007081844
+697,,Formicidae,"Tropical and Subtropical Grasslands, Savannas and Shrublands",E.ngamicum,,,individuals,1913.0,130.9770972345929,1433.2287827783987,98.12866996413149,1612.0155539041316,110.3696382369982,1433.2287827783987,98.12866996413149,1612.0155539041316,110.3696382369982
+698,,Formicidae,"Tropical and Subtropical Grasslands, Savannas and Shrublands",P.kalachariensis,,,individuals,1004.0,114.66036804406308,752.201619398595,85.90409813105892,846.0343001148709,96.62012373413587,752.201619398595,85.90409813105892,846.0343001148709,96.62012373413587
+699,,Formicidae,"Tropical and Subtropical Grasslands, Savannas and Shrublands",V.verrucosum,,,individuals,1485.0,190.60167890131504,1112.5691282937387,142.7996927586257,1251.355513616119,160.61310558764285,1112.5691282937387,142.7996927586257,1251.355513616119,160.61310558764285
+700,,Formicidae,Tundra,"""tundra""-Formicoidea",,,individuals,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+701,,Isoptera,Crops," sugar cane field in riparian forest near Rabba, Niggeria",,,individuals,1151.0,694.0,848.4646919966599,511.5851400918175,839.7024143767633,506.301890162879,848.4646919966599,511.5851400918175,839.7024143767633,506.301890162879
+702,,Isoptera,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (with crust),,,individuals,0.61,0.0,0.4450203933708302,0.0,0.4450203933708302,0.0,0.4450203933708302,0.0,0.4450203933708302,0.0
+703,,Isoptera,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (without crust),,,individuals,4.44,0.0,3.239164830436863,0.0,3.239164830436863,0.0,3.239164830436863,0.0,3.239164830436863,0.0
+704,,Isoptera,"Mediterranean Forests, Woodlands and Scrub",Eucalyptus marginata forest in S.W.,,,individuals,185.5,92.75,135.329972082441,67.6649860412205,135.329972082441,67.6649860412205,135.329972082441,67.6649860412205,135.329972082441,67.6649860412205
+705,,Isoptera,"Mediterranean Forests, Woodlands and Scrub",Mediterranean scrubs fYI. Australia),,,individuals,36.0,0.0,26.26349862516375,0.0,26.26349862516375,0.0,26.26349862516375,0.0,26.26349862516375,0.0
+706,,Isoptera,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur",,,individuals,2.7120370370166667,0.44509500998815754,1.5191131691752016,0.24931432793077404,1.9785439164744554,0.324715338413645,1.5191131691752016,0.24931432793077404,1.9785439164744554,0.324715338413645
+707,,Isoptera,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur - Control (pure grass blocks)",,,individuals,0.36111111133333335,0.0,0.20227181165837002,0.0,0.2634455882231765,0.0,0.20227181165837002,0.0,0.2634455882231765,0.0
+708,,Isoptera,Pasture,"Benfica Field Station, eastern Amazonia, near Marabá, State of Pará, Brazil.",,,individuals,916.0,0.0,513.0857890109017,0.0,668.2601316847221,0.0,513.0857890109017,0.0,668.2601316847221,0.0
+709,,Isoptera,Pasture,Cassava garden (Sumatra),,,individuals,26.0,0.0,14.563570430440443,0.0,18.96808234039604,0.0,14.563570430440443,0.0,18.96808234039604,0.0
+710,,Isoptera,Pasture,Cleared and burned forest (Thailand),,,individuals,7.0,0.0,3.9209612697339655,0.0,5.106791399337396,0.0,3.9209612697339655,0.0,5.106791399337396,0.0
+711,,Isoptera,Pasture,Imperata fallow (Sumatra),,,individuals,3.0,0.0,1.6804119727431281,0.0,2.1886248854303125,0.0,1.6804119727431281,0.0,2.1886248854303125,0.0
+712,,Isoptera,Pasture,"Maize (1 yr., W. Africa)",,,individuals,1553.0,0.0,869.8932645566927,0.0,1132.9781490244252,0.0,869.8932645566927,0.0,1132.9781490244252,0.0
+713,,Isoptera,Pasture,"Maize (8-24 yr., W. Africa)",,,individuals,6825.0,0.0,3822.9372379906163,0.0,4979.121614353961,0.0,3822.9372379906163,0.0,4979.121614353961,0.0
+714,,Isoptera,Pasture,Maize (Southern Africa),,,individuals,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+715,,Isoptera,Pasture,"Mixed crops (1 yr., ex-forest, cameroon)",,,individuals,2028.0,0.0,1135.9584935743546,0.0,1479.5104225508912,0.0,1135.9584935743546,0.0,1479.5104225508912,0.0
+716,,Isoptera,Pasture,Sugar cane (w. Africa),,,individuals,4800.0,0.0,2688.6591563890047,0.0,3501.7998166885,0.0,2688.6591563890047,0.0,3501.7998166885,0.0
+717,,Isoptera,Tropical and Subtropical Forests," Semi-deciduous forest, Ibadan, Nigeria",,,individuals,3163.0,0.0,2162.0836648769164,0.0,2307.540170872026,0.0,2162.0836648769164,0.0,2307.540170872026,0.0
+718,,Isoptera,Tropical and Subtropical Forests,Acacia plantation (S. India),,,individuals,831.0,0.0,568.0339947874542,0.0,606.2490932641965,0.0,568.0339947874542,0.0,606.2490932641965,0.0
+719,,Isoptera,Tropical and Subtropical Forests,Cocoa plantation (Cameroon),,,individuals,1102.0,0.0,753.2773312343857,0.0,803.9548745814014,0.0,753.2773312343857,0.0,803.9548745814014,0.0
+720,,Isoptera,Tropical and Subtropical Forests,Eucalypt stand,,,individuals,19.0,0.0,12.987540193696304,0.0,13.861290941058646,0.0,12.987540193696304,0.0,13.861290941058646,0.0
+721,,Isoptera,Tropical and Subtropical Forests,Forestry Reserve of Linhares A. mangium plantation,,,individuals,357.25,345.98735526027536,244.19993337884236,236.50129910281626,260.6287467733264,252.41217858895234,244.19993337884236,236.50129910281626,260.6287467733264,252.41217858895234
+722,,Isoptera,Tropical and Subtropical Forests,Forestry Reserve of Linhares E. grandis plantation,,,individuals,347.0,270.4662640700315,237.19349722171674,184.87849871833754,253.1509450814395,197.31639873767912,237.19349722171674,184.87849871833754,253.1509450814395,197.31639873767912
+723,,Isoptera,Tropical and Subtropical Forests,Forestry Reserve of Linhares F Primary forest,,,individuals,197.33333333333334,256.6469689411248,134.88813674856513,175.4322539322729,143.96288135274946,187.2346476649354,134.88813674856513,175.4322539322729,143.96288135274946,187.2346476649354
+724,,Isoptera,Tropical and Subtropical Forests,"Jungle rubber (25 yrs., Sumatra)",,,individuals,211.0,0.0,144.23005162473265,0.0,153.93328360859866,0.0,144.23005162473265,0.0,153.93328360859866,0.0
+725,,Isoptera,Tropical and Subtropical Forests,"Logged-over forest (4 yr., Borneo)",,,individuals,887.0,0.0,606.3130606215065,0.0,647.1034244588957,0.0,606.3130606215065,0.0,647.1034244588957,0.0
+726,,Isoptera,Tropical and Subtropical Forests,"Logger-over forest (18 yr., Borneo)",,,individuals,1762.0,0.0,1204.4234642785732,0.0,1285.4523493760703,0.0,1204.4234642785732,0.0,1285.4523493760703,0.0
+727,,Isoptera,Tropical and Subtropical Forests,"Logger-over forest (7yr., Sumatra)",,,individuals,163.0,0.0,111.41942376697357,0.0,118.91528544171365,0.0,111.41942376697357,0.0,118.91528544171365,0.0
+728,,Isoptera,Tropical and Subtropical Forests,Montane (Trinidad),,,individuals,4450.0,0.0,3041.818624313082,0.0,3246.46024672163,0.0,3041.818624313082,0.0,3246.46024672163,0.0
+729,,Isoptera,Tropical and Subtropical Forests,"Paraserianthes plantation(3 yrs, Sumatra)",,,individuals,515.0,0.0,352.0306947238735,0.0,375.713938665537,0.0,352.0306947238735,0.0,375.713938665537,0.0
+730,,Isoptera,Tropical and Subtropical Forests,Rainforest (Malaysia),,,individuals,1330.0,0.0,909.1278135587414,0.0,970.2903658741052,0.0,909.1278135587414,0.0,970.2903658741052,0.0
+731,,Isoptera,Tropical and Subtropical Forests,Rainforest (Pasoh),,,individuals,3500.0,0.0,2392.441614628267,0.0,2553.395699668698,0.0,2392.441614628267,0.0,2553.395699668698,0.0
+732,,Isoptera,Tropical and Subtropical Forests,Terminalia plantation (1 yr.),,,individuals,1601.5,0.0,1094.7129273791911,0.0,1168.3609180055485,0.0,1094.7129273791911,0.0,1168.3609180055485,0.0
+733,,Isoptera,Tropical and Subtropical Forests,Terminalia plantation (2 yr.),,,individuals,91.0,0.0,62.203481980334935,0.0,66.38828819138615,0.0,62.203481980334935,0.0,66.38828819138615,0.0
+734,,Isoptera,Tropical and Subtropical Forests,Terminalia plantation (5 yr.),,,individuals,5936.5,0.0,4057.9227557830586,0.0,4330.92387745235,0.0,4057.9227557830586,0.0,4330.92387745235,0.0
+735,,Isoptera,Tropical and Subtropical Forests,The Chamela Biological Station,,,individuals,60.0,0.0,41.013284822198855,0.0,43.77249770860625,0.0,41.013284822198855,0.0,43.77249770860625,0.0
+736,,Isoptera,Tropical and Subtropical Forests,riparian forest in Rabba zone,,,individuals,2646.0,1417.0,1808.6858606589697,968.5970765509297,1930.3671489495357,1033.7604875515842,1808.6858606589697,968.5970765509297,1930.3671489495357,1033.7604875515842
+737,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",A. karroo,,,individuals,1189.0,78.0,1031.0829584789954,67.64042957221332,867.4249962588806,56.90424702118813,1031.0829584789954,67.64042957221332,867.4249962588806,56.90424702118813
+738,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",Acacia savanna (S.Africa),,,individuals,732.0,0.0,634.7794159853865,0.0,534.0244720449963,0.0,634.7794159853865,0.0,534.0244720449963,0.0
+739,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",Broadleaved parkland (Southern Africa),,,individuals,3300.0,0.0,2861.710481901333,0.0,2407.487373973344,0.0,2861.710481901333,0.0,2407.487373973344,0.0
+740,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",Derived savanna (W. Africa) - Ivory coast,,,individuals,914.0,0.0,792.6070849872176,0.0,666.8010484277686,0.0,792.6070849872176,0.0,666.8010484277686,0.0
+741,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",E.ngamicum,,,individuals,880.0,36.98648401781386,763.1227951736888,32.07412394013759,641.9966330595583,26.98317978198598,763.1227951736888,32.07412394013759,641.9966330595583,26.98317978198598
+742,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",P.kalachariensis,,,individuals,556.0,19.849433241279208,482.1548569506488,17.21313065647559,405.6251454330846,14.48098785118378,482.1548569506488,17.21313065647559,405.6251454330846,14.48098785118378
+743,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands","Sahel (semi arid, W. Africa)",,,individuals,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+744,,Isoptera,"Tropical and Subtropical Grasslands, Savannas and Shrublands",V.verrucosum,,,individuals,522.0,46.45427859734774,452.6705671371199,40.28445333066508,380.8207300648744,33.89033005762267,452.6705671371199,40.28445333066508,380.8207300648744,33.89033005762267
+745,,Isoptera,Tundra,"""tundra""-Isoptera",,,individuals,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+746,,Other,Boreal Forests/Taiga,"Birch forest, Kevo",,,individuals,1088.2666666666667,91.3440246175596,,,,,0.0,0.0,0.0,0.0
+747,,Other,Boreal Forests/Taiga,Duparquet Lake,,,individuals,739.6666666666667,0.0,,,,,0.0,0.0,0.0,0.0
+748,,Other,Boreal Forests/Taiga,"Jyväskylä, Finland",,,individuals,892.8333333333334,0.0,,,,,0.0,0.0,0.0,0.0
+749,,Other,Boreal Forests/Taiga,"Pine forest, Kevo",,,individuals,526.15,123.55938518245657,,,,,0.0,0.0,0.0,0.0
+750,,Other,Boreal Forests/Taiga,central finland,,,individuals,1071.0,0.0,,,,,0.0,0.0,0.0,0.0
+751,,Other,Boreal Forests/Taiga,central sweden,,,individuals,627.5,0.0,,,,,0.0,0.0,0.0,0.0
+752,,Other,Crops,"Irrigated olive farm , Egyptian western desert ",,,individuals,2237.313432902,0.0,,,,,0.0,0.0,0.0,0.0
+753,,Other,Crops,"Rain-fed olive farm, Egyptian western desert ",,,individuals,1947.76119401,0.0,,,,,0.0,0.0,0.0,0.0
+754,,Other,Crops,Sampadi Forest Reserve plantation,,,individuals,2.0,4.0,,,,,0.0,0.0,0.0,0.0
+755,,Other,Crops,Seine  Valley,,,individuals,89.0,0.0,,,,,0.0,0.0,0.0,0.0
+756,,Other,Crops,"Vineyard, Egyptian western desert ",,,individuals,2759.70149253,0.0,,,,,0.0,0.0,0.0,0.0
+757,,Other,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (with crust),,,individuals,32.879999999999995,0.0,,,,,0.0,0.0,0.0,0.0
+758,,Other,Deserts and Xeric Shrublands, Northwest  Biological  Research  Center (without crust),,,individuals,27.65,0.0,,,,,0.0,0.0,0.0,0.0
+759,,Other,Deserts and Xeric Shrublands,The Mariut region,,,individuals,20.10086956521739,0.0,,,,,0.0,0.0,0.0,0.0
+760,,Other,"Mediterranean Forests, Woodlands and Scrub",Anabasis formation in Omayed,,,individuals,45.66,0.0,,,,,0.0,0.0,0.0,0.0
+761,,Other,"Mediterranean Forests, Woodlands and Scrub","Arbutus unedo formation in Ikaria is.,",,,individuals,844.77,0.0,,,,,0.0,0.0,0.0,0.0
+762,,Other,"Mediterranean Forests, Woodlands and Scrub",Eucalyptus marginata forest in S.W.,,,individuals,89540.7,0.0,,,,,0.0,0.0,0.0,0.0
+763,,Other,"Mediterranean Forests, Woodlands and Scrub",Juniperus phoenicea formation in Naxos is,,,individuals,85.9,0.0,,,,,0.0,0.0,0.0,0.0
+764,,Other,"Mediterranean Forests, Woodlands and Scrub","P. halepensis forest in N. Euboea,",,,individuals,829.0,0.0,,,,,0.0,0.0,0.0,0.0
+765,,Other,"Mediterranean Forests, Woodlands and Scrub",P. halepensis forest in Skopelos is,,,individuals,1246.5,0.0,,,,,0.0,0.0,0.0,0.0
+766,,Other,"Mediterranean Forests, Woodlands and Scrub","Pinus halepensis forest Sophiko, S. ",,,individuals,219.82,0.0,,,,,0.0,0.0,0.0,0.0
+767,,Other,"Mediterranean Forests, Woodlands and Scrub","Q. cocci/era formation in Naxos is.,",,,individuals,144.1,0.0,,,,,0.0,0.0,0.0,0.0
+768,,Other,"Mediterranean Forests, Woodlands and Scrub",Quercus cocci/era formation in Ikaria is,,,individuals,892.6120000000001,0.0,,,,,0.0,0.0,0.0,0.0
+769,,Other,"Mediterranean Forests, Woodlands and Scrub",Thymelaea formation in Gharbaniat,,,individuals,59.58,0.0,,,,,0.0,0.0,0.0,0.0
+770,,Other,"Mediterranean Forests, Woodlands and Scrub",Thymelaea formation in Omayed,,,individuals,32.11,0.0,,,,,0.0,0.0,0.0,0.0
+771,,Other,"Mediterranean Forests, Woodlands and Scrub",mount Carmel,,,individuals,127.0,0.0,,,,,0.0,0.0,0.0,0.0
+772,,Other,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur",,,individuals,6.3976697061,0.5684973281166903,,,,,0.0,0.0,0.0,0.0
+773,,Other,Pasture,"Artiya Kalla village, in Bhopalgarh tehsil of Jodhpur - Control (pure grass blocks)",,,individuals,0.59017223925,0.0,,,,,0.0,0.0,0.0,0.0
+774,,Other,Pasture,"Benfica Field Station, eastern Amazonia, near Marabá, State of Pará, Brazil.",,,individuals,106.0,0.0,,,,,0.0,0.0,0.0,0.0
+775,,Other,Pasture,Seine  Valley,,,individuals,89.0,0.0,,,,,0.0,0.0,0.0,0.0
+776,,Other,Temperate Forests," spruce forest, Southeastern Italian Alps.",,,individuals,7204.775,2359.661118545415,,,,,0.0,0.0,0.0,0.0
+777,,Other,Temperate Forests,Cove hardwood - Oak Ridge National Laboratory Tennessee,,,individuals,97000.0,24610.0,,,,,0.0,0.0,0.0,0.0
+778,,Other,Temperate Forests,Eawy Forest,,,individuals,167.5,0.0,,,,,0.0,0.0,0.0,0.0
+779,,Other,Temperate Forests,Lyons Forest,,,individuals,127.5,0.0,,,,,0.0,0.0,0.0,0.0
+780,,Other,Temperate Forests,Mature Douglas fir - H. J. Andrews Experimental Forest Oregon,,,individuals,88000.0,11939.0,,,,,0.0,0.0,0.0,0.0
+781,,Other,Temperate Forests,Mature loblolly pine - Santee Experimental Forest South Carolina,,,individuals,137000.0,65433.0,,,,,0.0,0.0,0.0,0.0
+782,,Other,Temperate Forests,Mixed oak - Coweeta Hydrologic Laboratory North Carolina,,,individuals,93000.0,36650.0,,,,,0.0,0.0,0.0,0.0
+783,,Other,Temperate Forests,Natural Area Teaching Laboratory,,,individuals,237.75,0.0,,,,,0.0,0.0,0.0,0.0
+784,,Other,Temperate Forests,Plantation Douglas fir - Cedar River Research Area Washington,,,individuals,43000.0,16633.0,,,,,0.0,0.0,0.0,0.0
+785,,Other,Temperate Forests,Plantation white pine - Coweeta Hydrologic Laboratory North Carolina,,,individuals,36000.0,3240.0,,,,,0.0,0.0,0.0,0.0
+786,,Other,Temperate Forests,Seine  Valley,,,individuals,66.75,0.0,,,,,0.0,0.0,0.0,0.0
+787,,Other,Temperate Forests,"Yanagisawa Pass, Enzan city Tullgren",,,individuals,4294.25,0.0,,,,,0.0,0.0,0.0,0.0
+788,,Other,Temperate Forests,west slope of Shergyla Mountain in the Shergyla Mountains in southeastern Tibet,,,individuals,8360.0,1856.2866158004801,,,,,0.0,0.0,0.0,0.0
+789,,Other,"Temperate Grasslands, Savannas and Shrublands",Konza Prairie Biological Station,,,individuals,96.5,0.0,,,,,0.0,0.0,0.0,0.0
+790,,Other,"Temperate Grasslands, Savannas and Shrublands",west slope of Shergyla Mountain in the Shergyla Mountains in southeastern Tibet,,,individuals,2040.0,578.2732917920384,,,,,0.0,0.0,0.0,0.0
+791,,Other,Tropical and Subtropical Forests,Espírito Santo (Brazil),,,individuals,620.0,0.0,,,,,0.0,0.0,0.0,0.0
+792,,Other,Tropical and Subtropical Forests,Forestry Reserve of Linhares A. mangium plantation,,,individuals,2391.5833333333335,290.04847514395476,,,,,0.0,0.0,0.0,0.0
+793,,Other,Tropical and Subtropical Forests,Forestry Reserve of Linhares E. grandis plantation,,,individuals,1874.75,244.86858720546414,,,,,0.0,0.0,0.0,0.0
+794,,Other,Tropical and Subtropical Forests,Forestry Reserve of Linhares F Primary forest,,,individuals,1985.0,217.7357438884729,,,,,0.0,0.0,0.0,0.0
+795,,Other,Tropical and Subtropical Forests,The Chamela Biological Station,,,individuals,1554.4,0.0,,,,,0.0,0.0,0.0,0.0
+796,,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",A. karroo,,,individuals,1151.0,95.06839643120105,,,,,0.0,0.0,0.0,0.0
+797,,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",E.ngamicum,,,individuals,2859.0,185.27277187973414,,,,,0.0,0.0,0.0,0.0
+798,,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",P.kalachariensis,,,individuals,1631.0,164.37761404765553,,,,,0.0,0.0,0.0,0.0
+799,,Other,"Tropical and Subtropical Grasslands, Savannas and Shrublands",V.verrucosum,,,individuals,606.0,98.42763839491425,,,,,0.0,0.0,0.0,0.0
+800,,Other,Tundra,"Low alpine heath, Kevo",,,individuals,245.91666666666669,54.30753477495856,,,,,0.0,0.0,0.0,0.0

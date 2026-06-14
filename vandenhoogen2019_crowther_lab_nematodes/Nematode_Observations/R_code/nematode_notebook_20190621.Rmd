@@ -1,0 +1,1171 @@
+---
+title: "Global nematode perspectives"
+author: "J. van den Hoogen & S. Geisen et al. 2019"
+output:
+  html_document:
+    # code_folding: hide
+    toc: yes
+    toc_collapse: no
+    toc_float: yes
+    theme: spacelab
+    fig_retina: 2
+  github_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load packages, results='hide', message=FALSE, warning=FALSE}
+suppressPackageStartupMessages({
+  library(reshape2)
+  library(corrplot)
+  library(tidyverse)
+  library(cowplot)
+  library(rworldmap)
+  library(NbClust)
+  library(factoextra)
+  library(cluster)
+  library(vegan)
+  library(RColorBrewer)
+  library(lemon)
+  library(parallel)
+  library(plotrix)
+  library(caret)
+  library(scales)
+})
+```
+
+# About the code
+This Rmarkdown file was used to create the main and supplemental figures for the associated paper (Van den Hoogen & Geisen et al., 2019), for which the raw abundance data was used. Scripts used for the geospatial analysis can be found under the respective directory in the main repository. Scripts are fully annotated for and organized by order of appearance in the paper. 
+
+For questions, please send an email to: johan.vandenhoogen@usys.ethz.ch
+
+# Initial data formating
+```{r Data import & general calculations}
+# Set working directory
+setwd("~/Work/ETH/Projects/Nematodes/Data")
+
+# Load data
+Data_raw <- read.csv("20190131_NematodePoints_SampledPixelValues_wBiome.csv")
+
+# Add ID column
+Data_raw <- tibble::rowid_to_column(Data_raw, "ID") 
+
+# Antartic sites
+Antarctica_points <- read.csv("20193119_NematodePoints_Antarctica_SampledPixelValues.csv") 
+Antarctica <- Antarctica_points %>% 
+  select(-Unidentified, -Pixel_Lat, -Pixel_Long)
+
+# Calculate proportional abundances
+Data_raw$Bacterivores.pct <- Data_raw$Bacterivores/rowSums(Data_raw[,c('Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')])
+Data_raw$Fungivores.pct <- Data_raw$Fungivores/rowSums(Data_raw[,c('Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')])
+Data_raw$Herbivores.pct <- Data_raw$Herbivores/rowSums(Data_raw[,c('Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')])
+Data_raw$Omnivores.pct <- Data_raw$Omnivores/rowSums(Data_raw[,c('Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')])
+Data_raw$Predators.pct <- Data_raw$Predators/rowSums(Data_raw[,c('Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')])
+
+#select data
+Data_tot <- Data_raw[,c('ID','Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')] %>% 
+  na.omit() %>% 
+  filter(Total_Number != 0)
+Data_group <- Data_tot[,c('Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')] %>% 
+  na.omit()
+
+#pull used IDs
+Used_IDs <- Data_tot[,1,drop=FALSE]
+#remove ID column 
+Data_tot <- subset(Data_tot, select = -ID)
+#convert to data frame
+Data_tot <- stack(as.data.frame(Data_tot)) %>% 
+    dplyr::rename(Group = ind) %>% 
+    dplyr::rename(Count = values) %>% 
+    mutate(Count = as.numeric(Count))
+
+#Calculate frequencies per row
+GroupComposition <- Data_raw[,c('ID','Bacterivores.pct','Fungivores.pct',"Herbivores.pct",'Omnivores.pct','Predators.pct')]
+#remove rows not including all trophic groups
+GroupComposition <- merge(GroupComposition, Used_IDs, "ID")
+#remove ID column
+GroupComposition <- subset(GroupComposition, select = -ID)
+names(GroupComposition) <- c('Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')
+```
+
+# Figure 1a - Sampling locations
+```{r Observations per biome}
+# Collate points to new df
+total_points <- plyr::rbind.fill(Data_raw, Antarctica_points)
+
+# Define world outline map
+world <- map_data("world")
+
+# Define color palette
+pal <- brewer.pal(8, "YlOrRd")
+
+# Plot sampling points on map
+nematode_pointmap <- ggplot() + geom_polygon(data = world, 
+                                             aes(x = long, y = lat, group = group),
+                                             fill = "#bababa",
+                                             color = NA,
+                                             size = 0.1) + 
+  coord_fixed(1.1) +
+  geom_point(data = total_points,
+             aes(x = Pixel_Long, y = Pixel_Lat, fill = Total_Number),
+             color = "black",
+             pch = 21
+  ) +
+  scale_fill_gradientn(colors = pal,
+                       limits = c(0, 3000),
+                       oob = scales::squish,
+                       name = "Nematodes per 100g dry soil") +
+  theme_minimal() +
+  theme(legend.position = "bottom",
+        legend.box="horizontal",
+        panel.grid = element_blank(),
+        axis.title=element_blank(),
+        axis.text=element_blank()) +
+  guides(fill = guide_colorbar(title.position = "top"))
+
+nematode_pointmap
+
+# Save to file
+ggsave("nematode_pointmap.pdf", plot = nematode_pointmap)
+```
+
+# Figure 1b - Observed abundances total and per trophic group, per biome
+## Summary per biome
+```{r Observations per trophic group and biome}
+# create color scheme
+col1 <- colorRampPalette(c("#B26A4A","#B2A877","#62B25E","#40B29A","#ef7e6b"))
+
+#plot observations total number
+plot_tot <- ggplot(subset(Data_tot, Group == "Total_Number"), aes(
+ x = Group, 
+ y = Count, 
+ # fill = Group,
+ color = Group ) ) +
+ geom_jitter(size = 0.75, alpha = 0.05, width = 0.35, height = 0) +
+ geom_boxplot(outlier.shape = NA, color = "black", alpha = 0.3) + 
+ theme_bw() + 
+ coord_cartesian(ylim = c(0,8000)) +
+ theme(panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    axis.line = element_line(color = 'black'), 
+    panel.border = element_rect(color = "white"),
+    aspect.ratio = (2.6/1),
+    legend.position = "none"
+    ) +
+ scale_color_manual(values = "#8399B2") + 
+  scale_y_continuous(labels = comma) +
+ scale_x_discrete(labels = "Total number") +
+ ylab("Nematodes per 100 g dry soil")  
+
+#plot observations per trophic group
+plot_sub <- ggplot(subset(Data_tot, Group != "Total_Number"), aes(
+ x = Group, 
+ y = Count, 
+ # fill = Group,
+ color = Group ) ) +
+ geom_jitter(size = 0.75, alpha = 0.05, width = 0.35, height = 0) +
+ geom_boxplot(outlier.shape = NA, color = "black", alpha = 0.3) + 
+ theme_bw() + 
+  coord_fixed(ratio = 1) +
+ coord_cartesian(ylim = c(0,3000)) +
+ theme(panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    axis.line = element_line(color = 'black'), 
+    panel.border = element_rect(color = "white"),
+    legend.position = "none") +
+ scale_fill_manual(values = col1(5)) +
+ scale_color_manual(values = col1(5)) + 
+ xlab("") +
+ ylab("") +
+  scale_y_continuous(labels = comma)
+
+# Data formating
+setwd("~/Work/ETH/Projects/Nematodes/Data/")
+
+Data_biome <- Data_raw %>% 
+  select('Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators','WWF_Biome') %>% 
+  plyr::rbind.fill(Antarctica) %>%
+  filter(WWF_Biome != 2) %>% 
+  filter(WWF_Biome != 3) %>% 
+  filter(WWF_Biome != 9) %>% 
+  filter(WWF_Biome != 98) %>% 
+  na.omit() %>% 
+  melt(id.vars = "WWF_Biome") %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 1, "Tropical Moist Forests")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 4, "Temperate Broadleaf Forests")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 5, "Temperate Conifer Forests")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 6, "Boreal Forests")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 7, "Tropical Grasslands")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 8, "Temperate Grasslands")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 10, "Montane Grasslands")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 11, "Tundra")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 12, "Mediterranean Forests")) %>%
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 13, "Deserts")) %>% 
+  mutate(WWF_Biome = replace(WWF_Biome, WWF_Biome == 25, "Antarctica")) %>% 
+  setNames(., c("Biome","Group","Count")) 
+
+Data_biome_sum <- Data_biome %>%
+  filter(Group == "Total_Number") %>% 
+  group_by(Biome) %>% 
+  dplyr::summarize(Mean = mean(Count, na.rm=TRUE), 
+                   Median = median(Count, na.rm=TRUE),
+                   n = n()) %>% 
+  arrange(desc(Median))  
+
+Data_biome_sum
+write.csv(Data_biome_sum, "data_biome_sum.csv")
+
+Data_biome_tot <- Data_biome %>% filter(Group == "Total_Number")
+
+# ordering of boxplots per biome. Ordered by median of total number in each biome
+levels = levels(reorder(factor(Data_biome_tot$Biome), Data_biome_tot$Count, median))
+```
+
+## Summary per trophic group
+Note: to create the final figure, we made some final modifications to the produced plot was modified in Adobe Illustrator CC 2018.
+```{r Trophic group and per biome, message = FALSE}
+# Creating subplots
+Total <- ggplot(data = Data_biome_tot, aes(
+  x = factor(Biome, levels = levels),
+  y = Count,
+  color = factor(Biome),
+  alpha = 0.2) ) + 
+  geom_jitter(alpha = 0.1, size = 0.5, color = "#8399B2") +
+  geom_boxplot(outlier.shape = NA, color = "black", fill = NA, lwd = 0.35) +
+  theme_minimal() +
+  scale_alpha(guide = 'none') +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(),
+    axis.title.y=element_blank(),
+    axis.title.x=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks.x=element_line(),
+    plot.title = element_text(hjust = 0.5, size = 10),
+    legend.position = "none",
+    axis.text.x = element_text(angle = 60, hjust = 1)) +
+  xlab("Nematodes per 100 g dry soil)") +
+  coord_flip(ylim = c(0,10000)) + 
+  scale_y_continuous(breaks = c(0, 5000, 9999), labels = comma) # Max value of 9,999 as workaround, to prevent scaling issues for final figure
+
+Bacterivores <- ggplot(data = subset(Data_biome, Group == "Bacterivores"), aes(
+  x = factor(Biome, levels = levels),
+  y = Count,
+  color = factor(Biome),
+  alpha = 0.2) ) + 
+  geom_jitter(alpha = 0.1, size = 0.5, color = "#B26A4A") +
+  geom_boxplot(outlier.shape = NA, color = "black", fill = NA, lwd = 0.35) +
+  theme_minimal() +
+  scale_alpha(guide = 'none') +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(),
+    axis.title.y=element_blank(),
+    axis.title.x=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks.x=element_line(),
+    plot.title = element_text(hjust = 0.5, size = 10),
+    legend.position = "none",
+    axis.text.x = element_text(angle = 60, hjust = 1)) +
+  xlab("Nematodes per 100 g dry soil)") +
+  coord_flip(ylim = c(0,4000)) +
+  scale_y_continuous(breaks = c(0,2000, 4000), labels = comma)
+
+Fungivores <- ggplot(data = subset(Data_biome, Group == "Fungivores"), aes(
+  x = factor(Biome, levels = levels),
+  y = Count,
+  alpha = 0.2) ) + 
+  geom_jitter(alpha = 0.1, size = 0.5, color = "#B2A877") +
+  geom_boxplot(outlier.shape = NA, color = "black", fill = NA, lwd = 0.35) +
+  theme_minimal() +
+  scale_alpha(guide = 'none') +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(),
+    axis.title.y=element_blank(),
+    axis.title.x=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks.x=element_line(),
+    plot.title = element_text(hjust = 0.5, size = 10),
+    legend.position = "none",
+    axis.text.x = element_text(angle = 60, hjust = 1)) +
+  xlab("") +
+  coord_flip(ylim = c(0,2000)) +
+  scale_y_continuous(breaks = c(0, 1000, 2000), labels = comma)
+
+Herbivores <- ggplot(data = subset(Data_biome, Group == "Herbivores"), aes(
+  x = factor(Biome, levels = levels),
+  y = Count,
+  alpha = 0.2) ) + 
+  geom_jitter(alpha = 0.1, size = 0.5, color = "#62B25E") +
+  geom_boxplot(outlier.shape = NA, color = "black", fill = NA, lwd = 0.35) +
+  theme_minimal() +
+  scale_alpha(guide = 'none') +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(),
+    axis.title.y=element_blank(),
+    axis.title.x=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks.x=element_line(),
+    plot.title = element_text(hjust = 0.5, size = 10),
+    legend.position = "none",
+    axis.text.x = element_text(angle = 60, hjust = 1)) +
+  xlab("") +
+  coord_flip(ylim = c(0,4000)) +
+  scale_y_continuous(breaks = c(0,2000, 4000), labels = comma)
+
+Omnivores <- ggplot(data = subset(Data_biome, Group == "Omnivores"), aes(
+  x = factor(Biome, levels = levels),
+  y = Count,
+  alpha = 0.2) ) + 
+  geom_jitter(alpha = 0.1, size = 0.5, color ="#40B29A") +
+  geom_boxplot(outlier.shape = NA, color = "black", fill = NA, lwd = 0.35) +
+  theme_minimal() +
+  scale_alpha(guide = 'none') +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(),
+    axis.title.y=element_blank(),
+    axis.title.x=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks.x=element_line(),
+    plot.title = element_text(hjust = 0.5, size = 10),
+    legend.position = "none",
+    axis.text.x = element_text(angle = 60, hjust = 1)) +
+  xlab("") +
+  coord_flip(ylim = c(0,800)) +
+  scale_y_continuous(breaks = c(0,400, 800), labels = comma)
+
+Predators <- ggplot(data = subset(Data_biome, Group == "Predators"), aes(
+  x = factor(Biome, levels = levels),
+  y = Count,
+  alpha = 0.2) ) + 
+  geom_jitter(alpha = 0.1, size = 0.5, color = "#ef7e6b") +
+  geom_boxplot(outlier.shape = NA, color = "black", fill = NA, lwd = 0.35) +
+  theme_minimal() +
+  scale_alpha(guide = 'none') +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(),
+    axis.title.y=element_blank(),
+    axis.title.x=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks.x=element_line(),
+    plot.title = element_text(hjust = 0.5, size = 10),
+    legend.position = "none",
+    axis.text.x = element_text(angle = 60, hjust = 1)) +
+  xlab("") +
+  coord_flip(ylim = c(0,300)) +
+  scale_y_continuous(breaks = c(0,150, 300), labels = comma)
+
+# Create empty plot witgh only axis labels 
+empty <- ggplot(data = subset(Data_biome, Group == "Total_Number"), aes(
+  x = factor(Biome, levels = levels),
+  Count, 
+  alpha = 0.2 )) +
+  theme_minimal() +
+  scale_alpha(guide = 'none') +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(),
+    axis.title.y = element_blank(),
+    axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line.x = element_blank(),
+    axis.line.y = element_blank(),
+    legend.position = "none") +
+  coord_flip() 
+
+# Combine plots to semi-final plot. Adobe Illustrator CC 2018 was used for minor tweaks. 
+grid1 <- plot_grid(Bacterivores, Fungivores, Herbivores, Omnivores, Predators, align = 'h', nrow = 1)
+plot_obs <- plot_grid(plot_grid(plot_tot, empty, align = "h", ncol = 1), plot_grid(plot_sub, grid1, align = "v", ncol = 1), nrow = 1, rel_widths = c(1,1.3))
+plot_obs
+
+gridx <- plot_grid(Total, Fungivores, Herbivores, Omnivores, Predators, align = 'h', nrow = 1)
+plot_obs_x <- plot_grid(plot_grid(plot_tot, empty, align = "h", ncol = 1), plot_grid(plot_sub, gridx, align = "v", ncol = 1), nrow = 1, rel_widths = c(1,1.3))
+plot_obs_x
+
+# Save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+ggsave("Abundances_biome.pdf", plot = plot_obs, device = "pdf", dpi = "retina", scale = 1)
+
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+ggsave("Abundances_biome_x.pdf", plot = plot_obs_x, device = "pdf", dpi = "retina", scale = 1)
+```
+
+# Figure 2 - Validation
+## Figure 2a - standard error observations
+```{r Fig 2a - stdev, message=FALSE, warning=FALSE}
+# Format data
+Data_tot <- Data_raw[,c('Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')] %>% 
+  na.omit() %>% 
+  filter(Total_Number != 0) %>% 
+  dplyr::rename("Total number" = Total_Number)
+
+Data_tot <- stack(as.data.frame(Data_tot)) %>% 
+    dplyr::rename(Group = ind) %>% 
+    dplyr::rename(Count = values) %>% 
+    group_by(Group) 
+
+#number of random samples to be selected
+nsamples = c(10,25,50,75,100,150,250,500)
+#create empty lists for storing samples
+random_samples <- list()
+list <- list()
+se_list <- list()
+  
+for (s in 1:100){
+  
+#select random samples
+ for (i in nsamples){
+    #set seed
+    set.seed(s)
+   
+    #select random samples 
+    random_samples[[i]] <- sample_n(Data_tot, i, replace = T)
+    
+    #calculate std error, store in list
+    list[[i]] <- dplyr::summarise(group_by(as.data.frame(random_samples[i]), Group), se = std.error(Count))
+    }
+  
+ #store std errors per nsamples in df
+ se_df <- Reduce(function(x, y) merge(x, y, by = "Group", all = TRUE) ,list(as.data.frame(list[10]),
+                                                                             as.data.frame(list[25]),
+                                                                             as.data.frame(list[50]),
+                                                                             as.data.frame(list[75]),
+                                                                             as.data.frame(list[100]),
+                                                                             as.data.frame(list[150]),
+                                                                             as.data.frame(list[250]),
+                                                                             as.data.frame(list[500])))
+
+ #rename columns, melt data
+ names(se_df) <- c("Group", "5", "25", "50", "75", "100", "150", "250","500")
+ se_df <- melt(se_df, id = "Group")
+ names(se_df) <- c("Group", "nsamples", "se")
+ #store in list
+ se_list[[s]] <- se_df
+}
+
+# Function to merge data frames from list
+merge.all <- function(x, y) {merge(x, y, all = TRUE, by = c("Group","nsamples"))}
+output <- Reduce(merge.all, se_list)
+output$mean.se <- rowMeans(output[,3:102])
+output <- output[,c("Group","nsamples","mean.se")]
+output$nsamples <- as.numeric(as.character(output$nsamples)) 
+  
+col_o <- colorRampPalette(c("#8399B2","#B26A4A","#B2A877","#62B25E","#40B29A","#ef7e6b"))
+
+# Plot
+se_plot_o <- ggplot(output, aes(
+  x = nsamples,
+  y = mean.se,
+  group = Group,
+  color = factor(Group))) + 
+  geom_point() +
+  geom_smooth(se = F, method = "loess", formula = y ~ log(x)) +
+  scale_color_manual(values = col_o(6), name = "Trophic group") +
+  xlab("Sample size") +
+  ylab("Standard error \n (nematodes per 100 g dry soil)") +
+  scale_y_continuous(labels = comma, breaks = c(0,250,500,750,1000)) 
+
+se_plot_o
+
+# Save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+ggsave("stderr_plot_obs.pdf", plot = se_plot_o, device = "pdf", dpi = "retina", scale = 2)  
+```
+
+## Figure 2b - standard error predicted points
+```{r Figure 2b - standard error predicted points, message=FALSE, warning=FALSE}
+# select data
+setwd("~/Work/ETH/Projects/Nematodes/Calculations/")
+std_err_pred <- read.csv("20180731_Nematode_BootStrap_StdError_1000Seeds.csv") %>%
+  dplyr::rename(nsamples = NumOfSamples) %>% 
+  dplyr::rename(mean.se = StdError) %>% 
+  mutate(Biome = replace(Biome, Biome == 1, "Tropical Moist Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 2, "Tropical Dry Forest")) %>%
+  mutate(Biome = replace(Biome, Biome == 3, "Tropical Coniferous Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 4, "Temperate Broadleaf Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 5, "Temperate Conifer Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 6, "Boreal Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 7, "Tropical Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 8, "Temperate Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 9, "Flooded Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 10, "Montane Grasslands")) %>%
+  mutate(Biome = replace(Biome, Biome == 11, "Tundra")) %>%
+  mutate(Biome = replace(Biome, Biome == 12, "Mediterranean Forests")) %>%
+  mutate(Biome = replace(Biome, Biome == 13, "Deserts")) %>% 
+  mutate(Biome = replace(Biome, Biome == 14, "Mangroves")) 
+
+levels <- c("Tropical Moist Forests",
+            "Tropical Dry Forest",
+            "Tropical Coniferous Forests",
+            "Temperate Broadleaf Forests",
+            "Temperate Conifer Forests",
+            "Boreal Forests",
+            "Tropical Grasslands",
+            "Temperate Grasslands",
+            "Flooded Grasslands",
+            "Montane Grasslands",
+            "Tundra",
+            "Mediterranean Forests",
+            "Deserts",
+            "Mangroves")
+
+# Set color scheme
+col <- colorRampPalette(brewer.pal(12, "Accent"))
+
+#plot
+se_plot_p <- ggplot(std_err_pred, aes(
+    x = nsamples,
+    y = mean.se,
+    group = Biome,
+    color = factor(Biome))) + 
+    geom_point() +
+  geom_smooth(se = F, method = "loess", formula = y ~ log(x)) +
+    scale_color_manual(values = col(14),
+                       name = "Biome",
+                       breaks = levels) +
+    xlab("Sample size") +
+    ylab("Standard error \n (nematodes per 100 g dry soil)")
+
+  
+se_plot_p
+
+# save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+ggsave("stderr_plot_pred.pdf", plot = se_plot_p, device = "pdf", dpi = "retina", scale = 2)  
+```
+
+## Final Figure 2
+To create the final figures, some minor modifications were made using Adobe Illustrator CC 2018.
+```{r}
+# Combine standard error plots
+se_plot_o <- se_plot_o + theme(legend.position = c(0.5, 0.7), 
+                               legend.text = element_text(size = 10),
+                               # legend.title = element_text(size = 12),
+                               legend.key = element_rect(size = 1),
+                               legend.key.size = unit(0.65, 'lines'),
+                               legend.title = element_blank())
+se_plot_p <- se_plot_p + theme(legend.position = c(0.3, 0.7), 
+                               legend.text = element_text(size = 10),
+                               # legend.title = element_text(size = 12),
+                               # axis.title.y = element_blank(),
+                               legend.key = element_rect(size = 1),
+                               legend.key.size = unit(0.65, 'lines'),
+                               legend.title = element_blank())
+
+se_plot_combined <- plot_grid(se_plot_o, se_plot_p, align = "h", labels = "auto")
+se_plot_combined
+
+# Save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+save_plot("stderr_plot_combined.pdf", se_plot_combined, base_aspect_ratio = 2.2)
+# ggsave("stderr_plot_combined.pdf", plot = se_plot_combined, device = "pdf")  
+
+```
+
+# Figures 2c-h - Predicted vs Observed
+```{r Predicted vs Observed plots}
+setwd("/Users/johanvandenhoogen/work/ETH/projects/Nematodes/R_code/20190607_Johan_Predicted_Versus_Observed/")
+
+# Import the raw data
+Total_Number <- read.csv('20180723_TotalNumb_PredVsObs.csv') %>% 
+  select(-system.index, -.geo) %>% 
+  rename(Observed = Total_Numb, Predicted = classification)
+Bacterivores <- read.csv('20180723_Bacterivores_PredVsObs.csv') %>% 
+  select(-system.index, -.geo) %>% 
+  rename(Observed = Bacterivor, Predicted = classification)
+Fungivores <- read.csv('20180723_Fungivores_PredVsObs.csv') %>% 
+  select(-system.index, -.geo) %>% 
+  rename(Observed = Fungivores, Predicted = classification)
+Herbivores <- read.csv('20180723_Herbivores_PredVsObs.csv') %>% 
+  select(-system.index, -.geo) %>% 
+  rename(Observed = Plant_feed, Predicted = classification)
+Omnivores <- read.csv('20180723_Omnivores_PredVsObs.csv') %>% 
+  select(-system.index, -.geo) %>% 
+  rename(Observed = Omnivores, Predicted = classification)
+Predators <- read.csv('20180723_Predators_PredVsObs.csv') %>% 
+  select(-system.index, -.geo) %>% 
+  rename(Observed = Predators, Predicted = classification)
+
+# Define palette
+paletteForUse <- c('#d10000', '#ff6622', '#ffda21', '#33dd00', '#1133cc', '#220066', '#330044')
+colors <-  colorRampPalette(paletteForUse)(256)
+
+# Total_Number
+# Use densCols() output to get density at each point
+Total_Number$dens <- col2rgb(densCols(Total_Number$Observed, Total_Number$Predicted))[1,] + 1L
+
+# Calculate predicted - observed R2
+R2Total_Number <- round(1 - (sum((Total_Number$Observed-Total_Number$Predicted )^2)/sum((Total_Number$Observed-mean(Total_Number$Observed))^2)),2)
+
+# Map densities to colors
+Total_Number$colors = colors[Total_Number$dens]
+
+total_number_plot <- Total_Number %>% 
+  ggplot(aes(x = Observed, y = Predicted)) +
+  geom_point(color = Total_Number$colors) +
+  coord_cartesian(xlim = c(0,15000), ylim = c(0,15000)) +
+  geom_smooth(method = 'lm', se = FALSE, linetype = 'dashed', color = 'black') + 
+  geom_abline() +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = comma) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        panel.grid = element_blank(),
+        plot.title = element_text(hjust = 0.5)) +
+  labs(title = "Total Number")
+
+# Bacterivores
+# Use densCols() output to get density at each point
+Bacterivores$dens <- col2rgb(densCols(Bacterivores$Observed, Bacterivores$Predicted))[1,] + 1L
+
+# Calculate predicted - observed R2
+R2Bacterivores <- round(1 - (sum((Bacterivores$Observed-Bacterivores$Predicted )^2)/sum((Bacterivores$Observed-mean(Bacterivores$Observed))^2)),2)
+
+# Map densities to colors
+Bacterivores$colors = colors[Bacterivores$dens]
+
+bacterivores_plot <- Bacterivores %>% 
+  ggplot(aes(x = Observed, y = Predicted)) +
+  geom_point(color = Bacterivores$colors) +
+  coord_cartesian(xlim = c(0,10000), ylim = c(0,10000)) +
+  geom_smooth(method = 'lm', se = FALSE, linetype = 'dashed', color = 'black') + 
+   geom_abline() +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = comma) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        panel.grid = element_blank(),
+        plot.title = element_text(hjust = 0.5)) +
+  labs(title = "Bacterivores")
+
+# Fungivores
+# Use densCols() output to get density at each point
+Fungivores$dens <- col2rgb(densCols(Fungivores$Observed, Fungivores$Predicted))[1,] + 1L
+
+# Calculate predicted - observed R2
+R2Fungivores <- round(1 - (sum((Fungivores$Observed-Fungivores$Predicted )^2)/sum((Fungivores$Observed-mean(Fungivores$Observed))^2)),2)
+
+# Map densities to colors
+Fungivores$colors = colors[Fungivores$dens]
+
+fungivores_plot <- Fungivores %>% 
+  ggplot(aes(x = Observed, y = Predicted)) +
+  geom_point(color = Fungivores$colors) +
+  coord_cartesian(xlim = c(0,2000), ylim = c(0,2000)) +
+  geom_smooth(method = 'lm', se = FALSE, linetype = 'dashed', color = 'black') + 
+  geom_abline() +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = comma) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        panel.grid = element_blank(),
+        plot.title = element_text(hjust = 0.5)) +
+  labs(title = "Fungivores")
+
+# Herbivores
+# Use densCols() output to get density at each point
+Herbivores$dens <- col2rgb(densCols(Herbivores$Observed, Herbivores$Predicted))[1,] + 1L
+
+# Calculate predicted - observed R2
+R2Herbivores <- round(1 - (sum((Herbivores$Observed-Herbivores$Predicted )^2)/sum((Herbivores$Observed-mean(Herbivores$Observed))^2)),2)
+
+# Map densities to colors
+Herbivores$colors = colors[Herbivores$dens]
+
+herbivores_plot <- Herbivores %>% 
+  ggplot(aes(x = Observed, y = Predicted)) +
+  geom_point(color = Herbivores$colors) +
+  coord_cartesian(xlim = c(0,5000), ylim = c(0,5000)) +
+  geom_smooth(method = 'lm', se = FALSE, linetype = 'dashed', color = 'black') + 
+  geom_abline() +
+  scale_x_continuous(labels = comma, breaks = c(0,2500, 5000)) +
+  scale_y_continuous(labels = comma, breaks = c(0,2500, 5000)) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        panel.grid = element_blank(),
+        plot.title = element_text(hjust = 0.5)) +
+  labs(title = "Herbivores")
+
+# Omnivores
+# Use densCols() output to get density at each point
+Omnivores$dens <- col2rgb(densCols(Omnivores$Observed, Omnivores$Predicted))[1,] + 1L
+
+# Calculate predicted - observed R2
+R2Omnivores <- round(1 - (sum((Omnivores$Observed-Omnivores$Predicted )^2)/sum((Omnivores$Observed-mean(Omnivores$Observed))^2)),2)
+
+# Map densities to colors
+Omnivores$colors = colors[Omnivores$dens]
+
+omnivores_plot <- Omnivores %>% 
+  ggplot(aes(x = Observed, y = Predicted)) +
+  geom_point(color = Omnivores$colors) +
+  coord_cartesian(xlim = c(0,1500), ylim = c(0,1500)) +
+  geom_smooth(method = 'lm', se = FALSE, linetype = 'dashed', color = 'black') + 
+  geom_abline() +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = comma) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        panel.grid = element_blank(),
+        plot.title = element_text(hjust = 0.5)) +
+  labs(title = "Omnivores")
+
+# Predators
+# Use densCols() output to get density at each point
+Predators$dens <- col2rgb(densCols(Predators$Observed, Predators$Predicted))[1,] + 1L
+
+# Calculate predicted - observed R2
+R2Predators <- round(1 - (sum((Predators$Observed-Predators$Predicted )^2)/sum((Predators$Observed-mean(Predators$Observed))^2)),2)
+
+# Map densities to colors
+Predators$colors = colors[Predators$dens]
+
+predators_plot <- Predators %>% 
+  ggplot(aes(x = Observed, y = Predicted)) +
+  geom_point(color = Predators$colors) +
+  coord_cartesian(xlim = c(0,1500), ylim = c(0,1500)) +
+  geom_smooth(method = 'lm', se = FALSE, linetype = 'dashed', color = 'black') + 
+  geom_abline() +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = comma) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        panel.grid = element_blank(),
+        plot.title = element_text(hjust = 0.5)) +
+  labs(title = "Predators")
+
+# Save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+
+ggsave("pred_obs_total_number.pdf", total_number_plot, width = 8, height = 8, device = "pdf")
+ggsave("pred_obs_bacterivores.pdf", bacterivores_plot, width = 4, height = 4, device = "pdf")
+ggsave("pred_obs_fungivores.pdf", fungivores_plot, width = 4, height = 4, device = "pdf")
+ggsave("pred_obs_herbivores.pdf", herbivores_plot, width = 4, height = 4, device = "pdf")
+ggsave("pred_obs_omnivores.pdf", omnivores_plot, width = 4, height = 4, device = "pdf")
+ggsave("pred_obs_predators.pdf", predators_plot, width = 4, height = 4, device = "pdf")
+
+plot_grid(total_number_plot,bacterivores_plot,fungivores_plot,herbivores_plot,omnivores_plot,predators_plot)
+
+p1 <- plot_grid(bacterivores_plot,fungivores_plot, ncol = 1)
+p2 <- plot_grid(total_number_plot, p1, rel_widths = c(2,1))
+p3 <- plot_grid(herbivores_plot,omnivores_plot,predators_plot, nrow = 1, align = "h")
+
+plot_grid(p2, p3, ncol = 1, rel_heights = c(3,1))
+
+# Legend with color scale
+pdf(file='Nema_PredVsObs_Legend_Spectrum.pdf')
+legend_image = as.raster(matrix(colors, ncol=1))
+plot(c(-3,4),c(0,1),type = 'n', axes = F,xlab = '', ylab = '')
+# text(x=1.5, y = seq(0,1,l=5), labels = c('0','','','','1'))
+rasterImage(legend_image, 0, 0, 1,1)
+dev.off()
+```
+
+# Extended Data Figure 2 - Linear regression models
+```{r Regression coefficients}
+# # Select top 10 variables from RF model
+lm_vars <- merge(Used_IDs, Data_raw, by = "ID" ) %>% select(Total_Number,
+                                                            Sand_Content_15cm,
+                                                            OrgCStockTHa_5to15cm,
+                                                            CatIonExcCap_15cm,
+                                                            Nadir_Reflectance_Band1,
+                                                            Nadir_Reflectance_Band7,
+                                                            Annual_Precipitation,
+                                                            pHinHOX_15cm,
+                                                            Aridity_Index,
+                                                            Temperature_Seasonality,
+                                                            Precipitation_Seasonality)
+
+# Scale data
+lm_vars_scaled <- merge(as.data.frame(lm_vars$Total_Number) %>% tibble::rowid_to_column("ID"),
+                        as.data.frame(scale(lm_vars[, -c(1)], center = TRUE, scale = TRUE)) %>% tibble::rowid_to_column("ID"),
+                        by = "ID") %>%
+  select(-ID) %>%
+  dplyr::rename(Total_Number = "lm_vars$Total_Number")
+
+lm_vars_scaled <- melt(lm_vars_scaled, "Total_Number")
+# lm_vars <- melt(lm_vars, "Total_Number")
+
+# Source of "stat_smooth_func" and "StatSmoothFunc": https://gist.github.com/kdauria/524eade46135f6348140
+# Slightly modified 
+{stat_smooth_func <- function(mapping = NULL, data = NULL,
+                             geom = "smooth", position = "identity",
+                             ...,
+                             method = "auto",
+                             formula = y ~ x,
+                             se = TRUE,
+                             n = 80,
+                             span = 0.75,
+                             fullrange = FALSE,
+                             level = 0.95,
+                             method.args = list(),
+                             na.rm = FALSE,
+                             show.legend = NA,
+                             inherit.aes = TRUE,
+                             xpos = NULL,
+                             ypos = NULL) {
+  layer(
+    data = data,
+    mapping = mapping,
+    stat = StatSmoothFunc,
+    geom = geom,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(
+      method = method,
+      formula = formula,
+      se = se,
+      n = n,
+      fullrange = fullrange,
+      level = level,
+      na.rm = na.rm,
+      method.args = method.args,
+      span = span,
+      xpos = xpos,
+      ypos = ypos,
+      ...
+    )
+  )
+}
+
+StatSmoothFunc <- ggproto("StatSmooth", Stat,
+                          
+                          setup_params = function(data, params) {
+                            # Figure out what type of smoothing to do: loess for small datasets,
+                            # gam with a cubic regression basis for large data
+                            # This is based on the size of the _largest_ group.
+                            if (identical(params$method, "auto")) {
+                              max_group <- max(table(data$group))
+                              
+                              if (max_group < 1000) {
+                                params$method <- "loess"
+                              } else {
+                                params$method <- "gam"
+                                params$formula <- y ~ s(x, bs = "cs")
+                              }
+                            }
+                            if (identical(params$method, "gam")) {
+                              params$method <- mgcv::gam
+                            }
+                            
+                            params
+                          },
+                          
+                          compute_group = function(data, scales, method = "auto", formula = y~x,
+                                                   se = TRUE, n = 80, span = 0.75, fullrange = FALSE,
+                                                   xseq = NULL, level = 0.95, method.args = list(),
+                                                   na.rm = FALSE, xpos=NULL, ypos=NULL) {
+                            if (length(unique(data$x)) < 2) {
+                              # Not enough data to perform fit
+                              return(data.frame())
+                            }
+                            
+                            if (is.null(data$weight)) data$weight <- 1
+                            
+                            if (is.null(xseq)) {
+                              if (is.integer(data$x)) {
+                                if (fullrange) {
+                                  xseq <- scales$x$dimension()
+                                } else {
+                                  xseq <- sort(unique(data$x))
+                                }
+                              } else {
+                                if (fullrange) {
+                                  range <- scales$x$dimension()
+                                } else {
+                                  range <- range(data$x, na.rm = TRUE)
+                                }
+                                xseq <- seq(range[1], range[2], length.out = n)
+                              }
+                            }
+                            # Special case span because it's the most commonly used model argument
+                            if (identical(method, "loess")) {
+                              method.args$span <- span
+                            }
+                            
+                            if (is.character(method)) method <- match.fun(method)
+                            
+                            base.args <- list(quote(formula), data = quote(data), weights = quote(weight))
+                            model <- do.call(method, c(base.args, method.args))
+                            
+                            m = model
+                            eq <- substitute(italic(R)^2~"="~r2, 
+                                             list(a = format(coef(m)[1], digits = 3), 
+                                                  b = format(coef(m)[2], digits = 3), 
+                                                  r2 = format(summary(m)$r.squared, digits = 3)))
+                            func_string = as.character(as.expression(eq))
+                            
+                            if(is.null(xpos)) xpos = min(data$x)*0.9
+                            if(is.null(ypos)) ypos = max(data$y)*0.9
+                            data.frame(x=xpos, y=ypos, label=func_string)
+                            
+                          },
+                          
+                          required_aes = c("x", "y")
+)
+}
+
+# Plot
+lm_plot <- ggplot(data = lm_vars_scaled, aes(
+  x = value, 
+  y = Total_Number, 
+  label = Total_Number)) +
+  stat_smooth_func(geom = "text", method = "lm", hjust = 0, parse = TRUE) +
+  geom_point(aes(color = variable, alpha = 0.05)) + 
+  geom_smooth(method = "lm", se = 0.95) +
+  facet_wrap(~variable, scales = "free_x", ncol = 5) +
+  theme(legend.position="none", 
+        aspect.ratio = 1) +
+  xlab("Value") +
+  ylab("Total number")
+
+lm_plot
+
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+ggsave("lm_plot.pdf", plot = lm_plot, device = "pdf", dpi = "retina", scale = 3)
+```
+
+# Extended Data Figure 6
+## Extended Data Figure 6a - functional group correlation
+Calculate correlation for each trophic group.
+```{r Figure S6 - trophic group correlation, message=FALSE, warning=FALSE}
+# calculate correlation values
+NemaCor <- cor(Data_group, use = "pairwise.complete.obs", method = "spearman")
+
+#set colors scale
+col <- colorRampPalette(c('#330044', '#220066', '#1133cc', '#33dd00', '#ffda21', '#ff6622', '#d10000'))
+
+# plot 
+corrplot(NemaCor, 
+         method = "circle",
+         type = "upper", 
+         tl.col = "black", 
+         tl.srt = 45, 
+         addgrid.col = NA,
+         diag = FALSE,
+         col = col(1000))
+
+#save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+dev.print(pdf, "Correlation.pdf")   
+```
+
+## Extended Data Figures 6b, c - community composition
+Here we explored the soil nematode community composition on the global scale. To do so, we first cluster the communities (i.e., the relative abundance of each of the functional groups in one 1-km2 pixel) into the most representative. Then, using the covariate data, we produce a NMDS plot to explore the importance and directionality of the different environmental factors. As covariate layer information is not available for Antarctic points, those points are removed from the dataset for the NMDS and linear modeling.
+
+```{r NMDS dataset}
+# Data_raw <- Data_raw %>% filter(WWF_Biome == 999)
+
+#select data
+Data_tot <- Data_raw[,c('ID','Total_Number','Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')] %>% 
+  na.omit() %>% 
+  filter(Total_Number != 0)
+Data_group <- Data_tot[,c('Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')] %>% 
+  na.omit()
+
+#pull used IDs
+Used_IDs <- Data_tot[,1,drop=FALSE]
+#remove ID column 
+Data_tot <- subset(Data_tot, select = -ID)
+#convert to data frame
+Data_tot <- stack(as.data.frame(Data_tot)) %>% 
+    dplyr::rename(Group = ind) %>% 
+    dplyr::rename(Count = values) %>% 
+    mutate(Count = as.numeric(Count))
+
+#Calculate frequencies per row
+GroupComposition <- Data_raw[,c('ID','Bacterivores.pct','Fungivores.pct',"Herbivores.pct",'Omnivores.pct','Predators.pct')]
+#remove rows not including all trophic groups
+GroupComposition <- merge(GroupComposition, Used_IDs, "ID")
+#remove ID column
+GroupComposition <- subset(GroupComposition, select = -ID)
+names(GroupComposition) <- c('Bacterivores','Fungivores',"Herbivores",'Omnivores','Predators')
+```
+
+## Non-metric multidimensional scaling
+First, we selected the number of clusters to use to cluster the observed soil nematode communities. Based on k-mediods clustering and pairwise distances we chose to select four clusters. 
+
+```{r clustering}
+# Partitioning Around Medoids (PAM) - k-mediods clustering
+set.seed(123)
+pam.res <- pam(GroupComposition, 4)
+```
+
+## Community type plots
+Then we plotted the community composition to visualize the relative presence of each trophic group.
+```{r Plotting the community}
+# Pull cluster info per id
+cluster_info <- as.data.frame(pam.res$cluster)
+#add IDs
+cluster_info <- tibble::rowid_to_column(cluster_info, "ID")
+names(cluster_info) <- c("ID","Cluster")
+
+GroupCompositionID <- tibble::rowid_to_column(GroupComposition, "ID")
+Nema_group_clusters <- merge(GroupCompositionID, cluster_info, by="ID")
+Nema_group_clusters <- melt(Nema_group_clusters, id = c("ID","Cluster"))
+names(Nema_group_clusters) <- c("ID","Cluster","Group","Freq")
+
+col <- colorRampPalette(c("#e24646", "#bb6cc9", "#11c63f", "#c68311", "#1186c6"))
+col1 <- colorRampPalette(c("#B26A4A","#B2A877","#62B25E","#40B29A","#ef7e6b"))
+
+#plot
+plots <- ggplot(data = Nema_group_clusters, aes(Freq, fill = Group, alpha = 0.3)) +
+  geom_density() +
+  scale_alpha(guide = 'none') +
+  guides(fill = guide_legend(override.aes= list(alpha = 0.5))) +
+  theme_minimal() +
+  xlab("Frequency") +
+  ylab("") +
+  scale_fill_manual(values = col(5),
+                      name = "Trophic group",
+                      labels = c("Bacterivores","Fungivores","Herbivores", "Omnivores ", "Predators")) +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.y=element_blank(),
+        aspect.ratio = 1,
+        axis.line = element_line() ) +
+  xlim(0,0.5) +
+  facet_rep_wrap(~Cluster,repeat.tick.labels = TRUE)
+plots
+
+##GroupComposition <- subset(GroupComposition, select = -ID)
+#save to file 
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+ggsave("comm_plots.pdf", plot = plots, device = "pdf", height =  5, width = 5, units = "cm", dpi = "retina", scale = 2)    
+```
+
+## NMDS
+Next, we ran a non-metric multidimensional scaling analysis. 
+```{r NMDS}
+### The NMDS takes a while to perform with 500 runs. 
+### To reduce rendering time of the script the analysis is now commented and a stored .rda file is imported. 
+
+# #Set number of clusters
+# clus <- makeCluster(3)
+# #random seed
+# set.seed(123)
+# #NMDS calc
+# NemaNMDS <- metaMDS(comm = GroupComposition,
+#                     distance = "bray",
+#                     k = 3,
+#                     pc = TRUE,
+#                     autotransform = FALSE,
+#                     trymax = 500,
+#                     center = TRUE,
+#                     parallel = clus
+#                     )
+# #stop cluster
+# stopCluster(clus)
+# 
+# # save rda file
+# setwd("~/Work/ETH/Projects/Nematodes/Data/")
+# #Save to file
+# save(NemaNMDS, file = "NemaNMDS_31012019.rda")
+
+# # load rda file from disk
+setwd("~/Work/ETH/Projects/Nematodes/Data/")
+load(file = "NemaNMDS_31012019.rda")
+
+# Plot stressplot
+stressplot(NemaNMDS, p.col = "grey", l.col = "black")
+
+# save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+dev.copy(png, file = "stressplot.png")
+dev.off()
+```
+
+Stress value of NMDS
+```{r}
+NemaNMDS$stress
+```
+
+## NMDS plot + vectors
+Then, the NMDS was fitted with environmental vectors. 
+```{r NMDS plot}
+# Load environmental data, select rows based on ID
+envfactors <- merge(Used_IDs, Data_raw, by = "ID" )
+
+# select layers
+envfactors<- envfactors[,c(
+  'Annual_Precipitation',
+  'Aridity_Index',
+  'Sand_Content_15cm',
+  'OrgCStockTHa_5to15cm',
+  'NDVI',
+  'Annual_Mean_Temperature',
+  'Shannon_Index_1km',
+  'Precipitation_Seasonality',
+  'Temperature_Seasonality',
+  'pHinHOX_15cm',
+  "EVI",
+  'Human_Development_Percentage')]
+
+# envfit
+fit <- envfit(NemaNMDS, envfactors, na.rm = T, permutations = 999)
+
+## Plot NMDS 
+## source https://oliviarata.wordpress.com/2014/04/17/ordinations-in-ggplot2/
+
+# NMDS points
+NMDS.data <- envfactors 
+NMDS.data$NMDS1 <- NemaNMDS$points[ ,1] 
+NMDS.data$NMDS2 <- NemaNMDS$points[ ,2] 
+NMDS.data <- tibble::rowid_to_column(NMDS.data, "ID")
+NMDS.data <- merge (NMDS.data, cluster_info, "ID")
+NMDS.data <- melt(NMDS.data, c("NMDS1","NMDS2","Cluster"))
+
+# Vectors
+env.scores.nema <- as.data.frame(scores(fit, display = "vectors")) 
+env.scores.nema <- cbind(env.scores.nema, env.variables = rownames(env.scores.nema)) 
+
+col = colorRampPalette(c("#A9A9A9", "#C0C0C0", "#D3D3D3", "#696969")) 
+
+NMDS <- ggplot(data = NMDS.data, aes(
+  x = NMDS1,
+  y = NMDS2)) + 
+  geom_point(aes(color = factor(NMDS.data$Cluster), shape = factor(NMDS.data$Cluster)), size = 0.5) +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line()) +
+  scale_shape_manual(values = c(0,18,1,17), 
+                     name = "Community type") +
+    scale_color_manual(values = col(4),
+                     name = "Community type") +
+  geom_segment(data = env.scores.nema,
+               aes(x = 0, 
+                   xend = 4 * NMDS1, 
+                   y = 0, 
+                   yend = 4 * NMDS2),
+               arrow = arrow(length = unit(0.25, "cm")), colour = "black") +
+  geom_text(data = env.scores.nema, 
+            aes(x = 4.5 * NMDS1, 
+                y = 4.5 * NMDS2, 
+                label = env.variables),
+            size = 3) +
+  annotate("text", x = -0.9, y = 1.5, label = paste("Stress value = ", format(round(NemaNMDS$stress, 4), nsmall = 4)), size = 3)
+NMDS
+
+fit
+
+#save to file
+setwd("~/Work/ETH/Projects/Nematodes/Figures/")
+ggsave("NMDS.pdf", plot = NMDS, device = "pdf", height =  10, width = 10, units = "cm", dpi = "retina", scale = 2)
+```
+

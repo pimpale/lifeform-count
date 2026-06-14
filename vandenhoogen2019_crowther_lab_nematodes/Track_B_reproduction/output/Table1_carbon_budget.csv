@@ -1,0 +1,7 @@
+"Trophic group","Computed individuals","Fresh biomass (Mt)","Biomass (Mt C)","Monthly respiration (Mt C)","Monthly production (Mt C)","Monthly carbon budget (Mt C)"
+"Bacterivores","1.92e+20",68.57,7.13,34.16,12.22,46.39
+"Fungivores","6.38e+19",9.56,0.99,6.49,0.91,7.4
+"Herbivores","1.25e+20",83.41,8.67,26.74,7.01,33.75
+"Omnivores","3.94e+19",98.5,10.25,27.38,6.08,33.46
+"Predators","1.97e+19",42.25,4.39,15.05,3,18.06
+"Total","4.40e+20",302.3,31.44,109.82,29.24,139.06

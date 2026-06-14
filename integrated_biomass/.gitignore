@@ -1,0 +1,10 @@
+# Large external datasets — fetched via `python -m integrated_biomass.bootstrap_data`
+data/dropzone/*.zip
+data/raw/
+data/cache/
+results/
+
+# uv / Python
+.venv/
+__pycache__/
+*.pyc
