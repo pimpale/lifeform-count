@@ -1,0 +1,143 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \expnd0\expndtw0\kerning0
+This is supporting data and code for the manuscript \'91The global biomass and number of terrestrial arthropods\'92 by Rosenberg et al., published in Science Advances.\
+It can be found in Zenodo repository, DOI:10.5281/zenodo.7502034
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 \'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The data used to produce the main results described in the above study is found in the xlsx file named \'91RawData\'92 under the folder \'91data\'92. The annotated Jupyter Notebooks analyze this data and the other files found in the folder named \'91data\'92. Results are written into the folder named \'91results\'92.
+\f1\fs24 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 Below is a description of the annotated Jupyter Notebook files:
+\f1\fs24 \
+\
+
+\f0\fs29\fsmilli14667 00_calculate_crop_pasture.ipynb
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Used to generate the file \'91aggregated biomes data.csv\'92. It summarizes the areas of the global WWF biomes, and the aggregated biomes used in the study. The areas of the official WWF biomes are calculated based on the map that defines them (found in the folder data/official_wwf_ecoregions, and can be downloaded from: https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world). The surface area of croplands and pastures from each official biome is removed and defined as two separate aggregated biomes.
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The global surface area of cropland and pasture land is obtained from data/cropland.tif and data/pasture.tif, which are based on Ramankutty et.al., Global Biogeochem. Cycles. 22 (2008).
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 01-Main-Estimate_global_biomass_and_numbers.ipynb
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 This is the main code to replicate the results of the study. The procedures performed are described in the manuscript Methods section and the Supplementary Materials. The code can be run as a standalone.\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The boolean parameter save_bool determines whether files will be exported by the code or not.\'a0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The numerical parameters N_boot and N_samps are used as part of the bootstrap procedure and can be changed to reduce execution time.
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 02-Arthropods dates.ipynb
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Used to analyze the measurements times generate figures 1B and S1.\'a0
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 03_sites_locations.ipynb
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Used to analyze the measurements locations and generate figures 1A and S2.
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 04_geographic_sensitivity_analysis.ipynb
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Performs a sensitivity analysis by varying the biogeographic resolution used in the analysis.\'a0
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 05_biome_maps.ipynb
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Generates the biome maps of figure S3.\'a0
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 The version of the Jupyter notebook server used was: 6.4.5
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The server was running on Python 3.9.7, IPython 7.29.0
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 Python packages used (dependencies are not listed):\'a0
+\f1\fs24 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl404\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 Package\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 Version
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------- --------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Cartopy\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 0.21.0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Fiona\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 1.8.22
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 GeoPandas\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 0.12.1
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 matplotlib\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 3.4.3
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 numpy\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 1.20.3
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 pandas \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 1.3.4
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 rasterio\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 1.2.6
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 rasterstats\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 0.17.0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 rioxarray \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 0.6.0
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 seaborn \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 0.11.2
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 xarray \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 2022.11.0\
+}

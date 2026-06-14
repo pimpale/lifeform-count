@@ -1,0 +1,64 @@
+# Heavy files for some lfs #
+#############################
+species_rasters/
+species_env_params/
+currently_unused/
+rasters_with_density/
+
+# Files compiled by other sources  #
+data/TERRESTRIAL_MAMMALS/
+data/MAMMALS/
+data/terrestrial_mammals_projected_dissolved/
+data/iucn_habitatclassification_composite_lvl2_ver001.tif
+data/livestock_data/
+data/Land_vertebrates_IUCN_suitable_habitat.csv
+data/IUCN_suitable_habitat_processed.csv
+data/MammalDIET_v1.0.csv
+data/mam12119-sup-0001-appendixs1.csv
+data/domesticated_data/WPP2019_TotalPopulationBySex.csv
+data/marine_data/PanTHERIA_1-0_WR93_Aug2008.csv
+
+
+
+# Files compiled by WorldClim  #
+data/annual_mean_temp.tif
+data/prec_seasonality.tif
+data/prec_warmest_quarter.tif
+data/temp_seasonality.tif
+
+## R package files
+data/map_data/
+
+#File compiled by SEDAC#
+data/npp.tif
+
+#Tetra density models
+data/Models_Mammals_santini_2018.csv
+
+#Local density model output- very heavy and isn't required for final res
+results/local_model_predictions_per_grid_cell.csv
+results/local_to_global_factor.csv
+results/local_model_pred_svr_factor.csv
+results/svr_prediction_bootstrapping.csv
+results/local_model_predictions_.csv
+
+
+
+
+#redundant
+*.pyc
+gitignore.txt
+.Rhistory
+.ipynb_checkpoints/
+__pycache__/
+*.html
+.idea/
+plots/poster/
+plots/ppt/
+Submit/
+
+
+
+
+
+

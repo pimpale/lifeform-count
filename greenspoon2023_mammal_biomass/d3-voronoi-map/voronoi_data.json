@@ -1,0 +1,159 @@
+{
+	"name": "Mammals",
+	"children": [
+		{
+			"name": "Domesticated",
+			"color": "#cc6666",
+			"children": [
+				{
+					"name": "Cattle",
+					"weight": 416.0,
+					"color": "#A05050"
+				},
+				{
+					"name": "Buffaloes",
+					"weight": 67.6,
+					"color": "#A25151"
+				},
+				{
+					"name": "Sheep",
+					"weight": 38.9,
+					"color": "#F07878"
+				},
+				{
+					"name": "Swine",
+					"weight": 38.2,
+					"color": "#C76363"
+				},
+				{
+					"name": "Goats",
+					"weight": 32.0,
+					"color": "#E67373"
+				},
+				{
+					"name": "Dog",
+					"weight": 21.6,
+					"color": "#FA7D7D"
+				},
+				{
+					"name": "Horses",
+					"weight": 16.1,
+					"color": "#A15050"
+				},
+				{
+					"name": "Camels and camelids",
+					"weight": 8.7,
+					"color": "#E97474"
+				},
+				{
+					"name": "Donkeys and mules",
+					"weight": 7.5,
+					"color": "#BE5F5F"
+				},
+				{
+					"name": "Cat",
+					"weight": 2.2,
+					"color": "#A85454"
+				},
+				{
+					"name": "Other",
+					"weight": 1.1,
+					"color": "#C16060"
+				}
+			]
+		},
+		{
+			"name": "Human",
+			"color": "#cc66cc",
+			"children": [
+				{
+					"name": "Human",
+					"weight": 393.7,
+					"color": "#AF57AF"
+				}
+			]
+		},
+		{
+			"name": "Marine",
+			"color": "#6688cc",
+			"children": [
+				{
+					"name": "Baleen whales",
+					"weight": 23.3,
+					"color": "#698DD3"
+				},
+				{
+					"name": "Sperm whales",
+					"weight": 6.7,
+					"color": "#688BD1"
+				},
+				{
+					"name": "Earless seals",
+					"weight": 4.9,
+					"color": "#6586CA"
+				},
+				{
+					"name": "Dolphins and Porpoises",
+					"weight": 2.7,
+					"color": "#769EED"
+				},
+				{
+					"name": "Beaked whales",
+					"weight": 0.9,
+					"color": "#678ACF"
+				},
+				{
+					"name": "Other",
+					"weight": 0.5,
+					"color": "#7095E0"
+				}
+			]
+		},
+		{
+			"name": "Terrestrial",
+			"color": "#ccbb66",
+			"children": [
+				{
+					"name": "Artiodactyla (Even-hoofed mammals)",
+					"weight": 10.9,
+					"color": "#FBE67D"
+				},
+				{
+					"name": "Rodentia (Rodents)",
+					"weight": 3.6,
+					"color": "#F8E47C"
+				},
+				{
+					"name": "Proboscidea (Elephants)",
+					"weight": 1.7,
+					"color": "#D5C36A"
+				},
+				{
+					"name": "Chiroptera (Bats)",
+					"weight": 1.6,
+					"color": "#FCE77E"
+				},
+				{
+					"name": "Diprotodontia (Marsupials)",
+					"weight": 1.6,
+					"color": "#B9AA5C"
+				},
+				{
+					"name": "Other",
+					"weight": 1.4,
+					"color": "#FBE67D"
+				},
+				{
+					"name": "Primates (Primates)",
+					"weight": 0.8,
+					"color": "#E8D474"
+				},
+				{
+					"name": "Carnivora (Carnivores)",
+					"weight": 0.7,
+					"color": "#AC9D56"
+				}
+			]
+		}
+	]
+}

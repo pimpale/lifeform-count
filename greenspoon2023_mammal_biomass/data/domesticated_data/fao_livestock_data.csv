@@ -1,0 +1,319 @@
+Domain Code,Domain,Area Code (FAO),Area,Element Code,Element,Item Code (FAO),Item,Year Code,Year,Unit,Value,Flag,Flag Description
+QA,Live Animals,2,Afghanistan,5111,Stocks,1107,Asses,2018,2018,Head,1334285,Im,FAO data based on imputation methodology
+QA,Live Animals,2,Afghanistan,5111,Stocks,1126,Camels,2018,2018,Head,172319,Im,FAO data based on imputation methodology
+QA,Live Animals,2,Afghanistan,5111,Stocks,1016,Goats,2018,2018,Head,7765089,Im,FAO data based on imputation methodology
+QA,Live Animals,2,Afghanistan,5111,Stocks,1096,Horses,2018,2018,Head,177637,Im,FAO data based on imputation methodology
+QA,Live Animals,2,Afghanistan,5111,Stocks,1110,Mules,2018,2018,Head,23892,Im,FAO data based on imputation methodology
+QA,Live Animals,2,Afghanistan,5111,Stocks,976,Sheep,2018,2018,Head,13975088,Im,FAO data based on imputation methodology
+QA,Live Animals,1,Armenia,5111,Stocks,1107,Asses,2018,2018,Head,1758,,Official data
+QA,Live Animals,1,Armenia,5111,Stocks,946,Buffaloes,2018,2018,Head,717,,Official data
+QA,Live Animals,1,Armenia,5111,Stocks,1016,Goats,2018,2018,Head,22081,,Official data
+QA,Live Animals,1,Armenia,5111,Stocks,1096,Horses,2018,2018,Head,10049,,Official data
+QA,Live Animals,1,Armenia,5111,Stocks,1110,Mules,2018,2018,Head,25,,Official data
+QA,Live Animals,1,Armenia,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,28,,Official data
+QA,Live Animals,1,Armenia,5111,Stocks,976,Sheep,2018,2018,Head,637978,,Official data
+QA,Live Animals,52,Azerbaijan,5111,Stocks,1107,Asses,2018,2018,Head,28040,,Official data
+QA,Live Animals,52,Azerbaijan,5111,Stocks,946,Buffaloes,2018,2018,Head,176195,,Official data
+QA,Live Animals,52,Azerbaijan,5111,Stocks,1126,Camels,2018,2018,Head,239,,Official data
+QA,Live Animals,52,Azerbaijan,5111,Stocks,1016,Goats,2018,2018,Head,622426,,Official data
+QA,Live Animals,52,Azerbaijan,5111,Stocks,1096,Horses,2018,2018,Head,65211,,Official data
+QA,Live Animals,52,Azerbaijan,5111,Stocks,1110,Mules,2018,2018,Head,53,,Official data
+QA,Live Animals,52,Azerbaijan,5111,Stocks,976,Sheep,2018,2018,Head,7681674,,Official data
+QA,Live Animals,13,Bahrain,5111,Stocks,1107,Asses,2018,2018,Head,,M,Data not available
+QA,Live Animals,13,Bahrain,5111,Stocks,1126,Camels,2018,2018,Head,1100,Im,FAO data based on imputation methodology
+QA,Live Animals,13,Bahrain,5111,Stocks,1016,Goats,2018,2018,Head,25000,,Official data
+QA,Live Animals,13,Bahrain,5111,Stocks,976,Sheep,2018,2018,Head,63660,,Official data
+QA,Live Animals,16,Bangladesh,5111,Stocks,946,Buffaloes,2018,2018,Head,1485000,,Official data
+QA,Live Animals,16,Bangladesh,5111,Stocks,1016,Goats,2018,2018,Head,60075049,Im,FAO data based on imputation methodology
+QA,Live Animals,16,Bangladesh,5111,Stocks,976,Sheep,2018,2018,Head,2268070,Im,FAO data based on imputation methodology
+QA,Live Animals,18,Bhutan,5111,Stocks,1107,Asses,2018,2018,Head,17959,Im,FAO data based on imputation methodology
+QA,Live Animals,18,Bhutan,5111,Stocks,946,Buffaloes,2018,2018,Head,531,,Official data
+QA,Live Animals,18,Bhutan,5111,Stocks,1016,Goats,2018,2018,Head,43839,,Official data
+QA,Live Animals,18,Bhutan,5111,Stocks,1096,Horses,2018,2018,Head,17103,,Official data
+QA,Live Animals,18,Bhutan,5111,Stocks,1110,Mules,2018,2018,Head,4703,Im,FAO data based on imputation methodology
+QA,Live Animals,18,Bhutan,5111,Stocks,976,Sheep,2018,2018,Head,10858,,Official data
+QA,Live Animals,26,Brunei Darussalam,5111,Stocks,946,Buffaloes,2018,2018,Head,2319,,Official data
+QA,Live Animals,26,Brunei Darussalam,5111,Stocks,1016,Goats,2018,2018,Head,6162,,Official data
+QA,Live Animals,26,Brunei Darussalam,5111,Stocks,976,Sheep,2018,2018,Head,4571,Im,FAO data based on imputation methodology
+QA,Live Animals,115,Cambodia,5111,Stocks,946,Buffaloes,2018,2018,Head,619140,Im,FAO data based on imputation methodology
+QA,Live Animals,115,Cambodia,5111,Stocks,1096,Horses,2018,2018,Head,30629,Im,FAO data based on imputation methodology
+QA,Live Animals,96,"China, Hong Kong SAR",5111,Stocks,946,Buffaloes,2018,2018,Head,323,Im,FAO data based on imputation methodology
+QA,Live Animals,96,"China, Hong Kong SAR",5111,Stocks,1016,Goats,2018,2018,Head,700,Im,FAO data based on imputation methodology
+QA,Live Animals,96,"China, Hong Kong SAR",5111,Stocks,1096,Horses,2018,2018,Head,1534,Im,FAO data based on imputation methodology
+QA,Live Animals,96,"China, Hong Kong SAR",5111,Stocks,976,Sheep,2018,2018,Head,21,Im,FAO data based on imputation methodology
+QA,Live Animals,41,"China, mainland",5111,Stocks,1107,Asses,2018,2018,Head,2532800,,Official data
+QA,Live Animals,41,"China, mainland",5111,Stocks,946,Buffaloes,2018,2018,Head,27116250,F,FAO estimate
+QA,Live Animals,41,"China, mainland",5111,Stocks,1126,Camels,2018,2018,Head,338400,,Official data
+QA,Live Animals,41,"China, mainland",5111,Stocks,1016,Goats,2018,2018,Head,135746900,,Official data
+QA,Live Animals,41,"China, mainland",5111,Stocks,1096,Horses,2018,2018,Head,3473100,,Official data
+QA,Live Animals,41,"China, mainland",5111,Stocks,1110,Mules,2018,2018,Head,757900,,Official data
+QA,Live Animals,41,"China, mainland",5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,230596,Im,FAO data based on imputation methodology
+QA,Live Animals,41,"China, mainland",5111,Stocks,976,Sheep,2018,2018,Head,161388200,,Official data
+QA,Live Animals,214,"China, Taiwan Province of",5111,Stocks,946,Buffaloes,2018,2018,Head,2057,,Official data
+QA,Live Animals,214,"China, Taiwan Province of",5111,Stocks,1016,Goats,2018,2018,Head,144733,,Official data
+QA,Live Animals,214,"China, Taiwan Province of",5111,Stocks,1096,Horses,2018,2018,Head,857,Im,FAO data based on imputation methodology
+QA,Live Animals,214,"China, Taiwan Province of",5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,70,Im,FAO data based on imputation methodology
+QA,Live Animals,214,"China, Taiwan Province of",5111,Stocks,976,Sheep,2018,2018,Head,182,Im,FAO data based on imputation methodology
+QA,Live Animals,50,Cyprus,5111,Stocks,946,Buffaloes,2018,2018,Head,0,,Official data
+QA,Live Animals,50,Cyprus,5111,Stocks,1016,Goats,2018,2018,Head,250412,,Official data
+QA,Live Animals,50,Cyprus,5111,Stocks,976,Sheep,2018,2018,Head,310988,,Official data
+QA,Live Animals,116,Democratic People's Republic of Korea,5111,Stocks,1016,Goats,2018,2018,Head,3631000,,Official data
+QA,Live Animals,116,Democratic People's Republic of Korea,5111,Stocks,1096,Horses,2018,2018,Head,48228,Im,FAO data based on imputation methodology
+QA,Live Animals,116,Democratic People's Republic of Korea,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,31259,,Official data
+QA,Live Animals,116,Democratic People's Republic of Korea,5111,Stocks,976,Sheep,2018,2018,Head,167000,,Official data
+QA,Live Animals,73,Georgia,5111,Stocks,1107,Asses,2018,2018,Head,10145,Im,FAO data based on imputation methodology
+QA,Live Animals,73,Georgia,5111,Stocks,946,Buffaloes,2018,2018,Head,18386,Im,FAO data based on imputation methodology
+QA,Live Animals,73,Georgia,5111,Stocks,1016,Goats,2018,2018,Head,51100,,Official data
+QA,Live Animals,73,Georgia,5111,Stocks,1096,Horses,2018,2018,Head,39368,Im,FAO data based on imputation methodology
+QA,Live Animals,73,Georgia,5111,Stocks,1110,Mules,2018,2018,Head,94,Im,FAO data based on imputation methodology
+QA,Live Animals,73,Georgia,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,17,Im,FAO data based on imputation methodology
+QA,Live Animals,73,Georgia,5111,Stocks,976,Sheep,2018,2018,Head,855900,,Official data
+QA,Live Animals,100,India,5111,Stocks,1107,Asses,2018,2018,Head,230255,Im,FAO data based on imputation methodology
+QA,Live Animals,100,India,5111,Stocks,946,Buffaloes,2018,2018,Head,110140128,Im,FAO data based on imputation methodology
+QA,Live Animals,100,India,5111,Stocks,1126,Camels,2018,2018,Head,277240,Im,FAO data based on imputation methodology
+QA,Live Animals,100,India,5111,Stocks,1016,Goats,2018,2018,Head,144425299,Im,FAO data based on imputation methodology
+QA,Live Animals,100,India,5111,Stocks,1096,Horses,2018,2018,Head,456099,Im,FAO data based on imputation methodology
+QA,Live Animals,100,India,5111,Stocks,1110,Mules,2018,2018,Head,129617,Im,FAO data based on imputation methodology
+QA,Live Animals,100,India,5111,Stocks,976,Sheep,2018,2018,Head,71587950,Im,FAO data based on imputation methodology
+QA,Live Animals,101,Indonesia,5111,Stocks,946,Buffaloes,2018,2018,Head,894278,,Official data
+QA,Live Animals,101,Indonesia,5111,Stocks,1016,Goats,2018,2018,Head,18306476,,Official data
+QA,Live Animals,101,Indonesia,5111,Stocks,1096,Horses,2018,2018,Head,377929,,Official data
+QA,Live Animals,101,Indonesia,5111,Stocks,976,Sheep,2018,2018,Head,17611392,,Official data
+QA,Live Animals,102,Iran (Islamic Republic of),5111,Stocks,1107,Asses,2018,2018,Head,1533576,Im,FAO data based on imputation methodology
+QA,Live Animals,102,Iran (Islamic Republic of),5111,Stocks,946,Buffaloes,2018,2018,Head,107805,Im,FAO data based on imputation methodology
+QA,Live Animals,102,Iran (Islamic Republic of),5111,Stocks,1126,Camels,2018,2018,Head,152563,Im,FAO data based on imputation methodology
+QA,Live Animals,102,Iran (Islamic Republic of),5111,Stocks,1016,Goats,2018,2018,Head,15423461,,Official data
+QA,Live Animals,102,Iran (Islamic Republic of),5111,Stocks,1096,Horses,2018,2018,Head,134383,Im,FAO data based on imputation methodology
+QA,Live Animals,102,Iran (Islamic Republic of),5111,Stocks,1110,Mules,2018,2018,Head,178344,Im,FAO data based on imputation methodology
+QA,Live Animals,102,Iran (Islamic Republic of),5111,Stocks,976,Sheep,2018,2018,Head,39998423,,Official data
+QA,Live Animals,103,Iraq,5111,Stocks,1107,Asses,2018,2018,Head,379272,Im,FAO data based on imputation methodology
+QA,Live Animals,103,Iraq,5111,Stocks,946,Buffaloes,2018,2018,Head,216965,,Official data
+QA,Live Animals,103,Iraq,5111,Stocks,1126,Camels,2018,2018,Head,84447,,Official data
+QA,Live Animals,103,Iraq,5111,Stocks,1016,Goats,2018,2018,Head,1305627,,Official data
+QA,Live Animals,103,Iraq,5111,Stocks,1096,Horses,2018,2018,Head,50839,Im,FAO data based on imputation methodology
+QA,Live Animals,103,Iraq,5111,Stocks,1110,Mules,2018,2018,Head,10482,Im,FAO data based on imputation methodology
+QA,Live Animals,103,Iraq,5111,Stocks,976,Sheep,2018,2018,Head,6663757,,Official data
+QA,Live Animals,105,Israel,5111,Stocks,1107,Asses,2018,2018,Head,5000,Im,FAO data based on imputation methodology
+QA,Live Animals,105,Israel,5111,Stocks,1126,Camels,2018,2018,Head,5538,Im,FAO data based on imputation methodology
+QA,Live Animals,105,Israel,5111,Stocks,1016,Goats,2018,2018,Head,108426,,Official data
+QA,Live Animals,105,Israel,5111,Stocks,1096,Horses,2018,2018,Head,4000,Im,FAO data based on imputation methodology
+QA,Live Animals,105,Israel,5111,Stocks,1110,Mules,2018,2018,Head,1600,Im,FAO data based on imputation methodology
+QA,Live Animals,105,Israel,5111,Stocks,976,Sheep,2018,2018,Head,477340,,Official data
+QA,Live Animals,110,Japan,5111,Stocks,1016,Goats,2018,2018,Head,15514,Im,FAO data based on imputation methodology
+QA,Live Animals,110,Japan,5111,Stocks,1096,Horses,2018,2018,Head,14209,Im,FAO data based on imputation methodology
+QA,Live Animals,110,Japan,5111,Stocks,976,Sheep,2018,2018,Head,15178,Im,FAO data based on imputation methodology
+QA,Live Animals,112,Jordan,5111,Stocks,1107,Asses,2018,2018,Head,6402,Im,FAO data based on imputation methodology
+QA,Live Animals,112,Jordan,5111,Stocks,946,Buffaloes,2018,2018,Head,98,Im,FAO data based on imputation methodology
+QA,Live Animals,112,Jordan,5111,Stocks,1126,Camels,2018,2018,Head,13221,Im,FAO data based on imputation methodology
+QA,Live Animals,112,Jordan,5111,Stocks,1016,Goats,2018,2018,Head,742172,,Official data
+QA,Live Animals,112,Jordan,5111,Stocks,1096,Horses,2018,2018,Head,2278,Im,FAO data based on imputation methodology
+QA,Live Animals,112,Jordan,5111,Stocks,1110,Mules,2018,2018,Head,868,Im,FAO data based on imputation methodology
+QA,Live Animals,112,Jordan,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,6,Im,FAO data based on imputation methodology
+QA,Live Animals,112,Jordan,5111,Stocks,976,Sheep,2018,2018,Head,3060321,,Official data
+QA,Live Animals,108,Kazakhstan,5111,Stocks,1107,Asses,2018,2018,Head,29066,Im,FAO data based on imputation methodology
+QA,Live Animals,108,Kazakhstan,5111,Stocks,946,Buffaloes,2018,2018,Head,10436,Im,FAO data based on imputation methodology
+QA,Live Animals,108,Kazakhstan,5111,Stocks,1126,Camels,2018,2018,Head,207566,,Official data
+QA,Live Animals,108,Kazakhstan,5111,Stocks,1016,Goats,2018,2018,Head,2282948,,Official data
+QA,Live Animals,108,Kazakhstan,5111,Stocks,1096,Horses,2018,2018,Head,2646535,,Official data
+QA,Live Animals,108,Kazakhstan,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,103,,Official data
+QA,Live Animals,108,Kazakhstan,5111,Stocks,976,Sheep,2018,2018,Head,16416177,,Official data
+QA,Live Animals,118,Kuwait,5111,Stocks,1126,Camels,2018,2018,Head,12228,,Official data
+QA,Live Animals,118,Kuwait,5111,Stocks,1016,Goats,2018,2018,Head,209686,,Official data
+QA,Live Animals,118,Kuwait,5111,Stocks,1096,Horses,2018,2018,Head,1155,Im,FAO data based on imputation methodology
+QA,Live Animals,118,Kuwait,5111,Stocks,976,Sheep,2018,2018,Head,684231,,Official data
+QA,Live Animals,113,Kyrgyzstan,5111,Stocks,1107,Asses,2018,2018,Head,28941,,Official data
+QA,Live Animals,113,Kyrgyzstan,5111,Stocks,1126,Camels,2018,2018,Head,246,,Official data
+QA,Live Animals,113,Kyrgyzstan,5111,Stocks,1016,Goats,2018,2018,Head,806949,,Official data
+QA,Live Animals,113,Kyrgyzstan,5111,Stocks,1096,Horses,2018,2018,Head,498684,,Official data
+QA,Live Animals,113,Kyrgyzstan,5111,Stocks,1110,Mules,2018,2018,Head,500,Im,FAO data based on imputation methodology
+QA,Live Animals,113,Kyrgyzstan,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,27,,Official data
+QA,Live Animals,113,Kyrgyzstan,5111,Stocks,976,Sheep,2018,2018,Head,5361000,,Official data
+QA,Live Animals,120,Lao People's Democratic Republic,5111,Stocks,946,Buffaloes,2018,2018,Head,1200040,,Official data
+QA,Live Animals,120,Lao People's Democratic Republic,5111,Stocks,1016,Goats,2018,2018,Head,616325,,Official data
+QA,Live Animals,120,Lao People's Democratic Republic,5111,Stocks,1096,Horses,2018,2018,Head,32410,Im,FAO data based on imputation methodology
+QA,Live Animals,121,Lebanon,5111,Stocks,1107,Asses,2018,2018,Head,14184,Im,FAO data based on imputation methodology
+QA,Live Animals,121,Lebanon,5111,Stocks,1126,Camels,2018,2018,Head,146,Im,FAO data based on imputation methodology
+QA,Live Animals,121,Lebanon,5111,Stocks,1016,Goats,2018,2018,Head,541418,Im,FAO data based on imputation methodology
+QA,Live Animals,121,Lebanon,5111,Stocks,1096,Horses,2018,2018,Head,3287,Im,FAO data based on imputation methodology
+QA,Live Animals,121,Lebanon,5111,Stocks,1110,Mules,2018,2018,Head,4684,Im,FAO data based on imputation methodology
+QA,Live Animals,121,Lebanon,5111,Stocks,976,Sheep,2018,2018,Head,440908,Im,FAO data based on imputation methodology
+QA,Live Animals,131,Malaysia,5111,Stocks,946,Buffaloes,2018,2018,Head,106988,,Official data
+QA,Live Animals,131,Malaysia,5111,Stocks,1016,Goats,2018,2018,Head,359200,,Official data
+QA,Live Animals,131,Malaysia,5111,Stocks,1096,Horses,2018,2018,Head,4204,,Official data
+QA,Live Animals,131,Malaysia,5111,Stocks,976,Sheep,2018,2018,Head,128298,,Official data
+QA,Live Animals,141,Mongolia,5111,Stocks,1107,Asses,2018,2018,Head,38,,Official data
+QA,Live Animals,141,Mongolia,5111,Stocks,1126,Camels,2018,2018,Head,459702,,Official data
+QA,Live Animals,141,Mongolia,5111,Stocks,1016,Goats,2018,2018,Head,27124703,,Official data
+QA,Live Animals,141,Mongolia,5111,Stocks,1096,Horses,2018,2018,Head,3940092,,Official data
+QA,Live Animals,141,Mongolia,5111,Stocks,976,Sheep,2018,2018,Head,30554804,,Official data
+QA,Live Animals,28,Myanmar,5111,Stocks,946,Buffaloes,2018,2018,Head,3926000,,Official data
+QA,Live Animals,28,Myanmar,5111,Stocks,1016,Goats,2018,2018,Head,9716695,F,FAO estimate
+QA,Live Animals,28,Myanmar,5111,Stocks,1096,Horses,2018,2018,Head,96811,Im,FAO data based on imputation methodology
+QA,Live Animals,28,Myanmar,5111,Stocks,1110,Mules,2018,2018,Head,999,Im,FAO data based on imputation methodology
+QA,Live Animals,28,Myanmar,5111,Stocks,976,Sheep,2018,2018,Head,1334305,F,FAO estimate
+QA,Live Animals,149,Nepal,5111,Stocks,946,Buffaloes,2018,2018,Head,5277819,,Official data
+QA,Live Animals,149,Nepal,5111,Stocks,1016,Goats,2018,2018,Head,11647319,,Official data
+QA,Live Animals,149,Nepal,5111,Stocks,976,Sheep,2018,2018,Head,800749,,Official data
+QA,Live Animals,221,Oman,5111,Stocks,1107,Asses,2018,2018,Head,22906,Im,FAO data based on imputation methodology
+QA,Live Animals,221,Oman,5111,Stocks,1126,Camels,2018,2018,Head,268127,,Official data
+QA,Live Animals,221,Oman,5111,Stocks,1016,Goats,2018,2018,Head,2302232,,Official data
+QA,Live Animals,221,Oman,5111,Stocks,976,Sheep,2018,2018,Head,605288,,Official data
+QA,Live Animals,165,Pakistan,5111,Stocks,1107,Asses,2018,2018,Head,5319000,,Official data
+QA,Live Animals,165,Pakistan,5111,Stocks,946,Buffaloes,2018,2018,Head,38848000,,Official data
+QA,Live Animals,165,Pakistan,5111,Stocks,1126,Camels,2018,2018,Head,1076000,,Official data
+QA,Live Animals,165,Pakistan,5111,Stocks,1016,Goats,2018,2018,Head,74134000,,Official data
+QA,Live Animals,165,Pakistan,5111,Stocks,1096,Horses,2018,2018,Head,369000,,Official data
+QA,Live Animals,165,Pakistan,5111,Stocks,1110,Mules,2018,2018,Head,192000,,Official data
+QA,Live Animals,165,Pakistan,5111,Stocks,976,Sheep,2018,2018,Head,30498000,,Official data
+QA,Live Animals,299,Palestine,5111,Stocks,1016,Goats,2018,2018,Head,213748,Im,FAO data based on imputation methodology
+QA,Live Animals,299,Palestine,5111,Stocks,976,Sheep,2018,2018,Head,754027,Im,FAO data based on imputation methodology
+QA,Live Animals,171,Philippines,5111,Stocks,946,Buffaloes,2018,2018,Head,2882655,,Official data
+QA,Live Animals,171,Philippines,5111,Stocks,1016,Goats,2018,2018,Head,3724808,,Official data
+QA,Live Animals,171,Philippines,5111,Stocks,1096,Horses,2018,2018,Head,250560,Im,FAO data based on imputation methodology
+QA,Live Animals,171,Philippines,5111,Stocks,976,Sheep,2018,2018,Head,30000,Im,FAO data based on imputation methodology
+QA,Live Animals,179,Qatar,5111,Stocks,1126,Camels,2018,2018,Head,126029,,Official data
+QA,Live Animals,179,Qatar,5111,Stocks,1016,Goats,2018,2018,Head,409840,,Official data
+QA,Live Animals,179,Qatar,5111,Stocks,1096,Horses,2018,2018,Head,8325,,Official data
+QA,Live Animals,179,Qatar,5111,Stocks,976,Sheep,2018,2018,Head,994858,,Official data
+QA,Live Animals,117,Republic of Korea,5111,Stocks,1107,Asses,2018,2018,Head,0,Im,FAO data based on imputation methodology
+QA,Live Animals,117,Republic of Korea,5111,Stocks,1016,Goats,2018,2018,Head,360586,Im,FAO data based on imputation methodology
+QA,Live Animals,117,Republic of Korea,5111,Stocks,1096,Horses,2018,2018,Head,25823,Im,FAO data based on imputation methodology
+QA,Live Animals,117,Republic of Korea,5111,Stocks,1110,Mules,2018,2018,Head,,M,Data not available
+QA,Live Animals,117,Republic of Korea,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,78,Im,FAO data based on imputation methodology
+QA,Live Animals,117,Republic of Korea,5111,Stocks,976,Sheep,2018,2018,Head,1326,Im,FAO data based on imputation methodology
+QA,Live Animals,194,Saudi Arabia,5111,Stocks,1107,Asses,2018,2018,Head,98889,Im,FAO data based on imputation methodology
+QA,Live Animals,194,Saudi Arabia,5111,Stocks,1126,Camels,2018,2018,Head,487823,,Official data
+QA,Live Animals,194,Saudi Arabia,5111,Stocks,1016,Goats,2018,2018,Head,3607524,,Official data
+QA,Live Animals,194,Saudi Arabia,5111,Stocks,1096,Horses,2018,2018,Head,27995,Im,FAO data based on imputation methodology
+QA,Live Animals,194,Saudi Arabia,5111,Stocks,976,Sheep,2018,2018,Head,9396448,,Official data
+QA,Live Animals,200,Singapore,5111,Stocks,946,Buffaloes,2018,2018,Head,,M,Data not available
+QA,Live Animals,200,Singapore,5111,Stocks,1016,Goats,2018,2018,Head,746,Im,FAO data based on imputation methodology
+QA,Live Animals,38,Sri Lanka,5111,Stocks,946,Buffaloes,2018,2018,Head,308790,,Official data
+QA,Live Animals,38,Sri Lanka,5111,Stocks,1016,Goats,2018,2018,Head,314800,,Official data
+QA,Live Animals,38,Sri Lanka,5111,Stocks,1096,Horses,2018,2018,Head,1370,Im,FAO data based on imputation methodology
+QA,Live Animals,38,Sri Lanka,5111,Stocks,976,Sheep,2018,2018,Head,11382,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5111,Stocks,1107,Asses,2018,2018,Head,69490,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5111,Stocks,946,Buffaloes,2018,2018,Head,6988,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5111,Stocks,1126,Camels,2018,2018,Head,46029,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5111,Stocks,1016,Goats,2018,2018,Head,1806510,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5111,Stocks,1096,Horses,2018,2018,Head,14696,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5111,Stocks,1110,Mules,2018,2018,Head,2373,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,98,,Official data
+QA,Live Animals,212,Syrian Arab Republic,5111,Stocks,976,Sheep,2018,2018,Head,14052576,,Official data
+QA,Live Animals,208,Tajikistan,5111,Stocks,1107,Asses,2018,2018,Head,136676,,Official data
+QA,Live Animals,208,Tajikistan,5111,Stocks,946,Buffaloes,2018,2018,Head,15318,Im,FAO data based on imputation methodology
+QA,Live Animals,208,Tajikistan,5111,Stocks,1126,Camels,2018,2018,Head,63,,Official data
+QA,Live Animals,208,Tajikistan,5111,Stocks,1016,Goats,2018,2018,Head,1953539,,Official data
+QA,Live Animals,208,Tajikistan,5111,Stocks,1096,Horses,2018,2018,Head,80791,,Official data
+QA,Live Animals,208,Tajikistan,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,82,Im,FAO data based on imputation methodology
+QA,Live Animals,208,Tajikistan,5111,Stocks,976,Sheep,2018,2018,Head,3666729,,Official data
+QA,Live Animals,216,Thailand,5111,Stocks,1107,Asses,2018,2018,Head,30,Im,FAO data based on imputation methodology
+QA,Live Animals,216,Thailand,5111,Stocks,946,Buffaloes,2018,2018,Head,929857,Im,FAO data based on imputation methodology
+QA,Live Animals,216,Thailand,5111,Stocks,1016,Goats,2018,2018,Head,471487,Im,FAO data based on imputation methodology
+QA,Live Animals,216,Thailand,5111,Stocks,1096,Horses,2018,2018,Head,6142,Im,FAO data based on imputation methodology
+QA,Live Animals,216,Thailand,5111,Stocks,1110,Mules,2018,2018,Head,49,Im,FAO data based on imputation methodology
+QA,Live Animals,216,Thailand,5111,Stocks,976,Sheep,2018,2018,Head,40013,Im,FAO data based on imputation methodology
+QA,Live Animals,176,Timor-Leste,5111,Stocks,946,Buffaloes,2018,2018,Head,124824,Im,FAO data based on imputation methodology
+QA,Live Animals,176,Timor-Leste,5111,Stocks,1016,Goats,2018,2018,Head,74870,Im,FAO data based on imputation methodology
+QA,Live Animals,176,Timor-Leste,5111,Stocks,1096,Horses,2018,2018,Head,51251,Im,FAO data based on imputation methodology
+QA,Live Animals,176,Timor-Leste,5111,Stocks,976,Sheep,2018,2018,Head,41848,Im,FAO data based on imputation methodology
+QA,Live Animals,223,Turkey,5111,Stocks,1107,Asses,2018,2018,Head,141375,,Official data
+QA,Live Animals,223,Turkey,5111,Stocks,946,Buffaloes,2018,2018,Head,161439,,Official data
+QA,Live Animals,223,Turkey,5111,Stocks,1126,Camels,2018,2018,Head,1703,,Official data
+QA,Live Animals,223,Turkey,5111,Stocks,1016,Goats,2018,2018,Head,10634672,,Official data
+QA,Live Animals,223,Turkey,5111,Stocks,1096,Horses,2018,2018,Head,114047,,Official data
+QA,Live Animals,223,Turkey,5111,Stocks,1110,Mules,2018,2018,Head,34360,,Official data
+QA,Live Animals,223,Turkey,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,50,Im,FAO data based on imputation methodology
+QA,Live Animals,223,Turkey,5111,Stocks,976,Sheep,2018,2018,Head,33677636,,Official data
+QA,Live Animals,213,Turkmenistan,5111,Stocks,1107,Asses,2018,2018,Head,24892,Im,FAO data based on imputation methodology
+QA,Live Animals,213,Turkmenistan,5111,Stocks,1126,Camels,2018,2018,Head,126354,Im,FAO data based on imputation methodology
+QA,Live Animals,213,Turkmenistan,5111,Stocks,1016,Goats,2018,2018,Head,2365429,Im,FAO data based on imputation methodology
+QA,Live Animals,213,Turkmenistan,5111,Stocks,1096,Horses,2018,2018,Head,25920,Im,FAO data based on imputation methodology
+QA,Live Animals,213,Turkmenistan,5111,Stocks,976,Sheep,2018,2018,Head,14056256,Im,FAO data based on imputation methodology
+QA,Live Animals,225,United Arab Emirates,5111,Stocks,1126,Camels,2018,2018,Head,457526,,Official data
+QA,Live Animals,225,United Arab Emirates,5111,Stocks,1016,Goats,2018,2018,Head,2395166,,Official data
+QA,Live Animals,225,United Arab Emirates,5111,Stocks,1096,Horses,2018,2018,Head,443,Im,FAO data based on imputation methodology
+QA,Live Animals,225,United Arab Emirates,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,,M,Data not available
+QA,Live Animals,225,United Arab Emirates,5111,Stocks,976,Sheep,2018,2018,Head,2147665,,Official data
+QA,Live Animals,235,Uzbekistan,5111,Stocks,1107,Asses,2018,2018,Head,222975,,Official data
+QA,Live Animals,235,Uzbekistan,5111,Stocks,1126,Camels,2018,2018,Head,19426,,Official data
+QA,Live Animals,235,Uzbekistan,5111,Stocks,1016,Goats,2018,2018,Head,3805800,,Official data
+QA,Live Animals,235,Uzbekistan,5111,Stocks,1096,Horses,2018,2018,Head,242470,,Official data
+QA,Live Animals,235,Uzbekistan,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,507,,Official data
+QA,Live Animals,235,Uzbekistan,5111,Stocks,976,Sheep,2018,2018,Head,17774700,,Official data
+QA,Live Animals,237,Viet Nam,5111,Stocks,946,Buffaloes,2018,2018,Head,2425105,,Official data
+QA,Live Animals,237,Viet Nam,5111,Stocks,1016,Goats,2018,2018,Head,2683942,,Official data
+QA,Live Animals,237,Viet Nam,5111,Stocks,1096,Horses,2018,2018,Head,53473,,Official data
+QA,Live Animals,249,Yemen,5111,Stocks,1107,Asses,2018,2018,Head,734024,Im,FAO data based on imputation methodology
+QA,Live Animals,249,Yemen,5111,Stocks,1126,Camels,2018,2018,Head,431462,,Official data
+QA,Live Animals,249,Yemen,5111,Stocks,1016,Goats,2018,2018,Head,8644657,,Official data
+QA,Live Animals,249,Yemen,5111,Stocks,1096,Horses,2018,2018,Head,1921,Im,FAO data based on imputation methodology
+QA,Live Animals,249,Yemen,5111,Stocks,976,Sheep,2018,2018,Head,8813076,,Official data
+QA,Live Animals,5100,Africa,5111,Stocks,1107,Asses,2018,2018,Head,30291166,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5100,Africa,5111,Stocks,946,Buffaloes,2018,2018,Head,3445202,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5100,Africa,5111,Stocks,1126,Camels,2018,2018,Head,30554470,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5100,Africa,5111,Stocks,1016,Goats,2018,2018,Head,439708953,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5100,Africa,5111,Stocks,1096,Horses,2018,2018,Head,7286226,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5100,Africa,5111,Stocks,1110,Mules,2018,2018,Head,849097,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5100,Africa,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,18493,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5100,Africa,5111,Stocks,976,Sheep,2018,2018,Head,389389503,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5203,Northern America,5111,Stocks,1107,Asses,2018,2018,Head,51978,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5203,Northern America,5111,Stocks,1016,Goats,2018,2018,Head,2669434,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5203,Northern America,5111,Stocks,1096,Horses,2018,2018,Head,11029668,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5203,Northern America,5111,Stocks,1110,Mules,2018,2018,Head,4001,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5203,Northern America,5111,Stocks,976,Sheep,2018,2018,Head,6094647,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5204,Central America,5111,Stocks,1107,Asses,2018,2018,Head,3337364,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5204,Central America,5111,Stocks,1016,Goats,2018,2018,Head,8925893,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5204,Central America,5111,Stocks,1096,Horses,2018,2018,Head,7292003,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5204,Central America,5111,Stocks,1110,Mules,2018,2018,Head,3479950,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5204,Central America,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,1398,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5204,Central America,5111,Stocks,976,Sheep,2018,2018,Head,9326220,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5206,Caribbean,5111,Stocks,1107,Asses,2018,2018,Head,408234,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5206,Caribbean,5111,Stocks,946,Buffaloes,2018,2018,Head,6089,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5206,Caribbean,5111,Stocks,1016,Goats,2018,2018,Head,4472454,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5206,Caribbean,5111,Stocks,1096,Horses,2018,2018,Head,1793701,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5206,Caribbean,5111,Stocks,1110,Mules,2018,2018,Head,269686,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5206,Caribbean,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,41,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5206,Caribbean,5111,Stocks,976,Sheep,2018,2018,Head,2055677,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5111,Stocks,1107,Asses,2018,2018,Head,2774596,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5111,Stocks,946,Buffaloes,2018,2018,Head,1849864,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5111,Stocks,1157,"Camelids, other",2018,2018,Head,9078030,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5111,Stocks,1016,Goats,2018,2018,Head,22733593,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5111,Stocks,1096,Horses,2018,2018,Head,12149446,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5111,Stocks,1110,Mules,2018,2018,Head,2045503,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,4585,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5112,Stocks,1150,"Rodents, other",2018,2018,1000 Head,19187,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5207,South America,5111,Stocks,976,Sheep,2018,2018,Head,63909868,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5111,Stocks,1107,Asses,2018,2018,Head,34072,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5111,Stocks,946,Buffaloes,2018,2018,Head,46841,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5111,Stocks,1126,Camels,2018,2018,Head,6561,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5111,Stocks,1016,Goats,2018,2018,Head,4837236,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5111,Stocks,1096,Horses,2018,2018,Head,2337515,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5111,Stocks,1110,Mules,2018,2018,Head,161,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,9192,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5401,Eastern Europe,5111,Stocks,976,Sheep,2018,2018,Head,37323435,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5402,Northern Europe,5111,Stocks,946,Buffaloes,2018,2018,Head,0,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5402,Northern Europe,5111,Stocks,1016,Goats,2018,2018,Head,217840,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5402,Northern Europe,5111,Stocks,1096,Horses,2018,2018,Head,752456,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5402,Northern Europe,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,1,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5402,Northern Europe,5111,Stocks,976,Sheep,2018,2018,Head,42806733,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5403,Southern Europe,5111,Stocks,1107,Asses,2018,2018,Head,56000,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5403,Southern Europe,5111,Stocks,946,Buffaloes,2018,2018,Head,406662,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5403,Southern Europe,5111,Stocks,1016,Goats,2018,2018,Head,9152646,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5403,Southern Europe,5111,Stocks,1096,Horses,2018,2018,Head,738877,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5403,Southern Europe,5111,Stocks,1110,Mules,2018,2018,Head,,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5403,Southern Europe,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,8,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5403,Southern Europe,5111,Stocks,976,Sheep,2018,2018,Head,39929472,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5404,Western Europe,5111,Stocks,1107,Asses,2018,2018,Head,34202,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5404,Western Europe,5111,Stocks,946,Buffaloes,2018,2018,Head,9610,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5404,Western Europe,5111,Stocks,1016,Goats,2018,2018,Head,2158598,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5404,Western Europe,5111,Stocks,1096,Horses,2018,2018,Head,893774,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5404,Western Europe,5111,Stocks,1110,Mules,2018,2018,Head,726,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5404,Western Europe,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,776,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5404,Western Europe,5111,Stocks,976,Sheep,2018,2018,Head,10326353,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5500,Oceania,5111,Stocks,1107,Asses,2018,2018,Head,8932,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5500,Oceania,5111,Stocks,946,Buffaloes,2018,2018,Head,177,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5500,Oceania,5111,Stocks,1016,Goats,2018,2018,Head,4069551,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5500,Oceania,5111,Stocks,1096,Horses,2018,2018,Head,355403,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5500,Oceania,5112,Stocks,1140,Rabbits and hares,2018,2018,1000 Head,,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+QA,Live Animals,5500,Oceania,5111,Stocks,976,Sheep,2018,2018,Head,97400877,A,"Aggregate, may include official, semi-official, estimated or calculated data"

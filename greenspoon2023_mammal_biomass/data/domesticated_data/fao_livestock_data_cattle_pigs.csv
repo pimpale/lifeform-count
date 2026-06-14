@@ -1,0 +1,211 @@
+Domain Code,Domain,Area Code (FAO),Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value,Flag,Flag Description
+EMN,Livestock Manure,2,Afghanistan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,3418897,F,FAO estimate
+EMN,Livestock Manure,2,Afghanistan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1603709,F,FAO estimate
+EMN,Livestock Manure,1,Armenia,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,253990,F,FAO estimate
+EMN,Livestock Manure,1,Armenia,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,336595,F,FAO estimate
+EMN,Livestock Manure,1,Armenia,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,16676,F,FAO estimate
+EMN,Livestock Manure,1,Armenia,5111,Stocks,1049,"Swine, market",2018,2018,Head,150081,F,FAO estimate
+EMN,Livestock Manure,52,Azerbaijan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,1285784,F,FAO estimate
+EMN,Livestock Manure,52,Azerbaijan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1196843,F,FAO estimate
+EMN,Livestock Manure,52,Azerbaijan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,549,F,FAO estimate
+EMN,Livestock Manure,52,Azerbaijan,5111,Stocks,1049,"Swine, market",2018,2018,Head,4937,F,FAO estimate
+EMN,Livestock Manure,13,Bahrain,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,6205,F,FAO estimate
+EMN,Livestock Manure,13,Bahrain,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,3639,F,FAO estimate
+EMN,Livestock Manure,16,Bangladesh,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,4054978,F,FAO estimate
+EMN,Livestock Manure,16,Bangladesh,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,20031022,F,FAO estimate
+EMN,Livestock Manure,18,Bhutan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,135590,F,FAO estimate
+EMN,Livestock Manure,18,Bhutan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,163011,F,FAO estimate
+EMN,Livestock Manure,18,Bhutan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,2181,F,FAO estimate
+EMN,Livestock Manure,18,Bhutan,5111,Stocks,1049,"Swine, market",2018,2018,Head,19629,F,FAO estimate
+EMN,Livestock Manure,26,Brunei Darussalam,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,113,F,FAO estimate
+EMN,Livestock Manure,26,Brunei Darussalam,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,568,F,FAO estimate
+EMN,Livestock Manure,26,Brunei Darussalam,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,124,F,FAO estimate
+EMN,Livestock Manure,26,Brunei Darussalam,5111,Stocks,1049,"Swine, market",2018,2018,Head,1112,F,FAO estimate
+EMN,Livestock Manure,115,Cambodia,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,121814,F,FAO estimate
+EMN,Livestock Manure,115,Cambodia,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,2733539,F,FAO estimate
+EMN,Livestock Manure,115,Cambodia,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,176095,F,FAO estimate
+EMN,Livestock Manure,115,Cambodia,5111,Stocks,1049,"Swine, market",2018,2018,Head,1584857,F,FAO estimate
+EMN,Livestock Manure,33,Canada,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,1002292,F,FAO estimate
+EMN,Livestock Manure,33,Canada,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,10562708,F,FAO estimate
+EMN,Livestock Manure,33,Canada,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,1417000,F,FAO estimate
+EMN,Livestock Manure,33,Canada,5111,Stocks,1049,"Swine, market",2018,2018,Head,12753000,F,FAO estimate
+EMN,Livestock Manure,96,"China, Hong Kong SAR",5111,Stocks,960,"Cattle, dairy",2018,2018,Head,60,F,FAO estimate
+EMN,Livestock Manure,96,"China, Hong Kong SAR",5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1523,F,FAO estimate
+EMN,Livestock Manure,96,"China, Hong Kong SAR",5111,Stocks,1051,"Swine, breeding",2018,2018,Head,15346,F,FAO estimate
+EMN,Livestock Manure,96,"China, Hong Kong SAR",5111,Stocks,1049,"Swine, market",2018,2018,Head,138112,F,FAO estimate
+EMN,Livestock Manure,41,"China, mainland",5111,Stocks,960,"Cattle, dairy",2018,2018,Head,5514386,F,FAO estimate
+EMN,Livestock Manure,41,"China, mainland",5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,57756864,F,FAO estimate
+EMN,Livestock Manure,41,"China, mainland",5111,Stocks,1051,"Swine, breeding",2018,2018,Head,44158920,F,FAO estimate
+EMN,Livestock Manure,41,"China, mainland",5111,Stocks,1049,"Swine, market",2018,2018,Head,397430280,F,FAO estimate
+EMN,Livestock Manure,214,"China, Taiwan Province of",5111,Stocks,960,"Cattle, dairy",2018,2018,Head,60523,F,FAO estimate
+EMN,Livestock Manure,214,"China, Taiwan Province of",5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,84572,F,FAO estimate
+EMN,Livestock Manure,214,"China, Taiwan Province of",5111,Stocks,1051,"Swine, breeding",2018,2018,Head,543268,F,FAO estimate
+EMN,Livestock Manure,214,"China, Taiwan Province of",5111,Stocks,1049,"Swine, market",2018,2018,Head,4889408,F,FAO estimate
+EMN,Livestock Manure,50,Cyprus,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,31878,F,FAO estimate
+EMN,Livestock Manure,50,Cyprus,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,38943,F,FAO estimate
+EMN,Livestock Manure,50,Cyprus,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,34767,F,FAO estimate
+EMN,Livestock Manure,50,Cyprus,5111,Stocks,1049,"Swine, market",2018,2018,Head,312904,F,FAO estimate
+EMN,Livestock Manure,116,Democratic People's Republic of Korea,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,35608,F,FAO estimate
+EMN,Livestock Manure,116,Democratic People's Republic of Korea,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,534623,F,FAO estimate
+EMN,Livestock Manure,116,Democratic People's Republic of Korea,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,261131,F,FAO estimate
+EMN,Livestock Manure,116,Democratic People's Republic of Korea,5111,Stocks,1049,"Swine, market",2018,2018,Head,2350181,F,FAO estimate
+EMN,Livestock Manure,73,Georgia,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,477400,F,FAO estimate
+EMN,Livestock Manure,73,Georgia,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,432300,F,FAO estimate
+EMN,Livestock Manure,73,Georgia,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,15070,F,FAO estimate
+EMN,Livestock Manure,73,Georgia,5111,Stocks,1049,"Swine, market",2018,2018,Head,135630,F,FAO estimate
+EMN,Livestock Manure,100,India,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,52841810,F,FAO estimate
+EMN,Livestock Manure,100,India,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,131622225,F,FAO estimate
+EMN,Livestock Manure,100,India,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,848524,F,FAO estimate
+EMN,Livestock Manure,100,India,5111,Stocks,1049,"Swine, market",2018,2018,Head,7636716,F,FAO estimate
+EMN,Livestock Manure,101,Indonesia,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,581793,F,FAO estimate
+EMN,Livestock Manure,101,Indonesia,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,15851152,F,FAO estimate
+EMN,Livestock Manure,101,Indonesia,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,854200,F,FAO estimate
+EMN,Livestock Manure,101,Indonesia,5111,Stocks,1049,"Swine, market",2018,2018,Head,7687800,F,FAO estimate
+EMN,Livestock Manure,102,Iran (Islamic Republic of),5111,Stocks,960,"Cattle, dairy",2018,2018,Head,1888579,F,FAO estimate
+EMN,Livestock Manure,102,Iran (Islamic Republic of),5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,3355452,F,FAO estimate
+EMN,Livestock Manure,103,Iraq,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,422390,F,FAO estimate
+EMN,Livestock Manure,103,Iraq,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1573968,F,FAO estimate
+EMN,Livestock Manure,105,Israel,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,118737,F,FAO estimate
+EMN,Livestock Manure,105,Israel,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,427463,F,FAO estimate
+EMN,Livestock Manure,105,Israel,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,17100,F,FAO estimate
+EMN,Livestock Manure,105,Israel,5111,Stocks,1049,"Swine, market",2018,2018,Head,153900,F,FAO estimate
+EMN,Livestock Manure,110,Japan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,847200,F,FAO estimate
+EMN,Livestock Manure,110,Japan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,2994800,F,FAO estimate
+EMN,Livestock Manure,110,Japan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,918900,F,FAO estimate
+EMN,Livestock Manure,110,Japan,5111,Stocks,1049,"Swine, market",2018,2018,Head,8270100,F,FAO estimate
+EMN,Livestock Manure,112,Jordan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,42053,F,FAO estimate
+EMN,Livestock Manure,112,Jordan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,29595,F,FAO estimate
+EMN,Livestock Manure,108,Kazakhstan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,2411069,F,FAO estimate
+EMN,Livestock Manure,108,Kazakhstan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,4739851,F,FAO estimate
+EMN,Livestock Manure,108,Kazakhstan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,79873,F,FAO estimate
+EMN,Livestock Manure,108,Kazakhstan,5111,Stocks,1049,"Swine, market",2018,2018,Head,718859,F,FAO estimate
+EMN,Livestock Manure,118,Kuwait,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,10353,F,FAO estimate
+EMN,Livestock Manure,118,Kuwait,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,18719,F,FAO estimate
+EMN,Livestock Manure,113,Kyrgyzstan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,789621,F,FAO estimate
+EMN,Livestock Manure,113,Kyrgyzstan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,837675,F,FAO estimate
+EMN,Livestock Manure,113,Kyrgyzstan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,5127,F,FAO estimate
+EMN,Livestock Manure,113,Kyrgyzstan,5111,Stocks,1049,"Swine, market",2018,2018,Head,46139,F,FAO estimate
+EMN,Livestock Manure,120,Lao People's Democratic Republic,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,44067,F,FAO estimate
+EMN,Livestock Manure,120,Lao People's Democratic Republic,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1996840,F,FAO estimate
+EMN,Livestock Manure,120,Lao People's Democratic Republic,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,382466,F,FAO estimate
+EMN,Livestock Manure,120,Lao People's Democratic Republic,5111,Stocks,1049,"Swine, market",2018,2018,Head,3442197,F,FAO estimate
+EMN,Livestock Manure,121,Lebanon,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,49064,F,FAO estimate
+EMN,Livestock Manure,121,Lebanon,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,32929,F,FAO estimate
+EMN,Livestock Manure,121,Lebanon,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,603,F,FAO estimate
+EMN,Livestock Manure,121,Lebanon,5111,Stocks,1049,"Swine, market",2018,2018,Head,5427,F,FAO estimate
+EMN,Livestock Manure,131,Malaysia,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,97385,F,FAO estimate
+EMN,Livestock Manure,131,Malaysia,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,655162,F,FAO estimate
+EMN,Livestock Manure,131,Malaysia,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,165480,F,FAO estimate
+EMN,Livestock Manure,131,Malaysia,5111,Stocks,1049,"Swine, market",2018,2018,Head,1489321,F,FAO estimate
+EMN,Livestock Manure,141,Mongolia,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,1175960,F,FAO estimate
+EMN,Livestock Manure,141,Mongolia,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,3204919,F,FAO estimate
+EMN,Livestock Manure,141,Mongolia,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,2782,F,FAO estimate
+EMN,Livestock Manure,141,Mongolia,5111,Stocks,1049,"Swine, market",2018,2018,Head,25037,F,FAO estimate
+EMN,Livestock Manure,28,Myanmar,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,2307791,F,FAO estimate
+EMN,Livestock Manure,28,Myanmar,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,15110573,F,FAO estimate
+EMN,Livestock Manure,28,Myanmar,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,1293445,F,FAO estimate
+EMN,Livestock Manure,28,Myanmar,5111,Stocks,1049,"Swine, market",2018,2018,Head,11641009,F,FAO estimate
+EMN,Livestock Manure,149,Nepal,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,1039538,F,FAO estimate
+EMN,Livestock Manure,149,Nepal,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,6336768,F,FAO estimate
+EMN,Livestock Manure,149,Nepal,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,143537,F,FAO estimate
+EMN,Livestock Manure,149,Nepal,5111,Stocks,1049,"Swine, market",2018,2018,Head,1291832,F,FAO estimate
+EMN,Livestock Manure,221,Oman,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,119074,F,FAO estimate
+EMN,Livestock Manure,221,Oman,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,277839,F,FAO estimate
+EMN,Livestock Manure,165,Pakistan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,13595000,F,FAO estimate
+EMN,Livestock Manure,165,Pakistan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,32489000,F,FAO estimate
+EMN,Livestock Manure,299,Palestine,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,18509,F,FAO estimate
+EMN,Livestock Manure,299,Palestine,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,12923,F,FAO estimate
+EMN,Livestock Manure,171,Philippines,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,5438,F,FAO estimate
+EMN,Livestock Manure,171,Philippines,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,2548499,F,FAO estimate
+EMN,Livestock Manure,171,Philippines,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,1260444,F,FAO estimate
+EMN,Livestock Manure,171,Philippines,5111,Stocks,1049,"Swine, market",2018,2018,Head,11343997,F,FAO estimate
+EMN,Livestock Manure,179,Qatar,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,6289,F,FAO estimate
+EMN,Livestock Manure,179,Qatar,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,7879,F,FAO estimate
+EMN,Livestock Manure,117,Republic of Korea,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,280409,F,FAO estimate
+EMN,Livestock Manure,117,Republic of Korea,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,3240477,F,FAO estimate
+EMN,Livestock Manure,117,Republic of Korea,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,1133281,F,FAO estimate
+EMN,Livestock Manure,117,Republic of Korea,5111,Stocks,1049,"Swine, market",2018,2018,Head,10199531,F,FAO estimate
+EMN,Livestock Manure,194,Saudi Arabia,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,260000,F,FAO estimate
+EMN,Livestock Manure,194,Saudi Arabia,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,108428,F,FAO estimate
+EMN,Livestock Manure,200,Singapore,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,12,F,FAO estimate
+EMN,Livestock Manure,200,Singapore,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,167,F,FAO estimate
+EMN,Livestock Manure,38,Sri Lanka,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,329380,F,FAO estimate
+EMN,Livestock Manure,38,Sri Lanka,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,781360,F,FAO estimate
+EMN,Livestock Manure,38,Sri Lanka,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,9799,F,FAO estimate
+EMN,Livestock Manure,38,Sri Lanka,5111,Stocks,1049,"Swine, market",2018,2018,Head,88191,F,FAO estimate
+EMN,Livestock Manure,212,Syrian Arab Republic,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,558394,F,FAO estimate
+EMN,Livestock Manure,212,Syrian Arab Republic,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,531606,F,FAO estimate
+EMN,Livestock Manure,212,Syrian Arab Republic,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,1,F,FAO estimate
+EMN,Livestock Manure,212,Syrian Arab Republic,5111,Stocks,1049,"Swine, market",2018,2018,Head,12,F,FAO estimate
+EMN,Livestock Manure,208,Tajikistan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,1207174,F,FAO estimate
+EMN,Livestock Manure,208,Tajikistan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1120357,F,FAO estimate
+EMN,Livestock Manure,208,Tajikistan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,19,F,FAO estimate
+EMN,Livestock Manure,208,Tajikistan,5111,Stocks,1049,"Swine, market",2018,2018,Head,174,F,FAO estimate
+EMN,Livestock Manure,216,Thailand,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,137441,F,FAO estimate
+EMN,Livestock Manure,216,Thailand,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,4519213,F,FAO estimate
+EMN,Livestock Manure,216,Thailand,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,790878,F,FAO estimate
+EMN,Livestock Manure,216,Thailand,5111,Stocks,1049,"Swine, market",2018,2018,Head,7117898,F,FAO estimate
+EMN,Livestock Manure,176,Timor-Leste,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,14171,F,FAO estimate
+EMN,Livestock Manure,176,Timor-Leste,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,194933,F,FAO estimate
+EMN,Livestock Manure,176,Timor-Leste,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,39228,F,FAO estimate
+EMN,Livestock Manure,176,Timor-Leste,5111,Stocks,1049,"Swine, market",2018,2018,Head,353053,F,FAO estimate
+EMN,Livestock Manure,223,Turkey,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,6377907,F,FAO estimate
+EMN,Livestock Manure,223,Turkey,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,9565679,F,FAO estimate
+EMN,Livestock Manure,223,Turkey,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,136,F,FAO estimate
+EMN,Livestock Manure,223,Turkey,5111,Stocks,1049,"Swine, market",2018,2018,Head,1225,F,FAO estimate
+EMN,Livestock Manure,213,Turkmenistan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,980140,F,FAO estimate
+EMN,Livestock Manure,213,Turkmenistan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1237308,F,FAO estimate
+EMN,Livestock Manure,213,Turkmenistan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,922,F,FAO estimate
+EMN,Livestock Manure,213,Turkmenistan,5111,Stocks,1049,"Swine, market",2018,2018,Head,8295,F,FAO estimate
+EMN,Livestock Manure,225,United Arab Emirates,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,43029,F,FAO estimate
+EMN,Livestock Manure,225,United Arab Emirates,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,61940,F,FAO estimate
+EMN,Livestock Manure,235,Uzbekistan,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,5081678,F,FAO estimate
+EMN,Livestock Manure,235,Uzbekistan,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,7732322,F,FAO estimate
+EMN,Livestock Manure,235,Uzbekistan,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,5886,F,FAO estimate
+EMN,Livestock Manure,235,Uzbekistan,5111,Stocks,1049,"Swine, market",2018,2018,Head,52970,F,FAO estimate
+EMN,Livestock Manure,237,Viet Nam,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,294382,F,FAO estimate
+EMN,Livestock Manure,237,Viet Nam,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,5508525,F,FAO estimate
+EMN,Livestock Manure,237,Viet Nam,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,2815195,F,FAO estimate
+EMN,Livestock Manure,237,Viet Nam,5111,Stocks,1049,"Swine, market",2018,2018,Head,25336753,F,FAO estimate
+EMN,Livestock Manure,249,Yemen,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,416188,F,FAO estimate
+EMN,Livestock Manure,249,Yemen,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,1376709,F,FAO estimate
+EMN,Livestock Manure,5100,Africa,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,67525504,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5100,Africa,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,288168631,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5100,Africa,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,4052527,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5100,Africa,5111,Stocks,1049,"Swine, market",2018,2018,Head,36472727,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5203,Northern America,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,10434866,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5203,Northern America,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,95428977,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5203,Northern America,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,8872101,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5203,Northern America,5111,Stocks,1049,"Swine, market",2018,2018,Head,79848908,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5204,Central America,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,5447652,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5204,Central America,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,45308584,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5204,Central America,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,2294130,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5204,Central America,5111,Stocks,1049,"Swine, market",2018,2018,Head,20647162,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5206,Caribbean,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,1027428,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5206,Caribbean,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,7996938,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5206,Caribbean,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,436570,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5206,Caribbean,5111,Stocks,1049,"Swine, market",2018,2018,Head,3929116,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5207,South America,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,29017544,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5207,South America,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,328205124,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5207,South America,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,6771698,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5207,South America,5111,Stocks,1049,"Swine, market",2018,2018,Head,60945271,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5401,Eastern Europe,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,14712235,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5401,Eastern Europe,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,23099968,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5401,Eastern Europe,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,5430069,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5401,Eastern Europe,5111,Stocks,1049,"Swine, market",2018,2018,Head,48870628,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5402,Northern Europe,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,5276224,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5402,Northern Europe,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,18122613,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5402,Northern Europe,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,2408744,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5402,Northern Europe,5111,Stocks,1049,"Swine, market",2018,2018,Head,21678698,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5403,Southern Europe,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,4460968,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5403,Southern Europe,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,13252033,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5403,Southern Europe,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,4727977,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5403,Southern Europe,5111,Stocks,1049,"Swine, market",2018,2018,Head,42551803,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5404,Western Europe,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,10836522,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5404,Western Europe,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,29596954,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5404,Western Europe,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,6272893,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5404,Western Europe,5111,Stocks,1049,"Swine, market",2018,2018,Head,56456038,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5500,Oceania,5111,Stocks,960,"Cattle, dairy",2018,2018,Head,6591631,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5500,Oceania,5111,Stocks,961,"Cattle, non-dairy",2018,2018,Head,30423851,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5500,Oceania,5111,Stocks,1051,"Swine, breeding",2018,2018,Head,574556,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+EMN,Livestock Manure,5500,Oceania,5111,Stocks,1049,"Swine, market",2018,2018,Head,5170998,A,"Aggregate, may include official, semi-official, estimated or calculated data"

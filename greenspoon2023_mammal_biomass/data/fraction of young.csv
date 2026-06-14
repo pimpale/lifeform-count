@@ -1,0 +1,7 @@
+binomial,common name,Non-adult fraction of population,data source,Description
+Odocoileus virginianus,White-tailed deer,0.4,https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1069&context=hwi,
+Hydrochoerus hydrochaeris,Capybara,0.37,DOI 10.1007/978-1-4614-4000-0_8,average value between wild
+Sus scrofa,Wild boar,0.51,https://link.springer.com/article/10.1007/s10344-014-0867-3,average value between observed
+Papio anubis,Olive babboon,0.53,https://www.researchgate.net/publication/343510440,
+Ursus americanus,American black bear,0.41,https://www.jstor.org/stable/3808513?seq=3#metadata_info_tab_contents,
+Loxodonta africana,African elephant,0.36,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4373548/,

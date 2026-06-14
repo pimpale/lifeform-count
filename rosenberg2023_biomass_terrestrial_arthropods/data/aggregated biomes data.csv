@@ -1,0 +1,19 @@
+,BIOME_num,area,WWF_biome_name,aggregated biome 1
+0,1,1.50575E+13,Tropical and subtropical moist broadleaf forests,Tropical and Subtropical Forests
+1,2,1.51018E+12,Tropical and subtropical dry broadleaf forests,Tropical and Subtropical Forests
+2,3,4.33227E+11,Tropical and subtropical coniferous forests,Tropical and Subtropical Forests
+3,4,7.40615E+12,Temperate broadleaf and mixed forests,Temperate Forests
+4,5,3.2158E+12,Temperate coniferous forests,Temperate Forests
+5,6,1.48534E+13,Boreal forests/taiga,Boreal Forests/Taiga
+6,7,1.09128E+13,"Tropical and subtropical grasslands, savannas, and shrublands","Tropical and Subtropical Grasslands, Savannas and Shrublands"
+7,8,2.57833E+12,"Temperate grasslands, savannas, and shrublands","Temperate Grasslands, Savannas and Shrublands"
+8,9,6.14707E+11,Flooded grasslands and savannas,
+9,10,3.03662E+12,Montane grasslands and shrublands,"Temperate Grasslands, Savannas and Shrublands"
+10,11,1.1654E+13,Tundra,Tundra
+11,12,1.60446E+12,"Mediterranean forests, woodlands, and scrub or sclerophyll forests","Mediterranean Forests, Woodlands and Scrub"
+12,13,1.95533E+13,Deserts and xeric shrublands,Deserts and Xeric Shrublands
+13,14,2.46152E+11,Mangrove,
+14,98,7.05816E+11,Lake,
+15,99,1.10839E+13,Rock and Ice,
+16,Crops,1.52234E+13,Crops,Crops
+17,Pasture,2.76502E+13,Pasture,Pasture

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1200"
+   height="1200"
+   version="1.1"
+   id="svg11033"
+   sodipodi:docname="voronoi_october_original.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+  <metadata
+     id="metadata11039">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11037" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1848"
+     inkscape:window-height="1136"
+     id="namedview11035"
+     showgrid="false"
+     inkscape:zoom="1.47"
+     inkscape:cx="1153.314"
+     inkscape:cy="486.98355"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11033" />
+  <path
+     class="world"
+     d="M 1612.581,471.81136 905.47421,1178.9181 198.36742,471.81136 905.47421,-235.29538 Z"
+     id="path10726" />
+  <g
+     class="cells"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1612.581,471.81135)"
+     id="g10780">
+    <path
+       class="cell"
+       d="m 1000,894.51969 -41.20203,-23.41936 -35.39745,0.2368 -34.5352,77.58987 24.49942,26.79958 30.49799,11.52897 L 1000,960.28903 Z"
+       style="fill:#fbe67d"
+       id="path10728" />
+    <path
+       class="cell"
+       d="m 974.53689,756.4496 -29.2453,65.70511 18.33928,10.13052 L 1000,828.09805 v -81.5978 z"
+       style="fill:#f8e47c"
+       id="path10730" />
+    <path
+       class="cell"
+       d="M 1000,960.28903 943.86273,987.25555 945.0398,1000 H 1000 Z"
+       style="fill:#d5c36a"
+       id="path10732" />
+    <path
+       class="cell"
+       d="M 888.86532,948.927 866.13276,1000 h 40.20291 l 7.02907,-24.27342 z"
+       style="fill:#fce77e"
+       id="path10734" />
+    <path
+       class="cell"
+       d="m 963.63087,832.28523 -18.33928,-10.13052 -21.89107,49.18242 35.39745,-0.2368 10.26657,-21.13223 z"
+       style="fill:#b9aa5c"
+       id="path10736" />
+    <path
+       class="cell"
+       d="M 1000,850.53142 969.06454,849.9681 958.79797,871.10033 1000,894.51969 Z"
+       style="fill:#fbe67d"
+       id="path10738" />
+    <path
+       class="cell"
+       d="m 1000,828.09805 -36.36913,4.18718 5.43367,17.68287 30.93546,0.56332 z"
+       style="fill:#e8d474"
+       id="path10740" />
+    <path
+       class="cell"
+       d="M 945.0398,1000 943.86273,987.25555 913.36474,975.72658 906.33567,1000 Z"
+       style="fill:#ac9d56"
+       id="path10742" />
+    <path
+       class="cell"
+       d="M 147.68861,69.31626 68.75031,20.28654 0,50.514601 V 214.67272 l 163.67204,-81.9784 1.36992,-25.16389 z"
+       style="fill:#698dd3"
+       id="path10744" />
+    <path
+       class="cell"
+       d="m 147.68861,69.31626 17.35335,38.21417 33.88389,7.50631 4.90332,-2.45592 L 237.9193,2.6041569 170.02329,16.5662 Z"
+       style="fill:#688bd1"
+       id="path10746" />
+    <path
+       class="cell"
+       d="M 147.68861,69.31626 170.02329,16.5662 165.04491,0 H 70.022514 L 68.75031,20.28654 Z"
+       style="fill:#6586ca"
+       id="path10748" />
+    <path
+       class="cell"
+       d="M 0,0 V 50.514601 L 68.75031,20.28654 70.022514,0 Z"
+       style="fill:#769eed"
+       id="path10750" />
+    <path
+       class="cell"
+       d="M 165.04491,0 170.02329,16.5662 237.9193,2.6041569 238.72653,0 Z"
+       style="fill:#678acf"
+       id="path10752" />
+    <path
+       class="cell"
+       d="m 198.92585,115.03674 -33.88389,-7.50631 -1.36992,25.16389 z"
+       style="fill:#7095e0"
+       id="path10754" />
+    <path
+       class="cell"
+       d="M 238.72653,0 203.82917,112.58082 974.53689,756.4496 1000,746.50025 V 0 Z"
+       style="fill:#af57af"
+       id="path10756" />
+    <path
+       class="cell"
+       d="M 185.67711,1000 H 667.51145 L 741.6884,917.93967 768.76484,873.54805 814.18231,622.48532 470.51835,335.37972 249.95282,404.52734 56.285205,649.82711 55.344732,757.45274 Z"
+       style="fill:#a05050"
+       id="path10758" />
+    <path
+       class="cell"
+       d="M 178.13309,298.30367 123.03336,279.47666 66.235736,285.53237 0,314.18189 V 634.99037 L 56.285205,649.82711 249.95282,404.52734 Z"
+       style="fill:#a25151"
+       id="path10760" />
+    <path
+       class="cell"
+       d="M 974.53689,756.4496 814.18231,622.48532 768.76484,873.54805 904.78629,913.15751 Z"
+       style="fill:#f07878"
+       id="path10762" />
+    <path
+       class="cell"
+       d="m 277.57821,174.19264 -99.44512,124.11103 71.81973,106.22367 220.56553,-69.14762 z"
+       style="fill:#c76363"
+       id="path10764" />
+    <path
+       class="cell"
+       d="M 185.67711,1000 55.344732,757.45274 0,768.45892 V 1000 Z"
+       style="fill:#e67373"
+       id="path10766" />
+    <path
+       class="cell"
+       d="M 178.13309,298.30367 277.57821,174.19264 203.82917,112.58082 88.591873,170.29972 123.03336,279.47666 Z"
+       style="fill:#fa7d7d"
+       id="path10768" />
+    <path
+       class="cell"
+       d="M 741.6884,917.93967 770.04508,1000 h 96.08768 l 38.65353,-86.84249 -136.02145,-39.60946 z"
+       style="fill:#a15050"
+       id="path10770" />
+    <path
+       class="cell"
+       d="m 16.272989,206.52207 49.962747,79.0103 56.797624,-6.05571 -34.441487,-109.17694 z"
+       style="fill:#e97474"
+       id="path10772" />
+    <path
+       class="cell"
+       d="M 667.51145,1000 H 770.04508 L 741.6884,917.93967 Z"
+       style="fill:#be5f5f"
+       id="path10774" />
+    <path
+       class="cell"
+       d="M 16.272989,206.52207 0,214.67272 v 99.50917 l 66.235736,-28.64952 z"
+       style="fill:#a85454"
+       id="path10776" />
+    <path
+       class="cell"
+       d="M 0,768.45892 55.344732,757.45274 56.285205,649.82711 0,634.99037 Z"
+       style="fill:#c16060"
+       id="path10778" />
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,285.34126,456.63171)"
+     style="font-size:22.0966px"
+     id="g10784">
+    <text
+       class="name"
+       id="text10782">Artiodactyla (Even-hoofed mammals)</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,357.85537,341.94498)"
+     style="font-size:19.0759px"
+     id="g10788">
+    <text
+       class="name"
+       id="text10786">Rodentia (Rodents)</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,224.86519,477.85977)"
+     style="font-size:18.2897px"
+     id="g10792">
+    <text
+       class="name"
+       id="text10790">Proboscidea (Elephants)</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,288.83837,534.62554)"
+     style="font-size:18.2483px"
+     id="g10796">
+    <text
+       class="name"
+       id="text10794">Chiroptera (Bats)</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,340.47227,402.23343)"
+     style="font-size:18.2483px"
+     id="g10800">
+    <text
+       class="name"
+       id="text10798">Diprotodontia (Marsupials)</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,303.80266,389.54379)"
+     style="font-size:18.1655px"
+     id="g10804">
+    <text
+       class="name"
+       id="text10802">Other</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,323.12801,369.50158)"
+     style="font-size:18px"
+     id="g10808">
+    <text
+       class="name"
+       id="text10806">Primates (Primates)</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,257.84492,517.55143)"
+     style="font-size:18px"
+     id="g10812">
+    <text
+       class="name"
+       id="text10810">Carnivora (Carnivores)</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1485.5701,500.95672)"
+     style="font-size:27.2276px"
+     id="g10816">
+    <text
+       class="name"
+       id="text10814">Baleen whales</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1438.1489,374.63984)"
+     style="font-size:20.3586px"
+     id="g10820">
+    <text
+       class="name"
+       id="text10818">Sperm whales</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1508.4381,403.11263)"
+     style="font-size:19.6138px"
+     id="g10824">
+    <text
+       class="name"
+       id="text10822">Earless seals</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1578.4078,464.82438)"
+     style="font-size:18.7034px"
+     id="g10828">
+    <text
+       class="name"
+       id="text10826">Dolphins and Porpoises</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1478.7395,347.89583)"
+     style="font-size:18px"
+     id="g10832">
+    <text
+       class="name"
+       id="text10830">Beaked whales</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1404.1683,427.96037)"
+     style="font-size:18px"
+     id="g10836">
+    <text
+       class="name"
+       id="text10834">Other</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,928.01579,161.57343)"
+     style="font-size:30px"
+     id="g10840">
+    <text
+       class="name"
+       id="text10838">Human</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,808.3229,666.24039)"
+     style="font-size:30px"
+     id="g10844">
+    <text
+       class="name"
+       id="text10842">Cattle</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1232.6129,716.14615)"
+     style="font-size:30px"
+     id="g10848">
+    <text
+       class="name"
+       id="text10846">Buffaloes</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,447.83898,416.20073)"
+     style="font-size:30px"
+     id="g10852">
+    <text
+       class="name"
+       id="text10850">Sheep</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1184.9343,469.40528)"
+     style="font-size:30px"
+     id="g10856">
+    <text
+       class="name"
+       id="text10854">Swine</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,927.56863,1062.4829)"
+     style="font-size:30px"
+     id="g10860">
+    <text
+       class="name"
+       id="text10858">Goats</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1345.0122,487.06736)"
+     style="font-size:26.5241px"
+     id="g10864">
+    <text
+       class="name"
+       id="text10862">Dog</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,369.00851,559.80392)"
+     style="font-size:24.2483px"
+     id="g10868">
+    <text
+       class="name"
+       id="text10866">Horses</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1395.7041,584.48156)"
+     style="font-size:21.1862px"
+     id="g10872">
+    <text
+       class="name"
+       id="text10870">Camels and camelids</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,411.02599,646.19368)"
+     style="font-size:20.6897px"
+     id="g10876">
+    <text
+       class="name"
+       id="text10874">Donkeys and mules</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1409.5705,646.04922)"
+     style="font-size:18.4966px"
+     id="g10880">
+    <text
+       class="name"
+       id="text10878">Cat</text>
+  </g>
+  <g
+     class="label"
+     transform="matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,1096.6035,949.52645)"
+     style="font-size:18.0414px"
+     id="g10884">
+    <text
+       class="name"
+       id="text10882">Other</text>
+  </g>
+</svg>
