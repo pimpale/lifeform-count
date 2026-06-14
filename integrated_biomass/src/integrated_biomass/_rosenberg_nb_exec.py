@@ -75,22 +75,46 @@ def main() -> int:
     os.environ.setdefault("MPLBACKEND", "Agg")
 
     nb = json.loads(nb_path.read_text())
-    pieces = []
+    cells = []
     for cell in nb["cells"]:
         if cell["cell_type"] != "code":
             continue
-        src = "".join(cell["source"])
-        src = _strip_magics(src)
-        src = _override_counts(src, n_boot, n_samp)
-        pieces.append(src)
-    pieces.append(EXPORT_BLOCK)
-    script = "\n\n".join(pieces)
+        src = _override_counts(_strip_magics("".join(cell["source"])), n_boot, n_samp)
+        cells.append(src)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     os.chdir(nb_path.parent)  # notebook reads data/ via relative paths
     g = {"__name__": "__main__", "__file__": str(nb_path)}
-    exec(compile(script, str(nb_path), "exec"), g)
+
+    # Exec cell-by-cell, tolerating per-cell failures. The four target frames
+    # (soil_tots, above_ground_tots, soil_pop_tots, above_ground_pop_tots) are
+    # computed by the main-estimate cells; later sensitivity/plotting cells are
+    # version-sensitive (matplotlib `linthreshy`, pandas groupby.apply) and not
+    # needed for the tables, so a failure there must not abort the export.
+    targets = ["soil_tots", "above_ground_tots", "soil_pop_tots", "above_ground_pop_tots"]
+    failed = []
+    for i, src in enumerate(cells):
+        try:
+            exec(compile(src, f"<rosenberg cell {i}>", "exec"), g)
+        except Exception as exc:  # noqa: BLE001 - tolerate non-essential cells
+            failed.append((i, type(exc).__name__, str(exc).splitlines()[0][:120]))
+            print(f"[cell {i}] skipped: {type(exc).__name__}: {exc}", file=sys.stderr)
+        if all(t in g for t in targets):
+            # All targets present; stop once we hit the first failing cell after
+            # them to avoid wasting time on downstream sensitivity analyses.
+            if failed and failed[-1][0] == i:
+                break
+
+    missing = [t for t in targets if t not in g]
+    if missing:
+        raise RuntimeError(
+            f"Essential frames not computed: {missing}. Failed cells: {failed}"
+        )
+
+    exec(compile(EXPORT_BLOCK, "<export>", "exec"), g)
     print("Rosenberg notebook executed; tables written to", out_dir)
+    if failed:
+        print(f"(tolerated {len(failed)} non-essential cell failures)")
     return 0
 
 
