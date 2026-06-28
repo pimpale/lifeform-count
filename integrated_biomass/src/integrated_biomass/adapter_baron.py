@@ -94,46 +94,10 @@ def recompute_global_total(swaps: dict[tuple[str, str], dict]) -> dict:
 # --------------------------------------------------------------------------
 # Rows for the biome x taxon matrix
 # --------------------------------------------------------------------------
-def annelid_biome_rows() -> list[dict]:
-    """Annelid biomass per biome (Fierer densities x biome area), soil fauna.
-
-    Biomass = sum_taxa(avg density [g C/m^2]) x biome area [m^2]; plus the
-    supplementary biomes (Crops / savanna / pasture). Crosswalked to canonical
-    biomes; sum approximates Bar-On's annelid total (~0.20 Gt C).
-    """
-    af = BARON_DIR / "animals" / "annelids" / "annelid_biomass_data.xlsx"
-    fierer = pd.read_excel(af, "Fierer", skiprows=1)
-    fierer.columns = ["Biome", "avg_density", "median_density", "Taxon"]
-    area = pd.read_excel(af, "Biome area", skiprows=1).set_index("Biome")["Area [m^2]"]
-    dens = fierer.groupby("Biome")["avg_density"].sum()
-
-    sup = pd.read_excel(af, "Supplementary biomes")
-    sup_dens = sup.groupby("Biome")["Biomass density [g C m^-2]"].mean()
-    dens = pd.concat([dens, sup_dens])
-
-    rows: list[dict] = []
-    for biome_label, d in dens.items():
-        if biome_label not in area.index:
-            continue
-        fine, group = biomes.normalize("baron_annelid", biome_label)
-        biomass_gC = float(d) * float(area[biome_label])  # g C/m^2 * m^2
-        rows.append(schema.row(
-            taxon="Annelids", realm="land", biome=fine, biome_group=group,
-            biomass_gC=biomass_gC, source=SOURCE,
-            resolution="fine" if fine else "group",
-        ))
-    return rows
-
-
 # Taxa provided at biome/group grain by the updated-source adapters; these must
-# NOT also be emitted as global-only rows (would double-count).
-#
-# NOTE: annelids and terrestrial protists *could* be biome-resolved from Bar-On's
-# Fierer tables (the "soil fauna only" scope), but a faithful per-biome
-# reproduction (savanna/pasture are mutually-exclusive scenarios; Bar-On uses the
-# geomean of mean & median densities plus enchytraeid adjustments) is a follow-up.
-# `annelid_biome_rows()` is a first approximation and is intentionally NOT wired
-# into the matrix yet; annelids/protists stay global-only until validated.
+# NOT also be emitted as global-only rows (would double-count). Annelids and
+# terrestrial protists are biome-resolved separately by adapter_baron_soilfauna
+# (custom_baron_soil_fauna reconstructions) and excluded in global_only_rows().
 _BIOME_RESOLVED = {
     "Terrestrial arthropods",  # Rosenberg
     "Nematodes",               # van den Hoogen
@@ -153,6 +117,10 @@ def global_only_rows(swaps: dict[tuple[str, str], dict] | None = None) -> list[d
     for (kingdom, taxon), r in t.iterrows():
         if taxon in _BIOME_RESOLVED:
             continue
+        # Annelids and terrestrial protists are biome-resolved by the soil-fauna
+        # adapter (custom_baron_soil_fauna); skip their global-only rows.
+        if (kingdom, taxon) in {("Animals", "Annelids"), ("Protists", "Terrestrial")}:
+            continue
         best = float(r["Biomass [Gt C]"])
         if (kingdom, taxon) in swaps:
             best = swaps[(kingdom, taxon)]["best_gtc"]
@@ -168,5 +136,5 @@ def global_only_rows(swaps: dict[tuple[str, str], dict] | None = None) -> list[d
 
 __all__ = [
     "reference_table", "published_global_total", "recompute_global_total",
-    "annelid_biome_rows", "global_only_rows", "SWAP_ROWS", "SOURCE",
+    "global_only_rows", "SWAP_ROWS", "SOURCE",
 ]

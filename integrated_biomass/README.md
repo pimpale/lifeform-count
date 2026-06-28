@@ -46,6 +46,7 @@ repro_mammal_biomes.py    run-once cache of IUCN×WWF range fractions
 adapter_rosenberg.py      terrestrial arthropods  (biome×taxon + site coords)
 adapter_vandenhoogen.py   nematodes               (biome×trophic, from Track B)
 adapter_greenspoon.py     wild mammals            (land split by biome; marine global)
+adapter_baron_soilfauna.py annelids + protists    (biome rows; reads ../custom_baron_soil_fauna)
 adapter_baron.py          aggregator: published baseline, global-total recompute,
                           global-only rows for the remaining taxa
 
@@ -68,7 +69,8 @@ Everything is harmonized onto the **14 WWF/RESOLVE biomes + Croplands + Pasture*
 (per the project decision, Crops/Pasture are kept as separate rows; only
 Rosenberg populates them). Sources sit at their native grain:
 
-- **fine** (14-biome): van den Hoogen nematodes, Greenspoon mammals
+- **fine** (14-biome): van den Hoogen nematodes, Greenspoon mammals, Bar-On
+  annelids + terrestrial protists (`custom_baron_soil_fauna` reconstructions)
 - **group** (aggregated): Rosenberg arthropods
 - **global** (no biome): marine taxa and all other Bar-On taxa
 
@@ -77,9 +79,12 @@ Rosenberg populates them). Sources sit at their native grain:
 - **Climate model** (temperature/rainfall → biomass from Rosenberg site data):
   scaffolding deferred; `adapter_rosenberg.sites()` already exposes the
   geolocated observations it would consume.
-- **Annelids / terrestrial protists** could be biome-resolved from Bar-On's
-  Fierer tables but are kept global-only until a faithful per-biome reproduction
-  (savanna/pasture scenarios, geomean of mean & median) is validated.
+- **Annelids / terrestrial protists** are biome-resolved via
+  `custom_baron_soil_fauna/` (validated to Bar-On's published 0.1985 / 1.6055 Gt C,
+  then rescaled per-biome to conserve mass). Their per-biome *shape* is faithful
+  but the absolute level is pinned to the published total, since each paper's
+  global number is a non-additive geomean of mean/median (and savanna/pasture)
+  scenarios.
 - ~6% of Greenspoon land-mammal biomass is in species without an IUCN range
   match (taxonomic synonyms); that biomass is reported as an unmatched
   global-only land row rather than being attributed to biomes.

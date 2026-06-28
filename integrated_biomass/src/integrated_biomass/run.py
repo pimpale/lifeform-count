@@ -17,6 +17,7 @@ from pathlib import Path
 import pandas as pd
 
 from . import adapter_baron as B
+from . import adapter_baron_soilfauna as SF
 from . import adapter_greenspoon as G
 from . import adapter_rosenberg as R
 from . import adapter_vandenhoogen as V
@@ -62,6 +63,7 @@ def biome_taxon_matrix(swaps: dict) -> pd.DataFrame:
     rows += R.biome_taxon_rows()          # terrestrial arthropods (group grain)
     rows += V.biome_taxon_rows()          # nematodes (fine grain)
     rows += G.biome_taxon_rows()          # wild mammals (fine + global marine)
+    rows += SF.biome_taxon_rows()         # annelids + terrestrial protists (fine)
     rows += B.global_only_rows(swaps)     # all remaining Bar-On taxa (global)
     return schema.frame(rows)
 
