@@ -1,0 +1,34 @@
+{
+  "width": 1440,
+  "height": 720,
+  "degrees": 0.25,
+  "bounds": [
+    -180.0,
+    -90.0,
+    180.0,
+    90.0
+  ],
+  "weights_csv": "biomass_density_model_weights.csv",
+  "vars": {
+    "temperature": {
+      "file": "temperature.f32",
+      "dtype": "float32",
+      "units": "degC"
+    },
+    "rainfall": {
+      "file": "rainfall.f32",
+      "dtype": "float32",
+      "units": "mm/yr"
+    },
+    "farm_development": {
+      "file": "farm.u8",
+      "dtype": "uint8",
+      "units": "0/1"
+    },
+    "urban_development": {
+      "file": "urban.u8",
+      "dtype": "uint8",
+      "units": "0/1"
+    }
+  }
+}

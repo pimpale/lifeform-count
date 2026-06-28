@@ -74,11 +74,44 @@ Rosenberg populates them). Sources sit at their native grain:
 - **group** (aggregated): Rosenberg arthropods
 - **global** (no biome): marine taxa and all other Bar-On taxa
 
+## Biomass-density models (`model_biomass.py`)
+
+Interpretable, exportable **per-taxon** models of **mass per km²** from four
+world properties:
+
+```sh
+uv run python -m integrated_biomass.model_biomass --points 4000
+```
+
+For each taxon:
+`log10(density [tonnes C/km²]) ~ temperature + rainfall + farm_development + urban_development`
+
+- **Max detail — one model per (taxon, sub_taxon)** (~62 models): the five wild
+  taxa *and their sub-taxa* (6 arthropod groups, 5 nematode trophic groups, 26
+  mammal orders), the anthropogenic taxa *and their individual animals*
+  (Humans; Livestock → Cattle/Sheep/Swine/…; Urban commensals →
+  Dog/Cat/Mouse/Rats), each taxon-level aggregate, and a **Total**. So farm/urban
+  weights are grounded in real biomass — e.g. Cattle `farm` ≈ ×2257, Dog `urban`
+  ≈ ×3070 (land-use-defined animals are deterministic, R²≈1).
+- **Features** sampled from real rasters: CHELSA temperature & rainfall, the
+  Ramankutty cropland/pasture rasters (farm), Natural Earth urban areas (urban).
+- **Weights** → `results/biomass_density_model_weights.csv` (long format:
+  `taxon, sub_taxon, feature, coefficient, multiplicative_effect, r2`; sub_taxon
+  `(all)` is the taxon aggregate). `10**coef` is the multiplicative effect — for
+  a binary, the effect of switching the flag on.
+
+**CHELSA sampling is cached.** The sampled feature table is written to
+`data/cache/model/points_n{N}_s{seed}.csv`, so CHELSA is read once per
+(points, seed) config and every per-taxon fit / re-run reuses it — zero repeat
+hits. `--download-chelsa` instead pulls the two rasters local (~3 GB) for
+fully-offline arbitrary sampling.
+
+Caveat: wild-taxon response is *per-biome-constant*, so `temperature`/`rainfall`
+capture cross-biome gradients rather than within-biome variation, and land-use
+effects on *wild* fauna are ignored (only the anthropogenic addition is modeled).
+
 ## Known limitations / follow-ups
 
-- **Climate model** (temperature/rainfall → biomass from Rosenberg site data):
-  scaffolding deferred; `adapter_rosenberg.sites()` already exposes the
-  geolocated observations it would consume.
 - **Annelids / terrestrial protists** are biome-resolved via
   `custom_baron_soil_fauna/` (validated to Bar-On's published 0.1985 / 1.6055 Gt C,
   then rescaled per-biome to conserve mass). Their per-biome *shape* is faithful
@@ -98,3 +131,5 @@ Rosenberg populates them). Sources sit at their native grain:
 | `global_total_recomputed.csv` | the full kingdom×taxon table after swaps |
 | `biome_taxon_matrix.csv` | the long-format biome×taxon rows (all sources) |
 | `biome_group_by_taxon_gtc.csv` | biome-resolved pivot (group × taxon, Gt C) |
+| `biomass_density_model_weights.csv` | exportable model weights (temp/rainfall/farm/urban → mass/km²) |
+| `biomass_density_training_sample.csv` | the sampled training points (features + response) |

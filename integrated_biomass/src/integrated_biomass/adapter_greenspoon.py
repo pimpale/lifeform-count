@@ -31,12 +31,31 @@ MARINE = GDIR / "wild_marine_biomass.csv"
 G_PER_MT = 1e12
 
 
+_ORDER_FILES = [
+    "data/species_to_infer_w_ranges.csv",
+    "data/species_w_pop_reports_w_ranges.csv",
+]
+
+
+def _order_map() -> dict[str, str]:
+    """binomial -> taxonomic order (title-cased), for sub-taxon detail."""
+    gdir = REPO_ROOT / "greenspoon2023_mammal_biomass"
+    frames = []
+    for f in _ORDER_FILES:
+        d = pd.read_csv(gdir / f)
+        if "Order" in d.columns:
+            frames.append(d[["binomial", "Order"]])
+    m = pd.concat(frames).dropna().drop_duplicates("binomial")
+    return {b: str(o).title() for b, o in zip(m["binomial"], m["Order"])}
+
+
 def _land_species() -> pd.DataFrame:
     land = pd.read_csv(LAND)[["binomial", "biomass_g", "lower", "upper"]]
     pop = pd.read_csv(LAND_POP)[["binomial", "estimated_population"]]
     df = land.merge(pop, on="binomial", how="left")
     for c in ("biomass_g", "lower", "upper"):
         df[c] = df[c] * MAMMAL_WET_TO_C  # wet g -> g C
+    df["order"] = df["binomial"].map(_order_map()).fillna("Other")
     return df
 
 
@@ -52,10 +71,10 @@ def biome_taxon_rows() -> list[dict]:
     matched["pop_b"] = matched["estimated_population"] * matched["fraction"]
 
     rows: list[dict] = []
-    grp = matched.groupby("biome")
-    for fine, g in grp:
+    # Max detail: split land mammals by biome x taxonomic order.
+    for (fine, order), g in matched.groupby(["biome", "order"]):
         rows.append(schema.row(
-            taxon=TAXON, sub_taxon="land", realm="land",
+            taxon=TAXON, sub_taxon=order, realm="land",
             biome=fine, biome_group=biomes.FINE_TO_GROUP[fine],
             biomass_gC=float(g["gc_b"].sum()),
             biomass_gC_low=float(g["low_b"].sum()),

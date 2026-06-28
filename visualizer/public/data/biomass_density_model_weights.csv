@@ -1,0 +1,311 @@
+taxon,sub_taxon,feature,coefficient,multiplicative_effect,r2
+Annelids,(all),intercept,-1.127505173999362,0.07455809894407267,0.4202570403920628
+Annelids,(all),temperature,-0.0218428505212898,0.9509488322870353,0.4202570403920628
+Annelids,(all),rainfall,0.0006473552650936255,1.0014917020656058,0.4202570403920628
+Annelids,(all),farm_development,1.3259665791222364,21.181981242790087,0.4202570403920628
+Annelids,(all),urban_development,0.11649020469025022,1.3076460452401497,0.4202570403920628
+Nematodes,Bacterivores,intercept,-1.358011275619952,0.04385193123176471,0.2863124140997739
+Nematodes,Bacterivores,temperature,-0.006868505487368191,0.9843090871001461,0.2863124140997739
+Nematodes,Bacterivores,rainfall,5.0697645013513046e-05,1.0001167424555282,0.2863124140997739
+Nematodes,Bacterivores,farm_development,0.003971629771907143,1.0091869589222304,0.2863124140997739
+Nematodes,Bacterivores,urban_development,0.10680762117605296,1.2788147038990414,0.2863124140997739
+Nematodes,Fungivores,intercept,-2.2258305650028856,0.005945240600999641,0.19937579539986283
+Nematodes,Fungivores,temperature,-0.006250993964143753,0.9857096449171644,0.19937579539986283
+Nematodes,Fungivores,rainfall,3.8986578290084956e-05,1.000089773943437,0.19937579539986283
+Nematodes,Fungivores,farm_development,0.017915403881707526,1.0421144164035128,0.19937579539986283
+Nematodes,Fungivores,urban_development,0.11605535409634832,1.3063373800402323,0.19937579539986283
+Nematodes,Herbivores,intercept,-1.2463782037042068,0.05670505764819453,0.25670772334852454
+Nematodes,Herbivores,temperature,-0.00547477817825372,0.987472981960951,0.25670772334852454
+Nematodes,Herbivores,rainfall,2.2989396102648436e-05,1.000052936441847,0.25670772334852454
+Nematodes,Herbivores,farm_development,-0.0023610901710133456,0.9945781405937055,0.25670772334852454
+Nematodes,Herbivores,urban_development,0.050248691536218124,1.1226611435664124,0.25670772334852454
+Nematodes,Omnivores,intercept,-1.2567127380647272,0.05537162409810364,0.16042111785698843
+Nematodes,Omnivores,temperature,-0.0041488781178411665,0.9904923414209504,0.16042111785698843
+Nematodes,Omnivores,rainfall,8.653958793809752e-05,1.000199284619682,0.16042111785698843
+Nematodes,Omnivores,farm_development,0.029654407088622832,1.0706669753264575,0.16042111785698843
+Nematodes,Omnivores,urban_development,0.13976455040639066,1.3796361021407018,0.16042111785698843
+Nematodes,Predators,intercept,-1.583036425641728,0.026119422734127856,0.03536367603124091
+Nematodes,Predators,temperature,-0.0005680323770962572,0.9986929121006562,0.03536367603124091
+Nematodes,Predators,rainfall,3.772177580770845e-05,1.0000868613708864,0.03536367603124091
+Nematodes,Predators,farm_development,-0.0024604617414945747,0.9943505957140496,0.03536367603124091
+Nematodes,Predators,urban_development,0.12513434408979365,1.3339340057567581,0.03536367603124091
+Protists (terrestrial),(all),intercept,0.7973684569225684,6.271457115949332,0.6846939830474836
+Protists (terrestrial),(all),temperature,0.009982594425787032,1.0232519817545958,0.6846939830474836
+Protists (terrestrial),(all),rainfall,9.310752599575813e-05,1.0002144109841533,0.6846939830474836
+Protists (terrestrial),(all),farm_development,0.026583761456449324,1.0631236059010118,0.6846939830474836
+Protists (terrestrial),(all),urban_development,0.0011352592177844942,1.0026174505094234,0.6846939830474836
+Terrestrial arthropods,Acari (soil),intercept,-1.658956437792655,0.021930248971924093,0.3925814381910986
+Terrestrial arthropods,Acari (soil),temperature,-0.020053957888599233,0.9548739426014152,0.3925814381910986
+Terrestrial arthropods,Acari (soil),rainfall,0.0004184483322215184,1.0009639772196246,0.3925814381910986
+Terrestrial arthropods,Acari (soil),farm_development,-0.08175572152241385,0.8284079889758831,0.3925814381910986
+Terrestrial arthropods,Acari (soil),urban_development,0.3600659624485879,2.2912156256809615,0.3925814381910986
+Terrestrial arthropods,Collembola (soil),intercept,-1.7333320424663285,0.018478552898519157,0.5522355920860713
+Terrestrial arthropods,Collembola (soil),temperature,-0.032704940049136384,0.9274597261125325,0.5522355920860713
+Terrestrial arthropods,Collembola (soil),rainfall,0.00032616928480727554,1.0007513146285392,0.5522355920860713
+Terrestrial arthropods,Collembola (soil),farm_development,0.07439650008993713,1.1868518199565836,0.5522355920860713
+Terrestrial arthropods,Collembola (soil),urban_development,0.2781411070461872,1.8973222819185616,0.5522355920860713
+Terrestrial arthropods,Combined (above-ground),intercept,-1.828642589608459,0.014837386520264744,0.41060358888377635
+Terrestrial arthropods,Combined (above-ground),temperature,-0.00800172366632577,0.9817440465797066,0.41060358888377635
+Terrestrial arthropods,Combined (above-ground),rainfall,0.0006322575827219361,1.001456887115309,0.41060358888377635
+Terrestrial arthropods,Combined (above-ground),farm_development,0.340239069506665,2.18896626987019,0.41060358888377635
+Terrestrial arthropods,Combined (above-ground),urban_development,-0.07044271406323857,0.8502708413987351,0.41060358888377635
+Terrestrial arthropods,Formicidae (soil),intercept,-2.060293685456391,0.008703748123348707,0.6699136205617806
+Terrestrial arthropods,Formicidae (soil),temperature,0.03071107332822479,1.073275148165832,0.6699136205617806
+Terrestrial arthropods,Formicidae (soil),rainfall,0.0001167315963298463,1.000268820559363,0.6699136205617806
+Terrestrial arthropods,Formicidae (soil),farm_development,0.2567629130806292,1.8061878357510834,0.6699136205617806
+Terrestrial arthropods,Formicidae (soil),urban_development,0.25577439692793497,1.8020813699751757,0.6699136205617806
+Terrestrial arthropods,Isoptera (soil),intercept,-2.0792870347870562,0.008331303684088525,0.7001335326241287
+Terrestrial arthropods,Isoptera (soil),temperature,0.03777712367155472,1.0908803620139478,0.7001335326241287
+Terrestrial arthropods,Isoptera (soil),rainfall,0.0002805397476343146,1.000646175322277,0.7001335326241287
+Terrestrial arthropods,Isoptera (soil),farm_development,0.7725169706873566,5.922662300866988,0.7001335326241287
+Terrestrial arthropods,Isoptera (soil),urban_development,0.24728116692662733,1.7671815427874398,0.7001335326241287
+Terrestrial arthropods,Other (soil),intercept,-1.9378036307758522,0.011539749175378663,0.41880964195164105
+Terrestrial arthropods,Other (soil),temperature,-0.009641769413851094,0.9780436338808954,0.41880964195164105
+Terrestrial arthropods,Other (soil),rainfall,0.0005461634029354488,1.0012583788049512,0.41880964195164105
+Terrestrial arthropods,Other (soil),farm_development,0.9631333313182284,9.186145740311238,0.41880964195164105
+Terrestrial arthropods,Other (soil),urban_development,0.30311940281709504,2.0096452587758598,0.41880964195164105
+Wild mammals,Afrosoricida,intercept,-3.0,0.001,1.0
+Wild mammals,Afrosoricida,temperature,0.0,1.0,1.0
+Wild mammals,Afrosoricida,rainfall,0.0,1.0,1.0
+Wild mammals,Afrosoricida,farm_development,0.0,1.0,1.0
+Wild mammals,Afrosoricida,urban_development,0.0,1.0,1.0
+Wild mammals,Carnivora,intercept,-2.9872711321446594,0.0010297430461632749,0.026050132407855253
+Wild mammals,Carnivora,temperature,-0.00022890701173951012,0.9994730610082274,0.026050132407855253
+Wild mammals,Carnivora,rainfall,4.67539689325395e-06,1.0000107655571384,0.026050132407855253
+Wild mammals,Carnivora,farm_development,0.012524610524682211,1.0292588514046608,0.026050132407855253
+Wild mammals,Carnivora,urban_development,0.04224126947399271,1.1021514325531827,0.026050132407855253
+Wild mammals,Cetartiodactyla,intercept,-2.2652801979856036,0.005428999504454864,0.4712633788229079
+Wild mammals,Cetartiodactyla,temperature,0.011389193280667802,1.0265714768544512,0.4712633788229079
+Wild mammals,Cetartiodactyla,rainfall,6.558865383923435e-05,1.0001510348612161,0.4712633788229079
+Wild mammals,Cetartiodactyla,farm_development,0.13825853620084974,1.3748601879191233,0.4712633788229079
+Wild mammals,Cetartiodactyla,urban_development,0.19087449319068842,1.5519384502858975,0.4712633788229079
+Wild mammals,Chiroptera,intercept,-3.0003119309936968,0.000999282010221975,0.4978193529395982
+Wild mammals,Chiroptera,temperature,0.006622838102198067,1.015366517489574,0.4978193529395982
+Wild mammals,Chiroptera,rainfall,0.0001609677630667632,1.0003707106679127,0.4978193529395982
+Wild mammals,Chiroptera,farm_development,-0.010692220276082196,0.9756808470501621,0.4978193529395982
+Wild mammals,Chiroptera,urban_development,-0.09140735889080152,0.8102007504413166,0.4978193529395982
+Wild mammals,Cingulata,intercept,-3.0,0.001,1.0
+Wild mammals,Cingulata,temperature,0.0,1.0,1.0
+Wild mammals,Cingulata,rainfall,0.0,1.0,1.0
+Wild mammals,Cingulata,farm_development,0.0,1.0,1.0
+Wild mammals,Cingulata,urban_development,0.0,1.0,1.0
+Wild mammals,Dasyuromorphia,intercept,-3.0,0.001,1.0
+Wild mammals,Dasyuromorphia,temperature,0.0,1.0,1.0
+Wild mammals,Dasyuromorphia,rainfall,0.0,1.0,1.0
+Wild mammals,Dasyuromorphia,farm_development,0.0,1.0,1.0
+Wild mammals,Dasyuromorphia,urban_development,0.0,1.0,1.0
+Wild mammals,Dermoptera,intercept,-3.0,0.001,1.0
+Wild mammals,Dermoptera,temperature,0.0,1.0,1.0
+Wild mammals,Dermoptera,rainfall,0.0,1.0,1.0
+Wild mammals,Dermoptera,farm_development,0.0,1.0,1.0
+Wild mammals,Dermoptera,urban_development,0.0,1.0,1.0
+Wild mammals,Didelphimorphia,intercept,-3.010133458691744,0.0009769369621006726,0.482668973542018
+Wild mammals,Didelphimorphia,temperature,0.00044535092273099844,1.0010259843580611,0.482668973542018
+Wild mammals,Didelphimorphia,rainfall,1.2709199251189995e-05,1.000029264440935,0.482668973542018
+Wild mammals,Didelphimorphia,farm_development,-0.0008384790154177729,0.9980711932614039,0.482668973542018
+Wild mammals,Didelphimorphia,urban_development,0.002655080110529113,1.0061322737581313,0.482668973542018
+Wild mammals,Diprotodontia,intercept,-2.7766876940590866,0.0016722927461414508,0.05836692455734038
+Wild mammals,Diprotodontia,temperature,-0.003487944754138807,0.9920008750447739,0.05836692455734038
+Wild mammals,Diprotodontia,rainfall,-8.363302719711099e-06,0.9999807429692484,0.05836692455734038
+Wild mammals,Diprotodontia,farm_development,0.03732424588088243,1.0897433961744578,0.05836692455734038
+Wild mammals,Diprotodontia,urban_development,-0.019351212521995866,0.9564203045047638,0.05836692455734038
+Wild mammals,Eulipotyphla,intercept,-3.0,0.001,1.0
+Wild mammals,Eulipotyphla,temperature,0.0,1.0,1.0
+Wild mammals,Eulipotyphla,rainfall,0.0,1.0,1.0
+Wild mammals,Eulipotyphla,farm_development,0.0,1.0,1.0
+Wild mammals,Eulipotyphla,urban_development,0.0,1.0,1.0
+Wild mammals,Hyracoidea,intercept,-3.0,0.001,1.0
+Wild mammals,Hyracoidea,temperature,0.0,1.0,1.0
+Wild mammals,Hyracoidea,rainfall,0.0,1.0,1.0
+Wild mammals,Hyracoidea,farm_development,0.0,1.0,1.0
+Wild mammals,Hyracoidea,urban_development,0.0,1.0,1.0
+Wild mammals,Lagomorpha,intercept,-3.0,0.001,1.0
+Wild mammals,Lagomorpha,temperature,0.0,1.0,1.0
+Wild mammals,Lagomorpha,rainfall,0.0,1.0,1.0
+Wild mammals,Lagomorpha,farm_development,0.0,1.0,1.0
+Wild mammals,Lagomorpha,urban_development,0.0,1.0,1.0
+Wild mammals,Macroscelidea,intercept,-3.0,0.001,1.0
+Wild mammals,Macroscelidea,temperature,0.0,1.0,1.0
+Wild mammals,Macroscelidea,rainfall,0.0,1.0,1.0
+Wild mammals,Macroscelidea,farm_development,0.0,1.0,1.0
+Wild mammals,Macroscelidea,urban_development,0.0,1.0,1.0
+Wild mammals,Microbiotheria,intercept,-3.0,0.001,1.0
+Wild mammals,Microbiotheria,temperature,0.0,1.0,1.0
+Wild mammals,Microbiotheria,rainfall,0.0,1.0,1.0
+Wild mammals,Microbiotheria,farm_development,0.0,1.0,1.0
+Wild mammals,Microbiotheria,urban_development,0.0,1.0,1.0
+Wild mammals,Monotremata,intercept,-3.0,0.001,1.0
+Wild mammals,Monotremata,temperature,0.0,1.0,1.0
+Wild mammals,Monotremata,rainfall,0.0,1.0,1.0
+Wild mammals,Monotremata,farm_development,0.0,1.0,1.0
+Wild mammals,Monotremata,urban_development,0.0,1.0,1.0
+Wild mammals,Notoryctemorphia,intercept,-3.0,0.001,1.0
+Wild mammals,Notoryctemorphia,temperature,0.0,1.0,1.0
+Wild mammals,Notoryctemorphia,rainfall,0.0,1.0,1.0
+Wild mammals,Notoryctemorphia,farm_development,0.0,1.0,1.0
+Wild mammals,Notoryctemorphia,urban_development,0.0,1.0,1.0
+Wild mammals,Paucituberculata,intercept,-3.0,0.001,1.0
+Wild mammals,Paucituberculata,temperature,0.0,1.0,1.0
+Wild mammals,Paucituberculata,rainfall,0.0,1.0,1.0
+Wild mammals,Paucituberculata,farm_development,0.0,1.0,1.0
+Wild mammals,Paucituberculata,urban_development,0.0,1.0,1.0
+Wild mammals,Peramelemorphia,intercept,-3.0,0.001,1.0
+Wild mammals,Peramelemorphia,temperature,0.0,1.0,1.0
+Wild mammals,Peramelemorphia,rainfall,0.0,1.0,1.0
+Wild mammals,Peramelemorphia,farm_development,0.0,1.0,1.0
+Wild mammals,Peramelemorphia,urban_development,0.0,1.0,1.0
+Wild mammals,Perissodactyla,intercept,-2.996672638253794,0.001007690958201995,0.11272582769539519
+Wild mammals,Perissodactyla,temperature,0.00021856063362420757,1.000503381110668,0.11272582769539519
+Wild mammals,Perissodactyla,rainfall,-7.274226175646668e-07,0.9999983250489273,0.11272582769539519
+Wild mammals,Perissodactyla,farm_development,0.0008541583547962346,1.0019687076600394,0.11272582769539519
+Wild mammals,Perissodactyla,urban_development,-0.0060941224030071585,0.9860657575263707,0.11272582769539519
+Wild mammals,Pholidota,intercept,-3.0,0.001,1.0
+Wild mammals,Pholidota,temperature,0.0,1.0,1.0
+Wild mammals,Pholidota,rainfall,0.0,1.0,1.0
+Wild mammals,Pholidota,farm_development,0.0,1.0,1.0
+Wild mammals,Pholidota,urban_development,0.0,1.0,1.0
+Wild mammals,Pilosa,intercept,-3.0,0.001,1.0
+Wild mammals,Pilosa,temperature,0.0,1.0,1.0
+Wild mammals,Pilosa,rainfall,0.0,1.0,1.0
+Wild mammals,Pilosa,farm_development,0.0,1.0,1.0
+Wild mammals,Pilosa,urban_development,0.0,1.0,1.0
+Wild mammals,Primates,intercept,-2.99280120202071,0.0010167139864472941,0.4939872822914454
+Wild mammals,Primates,temperature,0.004005085823099394,1.0092647050426384,0.4939872822914454
+Wild mammals,Primates,rainfall,0.00010641588781230375,1.0002450616596381,0.4939872822914454
+Wild mammals,Primates,farm_development,-0.014381695035914011,0.9674272249457272,0.4939872822914454
+Wild mammals,Primates,urban_development,-0.061689884839657726,0.867581165310421,0.4939872822914454
+Wild mammals,Proboscidea,intercept,-3.213841032838256,0.0006111656922569533,0.3442196426773739
+Wild mammals,Proboscidea,temperature,0.021883235924806822,1.051679082192747,0.3442196426773739
+Wild mammals,Proboscidea,rainfall,8.916396810042011e-05,1.0002053287008328,0.3442196426773739
+Wild mammals,Proboscidea,farm_development,0.0673366361750896,1.1677144008303129,0.3442196426773739
+Wild mammals,Proboscidea,urban_development,-0.10735330800872152,0.7809921919430859,0.3442196426773739
+Wild mammals,Rodentia,intercept,-2.88016035638214,0.001317770082914756,0.6539658576045415
+Wild mammals,Rodentia,temperature,0.008596612939619993,1.0199916416532517,0.6539658576045415
+Wild mammals,Rodentia,rainfall,0.0001787734508692333,1.0004117258188117,0.6539658576045415
+Wild mammals,Rodentia,farm_development,0.06508722544216736,1.1616819072560751,0.6539658576045415
+Wild mammals,Rodentia,urban_development,0.06089033898173411,1.150509844126715,0.6539658576045415
+Wild mammals,Scandentia,intercept,-3.0,0.001,1.0
+Wild mammals,Scandentia,temperature,0.0,1.0,1.0
+Wild mammals,Scandentia,rainfall,0.0,1.0,1.0
+Wild mammals,Scandentia,farm_development,0.0,1.0,1.0
+Wild mammals,Scandentia,urban_development,0.0,1.0,1.0
+Wild mammals,Tubulidentata,intercept,-3.0108109341237155,0.0009754141823718734,0.12977377171995907
+Wild mammals,Tubulidentata,temperature,0.0013651221361181218,1.0031482552595068,0.12977377171995907
+Wild mammals,Tubulidentata,rainfall,-2.016403974404781e-06,0.9999953570690455,0.12977377171995907
+Wild mammals,Tubulidentata,farm_development,0.006459249221085653,1.0149841239759374,0.12977377171995907
+Wild mammals,Tubulidentata,urban_development,-0.014763349849806632,0.9665774304283336,0.12977377171995907
+Nematodes,(all),intercept,-0.7210536723103604,0.19008433495639387,0.1842839520579953
+Nematodes,(all),temperature,-0.0046377021442948006,0.9893781111179883,0.1842839520579953
+Nematodes,(all),rainfall,5.220774456054618e-05,1.000120220000209,0.1842839520579953
+Nematodes,(all),farm_development,0.00854801575845216,1.0198775118463597,0.1842839520579953
+Nematodes,(all),urban_development,0.1040196758151004,1.2706316701754516,0.1842839520579953
+Terrestrial arthropods,(all),intercept,-0.7277866067696419,0.18716015372498185,0.4269765264107549
+Terrestrial arthropods,(all),temperature,0.00013530785547386656,1.0003116063901671,0.4269765264107549
+Terrestrial arthropods,(all),rainfall,0.0003333735023090329,1.0007679155531062,0.4269765264107549
+Terrestrial arthropods,(all),farm_development,0.358608774493225,2.283540794457183,0.4269765264107549
+Terrestrial arthropods,(all),urban_development,0.07935349414673191,1.2004760334813456,0.4269765264107549
+Wild mammals,(all),intercept,-2.1091081067569766,0.007778429023888345,0.6546580605111827
+Wild mammals,(all),temperature,0.01609551765554578,1.0377566323506318,0.6546580605111827
+Wild mammals,(all),rainfall,0.00011549388890725725,1.0002659698706455,0.6546580605111827
+Wild mammals,(all),farm_development,0.13853932083628315,1.375749364394586,0.6546580605111827
+Wild mammals,(all),urban_development,0.13030794451103164,1.349919728793833,0.6546580605111827
+Humans,(all),intercept,-0.6956940252637259,0.20151434846707192,1.0
+Humans,(all),temperature,-2.7696608700813306e-18,1.0,1.0
+Humans,(all),rainfall,2.0328790734103208e-20,1.0,1.0
+Humans,(all),farm_development,-1.1806136711142244e-17,1.0,1.0
+Humans,(all),urban_development,2.1917480663112108,155.50632796293792,1.0
+Livestock,Cattle,intercept,-3.000000000000011,0.0009999999999999744,1.0
+Livestock,Cattle,temperature,2.724322344764656e-15,1.0000000000000062,1.0
+Livestock,Cattle,rainfall,-1.8431436932253575e-17,1.0,1.0
+Livestock,Cattle,farm_development,3.353486312682495,2256.764869693536,1.0
+Livestock,Cattle,urban_development,-5.015196012549976e-17,0.9999999999999999,1.0
+Livestock,Buffaloes,intercept,-3.000000000000008,0.0009999999999999816,1.0
+Livestock,Buffaloes,temperature,2.0939696393538094e-15,1.0000000000000049,1.0
+Livestock,Buffaloes,rainfall,-1.4203048459560108e-17,1.0,1.0
+Livestock,Buffaloes,farm_development,2.564339677997386,366.7242913251977,1.0
+Livestock,Buffaloes,urban_development,-1.6550023727988452e-17,1.0,1.0
+Livestock,Sheep,intercept,-3.0000000000000084,0.0009999999999999805,1.0
+Livestock,Sheep,temperature,1.883283779109898e-15,1.0000000000000044,1.0
+Livestock,Sheep,rainfall,-1.235990476633475e-17,1.0,1.0
+Livestock,Sheep,farm_development,2.3243425833814597,211.029214978554,1.0
+Livestock,Sheep,urban_development,-8.651063369904588e-17,0.9999999999999998,1.0
+Livestock,Swine,intercept,-3.000000000000008,0.0009999999999999816,1.0
+Livestock,Swine,temperature,1.8853654358174533e-15,1.0000000000000044,1.0
+Livestock,Swine,rainfall,-1.2576745200831851e-17,1.0,1.0
+Livestock,Swine,farm_development,2.3164563449674596,207.2317740920499,1.0
+Livestock,Swine,urban_development,-7.313412499385922e-17,0.9999999999999998,1.0
+Livestock,Goats,intercept,-3.0000000000000075,0.0009999999999999827,1.0
+Livestock,Goats,temperature,1.8244267181554623e-15,1.0000000000000042,1.0
+Livestock,Goats,rainfall,-1.235990476633475e-17,1.0,1.0
+Livestock,Goats,farm_development,2.2395429603756583,173.5972976687335,1.0
+Livestock,Goats,urban_development,-5.08563925118239e-17,0.9999999999999999,1.0
+Livestock,Horses,intercept,-3.000000000000007,0.0009999999999999835,1.0
+Livestock,Horses,temperature,1.5680987130622677e-15,1.0000000000000036,1.0
+Livestock,Horses,rainfall,-1.0191500421363742e-17,1.0,1.0
+Livestock,Horses,farm_development,1.9412188580876022,87.34114038958157,1.0
+Livestock,Horses,urban_development,-1.5030824228563868e-17,1.0,1.0
+Livestock,Camels,intercept,-3.0000000000000058,0.0009999999999999868,1.0
+Livestock,Camels,temperature,1.318141175507428e-15,1.000000000000003,1.0
+Livestock,Camels,rainfall,-8.998878031629687e-18,1.0,1.0
+Livestock,Camels,farm_development,1.6208837072282338,41.77184975153896,1.0
+Livestock,Camels,urban_development,-5.47731297285949e-17,0.9999999999999999,1.0
+Livestock,Asses,intercept,-3.0000000000000053,0.0009999999999999877,1.0
+Livestock,Asses,temperature,1.2538817366802237e-15,1.0000000000000029,1.0
+Livestock,Asses,rainfall,-8.348356728138384e-18,1.0,1.0
+Livestock,Asses,farm_development,1.5473063386986075,35.26195108896145,1.0
+Livestock,Asses,urban_development,-3.481584700409245e-17,0.9999999999999999,1.0
+Livestock,Mules,intercept,-3.000000000000002,0.0009999999999999948,1.0
+Livestock,Mules,temperature,5.929268586295528e-16,1.0000000000000013,1.0
+Livestock,Mules,rainfall,-3.957337929572091e-18,1.0,1.0
+Livestock,Mules,farm_development,0.7343929820557512,5.424915552147908,1.0
+Livestock,Mules,urban_development,-1.0898963649151064e-17,1.0,1.0
+Livestock,"Camelids, other",intercept,-3.000000000000002,0.0009999999999999948,1.0
+Livestock,"Camelids, other",temperature,5.929268586295528e-16,1.0000000000000013,1.0
+Livestock,"Camelids, other",rainfall,-3.957337929572091e-18,1.0,1.0
+Livestock,"Camelids, other",farm_development,0.7343929820557512,5.424915552147908,1.0
+Livestock,"Camelids, other",urban_development,-1.0898963649151064e-17,1.0,1.0
+Livestock,Rabbits and hares,intercept,-3.0000000000000013,0.000999999999999997,1.0
+Livestock,Rabbits and hares,temperature,3.5076637834496853e-16,1.0000000000000009,1.0
+Livestock,Rabbits and hares,rainfall,-2.303929616531697e-18,1.0,1.0
+Livestock,Rabbits and hares,farm_development,0.4333629863917701,2.7124577760739546,1.0
+Livestock,Rabbits and hares,urban_development,-5.162618457424892e-18,1.0,1.0
+Livestock,(all),intercept,-3.0000000000000124,0.0009999999999999714,1.0
+Livestock,(all),temperature,2.8624799002717274e-15,1.0000000000000067,1.0
+Livestock,(all),rainfall,-1.929879867024198e-17,1.0,1.0
+Livestock,(all),farm_development,3.5306202960851922,3393.284677868534,1.0
+Livestock,(all),urban_development,-3.641689116544306e-18,1.0,1.0
+Urban commensals,Dog,intercept,-3.0,0.001,1.0
+Urban commensals,Dog,temperature,-4.47258797951785e-18,1.0,1.0
+Urban commensals,Dog,rainfall,3.3881317890172014e-20,1.0,1.0
+Urban commensals,Dog,farm_development,-8.60164728991794e-18,1.0,1.0
+Urban commensals,Dog,urban_development,3.487154350401984,3070.112927801696,1.0
+Urban commensals,Cat,intercept,-3.0000000000000004,0.000999999999999999,1.0
+Urban commensals,Cat,temperature,-3.591036766897375e-18,1.0,1.0
+Urban commensals,Cat,rainfall,2.541098841762901e-20,1.0,1.0
+Urban commensals,Cat,farm_development,-1.5084543612289746e-17,1.0,1.0
+Urban commensals,Cat,urban_development,2.495123280073263,312.6966870909158,1.0
+Urban commensals,Rats,intercept,-2.9999999999999996,0.001000000000000001,1.0
+Urban commensals,Rats,temperature,-2.1859579655608965e-18,1.0,1.0
+Urban commensals,Rats,rainfall,1.2705494208814505e-20,1.0,1.0
+Urban commensals,Rats,farm_development,-9.789333892936891e-18,1.0,1.0
+Urban commensals,Rats,urban_development,1.7547605905790178,56.853943107439086,1.0
+Urban commensals,Mouse,intercept,-3.0,0.001,1.0
+Urban commensals,Mouse,temperature,-1.8872705622472677e-18,1.0,1.0
+Urban commensals,Mouse,rainfall,1.1858461261560205e-20,1.0,1.0
+Urban commensals,Mouse,farm_development,-3.1856328051853917e-18,1.0,1.0
+Urban commensals,Mouse,urban_development,1.4537305949150368,28.426971553719554,1.0
+Urban commensals,"Rodents, other",intercept,-3.0,0.001,1.0
+Urban commensals,"Rodents, other",temperature,0.0,1.0,1.0
+Urban commensals,"Rodents, other",rainfall,0.0,1.0,1.0
+Urban commensals,"Rodents, other",farm_development,0.0,1.0,1.0
+Urban commensals,"Rodents, other",urban_development,0.0,1.0,1.0
+Urban commensals,(all),intercept,-3.0000000000000004,0.000999999999999999,1.0
+Urban commensals,(all),temperature,-4.538382694200219e-18,1.0,1.0
+Urban commensals,(all),rainfall,3.218725199566341e-20,1.0,1.0
+Urban commensals,(all),farm_development,-3.154214128055882e-17,0.9999999999999999,1.0
+Urban commensals,(all),urban_development,3.540090425589784,3468.090529553778,1.0
+Total,(all),intercept,0.8440872756180287,6.983727346377612,0.48534939707687863
+Total,(all),temperature,0.007604336722552049,1.0176638246276681,0.48534939707687863
+Total,(all),rainfall,0.00010842077990445837,1.0002496792362519,0.48534939707687863
+Total,(all),farm_development,0.21314531968150716,1.6335984763613074,0.48534939707687863
+Total,(all),urban_development,0.600784143840879,3.988266254210721,0.48534939707687863
