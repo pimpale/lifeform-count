@@ -1,13 +1,16 @@
 export const FEATURES = [
   "temperature",
   "rainfall",
-  "farm_development",
-  "urban_development",
+  "farm_intensity",
+  "urban_intensity",
 ] as const;
 
 export type Feature = (typeof FEATURES)[number];
 
-/** The four fitted coefficients plus intercept for one (taxon, sub_taxon). */
+/**
+ * The four fitted coefficients plus intercept for one (taxon, sub_taxon).
+ * The model is linear: density [t C/km^2] = intercept + Σ coef·feature.
+ */
 export interface ModelEntry {
   taxon: string;
   sub_taxon: string;
@@ -15,8 +18,8 @@ export interface ModelEntry {
   intercept: number;
   temperature: number;
   rainfall: number;
-  farm_development: number;
-  urban_development: number;
+  farm_intensity: number;
+  urban_intensity: number;
 }
 
 export interface GridMeta {
@@ -36,6 +39,6 @@ export interface FeatureGrid {
   bounds: [number, number, number, number];
   temperature: Float32Array; // NaN over ocean / non-land
   rainfall: Float32Array;
-  farm: Uint8Array;
-  urban: Uint8Array;
+  farm_intensity: Float32Array; // 0..1 cropland+pasture fraction
+  urban_intensity: Float32Array; // 0..1 built-up fraction
 }

@@ -10,8 +10,8 @@ export async function loadGrid(
   const [t, r, fa, ur] = await Promise.all([
     buf(meta.vars.temperature.file),
     buf(meta.vars.rainfall.file),
-    buf(meta.vars.farm_development.file),
-    buf(meta.vars.urban_development.file),
+    buf(meta.vars.farm_intensity.file),
+    buf(meta.vars.urban_intensity.file),
   ]);
   return {
     meta,
@@ -21,8 +21,8 @@ export async function loadGrid(
       bounds: meta.bounds,
       temperature: new Float32Array(t),
       rainfall: new Float32Array(r),
-      farm: new Uint8Array(fa),
-      urban: new Uint8Array(ur),
+      farm_intensity: new Float32Array(fa),
+      urban_intensity: new Float32Array(ur),
     },
   };
 }

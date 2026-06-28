@@ -16,17 +16,36 @@ export const COLORMAPS: Record<string, (t: number) => string> = {
 
 export type ColormapName = keyof typeof COLORMAPS;
 
+/** Parse a d3 color string ("#rrggbb", "#rgb" or "rgb(...)") to [r,g,b]. */
+function parseColor(s: string): [number, number, number] {
+  if (s[0] === "#") {
+    if (s.length === 7)
+      return [
+        parseInt(s.slice(1, 3), 16),
+        parseInt(s.slice(3, 5), 16),
+        parseInt(s.slice(5, 7), 16),
+      ];
+    if (s.length === 4)
+      return [
+        17 * parseInt(s[1], 16),
+        17 * parseInt(s[2], 16),
+        17 * parseInt(s[3], 16),
+      ];
+  }
+  const m = /rgba?\(\s*([\d.]+),\s*([\d.]+),\s*([\d.]+)/.exec(s);
+  if (m) return [Math.round(+m[1]), Math.round(+m[2]), Math.round(+m[3])];
+  return [0, 0, 0];
+}
+
 /** 256-entry RGB lookup table for a named d3 sequential colormap. */
 export function buildLUT(name: ColormapName): Uint8Array {
   const interp = COLORMAPS[name] ?? interpolateViridis;
   const lut = new Uint8Array(256 * 3);
   for (let i = 0; i < 256; i++) {
-    const m = /rgb\((\d+),\s*(\d+),\s*(\d+)\)/.exec(interp(i / 255));
-    if (m) {
-      lut[i * 3] = +m[1];
-      lut[i * 3 + 1] = +m[2];
-      lut[i * 3 + 2] = +m[3];
-    }
+    const [r, g, b] = parseColor(interp(i / 255));
+    lut[i * 3] = r;
+    lut[i * 3 + 1] = g;
+    lut[i * 3 + 2] = b;
   }
   return lut;
 }

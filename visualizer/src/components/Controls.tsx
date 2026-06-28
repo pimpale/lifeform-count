@@ -36,9 +36,9 @@ export default function Controls({
     <div className="panel">
       <h1>Biomass density models</h1>
       <p className="sub">
-        Predicted areal density (tonnes C / km²) from a log-linear model in
-        temperature, rainfall, farmland and urban cover. Pick a taxon to map it
-        globally.
+        Predicted areal density (tonnes C / km²) from a linear model in
+        temperature, rainfall, farm intensity and built-up fraction. Pick a
+        taxon to map it globally.
       </p>
 
       <div className="field">
@@ -91,25 +91,25 @@ export default function Controls({
           </div>
 
           <div className="section-title">
-            Coefficients (log₁₀ density per unit)
+            Coefficients (t C/km² per unit)
           </div>
           <table className="coef-table">
             <tbody>
               <tr>
-                <td>temperature (°C)</td>
+                <td>temperature (per °C)</td>
                 <td>{fmt(active.temperature)}</td>
               </tr>
               <tr>
-                <td>rainfall (mm/yr)</td>
+                <td>rainfall (per mm/yr)</td>
                 <td>{fmt(active.rainfall)}</td>
               </tr>
               <tr>
-                <td>farm development</td>
-                <td>{fmt(active.farm_development)}</td>
+                <td>farm intensity (0→1)</td>
+                <td>{fmt(active.farm_intensity)}</td>
               </tr>
               <tr>
-                <td>urban development</td>
-                <td>{fmt(active.urban_development)}</td>
+                <td>built-up frac (0→1)</td>
+                <td>{fmt(active.urban_intensity)}</td>
               </tr>
             </tbody>
           </table>

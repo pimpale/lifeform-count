@@ -20,15 +20,15 @@
       "dtype": "float32",
       "units": "mm/yr"
     },
-    "farm_development": {
-      "file": "farm.u8",
-      "dtype": "uint8",
-      "units": "0/1"
+    "farm_intensity": {
+      "file": "farm_intensity.f32",
+      "dtype": "float32",
+      "units": "0..1"
     },
-    "urban_development": {
-      "file": "urban.u8",
-      "dtype": "uint8",
-      "units": "0/1"
+    "urban_intensity": {
+      "file": "urban_intensity.f32",
+      "dtype": "float32",
+      "units": "0..1"
     }
   }
 }

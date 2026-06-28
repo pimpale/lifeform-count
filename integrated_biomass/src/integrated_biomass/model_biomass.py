@@ -1,16 +1,23 @@
 """Interpretable, exportable per-taxon models of biomass density (mass/km^2).
 
-For each taxon we fit
+For each taxon we fit a linear (additive) model
 
-    log10(density [tonnes C / km^2]) ~ temperature + rainfall + farm + urban
+    density [tonnes C / km^2] = b0 + b1*temperature + b2*rainfall
+                                   + b3*farm_intensity + b4*urban_intensity
 
-and export the weights to a CSV. The four features are interpretable world
+and export the weights to a CSV. Each weight is mass/km^2 per unit feature, so
+prediction is a plain dot product. The four features are interpretable world
 properties sampled from real rasters at each point:
 
-    temperature        mean annual temperature  [deg C]   (CHELSA bio1)
-    rainfall           annual precipitation     [mm]      (CHELSA bio12)
-    farm_development   cropland or pasture?     {0, 1}    (Ramankutty rasters)
-    urban_development  built-up area?           {0, 1}    (Natural Earth)
+    temperature        mean annual temperature      [deg C]  (CHELSA bio1)
+    rainfall           annual precipitation         [mm]     (CHELSA bio12)
+    farm_intensity     cropland + pasture fraction  [0..1]   (Ramankutty rasters)
+    urban_intensity    built-up area fraction       [0..1]   (GHS-BUILT-S)
+
+farm_intensity and urban_intensity are *continuous* degrees of land use (not
+0/1 flags): the response varies continuously with them -- wild density is a
+land-use mixture (nat/cropland/pasture by area fraction) and human/livestock/
+commensal density scales with built-up / farm fraction.
 
 Taxa modelled:
   - the five biome-resolved wild taxa (terrestrial arthropods, nematodes, wild
@@ -64,11 +71,20 @@ CHELSA = {
     "rainfall": (CHELSA_BASE + "CHELSA_bio12_1981-2010_V.2.1.tif", 0.1, 0.0),
 }
 NE_URBAN_URL = "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_urban_areas.zip"
+# GHS-BUILT-S 2020, 1 km, Mollweide (ESRI:54009). Pixel value = built-up
+# surface in m^2 per 1 km^2 cell, so built-up *fraction* = value / 1e6. This is
+# the continuous "degree of urbanization", symmetric with the cropland/pasture
+# area fractions used for farmland.
+GHS_BUILTUP_URL = (
+    "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/"
+    "GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000/V1-0/"
+    "GHS_BUILT_S_E2020_GLOBE_R2023A_54009_1000_V1_0.zip"
+)
+GHS_CELL_M2 = 1e6  # 1 km cell -> m^2 built-up to fraction
 
 EQUAL_AREA = "EPSG:6933"
-ICE_FREE_LAND_M2 = 1.3e14   # Bar-On ice-free land area (rural-human denominator)
+ICE_FREE_LAND_M2 = 1.3e14   # Bar-On ice-free land area
 G_PER_MT = 1e12
-FARM_THRESHOLD = 0.5
 FLOOR = 1e-3                  # tonnes C/km^2 floor so log10 is defined
 
 # Greenspoon human_and_domesticated items split by where the biomass lives.
@@ -79,7 +95,9 @@ FARM_ITEMS = ["Cattle", "Buffaloes", "Sheep", "Swine", "Goats", "Horses",
 
 WILD_TAXA = ["Terrestrial arthropods", "Nematodes", "Wild mammals",
              "Annelids", "Protists (terrestrial)"]
-FEATURES = ["temperature", "rainfall", "farm_development", "urban_development"]
+# Continuous features: farm_intensity = cropland+pasture areal fraction (0..1);
+# urban_intensity = built-up areal fraction (0..1).
+FEATURES = ["temperature", "rainfall", "farm_intensity", "urban_intensity"]
 
 
 # --------------------------------------------------------------------------
@@ -198,15 +216,39 @@ def download_chelsa() -> None:
         _ensure_chelsa(var)
 
 
-def _sample_raster(path_or_url, pts, scale, offset):
+def _ensure_ghs_builtup() -> str:
+    """Local GHS-BUILT-S tif (built-up m^2/cell), downloading+unzipping if absent."""
+    tif = next(CACHE.glob("**/GHS_BUILT_S_*.tif"), None)
+    if tif is not None:
+        return str(tif)
+    CACHE.mkdir(parents=True, exist_ok=True)
+    zp = CACHE / "ghs_builtup.zip"
+    print(f"[model] downloading GHS-BUILT-S -> {zp}", file=sys.stderr)
+    req = urllib.request.Request(GHS_BUILTUP_URL, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req) as r, open(zp, "wb") as fh:
+        while chunk := r.read(1 << 22):
+            fh.write(chunk)
+    with zipfile.ZipFile(zp) as zf:
+        zf.extractall(CACHE / "ghs_builtup")
+    return str(next(CACHE.glob("**/GHS_BUILT_S_*.tif")))
+
+
+def _sample_raster(path_or_url, pts, scale, offset, src_crs_from_raster=False):
+    """Sample a raster at (lon, lat) points. If src_crs_from_raster, transform
+    the lon/lat coords into the raster's CRS first (e.g. GHS Mollweide)."""
     import rasterio
 
     os.environ.setdefault("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")
     os.environ.setdefault("CPL_VSIL_CURL_ALLOWED_EXTENSIONS", ".tif")
     with rasterio.open(path_or_url) as s:
+        sample_pts = pts
+        if src_crs_from_raster and s.crs is not None and s.crs.to_epsg() != 4326:
+            from pyproj import Transformer
+            tr = Transformer.from_crs("EPSG:4326", s.crs, always_xy=True)
+            sample_pts = [tr.transform(lon, lat) for lon, lat in pts]
         nodata = s.nodata
         out = []
-        for v in s.sample(pts):
+        for v in s.sample(sample_pts):
             x = float(v[0])
             out.append(np.nan if (nodata is not None and x == nodata) else x * scale + offset)
     return np.array(out)
@@ -217,7 +259,7 @@ def _sample_raster(path_or_url, pts, scale, offset):
 # --------------------------------------------------------------------------
 def build_points(n_points: int = 4000, seed: int = 0, use_cache: bool = True) -> pd.DataFrame:
     """Sample land points + features, caching so CHELSA is hit once per config."""
-    cache_file = CACHE / f"points_n{n_points}_s{seed}.csv"
+    cache_file = CACHE / f"points_v2_n{n_points}_s{seed}.csv"
     if use_cache and cache_file.is_file():
         return pd.read_csv(cache_file)
 
@@ -245,18 +287,16 @@ def build_points(n_points: int = 4000, seed: int = 0, use_cache: bool = True) ->
     coords = list(zip(df["lon"], df["lat"]))
 
     print(f"[model] sampling land-use rasters at {len(df)} points", file=sys.stderr)
-    crop = np.nan_to_num(_sample_raster(CROPLAND_TIF, coords, 1.0, 0.0))
-    past = np.nan_to_num(_sample_raster(PASTURE_TIF, coords, 1.0, 0.0))
-    df["farm_development"] = ((crop > FARM_THRESHOLD) | (past > FARM_THRESHOLD)).astype(int)
-    eff = df["natural_group"].copy()
-    eff[crop > FARM_THRESHOLD] = "Croplands"
-    eff[(past > FARM_THRESHOLD) & (past >= crop)] = "Pasture"
-    df["effective_group"] = eff
+    # Continuous land-use fractions (0..1).
+    crop = np.clip(np.nan_to_num(_sample_raster(CROPLAND_TIF, coords, 1.0, 0.0)), 0, 1)
+    past = np.clip(np.nan_to_num(_sample_raster(PASTURE_TIF, coords, 1.0, 0.0)), 0, 1)
+    df["cropland_frac"] = crop
+    df["pasture_frac"] = past
+    df["farm_intensity"] = np.clip(crop + past, 0, 1)
 
-    urban = _ensure_urban().to_crs("EPSG:4326")
-    gpts = gpd.GeoDataFrame(geometry=gpd.points_from_xy(df["lon"], df["lat"]), crs="EPSG:4326")
-    inurb = gpd.sjoin(gpts, urban[["geometry"]], how="left", predicate="within")
-    df["urban_development"] = (~inurb.groupby(level=0)["index_right"].first().isna()).astype(int).values
+    builtup = _sample_raster(_ensure_ghs_builtup(), coords, 1.0 / GHS_CELL_M2, 0.0,
+                             src_crs_from_raster=True)
+    df["urban_intensity"] = np.clip(np.nan_to_num(builtup), 0, 1)
 
     for var, (_, scale, offset) in CHELSA.items():
         print(f"[model] sampling CHELSA {var}", file=sys.stderr)
@@ -276,43 +316,51 @@ def unit_density_columns(df: pd.DataFrame) -> dict[tuple[str, str], np.ndarray]:
     the wild taxa and their sub-taxa, the anthropogenic taxa and their
     individual animals, and a Total."""
     wild = wild_densities()
-    areas = group_areas_m2()
-    urban_area = _urban_area_m2()
-    farm_area = areas.get("Croplands", 0.0) + areas.get("Pasture", 0.0)
-    rural_area = ICE_FREE_LAND_M2 - urban_area
     hd = pd.read_csv(HUMAN_DOM_CSV).set_index("Item")["biomass_Mt"]
     to_gc = lambda mt: float(mt) * G_PER_MT * MAMMAL_WET_TO_C
 
-    eff = df["effective_group"].values
     nat = df["natural_group"].values
-    urb = df["urban_development"].values
-    farm = df["farm_development"].values
+    crop = df["cropland_frac"].values
+    past = df["pasture_frac"].values
+    nat_frac = np.clip(1.0 - crop - past, 0.0, 1.0)
+    farm_int = df["farm_intensity"].values
+    urb_int = df["urban_intensity"].values
     cols: dict[tuple[str, str], np.ndarray] = {}
 
-    # Wild taxa + sub-taxa (land-use aware: fall back to natural biome density).
+    # Wild taxa + sub-taxa: continuous land-use mixture per pixel --
+    #   density = nat_frac*natural + cropland_frac*Croplands + pasture_frac*Pasture
+    # (taxa without cropland/pasture rows fall back to natural, so the mixture
+    # collapses to the natural density).
     for key, dmap in wild.items():
-        cols[key] = np.array([dmap.get(e, dmap.get(n, np.nan)) for e, n in zip(eff, nat)])
+        n_d = np.array([dmap.get(g, np.nan) for g in nat])
+        c_d = np.array([dmap.get("Croplands", dmap.get(g, np.nan)) for g in nat])
+        p_d = np.array([dmap.get("Pasture", dmap.get(g, np.nan)) for g in nat])
+        cols[key] = nat_frac * n_d + crop * c_d + past * p_d
 
-    # Humans (present everywhere; concentrated in urban).
-    hu = to_gc(hd.get("Human", 0.0))
-    cols[("Humans", ALL)] = np.where(urb == 1, hu * URBAN_HUMAN_SHARE / urban_area,
-                                     hu * (1 - URBAN_HUMAN_SHARE) / rural_area)
+    # Anthropogenic densities scale continuously with land-use intensity.
+    # Calibrate per-unit-intensity densities so global totals are conserved:
+    # total built-up / farm area estimated from the sample (mean fraction * land).
+    builtup_area = max(urb_int.mean() * ICE_FREE_LAND_M2, 1.0)
+    farm_area = max(farm_int.mean() * ICE_FREE_LAND_M2, 1.0)
 
-    # Livestock: per animal on farmland (+ aggregate).
+    # Humans: distributed in proportion to built-up fraction.
+    cols[("Humans", ALL)] = urb_int * (to_gc(hd.get("Human", 0.0)) / builtup_area)
+
+    # Livestock: per animal, in proportion to farm intensity (+ aggregate).
     live_total = 0.0
     for item in FARM_ITEMS:
-        d = to_gc(hd.get(item, 0.0)) / farm_area
-        cols[("Livestock", item)] = np.where(farm == 1, d, FLOOR)
-        live_total += d
-    cols[("Livestock", ALL)] = np.where(farm == 1, live_total, FLOOR)
+        d_per = to_gc(hd.get(item, 0.0)) / farm_area
+        cols[("Livestock", item)] = farm_int * d_per
+        live_total += d_per
+    cols[("Livestock", ALL)] = farm_int * live_total
 
-    # Urban commensals: per animal in urban areas (+ aggregate).
+    # Urban commensals: per animal, in proportion to built-up fraction.
     com_total = 0.0
     for item in COMMENSAL_ITEMS:
-        d = to_gc(hd.get(item, 0.0)) / urban_area
-        cols[("Urban commensals", item)] = np.where(urb == 1, d, FLOOR)
-        com_total += d
-    cols[("Urban commensals", ALL)] = np.where(urb == 1, com_total, FLOOR)
+        d_per = to_gc(hd.get(item, 0.0)) / builtup_area
+        cols[("Urban commensals", item)] = urb_int * d_per
+        com_total += d_per
+    cols[("Urban commensals", ALL)] = urb_int * com_total
 
     # Total = sum of every taxon-level aggregate.
     tot = np.zeros(len(df))
@@ -330,18 +378,23 @@ def fit_and_export(n_points: int = 4000, seed: int = 0) -> pd.DataFrame:
     cols = unit_density_columns(df)
     X = df[FEATURES].to_numpy(float)
 
+    # Linear (additive) model: density [tonnes C/km^2] = intercept + sum(coef*feature).
+    # Linear space (not log) because the response scales *proportionally* with the
+    # continuous land-use intensities, so a log fit would explode on extrapolation.
+    # Each coefficient is therefore mass/km^2 per unit feature (per degC, per mm,
+    # and the added mass/km^2 at full farm / full built-up).
     rows = []
     for (taxon, sub), d in cols.items():
         mask = np.isfinite(d)
         if mask.sum() < len(FEATURES) + 1:
             continue
-        y = np.log10(np.maximum(d[mask], FLOOR))
+        y = d[mask]
         reg = LinearRegression().fit(X[mask], y)
         r2 = reg.score(X[mask], y)
         for feat, coef in zip(["intercept", *FEATURES], [reg.intercept_, *reg.coef_]):
             rows.append({
                 "taxon": taxon, "sub_taxon": sub, "feature": feat,
-                "coefficient": coef, "multiplicative_effect": 10 ** coef, "r2": r2,
+                "coefficient": coef, "r2": r2,
             })
     weights = pd.DataFrame(rows)
 
@@ -352,7 +405,7 @@ def fit_and_export(n_points: int = 4000, seed: int = 0) -> pd.DataFrame:
 
     n_units = weights[["taxon", "sub_taxon"]].drop_duplicates().shape[0]
     print("=" * 74)
-    print("PER (TAXON, SUB-TAXON) BIOMASS-DENSITY MODELS  (log10 tonnes C/km^2 ~ features)")
+    print("PER (TAXON, SUB-TAXON) BIOMASS-DENSITY MODELS  (tonnes C/km^2 = b0 + sum b*feature)")
     print("=" * 74)
     print(f"{len(df)} points | {n_units} models | weights -> {out}\n")
     # Readable summary: taxon-level aggregates only (full sub-taxon detail in CSV).

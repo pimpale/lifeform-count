@@ -30,8 +30,8 @@ export async function loadModels(url: string): Promise<ModelEntry[]> {
         intercept: 0,
         temperature: 0,
         rainfall: 0,
-        farm_development: 0,
-        urban_development: 0,
+        farm_intensity: 0,
+        urban_intensity: 0,
       };
       byKey.set(key, e);
     }
@@ -42,21 +42,25 @@ export async function loadModels(url: string): Promise<ModelEntry[]> {
   return [...byKey.values()];
 }
 
-/** Predicted density (tonnes C / km^2) for one set of feature values. */
+/**
+ * Predicted density (tonnes C / km^2) for one set of feature values. The model
+ * is linear/additive; negative predictions (extrapolation artifacts) are
+ * clamped to 0, since biomass density can't be negative.
+ */
 export function evalDensity(
   m: ModelEntry,
   temperature: number,
   rainfall: number,
-  farm: number,
-  urban: number
+  farmIntensity: number,
+  urbanIntensity: number
 ): number {
-  const log10d =
+  const d =
     m.intercept +
     m.temperature * temperature +
     m.rainfall * rainfall +
-    m.farm_development * farm +
-    m.urban_development * urban;
-  return Math.pow(10, log10d);
+    m.farm_intensity * farmIntensity +
+    m.urban_intensity * urbanIntensity;
+  return d > 0 ? d : 0;
 }
 
 /** Per-cell predicted density across the whole grid; NaN over non-land. */
@@ -72,13 +76,13 @@ export function computeDensities(
       out[i] = NaN;
       continue;
     }
-    const log10d =
+    const d =
       m.intercept +
       m.temperature * t +
       m.rainfall * grid.rainfall[i] +
-      m.farm_development * grid.farm[i] +
-      m.urban_development * grid.urban[i];
-    out[i] = Math.pow(10, log10d);
+      m.farm_intensity * grid.farm_intensity[i] +
+      m.urban_intensity * grid.urban_intensity[i];
+    out[i] = d > 0 ? d : 0;
   }
   return out;
 }

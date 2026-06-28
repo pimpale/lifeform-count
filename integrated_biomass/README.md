@@ -83,32 +83,41 @@ world properties:
 uv run python -m integrated_biomass.model_biomass --points 4000
 ```
 
-For each taxon:
-`log10(density [tonnes C/km²]) ~ temperature + rainfall + farm_development + urban_development`
+For each taxon (linear / additive, so each weight is mass/km² per unit feature):
+`density [tonnes C/km²] = b0 + b·temperature + b·rainfall + b·farm_intensity + b·urban_intensity`
+
+`farm_intensity` (cropland+pasture fraction) and `urban_intensity` (built-up
+fraction, GHS-BUILT-S) are **continuous** 0–1 degrees of land use, not flags.
+The response varies continuously with them: wild density is a land-use area
+mixture; human/livestock/commensal density scales with built-up / farm fraction
+(so e.g. Humans gain ≈+156 t C/km² at full built-up, exactly, R²=1).
 
 - **Max detail — one model per (taxon, sub_taxon)** (~62 models): the five wild
   taxa *and their sub-taxa* (6 arthropod groups, 5 nematode trophic groups, 26
   mammal orders), the anthropogenic taxa *and their individual animals*
   (Humans; Livestock → Cattle/Sheep/Swine/…; Urban commensals →
   Dog/Cat/Mouse/Rats), each taxon-level aggregate, and a **Total**. So farm/urban
-  weights are grounded in real biomass — e.g. Cattle `farm` ≈ ×2257, Dog `urban`
-  ≈ ×3070 (land-use-defined animals are deterministic, R²≈1).
+  weights are grounded in real biomass — e.g. Livestock `farm_intensity` ≈ +2.5,
+  Humans `urban_intensity` ≈ +156 t C/km² (the added mass/km² at full intensity;
+  land-use-defined animals are exact, R²=1).
 - **Features** sampled from real rasters: CHELSA temperature & rainfall, the
-  Ramankutty cropland/pasture rasters (farm), Natural Earth urban areas (urban).
+  Ramankutty cropland/pasture rasters (farm fraction), GHS-BUILT-S built-up
+  fraction (urban). Both land-use features are continuous 0–1.
 - **Weights** → `results/biomass_density_model_weights.csv` (long format:
-  `taxon, sub_taxon, feature, coefficient, multiplicative_effect, r2`; sub_taxon
-  `(all)` is the taxon aggregate). `10**coef` is the multiplicative effect — for
-  a binary, the effect of switching the flag on.
+  `taxon, sub_taxon, feature, coefficient, r2`; sub_taxon `(all)` is the taxon
+  aggregate). Predict with a plain dot product: `density = intercept + Σ
+  coef·feature`.
 
-**CHELSA sampling is cached.** The sampled feature table is written to
-`data/cache/model/points_n{N}_s{seed}.csv`, so CHELSA is read once per
-(points, seed) config and every per-taxon fit / re-run reuses it — zero repeat
-hits. `--download-chelsa` instead pulls the two rasters local (~3 GB) for
-fully-offline arbitrary sampling.
+**Sampling is cached.** CHELSA/GHS rasters are downloaded whole to
+`data/cache/model/` on first use and sampled locally; the sampled feature table
+is also cached to `points_v2_n{N}_s{seed}.csv`, so re-runs and every per-taxon
+fit reuse it without touching the rasters. `--download-chelsa` prefetches the
+climate rasters up front.
 
-Caveat: wild-taxon response is *per-biome-constant*, so `temperature`/`rainfall`
-capture cross-biome gradients rather than within-biome variation, and land-use
-effects on *wild* fauna are ignored (only the anthropogenic addition is modeled).
+Caveats: wild-taxon climate response is largely cross-biome (the wild per-biome
+density is constant within a biome); and in linear space a few wild taxa pick up
+small spurious land-use coefficients from collinearity (built-up is near-0 over
+most land), which barely affect predictions in range.
 
 ## Known limitations / follow-ups
 
