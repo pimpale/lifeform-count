@@ -20,8 +20,8 @@ land-use mixture (nat/cropland/pasture by area fraction) and human/livestock/
 commensal density scales with built-up / farm fraction.
 
 Taxa modelled:
-  - the five biome-resolved wild taxa (terrestrial arthropods, nematodes, wild
-    mammals, annelids, terrestrial protists), each from its biome density
+  - the biome-resolved wild taxa (terrestrial arthropods, nematodes, wild
+    mammals, annelids), each from its biome density
     (land-use aware where the source has cropland/pasture rows, else the natural
     biome density);
   - Humans, Livestock, and Urban commensals (dogs/cats/mice/rats) from the
@@ -84,6 +84,7 @@ GHS_CELL_M2 = 1e6  # 1 km cell -> m^2 built-up to fraction
 
 EQUAL_AREA = "EPSG:6933"
 ICE_FREE_LAND_M2 = 1.3e14   # Bar-On ice-free land area
+OCEAN_AREA_M2 = 3.61e14     # global ocean area (aquatic taxa spread evenly over it)
 G_PER_MT = 1e12
 FLOOR = 1e-3                  # tonnes C/km^2 floor so log10 is defined
 
@@ -93,8 +94,9 @@ COMMENSAL_ITEMS = ["Dog", "Cat", "Rats", "Mouse", "Rodents, other"]
 FARM_ITEMS = ["Cattle", "Buffaloes", "Sheep", "Swine", "Goats", "Horses",
               "Camels", "Asses", "Mules", "Camelids, other", "Rabbits and hares"]
 
-WILD_TAXA = ["Terrestrial arthropods", "Nematodes", "Wild mammals",
-             "Annelids", "Protists (terrestrial)"]
+WILD_TAXA = ["Terrestrial arthropods", "Nematodes", "Wild mammals", "Annelids"]
+# Taxa excluded from the models entirely (e.g. protists, dropped on request).
+EXCLUDE_TAXA = {"Protists (terrestrial)"}
 # Continuous features: farm_intensity = cropland+pasture areal fraction (0..1);
 # urban_intensity = built-up areal fraction (0..1).
 FEATURES = ["temperature", "rainfall", "farm_intensity", "urban_intensity"]
@@ -127,7 +129,7 @@ def wild_densities() -> dict[tuple[str, str], dict[str, float]]:
     """Per (wild taxon, sub_taxon) and per (taxon, '(all)'), areal density
     (g C/m^2 == tonnes C/km^2) per biome group, from the integrated matrix."""
     m = pd.read_csv(MATRIX_CSV)
-    br = m[m["resolution"] != "global"].copy()
+    br = m[(m["resolution"] != "global") & (~m["taxon"].isin(EXCLUDE_TAXA))].copy()
     br["sub_taxon"] = br["sub_taxon"].fillna(ALL)
     areas = group_areas_m2()
 
@@ -140,6 +142,51 @@ def wild_densities() -> dict[tuple[str, str], dict[str, float]]:
         out[(t, s)] = dens(g)
     for t, g in br.groupby("taxon"):           # taxon-level aggregate
         out[(t, ALL)] = dens(g)
+    return out
+
+
+def aquatic_densities() -> dict[tuple[str, str], float]:
+    """Per (aquatic taxon, sub_taxon) areal density (tonnes C/km^2 == g C/m^2),
+    from the global marine biomass totals spread evenly over the ocean.
+
+    The marine rows in the matrix are global totals (no spatial structure), so
+    per the even-distribution assumption every ocean pixel gets total / ocean
+    area. Includes a combined ('Total', '(all)') so the visualizer's Total fills
+    the ocean as well as the land.
+
+    Scope matches the terrestrial model: marine animals (arthropods, cnidarians,
+    molluscs, fish, mammals). Marine bacteria, archaea, fungi and protists --
+    like terrestrial soil/deep-subsurface microbes and protists, which the land
+    model also omits -- are excluded; otherwise deep-subsurface prokaryotes alone
+    would dominate the ocean."""
+    m = pd.read_csv(MATRIX_CSV)
+    mar = m[m["realm"] == "marine"]
+
+    out: dict[tuple[str, str], float] = {}
+
+    def add(key: tuple[str, str], gC: float) -> None:
+        out[key] = out.get(key, 0.0) + gC / OCEAN_AREA_M2
+
+    for _, r in mar.iterrows():
+        t, g = str(r["taxon"]), float(r["biomass_gC"])
+        if t == "Animals: Marine arthropods":
+            add(("Marine animals", "Arthropods"), g)
+        elif t == "Animals: Cnidarians":
+            add(("Marine animals", "Cnidarians"), g)
+        elif t == "Animals: Molluscs":
+            add(("Marine animals", "Molluscs"), g)
+        elif t == "Animals: Fish":
+            add(("Marine animals", "Fish"), g)
+        elif t == "Wild mammals":
+            add(("Marine animals", "Mammals"), g)
+        # Marine bacteria / archaea / fungi intentionally excluded (see above).
+
+    # Taxon-level aggregates + a grand aquatic total (the ocean side of Total).
+    for taxon in {t for (t, _) in out}:
+        subs = sum(v for (t, s), v in out.items() if t == taxon and s != ALL)
+        if (taxon, ALL) not in out and subs > 0:
+            out[(taxon, ALL)] = subs
+    out[("Total", ALL)] = sum(v for (_, s), v in out.items() if s == ALL)
     return out
 
 
@@ -394,7 +441,18 @@ def fit_and_export(n_points: int = 4000, seed: int = 0) -> pd.DataFrame:
         for feat, coef in zip(["intercept", *FEATURES], [reg.intercept_, *reg.coef_]):
             rows.append({
                 "taxon": taxon, "sub_taxon": sub, "feature": feat,
-                "coefficient": coef, "r2": r2,
+                "coefficient": coef, "r2": r2, "domain": "terrestrial",
+            })
+
+    # Aquatic taxa: constant density over the ocean (intercept = density, every
+    # land/climate coefficient is 0). Same linear form so the app evaluates them
+    # the same way, just on the ocean domain.
+    for (taxon, sub), dens in aquatic_densities().items():
+        for feat in ["intercept", *FEATURES]:
+            rows.append({
+                "taxon": taxon, "sub_taxon": sub, "feature": feat,
+                "coefficient": dens if feat == "intercept" else 0.0,
+                "r2": float("nan"), "domain": "aquatic",
             })
     weights = pd.DataFrame(rows)
 
@@ -408,8 +466,9 @@ def fit_and_export(n_points: int = 4000, seed: int = 0) -> pd.DataFrame:
     print("PER (TAXON, SUB-TAXON) BIOMASS-DENSITY MODELS  (tonnes C/km^2 = b0 + sum b*feature)")
     print("=" * 74)
     print(f"{len(df)} points | {n_units} models | weights -> {out}\n")
-    # Readable summary: taxon-level aggregates only (full sub-taxon detail in CSV).
-    agg = weights[weights["sub_taxon"] == ALL]
+    # Readable summary: terrestrial taxon-level aggregates only (full sub-taxon
+    # detail, and the aquatic taxa, are in the CSV).
+    agg = weights[(weights["sub_taxon"] == ALL) & (weights["domain"] == "terrestrial")]
     wide = agg.pivot(index="taxon", columns="feature", values="coefficient")
     wide = wide[["intercept", *FEATURES]]
     r2map = agg.drop_duplicates("taxon").set_index("taxon")["r2"]

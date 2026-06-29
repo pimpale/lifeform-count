@@ -29,6 +29,11 @@
       "file": "urban_intensity.f32",
       "dtype": "float32",
       "units": "0..1"
+    },
+    "ocean": {
+      "file": "ocean.u8",
+      "dtype": "uint8",
+      "units": "0/1"
     }
   }
 }

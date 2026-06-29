@@ -16,9 +16,20 @@ density [t C / km²] = intercept
 
 Because every taxon is just five numbers over the **same four feature rasters**,
 the app bakes those features into one compact global grid and evaluates whichever
-taxon you select in the browser — so all ~60 models (wild taxa & sub-taxa,
-humans, each livestock & commensal animal, and the Total) are instantly mappable.
-Negative predictions (linear extrapolation) are clamped to 0.
+taxon you select in the browser — so all ~70 models (wild taxa & sub-taxa,
+humans, each livestock & commensal animal, the marine taxa, and the Total) are
+instantly mappable. Negative predictions (linear extrapolation) are clamped to 0.
+
+**Aquatic biomass** is handled with a simple even-distribution assumption: each
+marine taxon's global total is spread uniformly over the ocean, giving a constant
+areal density. Scope matches the land model — marine **animals** (arthropods,
+cnidarians, molluscs, fish, mammals) and **protists**; marine bacteria/archaea/
+fungi are excluded, just as the terrestrial Total omits soil & deep-subsurface
+microbes and plants (otherwise deep-subsurface prokaryotes alone would dominate
+the ocean). Aquatic taxa are tagged `domain=aquatic` in the weights CSV
+(intercept = density, all feature coefficients 0). Each taxon is rendered on its
+domain — land taxa on land, marine taxa on the ocean/lake mask — and **Total**
+has both, so it fills the whole map.
 
 ## Data pipeline
 
@@ -32,8 +43,10 @@ Negative predictions (linear extrapolation) are clamped to 0.
 | farm_intensity | Ramankutty `cropland.tif` + `pasture.tif` areal fraction (`rosenberg…/data`) |
 | urban_intensity | GHS-BUILT-S 2020 built-up surface fraction (1 km, Mollweide) |
 
-The terrestrial land mask comes from the cropland raster's footprint. It also
-copies `biomass_density_model_weights.csv` into `public/data/` for the app.
+The terrestrial land mask comes from the cropland raster's footprint; the
+ocean/lake mask (`ocean.u8`, for the aquatic taxa) is the inverse of the full WWF
+ecoregion footprint, so ice sheets stay land and big lakes count as water. It
+also copies `biomass_density_model_weights.csv` into `public/data/` for the app.
 
 Regenerate (e.g. at a different resolution) with the `integrated_biomass`
 virtualenv, which has rasterio/geopandas:

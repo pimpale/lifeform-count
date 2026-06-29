@@ -1,6 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import type { FeatureGrid, ModelEntry } from "./types";
-import { loadModels, computeDensities } from "./model";
+import {
+  loadModels,
+  buildUnits,
+  leafUnits,
+  computeDensities,
+  unitKey,
+  unitLabel,
+} from "./model";
 import { loadGrid } from "./grid";
 import { buildLUT, type ColormapName } from "./colormap";
 import { densityCanvas, logDomain } from "./image";
@@ -13,8 +20,7 @@ export default function App() {
   const [grid, setGrid] = useState<FeatureGrid | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const [taxon, setTaxon] = useState("Total");
-  const [subTaxon, setSubTaxon] = useState("(all)");
+  const [selected, setSelected] = useState<Set<string> | null>(null);
   const [colormap, setColormap] = useState<ColormapName>("viridis");
 
   // Load weights + feature grid once.
@@ -33,24 +39,24 @@ export default function App() {
     })();
   }, []);
 
-  // Keep sub-taxon valid when taxon changes.
-  useEffect(() => {
-    if (!models) return;
-    const subs = models.filter((m) => m.taxon === taxon).map((m) => m.sub_taxon);
-    if (subs.length && !subs.includes(subTaxon)) {
-      setSubTaxon(subs.includes("(all)") ? "(all)" : subs[0]);
-    }
-  }, [taxon, models, subTaxon]);
+  const units = useMemo(() => (models ? buildUnits(models) : []), [models]);
+  const leaves = useMemo(() => leafUnits(units), [units]);
 
-  const active = useMemo(
-    () =>
-      models?.find((m) => m.taxon === taxon && m.sub_taxon === subTaxon),
-    [models, taxon, subTaxon]
+  // Start with everything selected (== the Total view).
+  useEffect(() => {
+    if (leaves.length && selected === null) {
+      setSelected(new Set(leaves.map(unitKey)));
+    }
+  }, [leaves, selected]);
+
+  const selectedUnits = useMemo(
+    () => (selected ? leaves.filter((u) => selected.has(unitKey(u))) : []),
+    [leaves, selected]
   );
 
   const densities = useMemo(
-    () => (grid && active ? computeDensities(grid, active) : null),
-    [grid, active]
+    () => (grid ? computeDensities(grid, selectedUnits) : null),
+    [grid, selectedUnits]
   );
 
   const domain = useMemo(
@@ -63,6 +69,14 @@ export default function App() {
     return densityCanvas(grid, densities, buildLUT(colormap), domain);
   }, [grid, densities, colormap, domain]);
 
+  const title = useMemo(() => {
+    if (!selected) return "";
+    if (selectedUnits.length === 0) return "Nothing selected";
+    if (selected.size === leaves.length) return "All taxa";
+    if (selectedUnits.length === 1) return unitLabel(selectedUnits[0]);
+    return `${selectedUnits.length} taxa`;
+  }, [selected, selectedUnits, leaves]);
+
   if (error)
     return (
       <div className="loading">
@@ -71,26 +85,20 @@ export default function App() {
         Did you run <code>npm run build-grid</code>?
       </div>
     );
-  if (!models || !grid) return <div className="loading">Loading model + grid…</div>;
+  if (!models || !grid || !selected)
+    return <div className="loading">Loading model + grid…</div>;
 
   return (
     <div className="app">
-      {image && densities && active && (
-        <MapView
-          grid={grid}
-          densities={densities}
-          image={image}
-          model={active}
-        />
+      {image && densities && (
+        <MapView grid={grid} densities={densities} image={image} title={title} />
       )}
       <Controls
-        models={models}
-        taxon={taxon}
-        subTaxon={subTaxon}
+        leaves={leaves}
+        selected={selected}
+        onChange={setSelected}
+        detail={selectedUnits.length === 1 ? selectedUnits[0] : undefined}
         colormap={colormap}
-        active={active}
-        onTaxon={setTaxon}
-        onSubTaxon={setSubTaxon}
         onColormap={setColormap}
       />
       <Legend colormap={colormap} domain={domain} />

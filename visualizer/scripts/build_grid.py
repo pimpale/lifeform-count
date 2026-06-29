@@ -20,10 +20,13 @@ common lon/lat grid and writes:
     public/data/rainfall.f32          float32
     public/data/farm_intensity.f32    float32, 0..1
     public/data/urban_intensity.f32   float32, 0..1
+    public/data/ocean.u8              uint8 {0,1}, ocean/lake mask for aquatic taxa
     public/data/biomass_density_model_weights.csv   (copied for the app)
 
 Land domain = where the Ramankutty cropland raster has data (terrestrial, the
-domain the densities are defined on). Run:
+domain the densities are defined on). The ocean/lake mask is the inverse of the
+full WWF terrestrial-ecoregion footprint (so ice sheets stay land, big lakes
+count as water). Run:
 
     uv run --project ../integrated_biomass python scripts/build_grid.py --deg 0.25
 """
@@ -38,6 +41,7 @@ from pathlib import Path
 
 import numpy as np
 import rasterio
+from rasterio import features
 from rasterio.enums import Resampling
 from rasterio.transform import from_bounds
 from rasterio.warp import reproject
@@ -50,6 +54,7 @@ OUT_DIR = VIS_ROOT / "public" / "data"
 ROSENBERG = REPO_ROOT / "rosenberg2023_biomass_terrestrial_arthropods"
 CROPLAND_TIF = ROSENBERG / "data" / "cropland.tif"
 PASTURE_TIF = ROSENBERG / "data" / "pasture.tif"
+WWF_SHP = REPO_ROOT / "integrated_biomass" / "data" / "raw" / "wwf_ecoregions" / "Ecoregions2017.shp"
 WEIGHTS_CSV = REPO_ROOT / "integrated_biomass" / "results" / "biomass_density_model_weights.csv"
 
 # Reuse the integrated_biomass cache/download helpers so CHELSA climate and the
@@ -122,11 +127,24 @@ def build(deg: float) -> None:
     urban_intensity = np.clip(np.nan_to_num(builtup) / GHS_CELL_M2, 0, 1)
     urban_intensity = np.where(land, urban_intensity, np.nan).astype("float32")
 
+    # Ocean/lake mask for aquatic taxa: inverse of the full WWF terrestrial
+    # footprint, so ice sheets (Antarctica, Greenland) stay land and inland
+    # lakes count as water.
+    print("[grid] rasterizing WWF land for ocean mask", file=sys.stderr)
+    import geopandas as gpd
+    eco = gpd.read_file(WWF_SHP, columns=["geometry"]).to_crs("EPSG:4326")
+    wwf_land = features.rasterize(
+        ((g, 1) for g in eco.geometry if g is not None),
+        out_shape=(height, width), transform=transform, fill=0, dtype="uint8",
+    )
+    ocean = (wwf_land == 0).astype("uint8")
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     temperature.tofile(OUT_DIR / "temperature.f32")
     rainfall.tofile(OUT_DIR / "rainfall.f32")
     farm_intensity.tofile(OUT_DIR / "farm_intensity.f32")
     urban_intensity.tofile(OUT_DIR / "urban_intensity.f32")
+    ocean.tofile(OUT_DIR / "ocean.u8")
     shutil.copyfile(WEIGHTS_CSV, OUT_DIR / WEIGHTS_CSV.name)
 
     meta = {
@@ -141,6 +159,7 @@ def build(deg: float) -> None:
             "rainfall": {"file": "rainfall.f32", "dtype": "float32", "units": "mm/yr"},
             "farm_intensity": {"file": "farm_intensity.f32", "dtype": "float32", "units": "0..1"},
             "urban_intensity": {"file": "urban_intensity.f32", "dtype": "float32", "units": "0..1"},
+            "ocean": {"file": "ocean.u8", "dtype": "uint8", "units": "0/1"},
         },
     }
     (OUT_DIR / "meta.json").write_text(json.dumps(meta, indent=2))
@@ -149,8 +168,8 @@ def build(deg: float) -> None:
     fmean = float(np.nanmean(farm_intensity))
     umean = float(np.nanmean(urban_intensity))
     print(f"[grid] wrote {OUT_DIR} | land cells: {n_land} "
-          f"({100*n_land/(width*height):.1f}%) | mean farm: {fmean:.3f} "
-          f"mean urban: {umean:.4f}", file=sys.stderr)
+          f"({100*n_land/(width*height):.1f}%) | ocean cells: {int(ocean.sum())} | "
+          f"mean farm: {fmean:.3f} mean urban: {umean:.4f}", file=sys.stderr)
     print(f"[grid]   temperature {np.nanmin(temperature):.1f}..{np.nanmax(temperature):.1f} C | "
           f"rainfall {np.nanmin(rainfall):.0f}..{np.nanmax(rainfall):.0f} mm", file=sys.stderr)
 

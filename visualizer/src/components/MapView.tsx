@@ -4,7 +4,7 @@ import { BitmapLayer, GeoJsonLayer } from "@deck.gl/layers";
 import type { PickingInfo } from "@deck.gl/core";
 import { feature } from "topojson-client";
 import worldTopo from "world-atlas/countries-110m.json";
-import type { FeatureGrid, ModelEntry } from "../types";
+import type { FeatureGrid } from "../types";
 import { MERCATOR_BOUNDS, MERC_LAT } from "../image";
 
 const INITIAL_VIEW_STATE = {
@@ -27,7 +27,7 @@ interface Props {
   grid: FeatureGrid;
   densities: Float32Array;
   image: HTMLCanvasElement;
-  model: ModelEntry;
+  title: string;
 }
 
 // BitmapLayer reliably accepts an image URL across deck/luma versions; encode
@@ -44,7 +44,7 @@ function densityStr(d: number): string {
   return d.toFixed(3);
 }
 
-export default function MapView({ grid, densities, image, model }: Props) {
+export default function MapView({ grid, densities, image, title }: Props) {
   const imageUrl = useMemo(() => image.toDataURL("image/png"), [image]);
   const layers = useMemo(() => {
     return [
@@ -92,19 +92,25 @@ export default function MapView({ grid, densities, image, model }: Props) {
     if (col < 0 || row < 0 || col >= grid.width || row >= grid.height) return null;
     const idx = row * grid.width + col;
     const t = grid.temperature[idx];
-    if (!Number.isFinite(t)) return null; // ocean / non-land
+    const onLand = Number.isFinite(t);
+    const isOcean = grid.ocean[idx] === 1;
+    if (!onLand && !isOcean) return null; // ice sheet / no data
+    const d = densities[idx];
+    if (!Number.isFinite(d)) return null; // no entry for this cell's domain
+
+    const label = title;
+    const detail = onLand
+      ? `${f1(t)} °C · ${f1(grid.rainfall[idx])} mm<br/>farm ${pct(
+          grid.farm_intensity[idx]
+        )} · built-up ${pct(grid.urban_intensity[idx])}`
+      : `ocean / lake`;
 
     return {
       html: `<div class="tooltip">
-        <b>${model.taxon}${
-        model.sub_taxon !== "(all)" ? " · " + model.sub_taxon : ""
-      }</b><br/>
-        ${densityStr(densities[idx])} t C/km²<br/>
+        <b>${label}</b><br/>
+        ${densityStr(d)} t C/km²<br/>
         ${lat.toFixed(1)}°, ${lon.toFixed(1)}°<br/>
-        ${f1(t)} °C · ${f1(grid.rainfall[idx])} mm<br/>
-        farm ${pct(grid.farm_intensity[idx])} · built-up ${pct(
-        grid.urban_intensity[idx]
-      )}
+        ${detail}
       </div>`,
       style: {
         background: "rgba(21,27,48,0.95)",
